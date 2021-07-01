@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Area;
-using SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.DialogService;
-using Object = SWLOR.Game.Server.Core.NWNX.Object;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWNX.Enum;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Area;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
+using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.DialogService;
+using Object = Xenomech.Core.NWNX.Object;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class PlayerHouseFurnitureDialog: DialogBase
     {

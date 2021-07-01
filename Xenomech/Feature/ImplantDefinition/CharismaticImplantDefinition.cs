@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Service.ImplantService;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Service.ImplantService;
 
-namespace SWLOR.Game.Server.Feature.ImplantDefinition
+namespace Xenomech.Feature.ImplantDefinition
 {
     public class CharismaticImplantDefinition: IImplantListDefinition
     {

@@ -1,8 +1,8 @@
-﻿using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.DialogService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Service;
+using Xenomech.Service.DialogService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class JukeboxDialog: DialogBase
     {

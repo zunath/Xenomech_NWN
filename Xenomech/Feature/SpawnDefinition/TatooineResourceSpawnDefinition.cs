@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Service.SpawnService;
+using Xenomech.Service.SpawnService;
 
-namespace SWLOR.Game.Server.Feature.SpawnDefinition
+namespace Xenomech.Feature.SpawnDefinition
 {
     public class TatooineResourceSpawnDefinition: ISpawnListDefinition
     {

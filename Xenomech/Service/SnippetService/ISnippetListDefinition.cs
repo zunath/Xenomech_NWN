@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Service.SnippetService
+namespace Xenomech.Service.SnippetService
 {
     public interface ISnippetListDefinition
     {

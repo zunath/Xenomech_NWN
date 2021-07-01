@@ -1,8 +1,8 @@
 using System;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Creature;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Creature;
 
-namespace SWLOR.Game.Server.Core.NWScript
+namespace Xenomech.Core.NWScript
 {
     public partial class NWScript
     {

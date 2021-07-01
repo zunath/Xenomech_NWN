@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.AbilityService;
-using SWLOR.Game.Server.Service.FactionService;
-using SWLOR.Game.Server.Service.ImplantService;
-using SWLOR.Game.Server.Service.SpaceService;
-using SWLOR.Game.Server.Service.TaxiService;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service.AbilityService;
+using Xenomech.Service.FactionService;
+using Xenomech.Service.ImplantService;
+using Xenomech.Service.SpaceService;
+using Xenomech.Service.TaxiService;
 
-namespace SWLOR.Game.Server.Entity
+namespace Xenomech.Entity
 {
     public class Player: EntityBase
     {

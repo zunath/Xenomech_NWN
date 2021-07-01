@@ -1,7 +1,5 @@
-﻿
-
-// ReSharper disable once CheckNamespace
-namespace SWLOR.Game.Server.Core.NWScript
+﻿// ReSharper disable once CheckNamespace
+namespace Xenomech.Core.NWScript
 {
     public partial class NWScript
     {

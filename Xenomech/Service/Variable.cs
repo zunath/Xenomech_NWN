@@ -1,8 +1,8 @@
-﻿using SWLOR.Game.Server.Core.NWNX.Enum;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Object = SWLOR.Game.Server.Core.NWNX.Object;
+﻿using Xenomech.Core.NWNX.Enum;
+using static Xenomech.Core.NWScript.NWScript;
+using Object = Xenomech.Core.NWNX.Object;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class Variable
     {

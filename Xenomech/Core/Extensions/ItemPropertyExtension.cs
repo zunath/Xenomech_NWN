@@ -1,7 +1,7 @@
-﻿using SWLOR.Game.Server.Core.NWScript.Enum.Item;
+﻿using Xenomech.Core.NWScript.Enum.Item;
 
 // ReSharper disable once CheckNamespace
-namespace SWLOR.Game.Server.Core.NWScript
+namespace Xenomech.Core.NWScript
 {
     public partial class NWScript
     {

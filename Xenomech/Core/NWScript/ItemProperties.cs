@@ -1,13 +1,13 @@
 using System;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item.Property;
-using Alignment = SWLOR.Game.Server.Core.NWScript.Enum.Item.Property.Alignment;
-using AlignmentGroup = SWLOR.Game.Server.Core.NWScript.Enum.Item.Property.AlignmentGroup;
-using DamageType = SWLOR.Game.Server.Core.NWScript.Enum.Item.Property.DamageType;
-using SpellSchool = SWLOR.Game.Server.Core.NWScript.Enum.SpellSchool;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Core.NWScript.Enum.Item.Property;
+using Alignment = Xenomech.Core.NWScript.Enum.Item.Property.Alignment;
+using AlignmentGroup = Xenomech.Core.NWScript.Enum.Item.Property.AlignmentGroup;
+using DamageType = Xenomech.Core.NWScript.Enum.Item.Property.DamageType;
+using SpellSchool = Xenomech.Core.NWScript.Enum.SpellSchool;
 
-namespace SWLOR.Game.Server.Core.NWScript
+namespace Xenomech.Core.NWScript
 {
     public partial class NWScript
     {

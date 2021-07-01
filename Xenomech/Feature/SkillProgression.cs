@@ -1,10 +1,10 @@
-﻿using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Service;
-using Skill = SWLOR.Game.Server.Service.Skill;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Core;
+using Xenomech.Entity;
+using Xenomech.Service;
+using Skill = Xenomech.Service.Skill;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature
+namespace Xenomech.Feature
 {
     public static class SkillProgression
     {

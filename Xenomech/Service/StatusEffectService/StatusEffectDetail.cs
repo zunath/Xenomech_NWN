@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SWLOR.Game.Server.Service.StatusEffectService
+﻿namespace Xenomech.Service.StatusEffectService
 {
     public delegate void StatusEffectAppliedDelegate(uint source, uint target, float length);
     public delegate void StatusEffectTickDelegate(uint source, uint target);

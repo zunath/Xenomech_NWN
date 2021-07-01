@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Entity
+namespace Xenomech.Entity
 {
     public class PlayerStore: EntityBase
     {

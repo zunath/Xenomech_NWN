@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.ChatCommandService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Enumeration;
+using Xenomech.Service.ChatCommandService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.ChatCommandDefinition
+namespace Xenomech.Feature.ChatCommandDefinition
 {
     public class SpatialChatCommand: IChatCommandListDefinition
     {

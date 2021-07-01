@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.AbilityService;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.AbilityService;
 
-namespace SWLOR.Game.Server.Feature.AbilityDefinition.Crafting
+namespace Xenomech.Feature.AbilityDefinition.Crafting
 {
     public class ImplantInstallationAbilityDefinition: IAbilityListDefinition
     {

@@ -1,12 +1,12 @@
-﻿using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Random = SWLOR.Game.Server.Service.Random;
-using Skill = SWLOR.Game.Server.Service.Skill;
+﻿using Xenomech.Core;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using static Xenomech.Core.NWScript.NWScript;
+using Random = Xenomech.Service.Random;
+using Skill = Xenomech.Service.Skill;
 
-namespace SWLOR.Game.Server.Feature
+namespace Xenomech.Feature
 {
     public static class ScavengePoint
     {

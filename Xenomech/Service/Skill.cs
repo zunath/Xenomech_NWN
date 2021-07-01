@@ -1,11 +1,10 @@
 ﻿using System.Linq;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Player = SWLOR.Game.Server.Entity.Player;
+using Xenomech.Core.NWNX;
+using Xenomech.Enumeration;
+using static Xenomech.Core.NWScript.NWScript;
+using Player = Xenomech.Entity.Player;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static partial class Skill
     {

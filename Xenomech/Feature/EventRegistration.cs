@@ -1,12 +1,10 @@
 ﻿using System;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Object = SWLOR.Game.Server.Core.NWNX.Object;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature
+namespace Xenomech.Feature
 {
     public class EventRegistration
     {

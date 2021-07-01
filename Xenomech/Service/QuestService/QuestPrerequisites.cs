@@ -1,9 +1,9 @@
-﻿using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.FactionService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service.FactionService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service.QuestService
+namespace Xenomech.Service.QuestService
 {
     public interface IQuestPrerequisite
     {

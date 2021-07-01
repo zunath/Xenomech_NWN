@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.StatusEffectService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Random = SWLOR.Game.Server.Service.Random;
+using Xenomech.Core.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
+using Xenomech.Enumeration;
+using Xenomech.Service.StatusEffectService;
+using static Xenomech.Core.NWScript.NWScript;
+using Random = Xenomech.Service.Random;
 
-namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
+namespace Xenomech.Feature.StatusEffectDefinition
 {
     public class DamageStatusEffectDefinition: IStatusEffectListDefinition
     {
@@ -78,7 +79,7 @@ namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
                 .GrantAction((source, target, length) =>
                 {
                     var effect = EffectDazed();
-                    effect = EffectLinkEffects(effect, EffectVisualEffect(Core.NWScript.Enum.VisualEffect.VisualEffect.Vfx_Dur_Iounstone_Blue));
+                    effect = EffectLinkEffects(effect, EffectVisualEffect(VisualEffect.Vfx_Dur_Iounstone_Blue));
                     effect = TagEffect(effect, "StatusEffectType." + StatusEffectType.Tranquilize);
 
                     ApplyEffectToObject(DurationType.Permanent, effect, target, length);

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class Menu
     {

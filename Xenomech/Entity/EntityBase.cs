@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SWLOR.Game.Server.Entity
+namespace Xenomech.Entity
 {
     public abstract class EntityBase
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class Gui
     {

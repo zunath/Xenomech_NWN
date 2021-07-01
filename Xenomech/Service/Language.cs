@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.LanguageService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using SkillType = SWLOR.Game.Server.Enumeration.SkillType;
+using Xenomech.Core;
+using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service.LanguageService;
+using static Xenomech.Core.NWScript.NWScript;
+using SkillType = Xenomech.Enumeration.SkillType;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class Language
     {

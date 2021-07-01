@@ -1,8 +1,8 @@
-﻿using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Core.Bioware
+namespace Xenomech.Core.Bioware
 {
     public enum AddItemPropertyPolicy
     {

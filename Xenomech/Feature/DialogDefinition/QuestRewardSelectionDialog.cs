@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.DialogService;
-using SWLOR.Game.Server.Service.QuestService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Service;
+using Xenomech.Service.DialogService;
+using Xenomech.Service.QuestService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class QuestRewardSelectionDialog: DialogBase
     {

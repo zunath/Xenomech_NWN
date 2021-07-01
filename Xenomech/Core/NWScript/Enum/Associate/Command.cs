@@ -1,4 +1,4 @@
-namespace SWLOR.Game.Server.Core.NWScript.Enum.Associate
+namespace Xenomech.Core.NWScript.Enum.Associate
 {
     public enum Command
     {

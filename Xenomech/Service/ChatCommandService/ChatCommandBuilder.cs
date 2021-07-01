@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service.ChatCommandService
+namespace Xenomech.Service.ChatCommandService
 {
     public class ChatCommandBuilder
     {

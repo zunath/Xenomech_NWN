@@ -1,10 +1,10 @@
-﻿using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.DialogService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.DialogService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class ViewSkillsDialog: DialogBase
     {

@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.Bioware;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Player = SWLOR.Game.Server.Core.NWNX.Player;
-using Skill = SWLOR.Game.Server.Service.Skill;
+using Xenomech.Core;
+using Xenomech.Core.Bioware;
+using Xenomech.Core.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using static Xenomech.Core.NWScript.NWScript;
+using Player = Xenomech.Core.NWNX.Player;
+using Skill = Xenomech.Service.Skill;
 
-namespace SWLOR.Game.Server.Feature
+namespace Xenomech.Feature
 {
     public static class CraftRefinery
     {

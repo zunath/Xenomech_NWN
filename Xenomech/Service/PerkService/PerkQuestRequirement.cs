@@ -1,7 +1,7 @@
-﻿using SWLOR.Game.Server.Entity;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Entity;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service.PerkService
+namespace Xenomech.Service.PerkService
 {
     public class PerkQuestRequirement : IPerkRequirement
     {

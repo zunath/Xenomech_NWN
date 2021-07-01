@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Service.SpaceService;
+using Xenomech.Service.SpaceService;
 
-namespace SWLOR.Game.Server.Feature.SpaceObjectDefinition
+namespace Xenomech.Feature.SpaceObjectDefinition
 {
     public class TestShipSpaceObjectDefinition: ISpaceObjectListDefinition
     {

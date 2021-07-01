@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.CraftService;
+using Xenomech.Enumeration;
+using Xenomech.Service.CraftService;
 
-namespace SWLOR.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
+namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
 {
     public class ArmorRecipes1 : IRecipeListDefinition
     {

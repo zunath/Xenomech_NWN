@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SWLOR.Game.Server.Service.FactionService
+namespace Xenomech.Service.FactionService
 {
     public enum FactionType
     {

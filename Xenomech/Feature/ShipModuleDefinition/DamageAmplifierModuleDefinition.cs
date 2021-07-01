@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.SpaceService;
+using Xenomech.Enumeration;
+using Xenomech.Service.SpaceService;
 
-namespace SWLOR.Game.Server.Feature.ShipModuleDefinition
+namespace Xenomech.Feature.ShipModuleDefinition
 {
     public class DamageAmplifierModuleDefinition : IShipModuleListDefinition
     {

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect;
-using SWLOR.Game.Server.Enumeration;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
+using Xenomech.Enumeration;
 
-namespace SWLOR.Game.Server.Service.AbilityService
+namespace Xenomech.Service.AbilityService
 {
     public class AbilityBuilder
     {

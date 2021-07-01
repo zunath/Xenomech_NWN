@@ -1,11 +1,12 @@
 ﻿using System.Numerics;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Area;
-using SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect;
-using SWLOR.Game.Server.Enumeration;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Area;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
+using Xenomech.Enumeration;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class TileMagic
     {

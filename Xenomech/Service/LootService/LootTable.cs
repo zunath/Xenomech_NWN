@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SWLOR.Game.Server.Service.LootService
+namespace Xenomech.Service.LootService
 {
     public class LootTable : List<LootTableItem>
     {

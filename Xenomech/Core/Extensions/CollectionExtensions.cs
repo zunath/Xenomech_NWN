@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Core.Extensions
+namespace Xenomech.Core.Extensions
 {
     internal static class CollectionExtensions
     {

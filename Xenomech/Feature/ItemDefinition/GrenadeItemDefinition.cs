@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.Bioware;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.AbilityService;
-using SWLOR.Game.Server.Service.ItemService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Random = SWLOR.Game.Server.Service.Random;
-using Skill = SWLOR.Game.Server.Service.Skill;
+using Xenomech.Core;
+using Xenomech.Core.Bioware;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
+using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.AbilityService;
+using Xenomech.Service.ItemService;
+using static Xenomech.Core.NWScript.NWScript;
+using Random = Xenomech.Service.Random;
 
-namespace SWLOR.Game.Server.Feature.ItemDefinition
+namespace Xenomech.Feature.ItemDefinition
 {
     public class GrenadeItemDefinition: IItemListDefinition
     {

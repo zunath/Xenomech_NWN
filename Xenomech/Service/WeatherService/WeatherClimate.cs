@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service.WeatherService
+﻿namespace Xenomech.Service.WeatherService
 {
     public class WeatherClimate
     {

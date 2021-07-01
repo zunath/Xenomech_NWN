@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.ChatCommandService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Player = SWLOR.Game.Server.Core.NWNX.Player;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWNX.Enum;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service.ChatCommandService;
+using static Xenomech.Core.NWScript.NWScript;
+using Player = Xenomech.Core.NWNX.Player;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class ChatCommand
     {

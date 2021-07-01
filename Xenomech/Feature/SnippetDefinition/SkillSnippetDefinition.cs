@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.SnippetService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.SnippetService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.SnippetDefinition
+namespace Xenomech.Feature.SnippetDefinition
 {
     public class SkillSnippetDefinition: ISnippetListDefinition
     {

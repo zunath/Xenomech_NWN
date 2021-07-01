@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.Bioware;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.SpaceService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Object = SWLOR.Game.Server.Core.NWNX.Object;
-using Player = SWLOR.Game.Server.Core.NWNX.Player;
+using Xenomech.Core;
+using Xenomech.Core.Bioware;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWNX.Enum;
+using Xenomech.Core.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
+using Xenomech.Enumeration;
+using Xenomech.Service.SpaceService;
+using static Xenomech.Core.NWScript.NWScript;
+using Object = Xenomech.Core.NWNX.Object;
+using Player = Xenomech.Core.NWNX.Player;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class Space
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Numerics;
-using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect;
+using Xenomech.Core.NWNX.Enum;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
 
-namespace SWLOR.Game.Server.Core.NWNX
+namespace Xenomech.Core.NWNX
 {
     public class Player
     {

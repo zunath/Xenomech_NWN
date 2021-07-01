@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Core.NWScript.Enum.Area
+﻿namespace Xenomech.Core.NWScript.Enum.Area
 {
     public enum WeatherType
     {

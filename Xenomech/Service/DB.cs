@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using StackExchange.Redis;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Entity;
+using Xenomech.Core;
+using Xenomech.Entity;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     internal class DB
     {

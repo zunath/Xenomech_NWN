@@ -1,7 +1,7 @@
-﻿using SWLOR.Game.Server.Core.NWNX.Enum;
-using static SWLOR.Game.Server.Core.NWNX.NWNXCore;
+﻿using Xenomech.Core.NWNX.Enum;
+using static Xenomech.Core.NWNX.NWNXCore;
 
-namespace SWLOR.Game.Server.Core.NWNX
+namespace Xenomech.Core.NWNX
 {
     public static class Tileset
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace SWLOR.Game.Server.Extension
+namespace Xenomech.Extension
 {
     public static class EnumerationExtension
     {

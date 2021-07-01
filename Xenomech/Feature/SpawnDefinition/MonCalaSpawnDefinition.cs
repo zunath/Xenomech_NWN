@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Service.SpawnService;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Service.SpawnService;
 
-namespace SWLOR.Game.Server.Feature.SpawnDefinition
+namespace Xenomech.Feature.SpawnDefinition
 {
     public class MonCalaSpawnDefinition: ISpawnListDefinition
     {

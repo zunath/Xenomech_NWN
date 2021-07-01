@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWNX.Enum;
+using Xenomech.Core.NWNX.Enum;
 
-namespace SWLOR.Game.Server.Entity
+namespace Xenomech.Entity
 {
     public class PlayerVisibilityObject: EntityBase
     {

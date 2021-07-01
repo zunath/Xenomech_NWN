@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.PerkService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Item = SWLOR.Game.Server.Service.Item;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service.PerkService;
+using static Xenomech.Core.NWScript.NWScript;
+using Item = Xenomech.Service.Item;
 
-namespace SWLOR.Game.Server.Feature.PerkDefinition
+namespace Xenomech.Feature.PerkDefinition
 {
     public class OneHandedPerkDefinition : IPerkListDefinition
     {

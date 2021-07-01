@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Service.ItemService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Random = SWLOR.Game.Server.Service.Random;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Service.ItemService;
+using static Xenomech.Core.NWScript.NWScript;
+using Random = Xenomech.Service.Random;
 
-namespace SWLOR.Game.Server.Feature.ItemDefinition
+namespace Xenomech.Feature.ItemDefinition
 {
     public class ConsumableItemDefinition: IItemListDefinition
     {

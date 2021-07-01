@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Creature;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.DialogService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Creature;
+using Xenomech.Service;
+using Xenomech.Service.DialogService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class CharacterCustomizationDialog: DialogBase
     {

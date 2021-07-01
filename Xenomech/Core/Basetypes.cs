@@ -1,7 +1,7 @@
 using System;
-using SWLOR.Game.Server.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum;
 
-namespace SWLOR.Game.Server.Core
+namespace Xenomech.Core
 {
     public partial class Effect
     {

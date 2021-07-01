@@ -1,10 +1,10 @@
 ﻿using System;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Service;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Random = SWLOR.Game.Server.Service.Random;
+using Xenomech.Core;
+using Xenomech.Service;
+using static Xenomech.Core.NWScript.NWScript;
+using Random = Xenomech.Service.Random;
 
-namespace SWLOR.Game.Server.Feature
+namespace Xenomech.Feature
 {
     public static class RimerCards
     {

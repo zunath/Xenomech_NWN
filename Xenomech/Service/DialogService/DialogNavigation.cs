@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service.DialogService
+﻿namespace Xenomech.Service.DialogService
 {
     public class DialogNavigation
     {

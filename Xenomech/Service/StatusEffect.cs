@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.StatusEffectService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core;
+using Xenomech.Enumeration;
+using Xenomech.Service.StatusEffectService;
+using static Xenomech.Core.NWScript.NWScript;
+using Object = Xenomech.Core.NWNX.Object;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class StatusEffect
     {
@@ -79,7 +80,7 @@ namespace SWLOR.Game.Server.Service
             // Add the status effect icon if there is one.
             if (statusEffectDetail.EffectIconId > 0)
             {
-                Core.NWNX.Object.AddIconEffect(creature, statusEffectDetail.EffectIconId);
+                Object.AddIconEffect(creature, statusEffectDetail.EffectIconId);
             }
 
             Messaging.SendMessageNearbyToPlayers(creature, $"{GetName(creature)} receives the effect of {statusEffectDetail.Name}.");
@@ -137,7 +138,7 @@ namespace SWLOR.Game.Server.Service
 
             if (statusEffectDetail.EffectIconId > 0)
             {
-                Core.NWNX.Object.RemoveIconEffect(creature, statusEffectDetail.EffectIconId);
+                Object.RemoveIconEffect(creature, statusEffectDetail.EffectIconId);
             }
 
             Messaging.SendMessageNearbyToPlayers(creature, $"{GetName(creature)}'s {statusEffectDetail.Name} effect has worn off.");

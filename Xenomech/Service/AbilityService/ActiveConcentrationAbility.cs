@@ -1,7 +1,7 @@
-﻿using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
+﻿using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
 
-namespace SWLOR.Game.Server.Service.AbilityService
+namespace Xenomech.Service.AbilityService
 {
     public class ActiveConcentrationAbility
     {

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.ChatCommandService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using static SWLOR.Game.Server.Service.Random;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.ChatCommandService;
+using static Xenomech.Core.NWScript.NWScript;
+using static Xenomech.Service.Random;
 
-namespace SWLOR.Game.Server.Feature.ChatCommandDefinition
+namespace Xenomech.Feature.ChatCommandDefinition
 {
     public class DiceChatCommand: IChatCommandListDefinition
     {

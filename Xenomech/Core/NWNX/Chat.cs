@@ -1,6 +1,6 @@
-using SWLOR.Game.Server.Core.NWNX.Enum;
+using Xenomech.Core.NWNX.Enum;
 
-namespace SWLOR.Game.Server.Core.NWNX
+namespace Xenomech.Core.NWNX
 {
     public static class Chat
     {

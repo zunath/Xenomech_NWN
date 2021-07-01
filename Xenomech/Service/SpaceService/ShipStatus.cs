@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum;
 
-namespace SWLOR.Game.Server.Service.SpaceService
+namespace Xenomech.Service.SpaceService
 {
     public class ShipStatus
     {

@@ -1,7 +1,7 @@
 ﻿using System;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     /// <summary>
     ///      *

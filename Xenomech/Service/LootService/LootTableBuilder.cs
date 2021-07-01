@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Service.LootService
+namespace Xenomech.Service.LootService
 {
     public class LootTableBuilder
     {

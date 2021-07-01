@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.StatusEffectService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Random = SWLOR.Game.Server.Service.Random;
+using Xenomech.Core;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.StatusEffectService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
+namespace Xenomech.Feature.StatusEffectDefinition
 {
     public class BurstOfSpeedStatusEffectDefinition : IStatusEffectListDefinition
     {
@@ -29,7 +29,7 @@ namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
                 .EffectIcon(25) // 25 = Haste
                 .GrantAction((source, target, length) =>
                 {
-                    Core.Effect effect = EffectMovementSpeedIncrease(20);
+                    Effect effect = EffectMovementSpeedIncrease(20);
                     TagEffect(effect, "StatusEffectType." + StatusEffectType.BurstOfSpeed1);
                     ApplyEffectToObject(DurationType.Permanent, effect, target);
 
@@ -47,7 +47,7 @@ namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
                 .EffectIcon(25) // 25 = Haste
                 .GrantAction((source, target, length) =>
                 {
-                    Core.Effect effect = EffectMovementSpeedIncrease(30);
+                    Effect effect = EffectMovementSpeedIncrease(30);
                     TagEffect(effect, "StatusEffectType." + StatusEffectType.BurstOfSpeed2);
                     ApplyEffectToObject(DurationType.Permanent, effect, target);
 
@@ -65,7 +65,7 @@ namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
                 .EffectIcon(25) // 25 = Haste
                 .GrantAction((source, target, length) =>
                 {
-                    Core.Effect effect = EffectMovementSpeedIncrease(40);
+                    Effect effect = EffectMovementSpeedIncrease(40);
                     TagEffect(effect, "StatusEffectType." + StatusEffectType.BurstOfSpeed3);
                     ApplyEffectToObject(DurationType.Permanent, effect, target);
 
@@ -83,7 +83,7 @@ namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
                 .EffectIcon(25) // 25 = Haste
                 .GrantAction((source, target, length) =>
                 {
-                    Core.Effect effect = EffectMovementSpeedIncrease(50);
+                    Effect effect = EffectMovementSpeedIncrease(50);
                     TagEffect(effect, "StatusEffectType." + StatusEffectType.BurstOfSpeed4);
                     ApplyEffectToObject(DurationType.Permanent, effect, target);
 
@@ -101,7 +101,7 @@ namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
                 .EffectIcon(25) // 25 = Haste
                 .GrantAction((source, target, length) =>
                 {
-                    Core.Effect effect = EffectMovementSpeedIncrease(60);
+                    Effect effect = EffectMovementSpeedIncrease(60);
                     TagEffect(effect, "StatusEffectType." + StatusEffectType.BurstOfSpeed5);
                     ApplyEffectToObject(DurationType.Permanent, effect, target);
 

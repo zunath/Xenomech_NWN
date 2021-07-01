@@ -1,7 +1,6 @@
 ﻿using System;
-using SWLOR.Game.Server.Core.NWNX;
 
-namespace SWLOR.Game.Server.Core
+namespace Xenomech.Core
 {
     public class Profiler : IDisposable
     {

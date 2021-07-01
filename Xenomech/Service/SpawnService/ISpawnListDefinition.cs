@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Service.SpawnService
+namespace Xenomech.Service.SpawnService
 {
     public interface ISpawnListDefinition
     {

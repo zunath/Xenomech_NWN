@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service.AbilityService
+﻿namespace Xenomech.Service.AbilityService
 {
     public enum AbilityActivationType
     {

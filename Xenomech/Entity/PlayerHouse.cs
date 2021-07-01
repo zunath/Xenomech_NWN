@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
+using Xenomech.Enumeration;
 
-namespace SWLOR.Game.Server.Entity
+namespace Xenomech.Entity
 {
     public class PlayerHouse: EntityBase
     {

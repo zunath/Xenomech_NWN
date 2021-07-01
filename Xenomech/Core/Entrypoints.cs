@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using SWLOR.Game.Server.Extension;
-using SWLOR.Game.Server.Service;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Extension;
+using Xenomech.Service;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Core
+namespace Xenomech.Core
 {
     public class Entrypoints
     {

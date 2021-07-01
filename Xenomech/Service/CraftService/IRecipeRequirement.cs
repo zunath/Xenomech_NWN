@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service.CraftService
+﻿namespace Xenomech.Service.CraftService
 {
     public interface IRecipeRequirement
     {

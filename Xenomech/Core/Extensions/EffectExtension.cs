@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 
 // ReSharper disable once CheckNamespace
-namespace SWLOR.Game.Server.Core.NWScript
+namespace Xenomech.Core.NWScript
 {
     public partial class NWScript
     {

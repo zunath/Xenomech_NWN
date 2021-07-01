@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.DialogService;
-using SWLOR.Game.Server.Service.PerkService;
-using Player = SWLOR.Game.Server.Entity.Player;
-using Skill = SWLOR.Game.Server.Service.Skill;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWNX.Enum;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.DialogService;
+using Xenomech.Service.PerkService;
+using Player = Xenomech.Entity.Player;
+using Skill = Xenomech.Service.Skill;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class ViewPerksDialog: DialogBase
     {

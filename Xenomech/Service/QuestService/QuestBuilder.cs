@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.FactionService;
+using Xenomech.Enumeration;
+using Xenomech.Service.FactionService;
 
-namespace SWLOR.Game.Server.Service.QuestService
+namespace Xenomech.Service.QuestService
 {
     public class QuestBuilder
     {

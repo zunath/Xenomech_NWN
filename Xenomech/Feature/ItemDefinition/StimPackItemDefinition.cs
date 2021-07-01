@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.ItemService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Skill = SWLOR.Game.Server.Service.Skill;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.ItemService;
+using static Xenomech.Core.NWScript.NWScript;
+using Skill = Xenomech.Service.Skill;
 
-namespace SWLOR.Game.Server.Feature.ItemDefinition
+namespace Xenomech.Feature.ItemDefinition
 {
     public class StimPackItemDefinition: IItemListDefinition
     {

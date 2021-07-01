@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using ChatChannel = SWLOR.Game.Server.Core.NWNX.Enum.ChatChannel;
-using Player = SWLOR.Game.Server.Entity.Player;
-using SkillType = SWLOR.Game.Server.Enumeration.SkillType;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using static Xenomech.Core.NWScript.NWScript;
+using ChatChannel = Xenomech.Core.NWNX.Enum.ChatChannel;
+using Player = Xenomech.Entity.Player;
+using SkillType = Xenomech.Enumeration.SkillType;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class Communication
     {

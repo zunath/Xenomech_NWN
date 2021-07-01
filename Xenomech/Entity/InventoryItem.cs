@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Entity
+﻿namespace Xenomech.Entity
 {
     public class InventoryItem : EntityBase
     {

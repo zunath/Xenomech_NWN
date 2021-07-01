@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Numerics;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.Bioware;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.AbilityService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Item = SWLOR.Game.Server.Service.Item;
+using Xenomech.Core;
+using Xenomech.Core.Bioware;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.AbilityService;
+using static Xenomech.Core.NWScript.NWScript;
+using Item = Xenomech.Service.Item;
 
-namespace SWLOR.Game.Server.Feature
+namespace Xenomech.Feature
 {
     public static class UsePerkFeat
     {

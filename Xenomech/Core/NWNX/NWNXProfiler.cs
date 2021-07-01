@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Core.NWNX
+﻿namespace Xenomech.Core.NWNX
 {
     public static class NWNXProfiler
     {

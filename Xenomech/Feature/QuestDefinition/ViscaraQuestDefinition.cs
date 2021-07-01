@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.QuestService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core;
+using Xenomech.Core.NWNX.Enum;
+using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.QuestService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.QuestDefinition
+namespace Xenomech.Feature.QuestDefinition
 {
     public class ViscaraQuestDefinition : IQuestListDefinition
     {

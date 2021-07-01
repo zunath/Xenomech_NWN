@@ -1,6 +1,6 @@
 using System;
 
-namespace SWLOR.Game.Server.Core.NWScript.Enum
+namespace Xenomech.Core.NWScript.Enum
 {
     [Flags]
     public enum ObjectType

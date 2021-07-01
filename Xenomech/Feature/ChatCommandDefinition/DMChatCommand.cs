@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.ChatCommandService;
-using SWLOR.Game.Server.Service.FactionService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Faction = SWLOR.Game.Server.Service.Faction;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.ChatCommandService;
+using Xenomech.Service.FactionService;
+using static Xenomech.Core.NWScript.NWScript;
+using Faction = Xenomech.Service.Faction;
+using Player = Xenomech.Entity.Player;
 
-namespace SWLOR.Game.Server.Feature.ChatCommandDefinition
+namespace Xenomech.Feature.ChatCommandDefinition
 {
     public class DMChatCommand: IChatCommandListDefinition
     {
@@ -681,7 +682,7 @@ namespace SWLOR.Game.Server.Feature.ChatCommandDefinition
                         BootPC(player, "The server is restarting.");
                         player = GetNextPC();
                     }
-                    Core.NWNX.Administration.ShutdownServer();
+                    Administration.ShutdownServer();
                 });
         }
     }

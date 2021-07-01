@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service.LanguageService
+﻿namespace Xenomech.Service.LanguageService
 {
     public interface ITranslator
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SWLOR.Game.Server
+namespace Xenomech
 {
     public class ApplicationSettings
     {

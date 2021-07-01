@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service.SpaceService
+﻿namespace Xenomech.Service.SpaceService
 {
     public enum ShipModulePowerType
     {

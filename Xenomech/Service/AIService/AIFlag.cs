@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SWLOR.Game.Server.Service.AIService
+namespace Xenomech.Service.AIService
 {
     [Flags]
     public enum AIFlag

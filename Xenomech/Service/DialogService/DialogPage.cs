@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Service.DialogService
+namespace Xenomech.Service.DialogService
 {
     public class DialogPage
     {

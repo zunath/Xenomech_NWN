@@ -1,4 +1,4 @@
-namespace SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect
+namespace Xenomech.Core.NWScript.Enum.VisualEffect
 {
     public enum VisualEffect
     {

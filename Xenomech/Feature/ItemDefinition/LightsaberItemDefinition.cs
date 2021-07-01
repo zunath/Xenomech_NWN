@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.Bioware;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.ItemService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Player = SWLOR.Game.Server.Entity.Player;
+using Xenomech.Core.Bioware;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.ItemService;
+using static Xenomech.Core.NWScript.NWScript;
+using Player = Xenomech.Entity.Player;
 
-namespace SWLOR.Game.Server.Feature.ItemDefinition
+namespace Xenomech.Feature.ItemDefinition
 {
     public class LightsaberItemDefinition: IItemListDefinition
     {

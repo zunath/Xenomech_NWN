@@ -1,13 +1,12 @@
-﻿using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.DialogService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Player = SWLOR.Game.Server.Entity.Player;
+﻿using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Service;
+using Xenomech.Service.DialogService;
+using static Xenomech.Core.NWScript.NWScript;
+using Player = Xenomech.Entity.Player;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class OutfitDialog: DialogBase
     {

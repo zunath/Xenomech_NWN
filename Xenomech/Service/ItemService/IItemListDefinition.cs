@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Service.ItemService
+namespace Xenomech.Service.ItemService
 {
     public interface IItemListDefinition
     {

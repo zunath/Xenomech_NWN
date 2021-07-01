@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Service;
-using ItemProperty = SWLOR.Game.Server.Core.ItemProperty;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Service;
+using ItemProperty = Xenomech.Core.ItemProperty;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature
+namespace Xenomech.Feature
 {
     public static class EquipmentStats
     {

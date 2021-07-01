@@ -1,9 +1,9 @@
 using System;
 using System.Numerics;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Area;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Area;
 
-namespace SWLOR.Game.Server.Core.NWScript
+namespace Xenomech.Core.NWScript
 {
     public partial class NWScript
     {

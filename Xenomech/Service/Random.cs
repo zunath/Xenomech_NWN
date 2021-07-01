@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service
+﻿namespace Xenomech.Service
 {
     public static class Random
     {

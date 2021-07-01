@@ -1,8 +1,7 @@
-﻿using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Enumeration;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service.AbilityService
+namespace Xenomech.Service.AbilityService
 {
     /// <summary>
     /// Adds an FP requirement to activate a perk.

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Feature.DialogDefinition;
-using SWLOR.Game.Server.Service.ItemService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Dialog = SWLOR.Game.Server.Service.Dialog;
+using Xenomech.Feature.DialogDefinition;
+using Xenomech.Service.ItemService;
+using static Xenomech.Core.NWScript.NWScript;
+using Dialog = Xenomech.Service.Dialog;
 
-namespace SWLOR.Game.Server.Feature.ItemDefinition
+namespace Xenomech.Feature.ItemDefinition
 {
     public class DestroyItemDefinition: IItemListDefinition
     {

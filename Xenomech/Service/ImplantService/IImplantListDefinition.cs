@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Service.ImplantService
+namespace Xenomech.Service.ImplantService
 {
     public interface IImplantListDefinition
     {

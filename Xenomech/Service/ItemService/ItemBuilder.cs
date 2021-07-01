@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum;
 
-namespace SWLOR.Game.Server.Service.ItemService
+namespace Xenomech.Service.ItemService
 {
     public class ItemBuilder
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Service.SpaceService
+namespace Xenomech.Service.SpaceService
 {
     public class SpaceObjectDetail
     {

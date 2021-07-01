@@ -1,6 +1,6 @@
 
 
-namespace SWLOR.Game.Server.Core.NWNX.Enum
+namespace Xenomech.Core.NWNX.Enum
 {
     public class ItemPropertyUnpacked
     {

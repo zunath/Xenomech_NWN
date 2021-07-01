@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace SWLOR.Game.Server.Extension
+namespace Xenomech.Extension
 {
     public static class ExceptionExtensions
     {

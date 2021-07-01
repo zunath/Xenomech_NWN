@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Core.NWScript;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.QuestService;
+using Xenomech.Core.NWNX.Enum;
+using Xenomech.Core.NWScript;
+using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.QuestService;
 
-namespace SWLOR.Game.Server.Feature.QuestDefinition
+namespace Xenomech.Feature.QuestDefinition
 {
     public class CZ220QuestDefinition: IQuestListDefinition
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SWLOR.Game.Server.Entity
+namespace Xenomech.Entity
 {
     public class BugReport: EntityBase
     {

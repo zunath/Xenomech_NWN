@@ -1,7 +1,7 @@
-﻿using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWScript.Enum;
+﻿using Xenomech.Core;
+using Xenomech.Core.NWScript.Enum;
 
-namespace SWLOR.Game.Server.Service.ItemService
+namespace Xenomech.Service.ItemService
 {
     public delegate void ApplyItemEffectsDelegate(uint user, uint item, uint target, Location targetLocation);
 

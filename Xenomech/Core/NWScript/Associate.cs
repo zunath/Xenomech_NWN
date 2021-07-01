@@ -1,7 +1,7 @@
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Associate;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Associate;
 
-namespace SWLOR.Game.Server.Core.NWScript
+namespace Xenomech.Core.NWScript
 {
     public partial class NWScript
     {

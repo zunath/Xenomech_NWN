@@ -1,7 +1,7 @@
-﻿using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.PerkService;
+﻿using Xenomech.Enumeration;
+using Xenomech.Service.PerkService;
 
-namespace SWLOR.Game.Server.Service.CraftService
+namespace Xenomech.Service.CraftService
 {
     public class RecipePerkRequirement: IRecipeRequirement
     {

@@ -1,8 +1,6 @@
-﻿
-using SWLOR.Game.Server.Entity;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service.AbilityService
+namespace Xenomech.Service.AbilityService
 {
     /// <summary>
     /// Adds a stamina requirement to activate a perk.

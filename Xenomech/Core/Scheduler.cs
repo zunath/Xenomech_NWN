@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using SWLOR.Game.Server.Core.Extensions;
+using Xenomech.Core.Extensions;
 
-namespace SWLOR.Game.Server.Core
+namespace Xenomech.Core
 {
     public static class Scheduler
     {

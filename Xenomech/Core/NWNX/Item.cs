@@ -1,6 +1,6 @@
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
+using Xenomech.Core.NWScript.Enum.Item;
 
-namespace SWLOR.Game.Server.Core.NWNX
+namespace Xenomech.Core.NWNX
 {
     public static class Item
     {

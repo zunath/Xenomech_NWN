@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Feature.DialogDefinition;
-using Player = SWLOR.Game.Server.Entity.Player;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Enumeration;
+using Xenomech.Feature.DialogDefinition;
+using Player = Xenomech.Entity.Player;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static partial class Perk
     {

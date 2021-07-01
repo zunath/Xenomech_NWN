@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.QuestService;
+using Xenomech.Core.NWNX.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.QuestService;
 
-namespace SWLOR.Game.Server.Feature.QuestDefinition
+namespace Xenomech.Feature.QuestDefinition
 {
     public class HutlarQuestDefinition: IQuestListDefinition
     {

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.SnippetService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Service;
+using Xenomech.Service.SnippetService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.SnippetDefinition
+namespace Xenomech.Feature.SnippetDefinition
 {
     public class MerchantSnippetDefinition: ISnippetListDefinition
     {

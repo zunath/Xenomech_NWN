@@ -1,4 +1,4 @@
-namespace SWLOR.Game.Server.Core.NWScript.Enum.Creature
+namespace Xenomech.Core.NWScript.Enum.Creature
 {
     public enum CreatureSize
     {

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.StatusEffectService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.StatusEffectService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
+namespace Xenomech.Feature.StatusEffectDefinition
 {
     public class ImplantInstallationStatusEffectDefinition: IStatusEffectListDefinition
     {

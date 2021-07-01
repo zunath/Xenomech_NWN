@@ -1,6 +1,6 @@
 
 
-namespace SWLOR.Game.Server.Core.NWNX
+namespace Xenomech.Core.NWNX
 {
     public enum DetectionMethod
     {

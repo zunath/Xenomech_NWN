@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.CraftService;
+using Xenomech.Enumeration;
+using Xenomech.Service.CraftService;
 
-namespace SWLOR.Game.Server.Feature.RecipeDefinition.FabricationRecipeDefinition
+namespace Xenomech.Feature.RecipeDefinition.FabricationRecipeDefinition
 {
     public class FabricationRecipes3 : IRecipeListDefinition
     {

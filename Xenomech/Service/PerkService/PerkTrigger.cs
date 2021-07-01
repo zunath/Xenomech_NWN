@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service.PerkService
+﻿namespace Xenomech.Service.PerkService
 {
     public enum PerkTrigger
     {

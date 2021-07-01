@@ -1,11 +1,10 @@
-﻿using System;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Service.DialogService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using BaseItem = SWLOR.Game.Server.Core.NWScript.Enum.Item.BaseItem;
+﻿using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Service.DialogService;
+using static Xenomech.Core.NWScript.NWScript;
+using BaseItem = Xenomech.Core.NWScript.Enum.Item.BaseItem;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class ModifyItemAppearanceDialog: DialogBase
     {

@@ -1,14 +1,14 @@
 ﻿using System;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.DialogService;
-using Player = SWLOR.Game.Server.Entity.Player;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Entity;
+using Xenomech.Service;
+using Xenomech.Service.DialogService;
+using static Xenomech.Core.NWScript.NWScript;
+using Object = Xenomech.Core.NWNX.Object;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class PlayerMarketDialog: DialogBase
     {
@@ -285,8 +285,8 @@ namespace SWLOR.Game.Server.Feature.DialogDefinition
             {
                 page.AddResponse(ColorToken.Red("CONFIRM REMOVE ITEM"), () =>
                 {
-                    var inWorldItem = Core.NWNX.Object.Deserialize(item.Data);
-                    Core.NWNX.Object.AcquireItem(player, inWorldItem);
+                    var inWorldItem = Object.Deserialize(item.Data);
+                    Object.AcquireItem(player, inWorldItem);
                     dbPlayerStore.ItemsForSale.Remove(model.SelectedItemId);
 
                     DB.Set(playerId, dbPlayerStore);

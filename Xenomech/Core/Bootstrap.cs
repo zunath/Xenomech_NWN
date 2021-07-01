@@ -3,7 +3,7 @@ using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace SWLOR.Game.Server.Core
+namespace Xenomech.Core
 {
     internal partial class Internal
     {

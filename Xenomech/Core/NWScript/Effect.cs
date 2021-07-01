@@ -1,13 +1,13 @@
 using System.Numerics;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item.Property;
-using SWLOR.Game.Server.Core.NWScript.Enum.VisualEffect;
-using Alignment = SWLOR.Game.Server.Core.NWScript.Enum.Alignment;
-using DamageType = SWLOR.Game.Server.Core.NWScript.Enum.DamageType;
-using RacialType = SWLOR.Game.Server.Core.NWScript.Enum.RacialType;
-using SpellSchool = SWLOR.Game.Server.Core.NWScript.Enum.SpellSchool;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item.Property;
+using Xenomech.Core.NWScript.Enum.VisualEffect;
+using Alignment = Xenomech.Core.NWScript.Enum.Alignment;
+using DamageType = Xenomech.Core.NWScript.Enum.DamageType;
+using RacialType = Xenomech.Core.NWScript.Enum.RacialType;
+using SpellSchool = Xenomech.Core.NWScript.Enum.SpellSchool;
 
-namespace SWLOR.Game.Server.Core.NWScript
+namespace Xenomech.Core.NWScript
 {
     public partial class NWScript
     {

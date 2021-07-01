@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service.LootService
+﻿namespace Xenomech.Service.LootService
 {
     public class LootTableItem
     {

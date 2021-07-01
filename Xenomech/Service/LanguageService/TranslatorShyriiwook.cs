@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace SWLOR.Game.Server.Service.LanguageService
+namespace Xenomech.Service.LanguageService
 {
     public class TranslatorShyriiwook : ITranslator
     {

@@ -1,16 +1,16 @@
 ﻿using System;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.DialogService;
-using Dialog = SWLOR.Game.Server.Service.Dialog;
-using Player = SWLOR.Game.Server.Entity.Player;
-using Skill = SWLOR.Game.Server.Service.Skill;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.DialogService;
+using Dialog = Xenomech.Service.Dialog;
+using Player = Xenomech.Entity.Player;
+using Skill = Xenomech.Service.Skill;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.DialogDefinition
+namespace Xenomech.Feature.DialogDefinition
 {
     public class RestMenuDialog : DialogBase
     {

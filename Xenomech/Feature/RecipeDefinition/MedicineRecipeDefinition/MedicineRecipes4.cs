@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.CraftService;
+using Xenomech.Enumeration;
+using Xenomech.Service.CraftService;
 
-namespace SWLOR.Game.Server.Feature.RecipeDefinition.MedicineRecipeDefinition
+namespace Xenomech.Feature.RecipeDefinition.MedicineRecipeDefinition
 {
     public class MedicineRecipes4 : IRecipeListDefinition
     {

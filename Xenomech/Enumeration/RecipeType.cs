@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Enumeration
+﻿namespace Xenomech.Enumeration
 {
     public enum RecipeType
     {

@@ -1,8 +1,8 @@
 ﻿using System.Numerics;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using static Xenomech.Core.NWScript.NWScript;
 using static System.Math;
 
-namespace SWLOR.Game.Server.Core.Bioware
+namespace Xenomech.Core.Bioware
 {
     public static class BiowareVector
     {

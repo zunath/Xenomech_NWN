@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service.DialogService
+namespace Xenomech.Service.DialogService
 {
     public abstract class DialogBase : IConversation
     {

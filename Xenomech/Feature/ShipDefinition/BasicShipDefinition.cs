@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.SpaceService;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service.SpaceService;
 
-namespace SWLOR.Game.Server.Feature.ShipDefinition
+namespace Xenomech.Feature.ShipDefinition
 {
     public class BasicShipDefinition: IShipListDefinition
     {

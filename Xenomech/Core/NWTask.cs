@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SWLOR.Game.Server.Core
+namespace Xenomech.Core
 {
     /// <summary>
     /// Awaiters for running NWN code in an async context.

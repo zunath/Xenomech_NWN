@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using Player = SWLOR.Game.Server.Entity.Player;
-using Skill = SWLOR.Game.Server.Core.NWScript.Enum.Skill;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Race = SWLOR.Game.Server.Service.Race;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Player = Xenomech.Entity.Player;
+using Skill = Xenomech.Core.NWScript.Enum.Skill;
+using static Xenomech.Core.NWScript.NWScript;
+using Race = Xenomech.Service.Race;
 
-namespace SWLOR.Game.Server.Feature
+namespace Xenomech.Feature
 {
     public class PlayerInitialization
     {

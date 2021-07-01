@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Service.AIService;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Service.AIService;
 
-namespace SWLOR.Game.Server.Service.SpawnService
+namespace Xenomech.Service.SpawnService
 {
     public class SpawnObject
     {

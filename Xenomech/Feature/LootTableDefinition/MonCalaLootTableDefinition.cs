@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Service.LootService;
+using Xenomech.Service.LootService;
 
-namespace SWLOR.Game.Server.Feature.LootTableDefinition
+namespace Xenomech.Feature.LootTableDefinition
 {
     public class MonCalaLootTableDefinition: ILootTableDefinition
     {

@@ -1,4 +1,4 @@
-namespace SWLOR.Game.Server.Core.NWScript.Enum.Item.Property
+namespace Xenomech.Core.NWScript.Enum.Item.Property
 {
     public enum Class
     {

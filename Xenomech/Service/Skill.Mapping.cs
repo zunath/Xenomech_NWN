@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Enumeration;
+using Xenomech.Core;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Enumeration;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static partial class Skill
     {

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Feature.DialogDefinition;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.ChatCommandService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Dialog = SWLOR.Game.Server.Service.Dialog;
-using HoloCom = SWLOR.Game.Server.Service.HoloCom;
-using Player = SWLOR.Game.Server.Entity.Player;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Feature.DialogDefinition;
+using Xenomech.Service;
+using Xenomech.Service.ChatCommandService;
+using static Xenomech.Core.NWScript.NWScript;
+using Dialog = Xenomech.Service.Dialog;
+using HoloCom = Xenomech.Service.HoloCom;
+using Player = Xenomech.Entity.Player;
 
-namespace SWLOR.Game.Server.Feature.ChatCommandDefinition
+namespace Xenomech.Feature.ChatCommandDefinition
 {
     public class CharacterChatCommand: IChatCommandListDefinition
     {

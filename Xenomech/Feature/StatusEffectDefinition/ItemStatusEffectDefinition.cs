@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.StatusEffectService;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.StatusEffectService;
 
-namespace SWLOR.Game.Server.Feature.StatusEffectDefinition
+namespace Xenomech.Feature.StatusEffectDefinition
 {
     public class ItemStatusEffectDefinition: IStatusEffectListDefinition
     {

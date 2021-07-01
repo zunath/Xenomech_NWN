@@ -1,9 +1,9 @@
-using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Creature;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
+using Xenomech.Core.NWNX.Enum;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Creature;
+using Xenomech.Core.NWScript.Enum.Item;
 
-namespace SWLOR.Game.Server.Core.NWNX
+namespace Xenomech.Core.NWNX
 {
     public static class Weapon
     {

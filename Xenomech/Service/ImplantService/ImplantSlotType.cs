@@ -1,4 +1,4 @@
-﻿namespace SWLOR.Game.Server.Service.ImplantService
+﻿namespace Xenomech.Service.ImplantService
 {
     public enum ImplantSlotType
     {

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Feature.DialogDefinition;
-using Player = SWLOR.Game.Server.Entity.Player;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core.NWNX;
+using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Feature.DialogDefinition;
+using Player = Xenomech.Entity.Player;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service.QuestService
+namespace Xenomech.Service.QuestService
 {
     public delegate void AcceptQuestDelegate(uint player, uint questSourceObject);
     public delegate void AdvanceQuestDelegate(uint player, uint questSourceObject, int questState);

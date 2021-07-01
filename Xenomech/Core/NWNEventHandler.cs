@@ -1,6 +1,6 @@
 using System;
 
-namespace SWLOR.Game.Server.Core
+namespace Xenomech.Core
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public class NWNEventHandler : Attribute

@@ -1,8 +1,8 @@
-﻿using SWLOR.Game.Server.Core.NWNX.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Core.NWNX.Enum;
+using Xenomech.Core.NWScript.Enum;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Core.NWNX
+namespace Xenomech.Core.NWNX
 {
     public static class PlayerQuickBarSlot
     {

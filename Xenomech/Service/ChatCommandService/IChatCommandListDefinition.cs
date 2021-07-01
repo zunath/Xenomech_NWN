@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Service.ChatCommandService
+namespace Xenomech.Service.ChatCommandService
 {
     public interface IChatCommandListDefinition
     {

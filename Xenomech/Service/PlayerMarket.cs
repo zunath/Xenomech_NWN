@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWNX;
-using SWLOR.Game.Server.Core.NWScript;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Entity;
-using Object = SWLOR.Game.Server.Core.NWNX.Object;
-using Player = SWLOR.Game.Server.Entity.Player;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core;
+using Xenomech.Core.NWNX;
+using Xenomech.Core.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Entity;
+using Object = Xenomech.Core.NWNX.Object;
+using Player = Xenomech.Entity.Player;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class PlayerMarket
     {
@@ -248,7 +248,7 @@ namespace SWLOR.Game.Server.Service
                 StoreMerchants.Remove(sellerPlayerId);
                 StoresOpen.Remove(sellerPlayerId);
 
-                DestroyObject(store);
+                NWScript.DestroyObject(store);
             }
         }
 

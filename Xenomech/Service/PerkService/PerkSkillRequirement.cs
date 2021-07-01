@@ -1,8 +1,8 @@
-﻿using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Entity;
+using Xenomech.Enumeration;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Service.PerkService
+namespace Xenomech.Service.PerkService
 {
     /// <summary>
     /// Adds a minimum skill level as a requirement to purchase or activate a perk.

@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Service.ImplantService;
+using Xenomech.Service.ImplantService;
 
-namespace SWLOR.Game.Server.Feature.ImplantDefinition
+namespace Xenomech.Feature.ImplantDefinition
 {
     public class QuicknessImplantDefinition: IImplantListDefinition
     {

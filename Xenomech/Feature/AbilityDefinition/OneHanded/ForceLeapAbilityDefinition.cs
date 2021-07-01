@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Core.NWScript.Enum.Item;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.AbilityService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Random = SWLOR.Game.Server.Service.Random;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.AbilityService;
+using static Xenomech.Core.NWScript.NWScript;
+using Random = Xenomech.Service.Random;
 
-namespace SWLOR.Game.Server.Feature.AbilityDefinition.OneHanded
+namespace Xenomech.Feature.AbilityDefinition.OneHanded
 {
     public class ForceLeapAbilityDefinition : IAbilityListDefinition
     {

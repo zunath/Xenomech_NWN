@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.ChatCommandService;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service.ChatCommandService;
 
-namespace SWLOR.Game.Server.Feature.ChatCommandDefinition
+namespace Xenomech.Feature.ChatCommandDefinition
 {
     public class EmoteChatCommand: IChatCommandListDefinition
     {

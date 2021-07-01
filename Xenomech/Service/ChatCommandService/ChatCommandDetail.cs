@@ -1,7 +1,7 @@
-﻿using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Enumeration;
+﻿using Xenomech.Core;
+using Xenomech.Enumeration;
 
-namespace SWLOR.Game.Server.Service.ChatCommandService
+namespace Xenomech.Service.ChatCommandService
 {
     public class ChatCommandDetail
     {

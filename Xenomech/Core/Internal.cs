@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SWLOR.Game.Server.Core
+namespace Xenomech.Core
 {
     internal partial class Internal
     {

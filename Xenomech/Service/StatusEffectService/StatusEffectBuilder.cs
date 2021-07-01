@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using SWLOR.Game.Server.Enumeration;
+﻿using System.Collections.Generic;
+using Xenomech.Enumeration;
 
-namespace SWLOR.Game.Server.Service.StatusEffectService
+namespace Xenomech.Service.StatusEffectService
 {
     public class StatusEffectBuilder
     {

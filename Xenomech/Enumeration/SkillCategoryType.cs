@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SWLOR.Game.Server.Enumeration
+namespace Xenomech.Enumeration
 {
     public enum SkillCategoryType
     {

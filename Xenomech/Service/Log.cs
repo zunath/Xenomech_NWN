@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Serilog;
 using Serilog.Core;
-using SWLOR.Game.Server.Core;
+using Xenomech.Core;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public enum LogGroup
     {

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Extension;
-using SWLOR.Game.Server.Service.PerkService;
+using Xenomech.Core;
+using Xenomech.Enumeration;
+using Xenomech.Extension;
+using Xenomech.Service.PerkService;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static partial class Perk
     {

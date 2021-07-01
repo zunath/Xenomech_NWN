@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SWLOR.Game.Server.Service.TaxiService
+namespace Xenomech.Service.TaxiService
 {
     public enum TaxiDestinationType
     {

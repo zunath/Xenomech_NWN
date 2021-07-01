@@ -1,9 +1,9 @@
-﻿using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Service;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+﻿using Xenomech.Core;
+using Xenomech.Entity;
+using Xenomech.Service;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature
+namespace Xenomech.Feature
 {
     public class PersistentMapProgression
     {

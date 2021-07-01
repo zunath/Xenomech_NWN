@@ -1,4 +1,4 @@
-namespace SWLOR.Game.Server.Core.NWScript.Enum.Item
+namespace Xenomech.Core.NWScript.Enum.Item
 {
     public enum BaseItem
     {

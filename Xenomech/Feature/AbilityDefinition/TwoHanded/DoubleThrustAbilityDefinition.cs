@@ -1,13 +1,13 @@
 ﻿//using Random = SWLOR.Game.Server.Service.Random;
 
 using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service;
-using SWLOR.Game.Server.Service.AbilityService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
+using Xenomech.Service;
+using Xenomech.Service.AbilityService;
+using static Xenomech.Core.NWScript.NWScript;
 
-namespace SWLOR.Game.Server.Feature.AbilityDefinition.TwoHanded
+namespace Xenomech.Feature.AbilityDefinition.TwoHanded
 {
     public class DoubleThrustAbilityDefinition : IAbilityListDefinition
     {

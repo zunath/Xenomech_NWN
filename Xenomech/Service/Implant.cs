@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SWLOR.Game.Server.Core;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Entity;
-using SWLOR.Game.Server.Enumeration;
-using SWLOR.Game.Server.Service.ImplantService;
-using static SWLOR.Game.Server.Core.NWScript.NWScript;
-using Object = SWLOR.Game.Server.Core.NWNX.Object;
+using Xenomech.Core;
+using Xenomech.Core.NWScript;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Entity;
+using Xenomech.Enumeration;
+using Xenomech.Service.ImplantService;
+using static Xenomech.Core.NWScript.NWScript;
+using Object = Xenomech.Core.NWNX.Object;
 
-namespace SWLOR.Game.Server.Service
+namespace Xenomech.Service
 {
     public static class Implant
     {

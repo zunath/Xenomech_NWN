@@ -1,4 +1,4 @@
-namespace SWLOR.Game.Server.Core.NWScript.Enum
+namespace Xenomech.Core.NWScript.Enum
 {
     public enum FootstepType
     {

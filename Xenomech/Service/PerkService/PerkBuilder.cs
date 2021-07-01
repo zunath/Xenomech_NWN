@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using SWLOR.Game.Server.Core.NWScript.Enum;
-using SWLOR.Game.Server.Enumeration;
+using Xenomech.Core.NWScript.Enum;
+using Xenomech.Enumeration;
 
-namespace SWLOR.Game.Server.Service.PerkService
+namespace Xenomech.Service.PerkService
 {
     public class PerkBuilder
     {
