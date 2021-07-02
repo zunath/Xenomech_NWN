@@ -14,6 +14,7 @@ namespace Xenomech.Feature
         {
             Feedback.SetFeedbackMessageHidden(FeedbackMessageTypes.UseitemCantUse, true);
             Feedback.SetFeedbackMessageHidden(FeedbackMessageTypes.CombatRunningOutOfAmmo, true);
+            Feedback.SetFeedbackMessageHidden(FeedbackMessageTypes.CombatOutOfAmmo, true);
         }
     }
 }

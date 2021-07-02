@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 using Xenomech.Core;
 using Xenomech.Core.Bioware;
 using Xenomech.Core.NWNX;
@@ -31,6 +32,17 @@ namespace Xenomech.Service
         }
 
         /// <summary>
+        /// When the player enters the server, clear any temporary data which may still reside on their PC.
+        /// </summary>
+        [NWNEventHandler("mod_enter")]
+        public static void ClearTemporaryData()
+        {
+            var player = GetEnteringObject();
+            DeleteLocalBool(player, "IS_ATTACKING");
+            SetCommandable(true, player);
+        }
+
+        /// <summary>
         /// When a creature inputs an attack command, if they are equipped with a gun, skip normal NWN combat and use
         /// this custom system.
         /// </summary>
@@ -42,17 +54,33 @@ namespace Xenomech.Service
             var weapon = GetItemInSlot(InventorySlot.RightHand, attacker);
             var gunType = GetGunType(weapon);
             if (gunType == GunType.Invalid) return;
+            if (GetLocalBool(attacker, "IS_ATTACKING")) return;
 
             var firingMode = GetCurrentFiringMode(weapon);
             var bullets = firingMode == FiringModeType.ThreeRoundBurst ? 3 : 1;
-            
+            var gunDetail = _gunTypes[gunType];
+            var totalAttackTime = gunDetail.AnimationDuration * bullets + 0.1f;
+
+            ClearAllActions();
             Events.SkipEvent();
             BiowarePosition.TurnToFaceObject(target, attacker);
 
-            for (var count = 1; count <= bullets; count++)
+            AssignCommand(attacker, () =>
             {
-                FireBullet(attacker, target, gunType);
+                ActionPlayAnimation(gunDetail.AnimationType, gunDetail.AnimationSpeed, gunDetail.AnimationDuration * bullets);
+            });
+
+            for (var shotCount = 1; shotCount <= bullets; shotCount++)
+            {
+                FireBullet(attacker, target, shotCount, gunType);
             }
+
+            SetLocalBool(attacker, "IS_ATTACKING", true);
+            DelayCommand(totalAttackTime, () =>
+            {
+                DeleteLocalBool(attacker, "IS_ATTACKING");
+                ClearAllActions();
+            });
         }
 
         /// <summary>
@@ -106,24 +134,19 @@ namespace Xenomech.Service
             }
         }
 
-        private static void FireBullet(uint attacker, uint target, GunType gunType)
+        private static void FireBullet(uint attacker, uint target, int shotCount, GunType gunType)
         {
             var gunDetail = _gunTypes[gunType];
-
-            AssignCommand(attacker, () => 
-            {
-                ActionPlayAnimation(gunDetail.AnimationType, gunDetail.AnimationSpeed, gunDetail.AnimationDuration);
-            });
-
+            
             // Todo: Determine target based on line of sight / cone in front of attacker
             DelayCommand(gunDetail.ShotDelay, () =>
             {
                 ApplyEffectToObject(DurationType.Instant, EffectDamage(1), target);
             });
-
-            DelayCommand(gunDetail.SoundDelay, () =>
+            
+            DelayCommand(gunDetail.SoundDelay * shotCount, () =>
             {
-                PlaySound(gunDetail.SoundFile);
+                ApplyEffectAtLocation(DurationType.Instant, EffectVisualEffect(gunDetail.AudioVFX), GetLocation(attacker));
             });
         }
 
