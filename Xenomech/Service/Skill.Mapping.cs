@@ -44,8 +44,6 @@ namespace Xenomech.Service
             _itemToSkillMapping[BaseItem.ShortSword] = SkillType.OneHanded;
             _itemToSkillMapping[BaseItem.Sickle] = SkillType.OneHanded;
             _itemToSkillMapping[BaseItem.Whip] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Lightsaber] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Saberstaff] = SkillType.OneHanded;
 
             // Two-Handed Skills
             _itemToSkillMapping[BaseItem.DireMace] = SkillType.TwoHanded;
@@ -68,14 +66,14 @@ namespace Xenomech.Service
             _itemToSkillMapping[BaseItem.QuarterStaff] = SkillType.MartialArts;
 
             // Ranged Skills
-            _itemToSkillMapping[BaseItem.Cannon] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Rifle] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Longbow] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Pistol] = SkillType.Ranged;
+            _itemToSkillMapping[BaseItem.Longarm] = SkillType.Ranged;
+            _itemToSkillMapping[BaseItem.HeavyWeapon] = SkillType.Ranged;
+            _itemToSkillMapping[BaseItem.Handgun] = SkillType.Ranged;
+            _itemToSkillMapping[BaseItem.SmallArm] = SkillType.Ranged;
             _itemToSkillMapping[BaseItem.Arrow] = SkillType.Ranged;
             _itemToSkillMapping[BaseItem.Bolt] = SkillType.Ranged;
             _itemToSkillMapping[BaseItem.Bullet] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Sling] = SkillType.Ranged;
+            _itemToSkillMapping[BaseItem.SmallArmOffHand] = SkillType.Ranged;
             _itemToSkillMapping[BaseItem.Grenade] = SkillType.Ranged;
             _itemToSkillMapping[BaseItem.Shuriken] = SkillType.Ranged;
             _itemToSkillMapping[BaseItem.ThrowingAxe] = SkillType.Ranged;

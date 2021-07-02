@@ -76,7 +76,7 @@ namespace Xenomech.Service
             var weapon = GetItemInSlot(InventorySlot.RightHand);
             
             if (Item.PistolBaseItemTypes.Contains(GetBaseItemType(weapon)) ||
-                GetBaseItemType(weapon) == BaseItem.Sling)
+                GetBaseItemType(weapon) == BaseItem.OffHandPistol)
             {
                 ClearAllActions();
 
@@ -161,11 +161,11 @@ namespace Xenomech.Service
             {
                 ToggleDualModeWeapon(player);
             }
-            else if (GetBaseItemType(item) == BaseItem.Sling && !dbPlayer.IsUsingDualPistolMode)
+            else if (GetBaseItemType(item) == BaseItem.OffHandPistol && !dbPlayer.IsUsingDualPistolMode)
             {
                 ToggleDualModeWeapon(player);
             }            
-            else if (GetBaseItemType(item) == BaseItem.Sling && dbPlayer.IsUsingDualPistolMode)
+            else if (GetBaseItemType(item) == BaseItem.OffHandPistol && dbPlayer.IsUsingDualPistolMode)
             {
                 DelayCommand(0.2f, () => { HandleOffhand(player, item); });
             }
@@ -179,7 +179,7 @@ namespace Xenomech.Service
 
             if (!GetIsPC(player)) return;
 
-            if (GetBaseItemType(item) == BaseItem.Sling)
+            if (GetBaseItemType(item) == BaseItem.OffHandPistol)
             {
                 var offHandPistol = GetItemInSlot(InventorySlot.LeftHand, player);
                 //Console.WriteLine("Un Equiping Sling based item.");
@@ -208,7 +208,7 @@ namespace Xenomech.Service
             if (GetBaseItemType(item) == BaseItem.OffHandPistol)
             {                
                 var mainHandItem = GetItemInSlot(InventorySlot.RightHand, player);
-                if (GetBaseItemType(mainHandItem) == BaseItem.Sling)
+                if (GetBaseItemType(mainHandItem) == BaseItem.OffHandPistol)
                 {
                     AssignCommand(player, () =>
                     {

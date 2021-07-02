@@ -1,7 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <LangVersion>8.0</LangVersion>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,5 +15,18 @@
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="StackExchange.Redis" Version="2.2.62" />
   </ItemGroup>
+
+  <Target Name="NWN" AfterTargets="Build">
+    <ItemGroup>
+      <AllOutputs Include="$(OutputPath)$(MSBuildProjectName).dll" />
+      <AllOutputs Include="$(OutputPath)$(MSBuildProjectName).pdb" />
+      <AllOutputs Include="$(OutputPath)$(MSBuildProjectName).runtimeconfig.json" />
+      <AllOutputs Include="$(OutputPath)$(MSBuildProjectName).deps.json" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="$(SolutionDir)NWN.Python\deployBuild.exe -b $(ProjectDir)$(OutDir)" />
+  </Target>
 
 </Project>

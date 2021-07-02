@@ -316,7 +316,6 @@ namespace Xenomech.Service
             BaseItem.Sickle,
             BaseItem.Whip,
             BaseItem.HandAxe,
-            BaseItem.Lightsaber,
             BaseItem.GreatAxe,
             BaseItem.GreatSword,
             BaseItem.DwarvenWarAxe,
@@ -326,16 +325,15 @@ namespace Xenomech.Service
             BaseItem.Trident,
             BaseItem.DoubleAxe,
             BaseItem.TwoBladedSword,
-            BaseItem.Saberstaff,
-            BaseItem.Knuckles,
+            BaseItem.Gloves,
             BaseItem.QuarterStaff,
             BaseItem.LightMace,
-            BaseItem.Pistol,
+            BaseItem.Handgun,
             BaseItem.ThrowingAxe,
             BaseItem.Shuriken,
             BaseItem.Dart,
-            BaseItem.Cannon,
-            BaseItem.Longbow,
+            BaseItem.HeavyWeapon,
+            BaseItem.Longarm,
         };
 
         /// <summary>
@@ -384,14 +382,6 @@ namespace Xenomech.Service
         };
 
         /// <summary>
-        /// Retrieves the list of Lightsaber base item types.
-        /// </summary>
-        public static List<BaseItem> LightsaberBaseItemTypes { get; } = new List<BaseItem>
-        {
-            BaseItem.Lightsaber
-        };
-
-        /// <summary>
         /// Retrieves the list of Heavy Vibroblade base item types.
         /// </summary>
         public static List<BaseItem> HeavyVibrobladeBaseItemTypes { get; } = new List<BaseItem>
@@ -420,21 +410,13 @@ namespace Xenomech.Service
             BaseItem.DoubleAxe,
             BaseItem.TwoBladedSword
         };
-
-        /// <summary>
-        /// Retrieves the list of Saberstaff base item types.
-        /// </summary>
-        public static List<BaseItem> SaberstaffBaseItemTypes { get; } = new List<BaseItem>
-        {
-            BaseItem.Saberstaff,
-        };
-
+        
         /// <summary>
         /// Retrieves the list of Knuckles base item types.
         /// </summary>
         public static List<BaseItem> KnucklesBaseItemTypes { get; } = new List<BaseItem>
         {
-            BaseItem.Knuckles
+            BaseItem.Gloves
         };
 
         /// <summary>
@@ -453,7 +435,7 @@ namespace Xenomech.Service
         /// </summary>
         public static List<BaseItem> PistolBaseItemTypes { get; } = new List<BaseItem>
         {
-            BaseItem.Pistol
+            BaseItem.Handgun
         };
 
         /// <summary>
@@ -471,7 +453,7 @@ namespace Xenomech.Service
         /// </summary>
         public static List<BaseItem> CannonBaseItemTypes { get; } = new List<BaseItem>
         {
-            BaseItem.Cannon
+            BaseItem.HeavyWeapon
         };
 
         /// <summary>
@@ -479,7 +461,7 @@ namespace Xenomech.Service
         /// </summary>
         public static List<BaseItem> RifleBaseItemTypes { get; } = new List<BaseItem>
         {
-            BaseItem.Longbow
+            BaseItem.Longarm
         };
 
         /// <summary>
@@ -500,9 +482,7 @@ namespace Xenomech.Service
             BaseItem.Sickle,
             BaseItem.Whip,
             BaseItem.HandAxe,
-            BaseItem.Lightsaber,
             BaseItem.ShortSpear,
-            BaseItem.Knuckles,
         };
 
         /// <summary>
@@ -519,7 +499,6 @@ namespace Xenomech.Service
             BaseItem.Trident,
             BaseItem.DoubleAxe,
             BaseItem.TwoBladedSword,
-            BaseItem.Saberstaff,
             BaseItem.QuarterStaff,
             BaseItem.LightMace,
         };

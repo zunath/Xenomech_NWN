@@ -31,7 +31,6 @@ namespace Xenomech.Feature.PerkDefinition
             WeaponFocusLightsabers(builder);
             ImprovedCriticalLightsabers(builder);
             LightsaberProficiency(builder);
-            LightsaberMastery(builder);
             ForceLeap(builder);
             SaberStrike(builder);
 
@@ -587,79 +586,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .RequirementCharacterType(CharacterType.ForceSensitive)
                 .GrantsFeat(FeatType.LightsaberProficiency5);
         }
-
-        private void LightsaberMastery(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.OneHandedLightsaber, PerkType.LightsaberMastery)
-                .Name("Lightsaber Mastery")
-                .TriggerEquippedItem((player, item, slot, type, level) =>
-                {
-                    if (slot != InventorySlot.RightHand) return;
-
-                    var itemType = GetBaseItemType(item);
-                    if (Item.LightsaberBaseItemTypes.Contains(itemType))
-                    {
-                        var bab = GetBaseAttackBonus(player) + level;
-                        Creature.SetBaseAttackBonus(player, bab);
-                    }
-                })
-                .TriggerUnequippedItem((player, item, slot, type, level) =>
-                {
-                    if (slot != InventorySlot.RightHand) return;
-
-                    var itemType = GetBaseItemType(item);
-                    if (Item.LightsaberBaseItemTypes.Contains(itemType))
-                    {
-                        var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
-                    }
-
-                })
-                .TriggerPurchase((player, type, level) =>
-                {
-                    var item = GetItemInSlot(InventorySlot.RightHand, player);
-                    var itemType = GetBaseItemType(item);
-
-                    if (Item.LightsaberBaseItemTypes.Contains(itemType))
-                    {
-                        var bab = GetBaseAttackBonus(player) + 1;
-                        Creature.SetBaseAttackBonus(player, bab);
-                    }
-                })
-                .TriggerRefund((player, type, level) =>
-                {
-                    var item = GetItemInSlot(InventorySlot.RightHand, player);
-                    var itemType = GetBaseItemType(item);
-
-                    if (Item.LightsaberBaseItemTypes.Contains(itemType))
-                    {
-                        var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
-                    }
-                })
-
-                .AddPerkLevel()
-                .Description("Grants +1 BAB when equipped with a Lightsaber.")
-                .Price(8)
-                .RequirementSkill(SkillType.OneHanded, 25)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.LightsaberMastery1)
-
-                .AddPerkLevel()
-                .Description("Grants +2 BAB when equipped with a Lightsaber.")
-                .Price(8)
-                .RequirementSkill(SkillType.OneHanded, 40)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.LightsaberMastery2)
-
-                .AddPerkLevel()
-                .Description("Grants +3 BAB when equipped with a Lightsaber.")
-                .Price(8)
-                .RequirementSkill(SkillType.OneHanded, 50)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.LightsaberMastery3);
-        }
-
+        
         private void ForceLeap(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.OneHandedLightsaber, PerkType.ForceLeap)

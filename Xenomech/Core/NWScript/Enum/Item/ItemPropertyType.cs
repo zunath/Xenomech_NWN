@@ -86,13 +86,13 @@ namespace Xenomech.Core.NWScript.Enum.Item
         Additional = 87,
 
         // Custom Item Properties follow
-        WeaponSocket = 88,
-        ArmorSocket = 89,
+        GunType = 88,
+        AvailableFiringMode = 89,
         HPBonus = 90,
-        FPBonus = 91,
+        EPBonus = 91, 
         STMBonus = 92,
+
         UseLimitationPerk = 100,
-        ArmorClass = 117,
-        AbilityRecastReduction = 118,
+        AbilityRecastReduction = 118
     }
 }

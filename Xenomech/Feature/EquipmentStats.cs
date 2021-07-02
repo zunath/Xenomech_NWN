@@ -22,7 +22,7 @@ namespace Xenomech.Feature
         public static void RegisterStatActions()
         {
             _statChangeActions[ItemPropertyType.HPBonus] = ApplyHPBonus;
-            _statChangeActions[ItemPropertyType.FPBonus] = ApplyFPBonus;
+            _statChangeActions[ItemPropertyType.EPBonus] = ApplyFPBonus;
             _statChangeActions[ItemPropertyType.STMBonus] = ApplySTMBonus;
             _statChangeActions[ItemPropertyType.AbilityRecastReduction] = ApplyAbilityRecastReduction;
         }

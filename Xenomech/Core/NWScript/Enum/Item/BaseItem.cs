@@ -9,12 +9,12 @@ namespace Xenomech.Core.NWScript.Enum.Item
         BastardSword = 3,
         LightFlail = 4,
         WarHammer = 5,
-        Cannon = 6, 
-        Rifle = 7,
-        Longbow = 8,
+        HeavyWeapon = 6, 
+        Longarm = 7,
+        SmallArm = 8,
         LightMace = 9,
         Halberd = 10,
-        Pistol = 11,
+        Handgun = 11,
         TwoBladedSword = 12,
         GreatSword = 13,
         SmallShield = 14,
@@ -61,7 +61,7 @@ namespace Xenomech.Core.NWScript.Enum.Item
         ShortSpear = 58,
         Shuriken = 59,
         Sickle = 60,
-        Sling = 61,
+        SmallArmOffHand = 61,
         ThievesTools = 62,
         ThrowingAxe = 63,
         TrapKit = 64,
@@ -97,10 +97,6 @@ namespace Xenomech.Core.NWScript.Enum.Item
         CraftMaterialSmall = 110,
         Whip = 111,
         CraftBase = 112,
-        OffHandPistol = 213,
-
-        Saberstaff = 511,
-        Lightsaber = 512,
-        Knuckles = 524,
+        OffHandPistol = 213
     }
 }

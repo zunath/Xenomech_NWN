@@ -46,10 +46,7 @@ namespace Xenomech.Feature.DialogDefinition
 
             return GetIsObjectValid(item) &&
                    !GetPlotFlag(item) &&
-                   !GetItemCursedFlag(item) &&
-                   type != BaseItem.Lightsaber &&
-                   type != BaseItem.Saberstaff &&
-                   !GetLocalBool(item, "LIGHTSABER");
+                   !GetItemCursedFlag(item);
         }
 
         private bool IsWeaponValid(uint item)
@@ -242,15 +239,15 @@ namespace Xenomech.Feature.DialogDefinition
                         model.PartSelection = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 18, 24, 25 };
                         break;
                     // Shortbow = Blaster Pistol
-                    case BaseItem.Pistol:
+                    case BaseItem.Handgun:
                         model.PartSelection = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 18, 19, 21, 22 };
                         break;
                     // Shortbow = Dual Blaster Pistol
-                    case BaseItem.Sling:
+                    case BaseItem.SmallArmOffHand:
                         model.PartSelection = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 18, 19, 21, 22 };
                         break;
                     // Light Crossbow = Blaster Rifle
-                    case BaseItem.Rifle:
+                    case BaseItem.Longarm:
                         model.PartSelection = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 };
                         break;
                     case BaseItem.ThrowingAxe:
@@ -322,11 +319,11 @@ namespace Xenomech.Feature.DialogDefinition
                         model.PartSelection = new[] { 1, 2, 3, 4, 6, 7, 11, 14, 18, 24, 25 };
                         break;
                     // Shortbow = Blaster Pistol
-                    case BaseItem.Pistol:
+                    case BaseItem.SmallArm:
                         model.PartSelection = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
                         break;
                     // Light Crossbow = Blaster Rifle
-                    case BaseItem.Rifle:
+                    case BaseItem.Longarm:
                         model.PartSelection = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25 };
                         break;
                     case BaseItem.ThrowingAxe:
@@ -398,11 +395,11 @@ namespace Xenomech.Feature.DialogDefinition
                         model.PartSelection = new[] { 1, 2, 3, 4, 6, 7, 11, 14, 18, 24, 25 };
                         break;
                     // Shortbow = Blaster Pistol
-                    case BaseItem.Pistol:
+                    case BaseItem.Handgun:
                         model.PartSelection = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
                         break;
                     // Light Crossbow = Blaster Rifle
-                    case BaseItem.Rifle:
+                    case BaseItem.Longarm:
                         model.PartSelection = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25 };
                         break;
                     case BaseItem.ThrowingAxe:

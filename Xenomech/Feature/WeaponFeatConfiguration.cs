@@ -19,11 +19,9 @@ namespace Xenomech.Feature
             // Weapon Focus, Specialization, Improved Critical
             ConfigureVibroblades();
             ConfigureFinesseVibroblades();
-            ConfigureLightsabers();
             ConfigureHeavyVibroblades();
             ConfigurePolearms();
             ConfigureTwinBlades();
-            ConfigureSaberstaffs();
             ConfigureKnuckles();
             ConfigureStaves();
             ConfigurePistols();
@@ -36,7 +34,6 @@ namespace Xenomech.Feature
         {
             Weapon.SetWeaponIsMonkWeapon(BaseItem.Club);
             Weapon.SetWeaponIsMonkWeapon(BaseItem.QuarterStaff);
-            Weapon.SetWeaponIsMonkWeapon(BaseItem.Knuckles);
             Weapon.SetWeaponIsMonkWeapon(BaseItem.LightMace);
         }
 
@@ -59,17 +56,7 @@ namespace Xenomech.Feature
                 Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalFinesseVibroblades);
             }
         }
-
-        private static void ConfigureLightsabers()
-        {
-            foreach (var itemType in Item.LightsaberBaseItemTypes)
-            {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusLightsabers);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationLightsabers);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalLightsabers);
-            }
-        }
-
+        
         private static void ConfigureHeavyVibroblades()
         {
             foreach (var itemType in Item.HeavyVibrobladeBaseItemTypes)
@@ -97,16 +84,6 @@ namespace Xenomech.Feature
                 Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusTwinBlades);
                 Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationTwinBlades);
                 Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalTwinBlades);
-            }
-        }
-
-        private static void ConfigureSaberstaffs()
-        {
-            foreach (var itemType in Item.SaberstaffBaseItemTypes)
-            {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusSaberstaffs);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationSaberstaffs);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalSaberstaffs);
             }
         }
 

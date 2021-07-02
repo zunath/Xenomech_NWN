@@ -38,7 +38,6 @@ namespace Xenomech.Feature.PerkDefinition
             WeaponFocusSaberstaffs(builder);
             ImprovedCriticalSaberstaffs(builder);
             SaberstaffProficiency(builder);
-            SaberstaffMastery(builder);
             CircleSlash(builder);
             DoubleStrike(builder);
 
@@ -746,79 +745,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .RequirementCharacterType(CharacterType.ForceSensitive)
                 .GrantsFeat(FeatType.SaberstaffProficiency5);
         }
-
-        private void SaberstaffMastery(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.TwoHandedSaberstaff, PerkType.SaberstaffMastery)
-                .Name("Saberstaff Mastery")
-                .TriggerEquippedItem((player, item, slot, type, level) =>
-                {
-                    if (slot != InventorySlot.RightHand) return;
-
-                    var itemType = GetBaseItemType(item);
-                    if (Item.SaberstaffBaseItemTypes.Contains(itemType))
-                    {
-                        var bab = GetBaseAttackBonus(player) + level;
-                        Creature.SetBaseAttackBonus(player, bab);
-                    }
-                })
-                .TriggerUnequippedItem((player, item, slot, type, level) =>
-                {
-                    if (slot != InventorySlot.RightHand) return;
-
-                    var itemType = GetBaseItemType(item);
-                    if (Item.SaberstaffBaseItemTypes.Contains(itemType))
-                    {
-                        var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
-                    }
-
-                })
-                .TriggerPurchase((player, type, level) =>
-                {
-                    var item = GetItemInSlot(InventorySlot.RightHand, player);
-                    var itemType = GetBaseItemType(item);
-
-                    if (Item.SaberstaffBaseItemTypes.Contains(itemType))
-                    {
-                        var bab = GetBaseAttackBonus(player) + 1;
-                        Creature.SetBaseAttackBonus(player, bab);
-                    }
-                })
-                .TriggerRefund((player, type, level) =>
-                {
-                    var item = GetItemInSlot(InventorySlot.RightHand, player);
-                    var itemType = GetBaseItemType(item);
-
-                    if (Item.SaberstaffBaseItemTypes.Contains(itemType))
-                    {
-                        var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
-                    }
-                })
-
-                .AddPerkLevel()
-                .Description("Grants +1 BAB when equipped with a Saberstaff.")
-                .Price(8)
-                .RequirementSkill(SkillType.TwoHanded, 25)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberstaffMastery1)
-
-                .AddPerkLevel()
-                .Description("Grants +2 BAB when equipped with a Saberstaff.")
-                .Price(8)
-                .RequirementSkill(SkillType.TwoHanded, 40)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberstaffMastery2)
-
-                .AddPerkLevel()
-                .Description("Grants +3 BAB when equipped with a Saberstaff.")
-                .Price(8)
-                .RequirementSkill(SkillType.TwoHanded, 50)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberstaffMastery3);
-        }
-
+        
         private void CircleSlash(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.TwoHandedSaberstaff, PerkType.CircleSlash)
