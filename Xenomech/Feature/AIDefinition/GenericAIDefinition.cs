@@ -34,77 +34,7 @@ namespace Xenomech.Feature.AIDefinition
             var allyCount = allies.Count;
             var activeConcentration = Ability.GetActiveConcentration(self).Feat;
             
-
-            // Battle Insight
-            if (CheckIfCanUseFeat(self, self, FeatType.BattleInsight2, () => allyCount >= 1 && activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.BattleInsight2, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.BattleInsight1, () => allyCount >= 1 && activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.BattleInsight1, self);
-            }
-
-            // Throw Saber
-            if (CheckIfCanUseFeat(self, self, FeatType.ThrowLightsaber3))
-            {
-                return (FeatType.ThrowLightsaber3, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.ThrowLightsaber2))
-            {
-                return (FeatType.ThrowLightsaber2, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.ThrowLightsaber1))
-            {
-                return (FeatType.ThrowLightsaber1, self);
-            }
-
-            // Force Stun
-            if (CheckIfCanUseFeat(self, target, FeatType.ForceStun3, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.ForceStun3, target);
-            }
-            if (CheckIfCanUseFeat(self, target, FeatType.ForceStun2, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.ForceStun2, target);
-            }
-            if (CheckIfCanUseFeat(self, target, FeatType.ForceStun1, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.ForceStun1, target);
-            }
-
-            // Mind Trick
-            if (CheckIfCanUseFeat(self, target, FeatType.MindTrick2, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.MindTrick2, target);
-            }
-            if (CheckIfCanUseFeat(self, target, FeatType.MindTrick1, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.MindTrick1, target);
-            }
-
-            // Burst of Speed
-            if (CheckIfCanUseFeat(self, self, FeatType.BurstOfSpeed5, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.BurstOfSpeed5, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.BurstOfSpeed4, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.BurstOfSpeed4, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.BurstOfSpeed3, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.BurstOfSpeed3, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.BurstOfSpeed2, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.BurstOfSpeed2, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.BurstOfSpeed1, () => activeConcentration == FeatType.Invalid))
-            {
-                return (FeatType.BurstOfSpeed1, self);
-            }
-
+            
             // Hacking Blade
             if (CheckIfCanUseFeat(self, self, FeatType.HackingBlade3))
             {
@@ -160,35 +90,7 @@ namespace Xenomech.Feature.AIDefinition
             {
                 return (FeatType.Backstab1, target);
             }
-
-            // Force Leap
-            if (CheckIfCanUseFeat(self, target, FeatType.ForceLeap3))
-            {
-                return (FeatType.ForceLeap3, target);
-            }
-            if (CheckIfCanUseFeat(self, target, FeatType.ForceLeap2))
-            {
-                return (FeatType.ForceLeap2, target);
-            }
-            if (CheckIfCanUseFeat(self, target, FeatType.ForceLeap1))
-            {
-                return (FeatType.ForceLeap1, target);
-            }
-
-            // Saber Strike
-            if (CheckIfCanUseFeat(self, self, FeatType.SaberStrike3))
-            {
-                return (FeatType.SaberStrike3, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.SaberStrike2))
-            {
-                return (FeatType.SaberStrike2, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.SaberStrike1))
-            {
-                return (FeatType.SaberStrike1, self);
-            }
-
+            
             // Crescent Moon
             if (CheckIfCanUseFeat(self, self, FeatType.CrescentMoon3))
             {
@@ -272,34 +174,6 @@ namespace Xenomech.Feature.AIDefinition
             if (CheckIfCanUseFeat(self, target, FeatType.CrossCut3))
             {
                 return (FeatType.CrossCut1, target);
-            }
-
-            // Circle Slash
-            if (CheckIfCanUseFeat(self, self, FeatType.CircleSlash3))
-            {
-                return (FeatType.CircleSlash3, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.CircleSlash2))
-            {
-                return (FeatType.CircleSlash2, self);
-            }
-            if (CheckIfCanUseFeat(self, self, FeatType.CircleSlash1))
-            {
-                return (FeatType.CircleSlash1, self);
-            }
-
-            // Double Strike
-            if (CheckIfCanUseFeat(self, target, FeatType.DoubleStrike3))
-            {
-                return (FeatType.DoubleStrike3, target);
-            }
-            if (CheckIfCanUseFeat(self, target, FeatType.DoubleStrike2))
-            {
-                return (FeatType.DoubleStrike2, target);
-            }
-            if (CheckIfCanUseFeat(self, target, FeatType.DoubleStrike1))
-            {
-                return (FeatType.DoubleStrike1, target);
             }
 
             // Electric Fist
