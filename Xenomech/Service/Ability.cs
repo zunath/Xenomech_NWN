@@ -80,14 +80,6 @@ namespace Xenomech.Service
         {
             var ability = GetAbilityDetail(abilityType);
 
-            // Cannot use this ability in space.
-            if (Space.IsPlayerInSpaceMode(activator) &&
-                !ability.CanBeUsedInSpace)
-            {
-                SendMessageToPC(activator, "This ability cannot be used in space.");
-                return false;
-            }
-
             // Must have at least one level in the perk.
             if (effectivePerkLevel <= 0)
             {

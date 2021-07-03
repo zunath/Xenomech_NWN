@@ -19,7 +19,7 @@ namespace Xenomech.Feature.StatusEffectDefinition
         {
             void CreateEffect(string name, int amount)
             {
-                builder.Create(StatusEffectType.ForcePack1)
+                builder.Create(StatusEffectType.EtherPack1)
                     .Name(name)
                     .EffectIcon(2) // 2 = Regenerate
                     .TickAction((source, target) =>

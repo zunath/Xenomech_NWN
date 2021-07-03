@@ -17,7 +17,7 @@ namespace Xenomech.Enumeration
             "One-Handed", 
             50, 
             true, 
-            "Ability to use one-handed weapons like vibroblades, finesse vibroblades, and lightsabers.", 
+            "Ability to use one-handed weapons like longswords and knives.", 
             true)]
         OneHanded = 1,
 
@@ -25,7 +25,7 @@ namespace Xenomech.Enumeration
             "Two-Handed", 
             50, 
             true, 
-            "Ability to use heavy weapons like heavy vibroblades, polearms, and saberstaffs in combat.", 
+            "Ability to use heavy weapons like greatswords, polearms, and twin blades in combat.", 
             true)]
         TwoHanded = 2,
 
@@ -48,7 +48,7 @@ namespace Xenomech.Enumeration
             "Force",
             50,
             true,
-            "Ability to use Force abilities. Only available to 'Force Sensitive' character types.",
+            "Ability to use Ether abilities. Only available to 'Mage' character types.",
             true)]
         Force = 5,
 
@@ -65,7 +65,7 @@ namespace Xenomech.Enumeration
             "Piloting",
             50,
             true,
-            "Ability to pilot starships, follow navigation charts, and control starship systems.",
+            "Ability to pilot mechs.",
             true)]
         Piloting = 7,
 
@@ -110,118 +110,13 @@ namespace Xenomech.Enumeration
             true)]
         Gathering = 13,
 
-
-        // Languages
-        [Skill(SkillCategoryType.Languages, 
-            "Mirialan", 
-            20, 
-            true, 
-            "Ability to speak the Mirialan language.", 
-            false)]
-        Mirialan = 14,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Bothese", 
-            20, 
-            true, 
-            "Ability to speak the Bothese language.", 
-            false)]
-        Bothese = 15,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Cheunh", 
-            20, 
-            true, 
-            "Ability to speak the Cheunh language.", 
-            false)]
-        Cheunh = 16,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Zabraki", 
-            20, 
-            true, 
-            "Ability to speak the Zabraki language.", 
-            false)]
-        Zabraki = 17,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Twi'leki (Ryl)", 
-            20, 
-            true, 
-            "Ability to speak the Twi'leki (Ryl) language.", 
-            false)]
-        Twileki = 18,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Catharese", 20, 
-            true, 
-            "Ability to speak the Catharese language.", 
-            false)]
-        Catharese = 19,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Dosh", 
-            20, 
-            true, 
-            "Ability to speak the Dosh language.", 
-            false)]
-        Dosh = 20,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Shyriiwook (Wookieespeak)", 
-            20, 
-            true, 
-            "Ability to speak the Shyriiwook (Wookieespeak) language.", 
-            false)]
-        Shyriiwook = 21,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Droidspeak", 
-            20, 
-            true, 
-            "Ability to speak the Droidspeak language.", 
-            false)]
-        Droidspeak = 22,
-
         [Skill(SkillCategoryType.Languages, 
             "Basic", 
             20, 
             true, 
-            "Ability to speak the Galactic Basic language.", 
+            "Ability to speak the Basic language.", 
             false)]
-        Basic = 23,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Mandoa", 
-            20, 
-            true, 
-            "Ability to speak the Mandoa language.", 
-            false)]
-        Mandoa = 24,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Huttese", 
-            20, 
-            true, 
-            "Ability to speak the Huttese language.", 
-            false)]
-        Huttese = 25,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Mon Calamarian", 
-            20, 
-            true, 
-            "Ability to speak the Mon Calamarian language.", 
-            false)]
-        MonCalamarian = 26,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Ugnaught", 
-            20, 
-            true, 
-            "Ability to speak the Ugnaught language.", 
-            false)]
-        Ugnaught = 27,
+        Basic = 30
     }
 
     public class SkillAttribute : Attribute

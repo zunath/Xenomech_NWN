@@ -4,6 +4,6 @@
     {
         Invalid = 0,
         Standard = 1,
-        ForceSensitive = 2
+        Mage = 2
     }
 }

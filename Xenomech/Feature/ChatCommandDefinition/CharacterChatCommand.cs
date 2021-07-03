@@ -140,16 +140,6 @@ namespace Xenomech.Feature.ChatCommandDefinition
                         return;
                     }
 
-                    // Wookiees cannot speak any language besides Shyriiwook.
-                    if (race == RacialType.Wookiee &&
-                        command != SkillType.Shyriiwook.ToString().ToLower())
-                    {
-                        Language.SetActiveLanguage(user, SkillType.Shyriiwook);
-                        SendMessageToPC(user, ColorToken.Red("Wookiees can only speak Shyriiwook."));
-                        return;
-                    }
-
-
                     foreach (var language in Language.Languages)
                     {
                         if (language.ChatNames.Contains(command))

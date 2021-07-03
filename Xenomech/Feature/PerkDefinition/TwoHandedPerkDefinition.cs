@@ -35,11 +35,6 @@ namespace Xenomech.Feature.PerkDefinition
             TwinBladeMastery(builder);
             LegSweep(builder);
             CrossCut(builder);
-            WeaponFocusSaberstaffs(builder);
-            ImprovedCriticalSaberstaffs(builder);
-            SaberstaffProficiency(builder);
-            CircleSlash(builder);
-            DoubleStrike(builder);
 
             return builder.Build();
         }
@@ -103,7 +98,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void WeaponFocusHeavyVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedHeavyVibroblade, PerkType.WeaponFocusHeavyVibroblades)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.WeaponFocusHeavyVibroblades)
                 .Name("Weapon Focus - Heavy Vibroblades")
 
                 .AddPerkLevel()
@@ -122,7 +117,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void ImprovedCriticalHeavyVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedHeavyVibroblade, PerkType.ImprovedCriticalHeavyVibroblades)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.ImprovedCriticalHeavyVibroblades)
                 .Name("Improved Critical - Heavy Vibroblades")
 
                 .AddPerkLevel()
@@ -135,7 +130,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void HeavyVibrobladeProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedHeavyVibroblade, PerkType.HeavyVibrobladeProficiency)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.HeavyVibrobladeProficiency)
                 .Name("Heavy Vibroblade Proficiency")
 
                 .AddPerkLevel()
@@ -170,7 +165,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void HeavyVibrobladeMastery(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedHeavyVibroblade, PerkType.HeavyVibrobladeMastery)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.HeavyVibrobladeMastery)
                 .Name("Heavy Vibroblade Mastery")
                 .TriggerEquippedItem((player, item, slot, type, level) =>
                 {
@@ -242,7 +237,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void CrescentMoon(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedHeavyVibroblade, PerkType.CrescentMoon)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.CrescentMoon)
                 .Name("Crescent Moon")
 
                 .AddPerkLevel()
@@ -268,7 +263,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void HardSlash(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedHeavyVibroblade, PerkType.HardSlash)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.HardSlash)
                 .Name("Hard Slash")
 
                 .AddPerkLevel()
@@ -671,133 +666,6 @@ namespace Xenomech.Feature.PerkDefinition
                 .RequirementSkill(SkillType.TwoHanded, 35)
                 .RequirementCharacterType(CharacterType.Standard)
                 .GrantsFeat(FeatType.CrossCut3);
-        }
-
-        private void WeaponFocusSaberstaffs(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.TwoHandedSaberstaff, PerkType.WeaponFocusSaberstaffs)
-                .Name("Weapon Focus - Saberstaffs")
-
-                .AddPerkLevel()
-                .Description("You gain the Weapon Focus feat which grants a +1 attack bonus when equipped with saberstaffs.")
-                .Price(3)
-                .RequirementSkill(SkillType.TwoHanded, 5)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.WeaponFocusSaberstaffs)
-
-                .AddPerkLevel()
-                .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with saberstaffs.")
-                .Price(4)
-                .RequirementSkill(SkillType.TwoHanded, 15)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.WeaponSpecializationSaberstaffs);
-        }
-
-        private void ImprovedCriticalSaberstaffs(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.TwoHandedSaberstaff, PerkType.ImprovedCriticalSaberstaffs)
-                .Name("Improved Critical - Saberstaffs")
-
-                .AddPerkLevel()
-                .Description("Improves the critical hit chance when using a saberstaff.")
-                .Price(3)
-                .RequirementSkill(SkillType.TwoHanded, 25)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.ImprovedCriticalSaberstaffs);
-        }
-
-        private void SaberstaffProficiency(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.TwoHandedSaberstaff, PerkType.SaberstaffProficiency)
-                .Name("Saberstaff Proficiency")
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 1 Saberstaffs.")
-                .Price(2)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberstaffProficiency1)
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 2 Saberstaffs.")
-                .Price(2)
-                .RequirementSkill(SkillType.TwoHanded, 10)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberstaffProficiency2)
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 3 Saberstaffs.")
-                .Price(2)
-                .RequirementSkill(SkillType.TwoHanded, 20)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberstaffProficiency3)
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 4 Saberstaffs.")
-                .Price(2)
-                .RequirementSkill(SkillType.TwoHanded, 30)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberstaffProficiency4)
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 5 Saberstaffs.")
-                .Price(2)
-                .RequirementSkill(SkillType.TwoHanded, 40)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberstaffProficiency5);
-        }
-        
-        private void CircleSlash(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.TwoHandedSaberstaff, PerkType.CircleSlash)
-                .Name("Circle Slash")
-
-                .AddPerkLevel()
-                .Description("Attacks up to 3 nearby enemies for 1d8 of damage each.")
-                .Price(3)
-                .RequirementSkill(SkillType.TwoHanded, 15)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.CircleSlash1)
-
-                .AddPerkLevel()
-                .Description("Attacks up to 3 nearby enemies for 2d6 of damage each.")
-                .Price(3)
-                .RequirementSkill(SkillType.TwoHanded, 30)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.CircleSlash2)
-
-                .AddPerkLevel()
-                .Description("Attacks up to 3 nearby enemies for 3d6 of damage each.")
-                .Price(3)
-                .RequirementSkill(SkillType.TwoHanded, 45)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.CircleSlash3);
-        }
-
-        private void DoubleStrike(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.TwoHandedSaberstaff, PerkType.DoubleStrike)
-                .Name("Double Strike")
-
-                .AddPerkLevel()
-                .Description("Instantly attacks twice, each for 1d4 damage.")
-                .Price(2)
-                .RequirementSkill(SkillType.TwoHanded, 5)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.DoubleStrike1)
-
-                .AddPerkLevel()
-                .Description("Instantly attacks twice, each for 2d6 damage.")
-                .Price(3)
-                .RequirementSkill(SkillType.TwoHanded, 20)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.DoubleStrike2)
-
-                .AddPerkLevel()
-                .Description("Instantly attacks twice, each for 3d6 damage.")
-                .Price(3)
-                .RequirementSkill(SkillType.TwoHanded, 35)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.DoubleStrike3);
         }
     }
 }

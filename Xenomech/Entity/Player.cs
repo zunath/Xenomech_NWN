@@ -5,7 +5,6 @@ using Xenomech.Enumeration;
 using Xenomech.Service.AbilityService;
 using Xenomech.Service.FactionService;
 using Xenomech.Service.ImplantService;
-using Xenomech.Service.SpaceService;
 using Xenomech.Service.TaxiService;
 
 namespace Xenomech.Entity
@@ -44,7 +43,6 @@ namespace Xenomech.Entity
             KeyItems = new Dictionary<KeyItemType, DateTime>();
             Guilds = new Dictionary<GuildType, PlayerGuild>();
             SavedOutfits = new Dictionary<int, string>();
-            Ships = new Dictionary<Guid, ShipStatus>();
             Implants = new Dictionary<ImplantSlotType, PlayerImplant>();
             Factions = new Dictionary<FactionType, PlayerFactionStanding>();
             TaxiDestinations = new Dictionary<int, List<TaxiDestinationType>>();
@@ -105,7 +103,6 @@ namespace Xenomech.Entity
         public Dictionary<KeyItemType, DateTime> KeyItems{ get; set; }
         public Dictionary<GuildType, PlayerGuild> Guilds { get; set; }
         public Dictionary<int, string> SavedOutfits { get; set; }
-        public Dictionary<Guid, ShipStatus> Ships { get; set; }
         public Dictionary<ImplantSlotType, PlayerImplant> Implants { get; set; }
         public Dictionary<FactionType, PlayerFactionStanding> Factions { get; set; }
         public Dictionary<int, List<TaxiDestinationType>> TaxiDestinations { get; set; }

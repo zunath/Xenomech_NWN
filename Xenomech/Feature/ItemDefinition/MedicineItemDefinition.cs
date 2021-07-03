@@ -122,11 +122,11 @@ namespace Xenomech.Feature.ItemDefinition
                     });
             }
 
-            CreateItem("force_pack_1", StatusEffectType.ForcePack1, 30f);
-            CreateItem("force_pack_2", StatusEffectType.ForcePack2, 30f);
-            CreateItem("force_pack_3", StatusEffectType.ForcePack3, 30f);
-            CreateItem("force_pack_4", StatusEffectType.ForcePack4, 30f);
-            CreateItem("force_pack_5", StatusEffectType.ForcePack5, 30f);
+            CreateItem("force_pack_1", StatusEffectType.EtherPack1, 30f);
+            CreateItem("force_pack_2", StatusEffectType.EtherPack2, 30f);
+            CreateItem("force_pack_3", StatusEffectType.EtherPack3, 30f);
+            CreateItem("force_pack_4", StatusEffectType.EtherPack4, 30f);
+            CreateItem("force_pack_5", StatusEffectType.EtherPack5, 30f);
         }
 
         private void StaminaPack(ItemBuilder builder)

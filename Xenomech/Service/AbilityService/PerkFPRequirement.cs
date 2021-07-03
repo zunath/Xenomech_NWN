@@ -30,9 +30,6 @@ namespace Xenomech.Service.AbilityService
         {
             if (GetIsDM(player)) return;
 
-            // Force Attunement reduces FP costs to zero.
-            if (StatusEffect.HasStatusEffect(player, StatusEffectType.ForceAttunement)) return;
-
             Stat.ReduceFP(player, _requiredFP);
         }
     }

@@ -293,15 +293,6 @@ namespace Xenomech.Service
 
                 var language = Language.GetActiveLanguage(sender);
 
-                // Wookiees cannot speak any other language (but they can understand them).
-                // Swap their language if they attempt to speak in any other language.
-                var race = GetRacialType(sender);
-                if (race == RacialType.Wookiee && language != SkillType.Shyriiwook)
-                {
-                    Language.SetActiveLanguage(sender, SkillType.Shyriiwook);
-                    language = SkillType.Shyriiwook;
-                }
-
                 var color = Language.GetColor(language);
                 var r = (byte)(color >> 24 & 0xFF);
                 var g = (byte)(color >> 16 & 0xFF);

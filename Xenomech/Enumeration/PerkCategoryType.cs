@@ -10,30 +10,24 @@ namespace Xenomech.Enumeration
         [PerkCategory("One Handed - General", true)]
         OneHandedGeneral = 1,
 
-        [PerkCategory("One Handed - Vibroblade", true)]
-        OneHandedVibroblade = 2,
+        [PerkCategory("One Handed - Longsword", true)]
+        OneHandedLongsword = 2,
 
-        [PerkCategory("One Handed - Finesse Vibroblade", true)]
-        OneHandedFinesseVibroblade = 3,
-
-        [PerkCategory("One Handed - Lightsaber", true)]
-        OneHandedLightsaber = 4,
+        [PerkCategory("One Handed - Knife", true)]
+        OneHandedKnife = 3,
 
         [PerkCategory("Two Handed - General", true)]
         TwoHandedGeneral = 5,
 
-        [PerkCategory("Two Handed - Heavy Vibroblade", true)]
-        TwoHandedHeavyVibroblade = 6,
+        [PerkCategory("Two Handed - Greatsword", true)]
+        TwoHandedGreatsword = 6,
 
         [PerkCategory("Two Handed - Polearm", true)]
         TwoHandedPolearm = 7,
 
         [PerkCategory("Two Handed - Twin Blade", true)]
         TwoHandedTwinBlade = 8,
-
-        [PerkCategory("Two Handed - Saberstaff", true)]
-        TwoHandedSaberstaff = 9,
-
+        
         [PerkCategory("Martial Arts - General", true)]
         MartialArtsGeneral = 10,
 
@@ -58,8 +52,8 @@ namespace Xenomech.Enumeration
         [PerkCategory("Ranged - Rifle", true)]
         RangedRifle = 17,
 
-        [PerkCategory("Force - Universal", true)]
-        ForceUniversal = 18,
+        [PerkCategory("Ether", true)]
+        Ether = 18,
 
         [PerkCategory("Armor - General", true)]
         ArmorGeneral = 19,

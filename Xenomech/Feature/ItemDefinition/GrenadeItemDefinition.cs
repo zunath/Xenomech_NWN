@@ -292,14 +292,6 @@ namespace Xenomech.Feature.ItemDefinition
                 (user, target) =>
                 {
                     var damage = EffectDamage(Random.D6(1), DamageType.Electrical);
-                    var race = GetRacialType(target);
-                    if (race == RacialType.Robot ||
-                        race == RacialType.Cyborg && Random.D6(1) > 4)
-                    {
-                        FloatingTextStringOnCreature("Your circuits are overloaded.", target);
-                        ApplyEffectToObject(DurationType.Temporary, EffectStunned(), target, 6.0f);
-                    }
-
                     ApplyEffectToObject(DurationType.Instant, damage, target);
                 });
         }

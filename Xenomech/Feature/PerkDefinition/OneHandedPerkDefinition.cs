@@ -28,11 +28,6 @@ namespace Xenomech.Feature.PerkDefinition
             FinesseVibrobladeMastery(builder);
             PoisonStab(builder);
             Backstab(builder);
-            WeaponFocusLightsabers(builder);
-            ImprovedCriticalLightsabers(builder);
-            LightsaberProficiency(builder);
-            ForceLeap(builder);
-            SaberStrike(builder);
 
             return builder.Build();
         }
@@ -135,7 +130,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void WeaponFocusVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedVibroblade, PerkType.WeaponFocusVibroblades)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.WeaponFocusVibroblades)
                 .Name("Weapon Focus - Vibroblades")
 
                 .AddPerkLevel()
@@ -154,7 +149,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void ImprovedCriticalVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedVibroblade, PerkType.ImprovedCriticalVibroblades)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.ImprovedCriticalVibroblades)
                 .Name("Improved Critical - Vibroblades")
 
                 .AddPerkLevel()
@@ -167,7 +162,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void VibrobladeProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedVibroblade, PerkType.VibrobladeProficiency)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.VibrobladeProficiency)
                 .Name("Vibroblade Proficiency")
 
                 .AddPerkLevel()
@@ -202,7 +197,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void VibrobladeMastery(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedVibroblade, PerkType.VibrobladeMastery)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.VibrobladeMastery)
                 .Name("Vibroblade Mastery")
                 .TriggerEquippedItem((player, item, slot, type, level) =>
                 {
@@ -274,7 +269,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void HackingBlade(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedVibroblade, PerkType.HackingBlade)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.HackingBlade)
                 .Name("Hacking Blade")
 
                 .AddPerkLevel()
@@ -300,7 +295,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void RiotBlade(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedVibroblade, PerkType.RiotBlade)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.RiotBlade)
                 .Name("Riot Blade")
 
                 .AddPerkLevel()
@@ -325,7 +320,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void WeaponFocusFinesseVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedFinesseVibroblade, PerkType.WeaponFocusFinesseVibroblades)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.WeaponFocusFinesseVibroblades)
                 .Name("Weapon Focus - Finesse Vibroblades")
 
                 .AddPerkLevel()
@@ -344,7 +339,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void ImprovedCriticalFinesseVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedFinesseVibroblade, PerkType.ImprovedCriticalFinesseVibroblades)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.ImprovedCriticalFinesseVibroblades)
                 .Name("Improved Critical - Finesse Vibroblades")
 
                 .AddPerkLevel()
@@ -357,7 +352,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void FinesseVibrobladeProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedFinesseVibroblade, PerkType.FinesseVibrobladeProficiency)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.FinesseVibrobladeProficiency)
                 .Name("Finesse Vibroblade Proficiency")
 
                 .AddPerkLevel()
@@ -392,7 +387,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void FinesseVibrobladeMastery(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedFinesseVibroblade, PerkType.FinesseVibrobladeMastery)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.FinesseVibrobladeMastery)
                 .Name("Finesse Vibroblade Mastery")
                 .TriggerEquippedItem((player, item, slot, type, level) =>
                 {
@@ -464,7 +459,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void PoisonStab(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedFinesseVibroblade, PerkType.PoisonStab)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.PoisonStab)
                 .Name("Poison Stab")
 
                 .AddPerkLevel()
@@ -490,7 +485,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void Backstab(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedFinesseVibroblade, PerkType.Backstab)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.Backstab)
                 .Name("Backstab")
 
                 .AddPerkLevel()
@@ -512,133 +507,6 @@ namespace Xenomech.Feature.PerkDefinition
                 .RequirementSkill(SkillType.OneHanded, 35)
                 .RequirementCharacterType(CharacterType.Standard)
                 .GrantsFeat(FeatType.Backstab3);
-        }
-
-        private void WeaponFocusLightsabers(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.OneHandedLightsaber, PerkType.WeaponFocusLightsabers)
-                .Name("Weapon Focus - Lightsabers")
-
-                .AddPerkLevel()
-                .Description("You gain the Weapon Focus feat which grants a +1 attack bonus when equipped with lightsabers.")
-                .Price(3)
-                .RequirementSkill(SkillType.OneHanded, 5)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.WeaponFocusLightsabers)
-
-                .AddPerkLevel()
-                .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with lightsabers.")
-                .Price(4)
-                .RequirementSkill(SkillType.OneHanded, 15)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.WeaponSpecializationLightsabers);
-        }
-
-        private void ImprovedCriticalLightsabers(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.OneHandedLightsaber, PerkType.ImprovedCriticalLightsabers)
-                .Name("Improved Critical - Lightsabers")
-
-                .AddPerkLevel()
-                .Description("Improves the critical hit chance when using a lightsaber.")
-                .Price(3)
-                .RequirementSkill(SkillType.OneHanded, 25)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.ImprovedCriticalLightsabers);
-        }
-
-        private void LightsaberProficiency(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.OneHandedLightsaber, PerkType.LightsaberProficiency)
-                .Name("Lightsaber Proficiency")
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 1 Lightsabers.")
-                .Price(2)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.LightsaberProficiency1)
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 2 Lightsabers.")
-                .Price(2)
-                .RequirementSkill(SkillType.OneHanded, 10)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.LightsaberProficiency2)
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 3 Lightsabers.")
-                .Price(2)
-                .RequirementSkill(SkillType.OneHanded, 20)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.LightsaberProficiency3)
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 4 Lightsabers.")
-                .Price(2)
-                .RequirementSkill(SkillType.OneHanded, 30)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.LightsaberProficiency4)
-
-                .AddPerkLevel()
-                .Description("Grants the ability to equip tier 5 Lightsabers.")
-                .Price(2)
-                .RequirementSkill(SkillType.OneHanded, 40)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.LightsaberProficiency5);
-        }
-        
-        private void ForceLeap(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.OneHandedLightsaber, PerkType.ForceLeap)
-                .Name("Force Leap")
-
-                .AddPerkLevel()
-                .Description("Leap to a distant target instantly, inflicting 1d4 damage and stunning for 2 seconds.")
-                .Price(3)
-                .RequirementSkill(SkillType.OneHanded, 15)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.ForceLeap1)
-
-                .AddPerkLevel()
-                .Description("Leap to a distant target instantly, inflicting 1d6 damage and stunning for 2 seconds.")
-                .Price(3)
-                .RequirementSkill(SkillType.OneHanded, 30)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.ForceLeap2)
-
-                .AddPerkLevel()
-                .Description("Leap to a distant target instantly, inflicting 2d4 damage and stunning for 2 seconds.")
-                .Price(3)
-                .RequirementSkill(SkillType.OneHanded, 45)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.ForceLeap3);
-        }
-
-        private void SaberStrike(PerkBuilder builder)
-        {
-            builder.Create(PerkCategoryType.OneHandedLightsaber, PerkType.SaberStrike)
-                .Name("Saber Strike")
-
-                .AddPerkLevel()
-                .Description("Your next attack deals an additional 1d6 damage and has a 50% chance to inflict Breach for 30 seconds.")
-                .Price(2)
-                .RequirementSkill(SkillType.OneHanded, 5)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberStrike1)
-
-                .AddPerkLevel()
-                .Description("Your next attack deals an additional 2d6 damage and has a 75% chance to inflict Breach for 1 minute.")
-                .Price(3)
-                .RequirementSkill(SkillType.OneHanded, 20)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberStrike2)
-
-                .AddPerkLevel()
-                .Description("Your next attack deals an additional 3d6 damage and has a 100% chance to inflict Breach for 1 minute.")
-                .Price(3)
-                .RequirementSkill(SkillType.OneHanded, 35)
-                .RequirementCharacterType(CharacterType.ForceSensitive)
-                .GrantsFeat(FeatType.SaberStrike3);
         }
     }
 }

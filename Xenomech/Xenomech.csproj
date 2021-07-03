@@ -16,6 +16,11 @@
     <PackageReference Include="StackExchange.Redis" Version="2.2.62" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Feature\QuestDefinition\" />
+    <Folder Include="Feature\SpawnDefinition\" />
+  </ItemGroup>
+
   <Target Name="NWN" AfterTargets="Build">
     <ItemGroup>
       <AllOutputs Include="$(OutputPath)$(MSBuildProjectName).dll" />

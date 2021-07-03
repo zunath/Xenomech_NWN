@@ -51,22 +51,17 @@ namespace Xenomech.Feature.DialogDefinition
 
             page.Header = "You can customize your character here. Once you leave the entry area you can't make any changes to your appearance or association. Be sure you have it set up like you want!\n\nNote: We limit the available options based on the race you selected at character creation. This is intended to maintain the 'feel' of the setting. If you don't see an option here then it's unfortunately not available for your race.\n\nYou can request that new options be added on our Discord.";
 
-            if (racialType != RacialType.Wookiee)
+            page.AddResponse("Change Skin Color", () =>
             {
-                page.AddResponse("Change Skin Color", () =>
-                {
-                    ChangePage(SkinColorPageId);
-                });
-            }
+                ChangePage(SkinColorPageId);
+            });
 
             page.AddResponse("Change Head", () =>
             {
                 ChangePage(HeadPageId);
             });
 
-            var changeHairColorText = (racialType == RacialType.Trandoshan || racialType == RacialType.MonCalamari)
-                ? "Change Eye Color"
-                : "Change Hair Color";
+            var changeHairColorText = "Change Hair Color";
             page.AddResponse(changeHairColorText, () =>
             {
                 ChangePage(HairColorPageId);
@@ -113,39 +108,6 @@ namespace Xenomech.Feature.DialogDefinition
             {
                 case RacialType.Human:
                     colorsToUse = HumanSkinColors;
-                    break;
-                case RacialType.Bothan:
-                    colorsToUse = BothanSkinColors;
-                    break;
-                case RacialType.Chiss:
-                    colorsToUse = ChissSkinColors;
-                    break;
-                case RacialType.Zabrak:
-                    colorsToUse = ZabrakSkinColors;
-                    break;
-                case RacialType.Twilek:
-                    colorsToUse = TwilekSkinColors;
-                    break;
-                case RacialType.Mirialan:
-                    colorsToUse = MirialanSkinColors;
-                    break;
-                case RacialType.Echani:
-                    colorsToUse = EchaniSkinColors;
-                    break;
-                case RacialType.Cyborg:
-                    colorsToUse = CyborgSkinColors;
-                    break;
-                case RacialType.Cathar:
-                    colorsToUse = CatharSkinColors;
-                    break;
-                case RacialType.Trandoshan:
-                    colorsToUse = TrandoshanSkinColors;
-                    break;
-                case RacialType.MonCalamari:
-                    colorsToUse = MonCalamariSkinColors;
-                    break;
-                case RacialType.Ugnaught:
-                    colorsToUse = UgnaughtSkinColors;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -204,50 +166,6 @@ namespace Xenomech.Feature.DialogDefinition
                 case RacialType.Human:
                     headsToUse = gender == Gender.Male ? MaleHumanHeads : FemaleHumanHeads;
                     break;
-                case RacialType.Bothan:
-                    headsToUse = gender == Gender.Male ? MaleBothanHeads : FemaleBothanHeads;
-                    break;
-                case RacialType.Chiss:
-                    headsToUse = gender == Gender.Male ?
-                        MaleChissHeads.Concat(MaleHumanHeads).ToArray() :
-                        FemaleChissHeads.Concat(FemaleHumanHeads).ToArray();
-                    break;
-                case RacialType.Zabrak:
-                    headsToUse = gender == Gender.Male ? MaleZabrakHeads : FemaleZabrakHeads;
-                    break;
-                case RacialType.Twilek:
-                    headsToUse = gender == Gender.Male ? MaleTwilekHeads : FemaleTwilekHeads;
-                    break;
-                case RacialType.Mirialan:
-                    headsToUse = gender == Gender.Male ?
-                        MaleMirialanHeads.Concat(MaleHumanHeads).ToArray() :
-                        FemaleMirialanHeads.Concat(FemaleHumanHeads).ToArray();
-                    break;
-                case RacialType.Echani:
-                    headsToUse = gender == Gender.Male ?
-                        MaleEchaniHeads.Concat(MaleHumanHeads).ToArray() :
-                        FemaleEchaniHeads.Concat(FemaleHumanHeads).ToArray();
-                    break;
-                case RacialType.Cyborg:
-                    headsToUse = gender == Gender.Male ?
-                        MaleCyborgHeads.Concat(MaleHumanHeads).ToArray() :
-                        FemaleCyborgHeads.Concat(FemaleHumanHeads).ToArray();
-                    break;
-                case RacialType.Cathar:
-                    headsToUse = gender == Gender.Male ? MaleCatharHeads : FemaleCatharHeads;
-                    break;
-                case RacialType.Trandoshan:
-                    headsToUse = gender == Gender.Male ? MaleTrandoshanHeads : FemaleTrandoshanHeads;
-                    break;
-                case RacialType.Wookiee:
-                    headsToUse = gender == Gender.Male ? MaleWookieeHeads : FemaleWookieeHeads;
-                    break;
-                case RacialType.MonCalamari:
-                    headsToUse = gender == Gender.Male ? MaleMonCalamariHeads : FemaleMonCalamariHeads;
-                    break;
-                case RacialType.Ugnaught:
-                    headsToUse = gender == Gender.Male ? MaleUgnaughtHeads : FemaleUgnaughtHeads;
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
@@ -289,42 +207,6 @@ namespace Xenomech.Feature.DialogDefinition
             {
                 case RacialType.Human:
                     colorsToUse = HumanHairColors;
-                    break;
-                case RacialType.Bothan:
-                    colorsToUse = BothanHairColors;
-                    break;
-                case RacialType.Chiss:
-                    colorsToUse = ChissHairColors;
-                    break;
-                case RacialType.Zabrak:
-                    colorsToUse = ZabrakHairColors;
-                    break;
-                case RacialType.Twilek:
-                    colorsToUse = TwilekHairColors;
-                    break;
-                case RacialType.Mirialan:
-                    colorsToUse = MirialanHairColors;
-                    break;
-                case RacialType.Echani:
-                    colorsToUse = EchaniHairColors;
-                    break;
-                case RacialType.Cyborg:
-                    colorsToUse = CyborgHairColors.Concat(HumanHairColors).ToArray();
-                    break;
-                case RacialType.Cathar:
-                    colorsToUse = CatharHairColors;
-                    break;
-                case RacialType.Trandoshan:
-                    colorsToUse = TrandoshanEyeColors;
-                    break;
-                case RacialType.Wookiee:
-                    colorsToUse = WookieeHairColors;
-                    break;
-                case RacialType.MonCalamari:
-                    colorsToUse = MonCalamariHairColors;
-                    break;
-                case RacialType.Ugnaught:
-                    colorsToUse = UgnaughtHairColors;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -368,12 +250,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.Torso;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208, 209 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2, 166 };
                         break;
@@ -388,12 +264,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.Pelvis;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208, 209 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2, 11, 158 };
                         break;
@@ -408,12 +278,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.RightBicep;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2 };
                         break;
@@ -428,12 +292,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.RightForearm;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2, 152 };
                         break;
@@ -448,12 +306,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.RightHand;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2, 5, 6, 63, 100, 110, 113, 121, 151, };
                         break;
@@ -468,12 +320,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.RightThigh;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2, 154 };
                         break;
@@ -488,12 +334,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.RightShin;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2 };
                         break;
@@ -508,12 +348,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.LeftBicep;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2 };
                         break;
@@ -528,12 +362,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.LeftForearm;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2, 152 };
                         break;
@@ -548,14 +376,8 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.LeftHand;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
-                        model.Parts = new[] { 1, 2, 5, 6, 63, 100, 110, 113, 121, 151, };
+                        model.Parts = new[] { 1, 2, 5, 6, 63, 100, 110, 113, 121, 151 };
                         break;
                 }
 
@@ -568,12 +390,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.LeftThigh;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2, 154 };
                         break;
@@ -588,12 +404,6 @@ namespace Xenomech.Feature.DialogDefinition
                 model.BodyPartID = CreaturePart.LeftShin;
                 switch (race)
                 {
-                    case RacialType.Wookiee:
-                        model.Parts = new[] { 208 };
-                        break;
-                    case RacialType.MonCalamari:
-                        model.Parts = new[] { 204 };
-                        break;
                     default:
                         model.Parts = new[] { 1, 2 };
                         break;

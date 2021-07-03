@@ -36,20 +36,16 @@ namespace Xenomech.Enumeration
         Boot = 14,
         [RecipeCategory("Light Shield", true)]
         LightShield = 15,
-        [RecipeCategory("Vibroblade", true)]
+        [RecipeCategory("Longsword", true)]
         Vibroblade = 16,
-        [RecipeCategory("Finesse Vibroblade", true)]
+        [RecipeCategory("Knife", true)]
         FinesseVibroblade = 17,
-        [RecipeCategory("Lightsaber", true)]
-        Lightsaber = 18,
-        [RecipeCategory("Heavy Vibroblade", true)]
+        [RecipeCategory("Greatsword", true)]
         HeavyVibroblade = 19,
         [RecipeCategory("Polearm", true)]
         Polearm = 20,
         [RecipeCategory("Twin Blade", true)]
-        TwinBlade = 21,
-        [RecipeCategory("Saberstaff", true)]
-        Saberstaff = 22,
+        TwinBlade = 21,     
         [RecipeCategory("Martial", true)]
         Martial = 23,
         [RecipeCategory("Baton", true)]

@@ -40,7 +40,6 @@ namespace Xenomech.Feature
             InitializeHotBar(player);
             AdjustStats(player, dbPlayer);
             AdjustAlignment(player);
-            InitializeLanguages(player, dbPlayer);
             AssignRacialAppearance(player, dbPlayer);
             GiveStartingItems(player);
             AssignCharacterType(player, dbPlayer);
@@ -210,70 +209,7 @@ namespace Xenomech.Feature
             Creature.SetAlignmentLawChaos(player, 50);
             Creature.SetAlignmentGoodEvil(player, 50);
         }
-
-        /// <summary>
-        /// Initializes all of the languages for a player based on their racial type.
-        /// </summary>
-        /// <param name="player">The player object.</param>
-        /// <param name="dbPlayer">The player entity.</param>
-        private static void InitializeLanguages(uint player, Player dbPlayer)
-        {
-            var race = GetRacialType(player);
-            var languages = new List<SkillType>(new[] { SkillType.Basic });
-
-            switch (race)
-            {
-                case RacialType.Bothan:
-                    languages.Add(SkillType.Bothese);
-                    break;
-                case RacialType.Chiss:
-                    languages.Add(SkillType.Cheunh);
-                    break;
-                case RacialType.Zabrak:
-                    languages.Add(SkillType.Zabraki);
-                    break;
-                case RacialType.Wookiee:
-                    languages.Add(SkillType.Shyriiwook);
-                    break;
-                case RacialType.Twilek:
-                    languages.Add(SkillType.Twileki);
-                    break;
-                case RacialType.Cathar:
-                    languages.Add(SkillType.Catharese);
-                    break;
-                case RacialType.Trandoshan:
-                    languages.Add(SkillType.Dosh);
-                    break;
-                case RacialType.Cyborg:
-                    languages.Add(SkillType.Droidspeak);
-                    break;
-                case RacialType.Mirialan:
-                    languages.Add(SkillType.Mirialan);
-                    break;
-                case RacialType.MonCalamari:
-                    languages.Add(SkillType.MonCalamarian);
-                    break;
-                case RacialType.Ugnaught:
-                    languages.Add(SkillType.Ugnaught);
-                    break;
-            }
-
-            // Fair warning: We're short-circuiting the skill system here.
-            // Languages don't level up like normal skills (no stat increases, SP, etc.)
-            // So it's safe to simply set the player's rank in the skill to max.
-            foreach (var language in languages)
-            {
-                var skill = Service.Skill.GetSkillDetails(language);
-                if (!dbPlayer.Skills.ContainsKey(language))
-                    dbPlayer.Skills[language] = new PlayerSkill();
-
-                var level = skill.MaxRank;
-                dbPlayer.Skills[language].Rank = level;
-
-                dbPlayer.Skills[language].XP = Service.Skill.GetRequiredXP(level) - 1;
-            }
-        }
-
+        
         /// <summary>
         /// Assigns and stores the player's original racial appearance.
         /// This value is primarily used in the space system for switching between space and character modes.
@@ -317,7 +253,7 @@ namespace Xenomech.Feature
             if (@class == ClassType.Standard)
                 dbPlayer.CharacterType = CharacterType.Standard;
             else if (@class == ClassType.ForceSensitive)
-                dbPlayer.CharacterType = CharacterType.ForceSensitive;
+                dbPlayer.CharacterType = CharacterType.Mage;
         }
 
         /// <summary>

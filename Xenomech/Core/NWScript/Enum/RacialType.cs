@@ -29,22 +29,8 @@ namespace Xenomech.Core.NWScript.Enum
         All = 28, 
         Invalid = 28, 
         Ooze = 29, 
-        Plant = 52,
-
-        Robot = 150,
-        Alien = 151,
-        Bothan = 152,
-        Chiss = 153,
-        Zabrak = 154,
-        Wookiee = 155,
-        Twilek = 156,
-        Cyborg = 157,
-        Cathar = 158,
-        Trandoshan = 159,
-        Mirialan = 160,
-        Echani = 161,
-        MonCalamari = 162,
-        Ugnaught = 163
+        
+        Mech = 30
 
     }
 }

@@ -24,19 +24,6 @@ namespace Xenomech.Service
         {
             _translators = new Dictionary<SkillType, ITranslator>
             {
-                { SkillType.Bothese, new TranslatorBothese() },
-                { SkillType.Catharese, new TranslatorCatharese() },
-                { SkillType.Cheunh, new TranslatorCheunh() },
-                { SkillType.Dosh, new TranslatorDosh() },
-                { SkillType.Droidspeak, new TranslatorDroidspeak() },
-                { SkillType.Huttese, new TranslatorHuttese() },
-                { SkillType.Mandoa,  new TranslatorMandoa() },
-                { SkillType.Shyriiwook, new TranslatorShyriiwook() },
-                { SkillType.Twileki, new TranslatorTwileki() },
-                { SkillType.Zabraki, new TranslatorZabraki() },
-                { SkillType.Mirialan, new TranslatorMirialan() },
-                { SkillType.MonCalamarian, new TranslatorMonCalamarian() },
-                { SkillType.Ugnaught, new TranslatorUgnaught() }
             };
         }
 
@@ -172,19 +159,6 @@ namespace Xenomech.Service
 
             switch (language)
             {
-                case SkillType.Bothese: r = 132; g = 56; b = 18; break;
-                case SkillType.Catharese: r = 235; g = 235; b = 199; break;
-                case SkillType.Cheunh: r = 82; g = 143; b = 174; break;
-                case SkillType.Dosh: r = 166; g = 181; b = 73; break;
-                case SkillType.Droidspeak: r = 192; g = 192; b = 192; break;
-                case SkillType.Huttese: r = 162; g = 74; b = 10; break;
-                case SkillType.Mandoa: r = 255; g = 215; b = 0; break;
-                case SkillType.Shyriiwook: r = 149; g = 125; b = 86; break;
-                case SkillType.Twileki: r = 65; g = 105; b = 225; break;
-                case SkillType.Zabraki: r = 255; g = 102; b = 102; break;
-                case SkillType.Mirialan: r = 77; g = 230; b = 215; break;
-                case SkillType.MonCalamarian: r = 128; g = 128; b = 192; break;
-                case SkillType.Ugnaught: r = 255; g = 193; b = 233; break;
             }
 
             return r << 24 | g << 16 | b << 8;
@@ -194,19 +168,6 @@ namespace Xenomech.Service
         {
             switch (language)
             {
-                case SkillType.Bothese: return "Bothese";
-                case SkillType.Catharese: return "Catharese";
-                case SkillType.Cheunh: return "Cheunh";
-                case SkillType.Dosh: return "Dosh";
-                case SkillType.Droidspeak: return "Droidspeak";
-                case SkillType.Huttese: return "Huttese";
-                case SkillType.Mandoa: return "Mandoa";
-                case SkillType.Shyriiwook: return "Shyriiwook";
-                case SkillType.Twileki: return "Twi'leki";
-                case SkillType.Zabraki: return "Zabraki";
-                case SkillType.Mirialan: return "Mirialan";
-                case SkillType.MonCalamarian: return "Mon Calamarian";
-                case SkillType.Ugnaught: return "Ugnaught";
             }
 
             return "Basic";
@@ -246,20 +207,6 @@ namespace Xenomech.Service
                 {
                     var languages = new List<LanguageCommand>
                     {
-                        new LanguageCommand("Basic", SkillType.Basic, new [] { "basic" }),
-                        new LanguageCommand("Bothese", SkillType.Bothese, new[] {"bothese"}),
-                        new LanguageCommand("Catharese", SkillType.Catharese, new []{"catharese"}),
-                        new LanguageCommand("Cheunh", SkillType.Cheunh, new []{"cheunh"}),
-                        new LanguageCommand("Dosh", SkillType.Dosh, new []{"dosh"}),
-                        new LanguageCommand("Droidspeak", SkillType.Droidspeak, new []{"droidspeak"}),
-                        new LanguageCommand("Huttese", SkillType.Huttese, new []{"huttese"}),
-                        new LanguageCommand("Mando'a", SkillType.Mandoa, new []{"mandoa"}),
-                        new LanguageCommand("Mirialan", SkillType.Mirialan, new []{"mirialan"}),
-                        new LanguageCommand("Mon Calamarian", SkillType.MonCalamarian, new []{"moncalamarian", "moncal"}),
-                        new LanguageCommand("Shyriiwook", SkillType.Shyriiwook, new []{"shyriiwook", "wookieespeak"}),
-                        new LanguageCommand("Twi'leki", SkillType.Twileki, new []{"twileki", "ryl"}),
-                        new LanguageCommand("Ugnaught", SkillType.Ugnaught, new []{"ugnaught"}),
-                        new LanguageCommand("Zabraki", SkillType.Zabraki, new []{"zabraki", "zabrak"}),
                     };
 
                     _languages = languages;
