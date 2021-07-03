@@ -823,6 +823,22 @@
                       "type": "byte",
                       "value": 44
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Assault Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ass_rifle"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 16777243

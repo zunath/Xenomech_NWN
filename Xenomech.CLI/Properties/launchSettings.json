@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Xenomech.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": "-p"
+    }
+  }
+}

@@ -13,6 +13,13 @@
           "type": "resref",
           "value": "area001"
         }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "area002"
+        }
       }
     ]
   },
@@ -42,7 +49,7 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "area001"
+    "value": "area002"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
@@ -54,11 +61,11 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 40.0
+    "value": 39.0
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 40.0
+    "value": 32.0
   },
   "Mod_Entry_Z": {
     "type": "float",
@@ -86,6 +93,13 @@
         "__struct_id": 8,
         "Mod_Hak": {
           "type": "cexostring",
+          "value": "xm_bp_placeables"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
           "value": "xm_categories"
         }
       },
@@ -107,7 +121,14 @@
         "__struct_id": 8,
         "Mod_Hak": {
           "type": "cexostring",
-          "value": "xm_gears"
+          "value": "xm_fonts"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "xm_gui"
         }
       },
       {
@@ -128,7 +149,42 @@
         "__struct_id": 8,
         "Mod_Hak": {
           "type": "cexostring",
+          "value": "xm_mechs"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "xm_music"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "xm_placeables"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
           "value": "xm_portraits"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "xm_ts_scifibase"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "xm_visualeffects"
         }
       }
     ]
