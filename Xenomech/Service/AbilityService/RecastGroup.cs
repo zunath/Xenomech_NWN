@@ -7,32 +7,6 @@ namespace Xenomech.Service.AbilityService
     {
         [RecastGroup("Invalid", "Invalid")]
         Invalid = 0,
-        [RecastGroup("Burst Of Speed", "Burst Of Speed")]
-        BurstOfSpeed = 1,
-        [RecastGroup("Force Heal", "Force Heal")]
-        ForceHeal = 2,
-        [RecastGroup("Force Push", "Force Push")]
-        ForcePush = 3,
-        [RecastGroup("Throw Lightsaber", "Throw Saber")]
-        ThrowLightsaber = 4,
-        [RecastGroup("Force Stun", "Force Stun")]
-        ForceStun = 5,
-        [RecastGroup("Battle Insight", "Battle Insight")]
-        BattleInsight = 6,
-        [RecastGroup("Comprehend Speech", "Comp. Speech")]
-        ComprehendSpeech = 7,
-        [RecastGroup("Mind Trick", "Mind Trick")]
-        MindTrick = 8,
-        [RecastGroup("Force Breach", "Force Breach")]
-        ForceBreach = 9,
-        [RecastGroup("Force Body", "Force Body")]
-        ForceBody = 10,
-        [RecastGroup("Force Drain", "Force Drain")]
-        ForceDrain = 11,
-        [RecastGroup("Force Lightning", "F. Lightning")]
-        ForceLightning = 12,
-        [RecastGroup("Force Mind", "Force Mind")]
-        ForceMind = 13,
         [RecastGroup("Hacking Blade", "Hacking Blade")]
         HackingBlade = 14,
         [RecastGroup("Riot Blade", "Riot Blade")]
@@ -41,8 +15,6 @@ namespace Xenomech.Service.AbilityService
         PoisonStab = 16,
         [RecastGroup("Backstab", "Backstab")]
         Backstab = 17,        
-        [RecastGroup("Force Leap", "Force Leap")]
-        ForceLeap = 18,
         [RecastGroup("Saber Strike", "Saber Strike")]
         SaberStrike = 19,
         [RecastGroup("Crescent Moon", "Cresc. Moon")]

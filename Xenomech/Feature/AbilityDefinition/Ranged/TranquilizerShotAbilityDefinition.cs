@@ -82,7 +82,7 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
             }
 
             Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Force, 3);
+            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
         }
 
         private static void TranquilizerShot1(AbilityBuilder builder)

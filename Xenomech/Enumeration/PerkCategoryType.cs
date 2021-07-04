@@ -46,9 +46,6 @@ namespace Xenomech.Enumeration
         [PerkCategory("Ranged - Throwing", true)]
         RangedThrowing = 15,
 
-        [PerkCategory("Ranged - Cannon", true)]
-        RangedCannon = 16,
-
         [PerkCategory("Ranged - Rifle", true)]
         RangedRifle = 17,
 

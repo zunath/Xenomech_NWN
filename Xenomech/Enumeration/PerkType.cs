@@ -86,12 +86,7 @@
         ThrowingWeaponMastery = 80,
         ExplosiveToss = 81,
         PiercingToss = 82,
-        WeaponFocusCannons = 83,
-        ImprovedCriticalCannons = 84,
-        CannonProficiency = 85,
-        CannonMastery = 86,
-        FullAuto = 87,
-        HammerShot = 88,
+        
         WeaponFocusRifles = 89,
         ImprovedCriticalRifles = 90,
         RifleProficiency = 91,

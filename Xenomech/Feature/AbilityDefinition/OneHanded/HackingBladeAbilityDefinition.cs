@@ -69,7 +69,7 @@ namespace Xenomech.Feature.AbilityDefinition.OneHanded
             if (inflictBleed) StatusEffect.Apply(activator, target, StatusEffectType.Bleed, 60f);
 
             Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Force, 3);
+            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
         }
 
         private static void HackingBlade1(AbilityBuilder builder)

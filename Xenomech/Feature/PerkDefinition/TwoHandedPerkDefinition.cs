@@ -105,14 +105,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Focus feat which grants a +1 attack bonus when equipped with heavy vibroblades.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 5)
-                .GrantsFeat(FeatType.WeaponFocusHeavyVibroblades)
+                .GrantsFeat(FeatType.WeaponFocusGreatswords)
 
                 .AddPerkLevel()
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with heavy vibroblades.")
                 .Price(4)
                 .RequirementSkill(SkillType.TwoHanded, 15)
                 .RequirementCharacterType(CharacterType.Standard)
-                .GrantsFeat(FeatType.WeaponSpecializationHeavyVibroblades);
+                .GrantsFeat(FeatType.WeaponSpecializationGreatswords);
         }
 
         private void ImprovedCriticalHeavyVibroblades(PerkBuilder builder)
@@ -125,7 +125,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 25)
                 .RequirementCharacterType(CharacterType.Standard)
-                .GrantsFeat(FeatType.ImprovedCriticalHeavyVibroblades);
+                .GrantsFeat(FeatType.ImprovedCriticalGreatswords);
         }
 
         private void HeavyVibrobladeProficiency(PerkBuilder builder)
@@ -136,31 +136,31 @@ namespace Xenomech.Feature.PerkDefinition
                 .AddPerkLevel()
                 .Description("Grants the ability to equip tier 1 Heavy Vibroblades.")
                 .Price(2)
-                .GrantsFeat(FeatType.HeavyVibrobladeProficiency1)
+                .GrantsFeat(FeatType.GreatswordProficiency1)
 
                 .AddPerkLevel()
                 .Description("Grants the ability to equip tier 2 Heavy Vibroblades.")
                 .Price(2)
                 .RequirementSkill(SkillType.TwoHanded, 10)
-                .GrantsFeat(FeatType.HeavyVibrobladeProficiency2)
+                .GrantsFeat(FeatType.GreatswordProficiency2)
 
                 .AddPerkLevel()
                 .Description("Grants the ability to equip tier 3 Heavy Vibroblades.")
                 .Price(2)
                 .RequirementSkill(SkillType.TwoHanded, 20)
-                .GrantsFeat(FeatType.HeavyVibrobladeProficiency3)
+                .GrantsFeat(FeatType.GreatswordProficiency3)
 
                 .AddPerkLevel()
                 .Description("Grants the ability to equip tier 4 Heavy Vibroblades.")
                 .Price(2)
                 .RequirementSkill(SkillType.TwoHanded, 30)
-                .GrantsFeat(FeatType.HeavyVibrobladeProficiency4)
+                .GrantsFeat(FeatType.GreatswordProficiency4)
 
                 .AddPerkLevel()
                 .Description("Grants the ability to equip tier 5 Heavy Vibroblades.")
                 .Price(2)
                 .RequirementSkill(SkillType.TwoHanded, 40)
-                .GrantsFeat(FeatType.HeavyVibrobladeProficiency5);
+                .GrantsFeat(FeatType.GreatswordProficiency5);
         }
 
         private void HeavyVibrobladeMastery(PerkBuilder builder)
@@ -218,21 +218,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 25)
                 .RequirementCharacterType(CharacterType.Standard)
-                .GrantsFeat(FeatType.HeavyVibrobladeMastery1)
+                .GrantsFeat(FeatType.GreatswordMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Heavy Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 40)
                 .RequirementCharacterType(CharacterType.Standard)
-                .GrantsFeat(FeatType.HeavyVibrobladeMastery2)
+                .GrantsFeat(FeatType.GreatswordMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Heavy Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 50)
                 .RequirementCharacterType(CharacterType.Standard)
-                .GrantsFeat(FeatType.HeavyVibrobladeMastery3);
+                .GrantsFeat(FeatType.GreatswordMastery3);
         }
 
         private void CrescentMoon(PerkBuilder builder)

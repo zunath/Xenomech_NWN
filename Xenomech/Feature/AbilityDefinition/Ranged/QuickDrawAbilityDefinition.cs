@@ -59,7 +59,7 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
             ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Piercing), target);
 
             Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Force, 3);
+            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
         }
 
         private static void QuickDraw1(AbilityBuilder builder)

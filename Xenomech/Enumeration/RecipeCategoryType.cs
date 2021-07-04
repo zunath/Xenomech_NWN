@@ -54,8 +54,7 @@ namespace Xenomech.Enumeration
         Pistol = 25,
         [RecipeCategory("Throwing", true)]
         Throwing = 26,
-        [RecipeCategory("Cannon", true)]
-        Cannon = 27,
+        
         [RecipeCategory("Rifle", true)]
         Rifle = 28,
         [RecipeCategory("Neck Implant", true)]

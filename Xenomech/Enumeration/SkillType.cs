@@ -40,17 +40,33 @@ namespace Xenomech.Enumeration
             "Ranged", 
             50, 
             true, 
-            "Ability to use ranged weapons like pistols, cannons, and rifles in combat.", 
+            "Ability to use ranged weapons like pistols and rifles in combat.", 
             true)]
         Ranged = 4,
 
-        [Skill(SkillCategoryType.Combat,
-            "Force",
+        [Skill(SkillCategoryType.Ether,
+            "Elemental",
             50,
             true,
-            "Ability to use Ether abilities. Only available to 'Mage' character types.",
+            "Ability to use Elemental Ether abilities. Only available to 'Mage' character types.",
             true)]
-        Force = 5,
+        Elemental = 5,
+
+        [Skill(SkillCategoryType.Ether,
+            "Arcane",
+            50,
+            true,
+            "Ability to use Arcane Ether abilities. Only available to 'Mage' character types.",
+            true)]
+        Arcane = 6,
+
+        [Skill(SkillCategoryType.Ether,
+            "Summoning",
+            50,
+            true,
+            "Ability to use Summoning Ether abilities. Only available to 'Mage' character types.",
+            true)]
+        Summoning = 7,
 
         [Skill(SkillCategoryType.Combat, 
             "Armor", 
@@ -58,16 +74,16 @@ namespace Xenomech.Enumeration
             true,
             "Ability to effectively wear and defend against attacks with armor.", 
             true)]
-        Armor = 6,
+        Armor = 8,
 
         // Utility
         [Skill(SkillCategoryType.Utility,
             "Piloting",
             50,
             true,
-            "Ability to pilot mechs.",
+            "Ability to pilot and outfit mechs.",
             true)]
-        Piloting = 7,
+        Piloting = 9,
 
         [Skill(SkillCategoryType.Utility,
             "First Aid",
@@ -75,7 +91,7 @@ namespace Xenomech.Enumeration
             true,
             "Ability to treat bodily injuries in the field with healing kits and stim packs.",
             true)]
-        FirstAid = 8,
+        FirstAid = 10,
 
         // Crafting
         [Skill(SkillCategoryType.Crafting, 
@@ -84,7 +100,7 @@ namespace Xenomech.Enumeration
             true, 
             "Ability to create weapons and armor like vibroblades, blasters, and helmets.", 
             true)]
-        Smithery = 9,
+        Smithery = 11,
         
         [Skill(SkillCategoryType.Crafting,
             "Cybertech", 
@@ -92,7 +108,7 @@ namespace Xenomech.Enumeration
             true,
             "Ability to create and install implants.",
             true)]
-        Cybertech = 11,
+        Cybertech = 12,
 
         [Skill(SkillCategoryType.Crafting, 
             "Fabrication", 
@@ -100,7 +116,7 @@ namespace Xenomech.Enumeration
             true, 
             "Ability to create base structures, furniture, and starships.", 
             true)]
-        Fabrication = 12,
+        Fabrication = 13,
 
         [Skill(SkillCategoryType.Crafting, 
             "Gathering", 
@@ -108,7 +124,7 @@ namespace Xenomech.Enumeration
             true, 
             "Ability to harvest raw materials and scavenge for supplies.", 
             true)]
-        Gathering = 13,
+        Gathering = 14,
 
         [Skill(SkillCategoryType.Languages, 
             "Basic", 

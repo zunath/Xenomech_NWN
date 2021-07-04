@@ -68,7 +68,7 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
             if (inflict) StatusEffect.Apply(activator, target, StatusEffectType.Bleed, duration);
 
             Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Force, 3);
+            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
         }
 
         private static void PiercingToss1(AbilityBuilder builder)

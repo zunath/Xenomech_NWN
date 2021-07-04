@@ -26,7 +26,6 @@ namespace Xenomech.Feature
             ConfigureStaves();
             ConfigurePistols();
             ConfigureThrowingWeapons();
-            ConfigureCannons();
             ConfigureRifles();
         }
 
@@ -41,9 +40,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.VibrobladeBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusVibroblades);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationVibroblades);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalVibroblades);
+                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusLongswords);
+                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationLongswords);
+                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalLongswords);
             }
         }
 
@@ -51,9 +50,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.FinesseVibrobladeBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusFinesseVibroblades);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationFinesseVibroblades);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalFinesseVibroblades);
+                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusKnives);
+                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationKnives);
+                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalKnives);
             }
         }
         
@@ -61,9 +60,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.HeavyVibrobladeBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusHeavyVibroblades);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationHeavyVibroblades);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalHeavyVibroblades);
+                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusGreatswords);
+                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationGreatswords);
+                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalGreatswords);
             }
         }
 
@@ -125,17 +124,7 @@ namespace Xenomech.Feature
                 Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalThrowingWeapons);
             }
         }
-
-        private static void ConfigureCannons()
-        {
-            foreach (var itemType in Item.CannonBaseItemTypes)
-            {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusCannons);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationCannons);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalCannons);
-            }
-        }
-
+        
         private static void ConfigureRifles()
         {
             foreach (var itemType in Item.RifleBaseItemTypes)

@@ -68,7 +68,7 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
             if (inflict) ApplyEffectToObject(DurationType.Temporary, EffectSlow(), target, duration);
 
             Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Force, 3);
+            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
         }
 
         private static void CripplingShot1(AbilityBuilder builder)

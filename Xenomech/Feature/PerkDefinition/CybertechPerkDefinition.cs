@@ -162,31 +162,31 @@ namespace Xenomech.Feature.PerkDefinition
                 .AddPerkLevel()
                 .Description("Grants access to tier 1 Body Implant blueprints.")
                 .Price(1)
-                .GrantsFeat(FeatType.BodyImplantBlueprints1)
+                .GrantsFeat(FeatType.ChestImplantBlueprints1)
 
                 .AddPerkLevel()
                 .Description("Grants access to tier 2 Body Implant blueprints.")
                 .Price(1)
                 .RequirementSkill(SkillType.Cybertech, 10)
-                .GrantsFeat(FeatType.BodyImplantBlueprints2)
+                .GrantsFeat(FeatType.ChestImplantBlueprints2)
 
                 .AddPerkLevel()
                 .Description("Grants access to tier 3 Body Implant blueprints.")
                 .Price(2)
                 .RequirementSkill(SkillType.Cybertech, 20)
-                .GrantsFeat(FeatType.BodyImplantBlueprints3)
+                .GrantsFeat(FeatType.ChestImplantBlueprints3)
 
                 .AddPerkLevel()
                 .Description("Grants access to tier 4 Body Implant blueprints.")
                 .Price(3)
                 .RequirementSkill(SkillType.Cybertech, 30)
-                .GrantsFeat(FeatType.BodyImplantBlueprints4)
+                .GrantsFeat(FeatType.ChestImplantBlueprints4)
 
                 .AddPerkLevel()
                 .Description("Grants access to tier 5 Body Implant blueprints.")
                 .Price(3)
                 .RequirementSkill(SkillType.Cybertech, 40)
-                .GrantsFeat(FeatType.BodyImplantBlueprints5);
+                .GrantsFeat(FeatType.ChestImplantBlueprints5);
         }
     }
 }

@@ -68,7 +68,7 @@ namespace Xenomech.Feature.AbilityDefinition.OneHanded
             if (inflictPoision) StatusEffect.Apply(activator, target, StatusEffectType.Poison, 60f);
 
             Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Force, 3);
+            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
         }
 
         private static void PoisonStab1(AbilityBuilder builder)

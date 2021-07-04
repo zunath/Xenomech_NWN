@@ -447,15 +447,7 @@ namespace Xenomech.Service
             BaseItem.Shuriken,
             BaseItem.Dart
         };
-
-        /// <summary>
-        /// Retrieves the list of Cannon base item types.
-        /// </summary>
-        public static List<BaseItem> CannonBaseItemTypes { get; } = new List<BaseItem>
-        {
-            BaseItem.HeavyWeapon
-        };
-
+        
         /// <summary>
         /// Retrieves the list of Rifle base item types.
         /// </summary>
