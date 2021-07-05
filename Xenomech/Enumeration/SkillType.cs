@@ -106,7 +106,7 @@ namespace Xenomech.Enumeration
             "Cybertech", 
             50,
             true,
-            "Ability to create and install implants.",
+            "",
             true)]
         Cybertech = 12,
 

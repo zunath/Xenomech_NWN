@@ -37,11 +37,11 @@ namespace Xenomech.Enumeration
         [RecipeCategory("Light Shield", true)]
         LightShield = 15,
         [RecipeCategory("Longsword", true)]
-        Vibroblade = 16,
+        Longsword = 16,
         [RecipeCategory("Knife", true)]
-        FinesseVibroblade = 17,
+        Knife = 17,
         [RecipeCategory("Greatsword", true)]
-        HeavyVibroblade = 19,
+        Greatsword = 19,
         [RecipeCategory("Polearm", true)]
         Polearm = 20,
         [RecipeCategory("Twin Blade", true)]
@@ -57,38 +57,10 @@ namespace Xenomech.Enumeration
         
         [RecipeCategory("Rifle", true)]
         Rifle = 28,
-        [RecipeCategory("Neck Implant", true)]
-        NeckImplant = 29,
-        [RecipeCategory("Head Implant", true)]
-        HeadImplant = 30,
-        [RecipeCategory("Arm Implant", true)]
-        ArmImplant = 31,
-        [RecipeCategory("Leg Implant", true)]
-        LegImplant = 32,
-        [RecipeCategory("Foot Implant", true)]
-        FootImplant = 33,
-        [RecipeCategory("Chest Implant", true)]
-        ChestImplant = 34,
-        [RecipeCategory("Hand Implant", true)]
-        HandImplant = 35,
-        [RecipeCategory("Eye Implant", true)]
-        EyeImplant = 36,
+        
         [RecipeCategory("Furniture", true)]
         Furniture = 37,
-        [RecipeCategory("Structure", true)]
-        Structure = 38,
-        [RecipeCategory("Starship", true)]
-        Starship = 39,
-        [RecipeCategory("Turret", true)]
-        Turret = 40,
-        [RecipeCategory("Reactor", true)]
-        Reactor = 41,
-        [RecipeCategory("Plating", true)]
-        Plating = 42,
-        [RecipeCategory("Mining", true)]
-        Mining = 43,
-        [RecipeCategory("Droid", true)]
-        Droid = 44,
+        
         [RecipeCategory("Harvester", true)]
         Harvester = 45,
         [RecipeCategory("Stim Pack", true)]

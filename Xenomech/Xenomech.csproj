@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Feature\AbilityDefinition\Crafting\" />
     <Folder Include="Feature\QuestDefinition\" />
     <Folder Include="Feature\SpawnDefinition\" />
   </ItemGroup>

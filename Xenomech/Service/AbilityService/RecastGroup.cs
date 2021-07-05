@@ -62,9 +62,7 @@ namespace Xenomech.Service.AbilityService
         [RecastGroup("Rest", "Rest")]
         Rest = 41,
         [RecastGroup("Knockdown", "Knockdown")]
-        Knockdown = 42,
-        [RecastGroup("Implant Installation", "Imp. Install")]
-        ImplantInstallation = 43,
+        Knockdown = 42
     }
 
     public class RecastGroupAttribute: Attribute

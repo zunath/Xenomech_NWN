@@ -4,7 +4,6 @@ using Xenomech.Core.NWScript.Enum;
 using Xenomech.Enumeration;
 using Xenomech.Service.AbilityService;
 using Xenomech.Service.FactionService;
-using Xenomech.Service.ImplantService;
 using Xenomech.Service.TaxiService;
 
 namespace Xenomech.Entity
@@ -14,7 +13,6 @@ namespace Xenomech.Entity
         public Player()
         {
             Settings = new PlayerSettings();
-            ImplantStats = new PlayerImplantStats();
             BaseStats = new Dictionary<AbilityType, int>
             {
                 {AbilityType.Vitality, 0},
@@ -43,7 +41,6 @@ namespace Xenomech.Entity
             KeyItems = new Dictionary<KeyItemType, DateTime>();
             Guilds = new Dictionary<GuildType, PlayerGuild>();
             SavedOutfits = new Dictionary<int, string>();
-            Implants = new Dictionary<ImplantSlotType, PlayerImplant>();
             Factions = new Dictionary<FactionType, PlayerFactionStanding>();
             TaxiDestinations = new Dictionary<int, List<TaxiDestinationType>>();
         }
@@ -89,7 +86,6 @@ namespace Xenomech.Entity
         public int AbilityRecastReduction { get; set; }
 
         public PlayerSettings Settings { get; set; }
-        public PlayerImplantStats ImplantStats { get; set; }
         public Dictionary<AbilityType, int> BaseStats { get; set; }
         public RoleplayProgress RoleplayProgress { get; set; }
         public Dictionary<string, List<MapPin>> MapPins { get; set; }
@@ -103,7 +99,6 @@ namespace Xenomech.Entity
         public Dictionary<KeyItemType, DateTime> KeyItems{ get; set; }
         public Dictionary<GuildType, PlayerGuild> Guilds { get; set; }
         public Dictionary<int, string> SavedOutfits { get; set; }
-        public Dictionary<ImplantSlotType, PlayerImplant> Implants { get; set; }
         public Dictionary<FactionType, PlayerFactionStanding> Factions { get; set; }
         public Dictionary<int, List<TaxiDestinationType>> TaxiDestinations { get; set; }
     }
@@ -157,36 +152,9 @@ namespace Xenomech.Entity
         public int Points { get; set; }
     }
 
-    public class PlayerImplant
-    {
-        public string ItemId { get; set; }
-        public string ItemSerializedData { get; set; }
-    }
-
     public class PlayerFactionStanding
     {
         public int Standing { get; set; }
         public int Points { get; set; }
-    }
-
-    public class PlayerImplantStats
-    {
-        public Dictionary<AbilityType, int> Attributes { get; set; }
-        public int HPRegen { get; set; }
-        public int FPRegen { get; set; }
-        public int STMRegen { get; set; }
-
-        public PlayerImplantStats()
-        {
-            Attributes = new Dictionary<AbilityType, int>
-            {
-                {AbilityType.Vitality, 0},
-                {AbilityType.Might, 0},
-                {AbilityType.Diplomacy, 0},
-                {AbilityType.Perception, 0},
-                {AbilityType.Unused, 0},
-                {AbilityType.Spirit, 0}
-            };
-        }
     }
 }

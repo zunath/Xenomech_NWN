@@ -39,7 +39,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicHeavyVibrobladeGA()
         {
             _builder.Create(RecipeType.BasicHeavyVibrobladeGA, SkillType.Smithery)
-                .Category(RecipeCategoryType.HeavyVibroblade)
+                .Category(RecipeCategoryType.Greatsword)
                 .Level(8)
                 .Quantity(1)
                 .RequirementPerk(PerkType.TwoHandedBlueprints, 1)
@@ -51,7 +51,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicVibrobladeBA()
         {
             _builder.Create(RecipeType.BasicVibrobladeBA, SkillType.Smithery)
-                .Category(RecipeCategoryType.Vibroblade)
+                .Category(RecipeCategoryType.Longsword)
                 .Level(7)
                 .Quantity(1)
                 .RequirementPerk(PerkType.OneHandedBlueprints, 1)
@@ -63,7 +63,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicVibrobladeBS()
         {
             _builder.Create(RecipeType.BasicVibrobladeBS, SkillType.Smithery)
-                .Category(RecipeCategoryType.Vibroblade)
+                .Category(RecipeCategoryType.Longsword)
                 .Level(6)
                 .Quantity(1)
                 .RequirementPerk(PerkType.OneHandedBlueprints, 1)
@@ -75,7 +75,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicFinesseVibrobladeD()
         {
             _builder.Create(RecipeType.BasicFinesseVibrobladeD, SkillType.Smithery)
-                .Category(RecipeCategoryType.FinesseVibroblade)
+                .Category(RecipeCategoryType.Knife)
                 .Level(1)
                 .Quantity(1)
                 .RequirementPerk(PerkType.OneHandedBlueprints, 1)
@@ -86,7 +86,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicHeavyVibrobladeGS()
         {
             _builder.Create(RecipeType.BasicHeavyVibrobladeGS, SkillType.Smithery)
-                .Category(RecipeCategoryType.HeavyVibroblade)
+                .Category(RecipeCategoryType.Greatsword)
                 .Level(6)
                 .Quantity(1)
                 .RequirementPerk(PerkType.TwoHandedBlueprints, 1)
@@ -97,7 +97,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicVibrobladeLS()
         {
             _builder.Create(RecipeType.BasicVibrobladeLS, SkillType.Smithery)
-                .Category(RecipeCategoryType.Vibroblade)
+                .Category(RecipeCategoryType.Longsword)
                 .Level(5)
                 .Quantity(1)
                 .RequirementPerk(PerkType.OneHandedBlueprints, 1)
@@ -108,7 +108,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicFinesseVibrobladeR()
         {
             _builder.Create(RecipeType.BasicFinesseVibrobladeR, SkillType.Smithery)
-                .Category(RecipeCategoryType.FinesseVibroblade)
+                .Category(RecipeCategoryType.Knife)
                 .Level(4)
                 .Quantity(1)
                 .RequirementPerk(PerkType.OneHandedBlueprints, 1)
@@ -119,7 +119,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicVibrobladeK()
         {
             _builder.Create(RecipeType.BasicVibrobladeK, SkillType.Smithery)
-                .Category(RecipeCategoryType.Vibroblade)
+                .Category(RecipeCategoryType.Longsword)
                 .Level(5)
                 .Quantity(1)
                 .RequirementPerk(PerkType.OneHandedBlueprints, 1)
@@ -130,7 +130,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicFinesseVibrobladeSS()
         {
             _builder.Create(RecipeType.BasicFinesseVibrobladeSS, SkillType.Smithery)
-                .Category(RecipeCategoryType.FinesseVibroblade)
+                .Category(RecipeCategoryType.Knife)
                 .Level(3)
                 .Quantity(1)
                 .RequirementPerk(PerkType.OneHandedBlueprints, 1)
@@ -185,7 +185,7 @@ namespace Xenomech.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void BasicFinesseVibrobladeK()
         {
             _builder.Create(RecipeType.BasicFinesseVibrobladeK, SkillType.Smithery)
-                .Category(RecipeCategoryType.FinesseVibroblade)
+                .Category(RecipeCategoryType.Knife)
                 .Level(6)
                 .Quantity(1)
                 .RequirementPerk(PerkType.OneHandedBlueprints, 1)
