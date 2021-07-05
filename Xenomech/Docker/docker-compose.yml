@@ -8,8 +8,10 @@ services:
         volumes:
           - ${PWD-.}/redis:/data
         restart: always
+        ports:
+            - "6379:6379"
         networks:
-            swlor_network:
+            xenomech_network:
                 ipv4_address: 172.22.0.100
                 
     redis-commander:
@@ -24,7 +26,7 @@ services:
         ports:
             - "8081:8081"
         networks:
-            swlor_network:
+            xenomech_network:
                 ipv4_address: 172.22.0.99
 
     influxdb:
@@ -45,7 +47,7 @@ services:
         logging:
             driver: "none"
         networks:
-            swlor_network:
+            xenomech_network:
                 ipv4_address: 172.22.0.102
             
     grafana:
@@ -61,13 +63,13 @@ services:
         volumes:
             - ./grafana-provisioning:/etc/grafana/provisioning
         networks:
-            swlor_network:
+            xenomech_network:
                 ipv4_address: 172.22.0.103
             
-    swlor-server:
+    xenomech-server:
         hostname: nwnx-server
         image: nwnxee/unified:latest
-        env_file: ${PWD-.}/swlor.env
+        env_file: ${PWD-.}/xenomech.env
         stdin_open: true
         tty: true
         depends_on:
@@ -80,11 +82,11 @@ services:
         ports:
             - "5121:5121/udp"
         networks:
-          swlor_network:
+          xenomech_network:
             ipv4_address: 172.22.0.101
             
 networks:
-    swlor_network:
+    xenomech_network:
         ipam:
             driver: default
             config:
