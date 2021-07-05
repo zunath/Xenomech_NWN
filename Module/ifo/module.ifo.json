@@ -13,13 +13,6 @@
           "type": "resref",
           "value": "area001"
         }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "area002"
-        }
       }
     ]
   },
@@ -41,7 +34,9 @@
   },
   "Mod_Description": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": ""
+    }
   },
   "Mod_DuskHour": {
     "type": "byte",
@@ -49,7 +44,7 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "area002"
+    "value": "area001"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
@@ -61,11 +56,11 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 39.0
+    "value": 40.0
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 32.0
+    "value": 45.0
   },
   "Mod_Entry_Z": {
     "type": "float",
@@ -171,6 +166,13 @@
         "Mod_Hak": {
           "type": "cexostring",
           "value": "xm_portraits"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "xm_ts_d20mm"
         }
       },
       {
