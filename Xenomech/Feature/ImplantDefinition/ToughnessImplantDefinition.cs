@@ -26,8 +26,8 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+1 CON, -1 WIS")
                 .RequiredLevel(1)
                 .Slot(ImplantSlotType.Body)
-                .ModifyAbilityScore(AbilityType.Constitution, 1)
-                .ModifyAbilityScore(AbilityType.Wisdom, -1);
+                .ModifyAbilityScore(AbilityType.Vitality, 1)
+                .ModifyAbilityScore(AbilityType.Spirit, -1);
         }
 
         private void ToughnessImplant2()
@@ -37,9 +37,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+2 CON, -1 INT, -1 WIS")
                 .RequiredLevel(2)
                 .Slot(ImplantSlotType.Body)
-                .ModifyAbilityScore(AbilityType.Constitution, 2)
-                .ModifyAbilityScore(AbilityType.Intelligence, -1)
-                .ModifyAbilityScore(AbilityType.Wisdom, -1);
+                .ModifyAbilityScore(AbilityType.Vitality, 2)
+                .ModifyAbilityScore(AbilityType.Unused, -1)
+                .ModifyAbilityScore(AbilityType.Spirit, -1);
         }
         private void ToughnessImplant3()
         {
@@ -48,9 +48,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+3 CHA, -2 INT, -2 WIS")
                 .RequiredLevel(3)
                 .Slot(ImplantSlotType.Body)
-                .ModifyAbilityScore(AbilityType.Constitution, 3)
-                .ModifyAbilityScore(AbilityType.Intelligence, -2)
-                .ModifyAbilityScore(AbilityType.Wisdom, -2);
+                .ModifyAbilityScore(AbilityType.Vitality, 3)
+                .ModifyAbilityScore(AbilityType.Unused, -2)
+                .ModifyAbilityScore(AbilityType.Spirit, -2);
         }
         private void ToughnessImplant4()
         {
@@ -59,9 +59,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+4 CHA, -3 INT, -3 WIS")
                 .RequiredLevel(4)
                 .Slot(ImplantSlotType.Body)
-                .ModifyAbilityScore(AbilityType.Constitution, 4)
-                .ModifyAbilityScore(AbilityType.Intelligence, -3)
-                .ModifyAbilityScore(AbilityType.Wisdom, -3);
+                .ModifyAbilityScore(AbilityType.Vitality, 4)
+                .ModifyAbilityScore(AbilityType.Unused, -3)
+                .ModifyAbilityScore(AbilityType.Spirit, -3);
         }
         private void ToughnessImplant5()
         {
@@ -70,9 +70,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+5 CHA, -4 INT, -4 WIS")
                 .RequiredLevel(5)
                 .Slot(ImplantSlotType.Body)
-                .ModifyAbilityScore(AbilityType.Constitution, 5)
-                .ModifyAbilityScore(AbilityType.Intelligence, -4)
-                .ModifyAbilityScore(AbilityType.Wisdom, -4);
+                .ModifyAbilityScore(AbilityType.Vitality, 5)
+                .ModifyAbilityScore(AbilityType.Unused, -4)
+                .ModifyAbilityScore(AbilityType.Spirit, -4);
         }
     }
 }

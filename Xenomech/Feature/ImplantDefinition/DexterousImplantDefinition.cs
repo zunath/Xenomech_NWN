@@ -27,8 +27,8 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+1 DEX, -1 INT")
                 .RequiredLevel(1)
                 .Slot(ImplantSlotType.Legs)
-                .ModifyAbilityScore(AbilityType.Dexterity, 1)
-                .ModifyAbilityScore(AbilityType.Intelligence, -1);
+                .ModifyAbilityScore(AbilityType.Perception, 1)
+                .ModifyAbilityScore(AbilityType.Unused, -1);
         }
 
         private void DexterousImplant2()
@@ -38,9 +38,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+2 DEX, -1 WIS, -1 INT")
                 .RequiredLevel(2)
                 .Slot(ImplantSlotType.Legs)
-                .ModifyAbilityScore(AbilityType.Dexterity, 2)
-                .ModifyAbilityScore(AbilityType.Intelligence, -1)
-                .ModifyAbilityScore(AbilityType.Wisdom, -1);
+                .ModifyAbilityScore(AbilityType.Perception, 2)
+                .ModifyAbilityScore(AbilityType.Unused, -1)
+                .ModifyAbilityScore(AbilityType.Spirit, -1);
         }
         private void DexterousImplant3()
         {
@@ -49,9 +49,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+3 DEX, -2 WIS, -2 INT")
                 .RequiredLevel(3)
                 .Slot(ImplantSlotType.Legs)
-                .ModifyAbilityScore(AbilityType.Dexterity, 3)
-                .ModifyAbilityScore(AbilityType.Intelligence, -2)
-                .ModifyAbilityScore(AbilityType.Wisdom, -2);
+                .ModifyAbilityScore(AbilityType.Perception, 3)
+                .ModifyAbilityScore(AbilityType.Unused, -2)
+                .ModifyAbilityScore(AbilityType.Spirit, -2);
         }
         private void DexterousImplant4()
         {
@@ -60,9 +60,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+4 DEX, -3 WIS, -3 INT")
                 .RequiredLevel(4)
                 .Slot(ImplantSlotType.Legs)
-                .ModifyAbilityScore(AbilityType.Dexterity, 4)
-                .ModifyAbilityScore(AbilityType.Intelligence, -3)
-                .ModifyAbilityScore(AbilityType.Wisdom, -3);
+                .ModifyAbilityScore(AbilityType.Perception, 4)
+                .ModifyAbilityScore(AbilityType.Unused, -3)
+                .ModifyAbilityScore(AbilityType.Spirit, -3);
         }
         private void DexterousImplant5()
         {
@@ -71,9 +71,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+5 DEX, -4 WIS, -4 INT")
                 .RequiredLevel(5)
                 .Slot(ImplantSlotType.Legs)
-                .ModifyAbilityScore(AbilityType.Dexterity, 5)
-                .ModifyAbilityScore(AbilityType.Intelligence, -4)
-                .ModifyAbilityScore(AbilityType.Wisdom, -4);
+                .ModifyAbilityScore(AbilityType.Perception, 5)
+                .ModifyAbilityScore(AbilityType.Unused, -4)
+                .ModifyAbilityScore(AbilityType.Spirit, -4);
         }
     }
 }

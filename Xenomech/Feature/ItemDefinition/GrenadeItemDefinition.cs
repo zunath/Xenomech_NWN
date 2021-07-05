@@ -135,7 +135,7 @@ namespace Xenomech.Feature.ItemDefinition
                 .ReducesItemCharge()
                 .MaxDistance((user, item, target, location) =>
                 {
-                    return 10f + 2f * GetAbilityModifier(AbilityType.Strength, user);
+                    return 10f + 2f * GetAbilityModifier(AbilityType.Might, user);
                 })
                 .ValidationAction((user, item, target, location) =>
                 {

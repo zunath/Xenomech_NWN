@@ -51,12 +51,12 @@ namespace Xenomech.Feature
         private static void AutoLevelPlayer(uint player)
         {
             // Capture original stats before we level up the player.
-            var str = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Strength);
-            var con = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Constitution);
-            var dex = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Dexterity);
-            var @int = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Intelligence);
-            var wis = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Wisdom);
-            var cha = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Charisma);
+            var str = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Might);
+            var con = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Vitality);
+            var dex = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Perception);
+            var @int = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Unused);
+            var wis = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Spirit);
+            var cha = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Diplomacy);
 
             GiveXPToCreature(player, 10000);
 
@@ -67,12 +67,12 @@ namespace Xenomech.Feature
             }
 
             // Set stats back to how they were on entry.
-            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Strength, str);
-            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Constitution, con);
-            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Dexterity, dex);
-            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Intelligence, @int);
-            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Wisdom, wis);
-            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Charisma, cha);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Might, str);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Vitality, con);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Perception, dex);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Unused, @int);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Spirit, wis);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Diplomacy, cha);
         }
 
         /// <summary>
@@ -192,12 +192,12 @@ namespace Xenomech.Feature
             dbPlayer.FP = Stat.GetMaxFP(player, dbPlayer);
             dbPlayer.Stamina = Stat.GetMaxStamina(player, dbPlayer);
 
-            dbPlayer.BaseStats[AbilityType.Strength] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Strength);
-            dbPlayer.BaseStats[AbilityType.Dexterity] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Dexterity);
-            dbPlayer.BaseStats[AbilityType.Constitution] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Constitution);
-            dbPlayer.BaseStats[AbilityType.Wisdom] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Wisdom);
-            dbPlayer.BaseStats[AbilityType.Intelligence] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Intelligence);
-            dbPlayer.BaseStats[AbilityType.Charisma] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Charisma);
+            dbPlayer.BaseStats[AbilityType.Might] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Might);
+            dbPlayer.BaseStats[AbilityType.Perception] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Perception);
+            dbPlayer.BaseStats[AbilityType.Vitality] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Vitality);
+            dbPlayer.BaseStats[AbilityType.Spirit] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Spirit);
+            dbPlayer.BaseStats[AbilityType.Unused] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Unused);
+            dbPlayer.BaseStats[AbilityType.Diplomacy] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Diplomacy);
         }
 
         /// <summary>

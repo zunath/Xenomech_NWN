@@ -2,11 +2,11 @@ namespace Xenomech.Core.NWScript.Enum.Item.Property
 {
     public enum Ability
     {
-        Strength,
-        Dexterity,
-        Constitution,
-        Intelligence,
-        Wisdom,
-        Charisma
+        Might,
+        Perception,
+        Vitality,
+        Unused,
+        Spirit,
+        Diplomacy
     }
 }

@@ -27,8 +27,8 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+1 INT, -1 STR")
                 .RequiredLevel(1)
                 .Slot(ImplantSlotType.Head)
-                .ModifyAbilityScore(AbilityType.Intelligence, 1)
-                .ModifyAbilityScore(AbilityType.Strength, -1);
+                .ModifyAbilityScore(AbilityType.Unused, 1)
+                .ModifyAbilityScore(AbilityType.Might, -1);
         }
 
         private void IntellectImplant2()
@@ -38,9 +38,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+2 INT, -1 CON, -1 STR")
                 .RequiredLevel(2)
                 .Slot(ImplantSlotType.Head)
-                .ModifyAbilityScore(AbilityType.Intelligence, 2)
-                .ModifyAbilityScore(AbilityType.Constitution, -1)
-                .ModifyAbilityScore(AbilityType.Strength, -1);
+                .ModifyAbilityScore(AbilityType.Unused, 2)
+                .ModifyAbilityScore(AbilityType.Vitality, -1)
+                .ModifyAbilityScore(AbilityType.Might, -1);
         }
         private void IntellectImplant3()
         {
@@ -49,9 +49,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+3 INT, -2 CON, -2 STR")
                 .RequiredLevel(3)
                 .Slot(ImplantSlotType.Head)
-                .ModifyAbilityScore(AbilityType.Intelligence, 3)
-                .ModifyAbilityScore(AbilityType.Constitution, -2)
-                .ModifyAbilityScore(AbilityType.Strength, -2);
+                .ModifyAbilityScore(AbilityType.Unused, 3)
+                .ModifyAbilityScore(AbilityType.Vitality, -2)
+                .ModifyAbilityScore(AbilityType.Might, -2);
         }
         private void IntellectImplant4()
         {
@@ -60,9 +60,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+4 INT, -3 CON, -3 STR")
                 .RequiredLevel(4)
                 .Slot(ImplantSlotType.Head)
-                .ModifyAbilityScore(AbilityType.Intelligence, 4)
-                .ModifyAbilityScore(AbilityType.Constitution, -3)
-                .ModifyAbilityScore(AbilityType.Strength, -3);
+                .ModifyAbilityScore(AbilityType.Unused, 4)
+                .ModifyAbilityScore(AbilityType.Vitality, -3)
+                .ModifyAbilityScore(AbilityType.Might, -3);
         }
         private void IntellectImplant5()
         {
@@ -71,9 +71,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+5 INT, -4 CON, -4 STR")
                 .RequiredLevel(5)
                 .Slot(ImplantSlotType.Head)
-                .ModifyAbilityScore(AbilityType.Intelligence, 5)
-                .ModifyAbilityScore(AbilityType.Constitution, -4)
-                .ModifyAbilityScore(AbilityType.Strength, -4);
+                .ModifyAbilityScore(AbilityType.Unused, 5)
+                .ModifyAbilityScore(AbilityType.Vitality, -4)
+                .ModifyAbilityScore(AbilityType.Might, -4);
         }
     }
 }

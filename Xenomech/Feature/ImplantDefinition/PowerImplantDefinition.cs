@@ -26,8 +26,8 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+1 STR, -1 WIS")
                 .RequiredLevel(1)
                 .Slot(ImplantSlotType.Arms)
-                .ModifyAbilityScore(AbilityType.Strength, 1)
-                .ModifyAbilityScore(AbilityType.Wisdom, -1);
+                .ModifyAbilityScore(AbilityType.Might, 1)
+                .ModifyAbilityScore(AbilityType.Spirit, -1);
         }
 
         private void PowerImplant2()
@@ -37,9 +37,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+2 STR, -1 INT, -1 WIS")
                 .RequiredLevel(2)
                 .Slot(ImplantSlotType.Arms)
-                .ModifyAbilityScore(AbilityType.Strength, 2)
-                .ModifyAbilityScore(AbilityType.Intelligence, -1)
-                .ModifyAbilityScore(AbilityType.Wisdom, -1);
+                .ModifyAbilityScore(AbilityType.Might, 2)
+                .ModifyAbilityScore(AbilityType.Unused, -1)
+                .ModifyAbilityScore(AbilityType.Spirit, -1);
         }
         private void PowerImplant3()
         {
@@ -48,9 +48,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+3 STR, -2 INT, -2 WIS")
                 .RequiredLevel(3)
                 .Slot(ImplantSlotType.Arms)
-                .ModifyAbilityScore(AbilityType.Strength, 3)
-                .ModifyAbilityScore(AbilityType.Intelligence, -2)
-                .ModifyAbilityScore(AbilityType.Wisdom, -2);
+                .ModifyAbilityScore(AbilityType.Might, 3)
+                .ModifyAbilityScore(AbilityType.Unused, -2)
+                .ModifyAbilityScore(AbilityType.Spirit, -2);
         }
         private void PowerImplant4()
         {
@@ -59,9 +59,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+4 STR, -3 INT, -3 WIS")
                 .RequiredLevel(4)
                 .Slot(ImplantSlotType.Arms)
-                .ModifyAbilityScore(AbilityType.Strength, 4)
-                .ModifyAbilityScore(AbilityType.Intelligence, -3)
-                .ModifyAbilityScore(AbilityType.Wisdom, -3);
+                .ModifyAbilityScore(AbilityType.Might, 4)
+                .ModifyAbilityScore(AbilityType.Unused, -3)
+                .ModifyAbilityScore(AbilityType.Spirit, -3);
         }
         private void PowerImplant5()
         {
@@ -70,9 +70,9 @@ namespace Xenomech.Feature.ImplantDefinition
                 .Description("+5 STR, -4 INT, -4 WIS")
                 .RequiredLevel(5)
                 .Slot(ImplantSlotType.Arms)
-                .ModifyAbilityScore(AbilityType.Strength, 5)
-                .ModifyAbilityScore(AbilityType.Intelligence, -4)
-                .ModifyAbilityScore(AbilityType.Wisdom, -4);
+                .ModifyAbilityScore(AbilityType.Might, 5)
+                .ModifyAbilityScore(AbilityType.Unused, -4)
+                .ModifyAbilityScore(AbilityType.Spirit, -4);
         }
     }
 }

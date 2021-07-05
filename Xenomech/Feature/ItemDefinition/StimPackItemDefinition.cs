@@ -68,34 +68,34 @@ namespace Xenomech.Feature.ItemDefinition
             }
 
             // Charisma
-            CreateItem("stim_cha1", AbilityType.Charisma, 2);
-            CreateItem("stim_cha2", AbilityType.Charisma, 4);
-            CreateItem("stim_cha3", AbilityType.Charisma, 6);
+            CreateItem("stim_cha1", AbilityType.Diplomacy, 2);
+            CreateItem("stim_cha2", AbilityType.Diplomacy, 4);
+            CreateItem("stim_cha3", AbilityType.Diplomacy, 6);
 
             // Strength
-            CreateItem("stim_str1", AbilityType.Strength, 2);
-            CreateItem("stim_str2", AbilityType.Strength, 4);
-            CreateItem("stim_str3", AbilityType.Strength, 6);
+            CreateItem("stim_str1", AbilityType.Might, 2);
+            CreateItem("stim_str2", AbilityType.Might, 4);
+            CreateItem("stim_str3", AbilityType.Might, 6);
 
             // Dexterity
-            CreateItem("stim_dex1", AbilityType.Dexterity, 2);
-            CreateItem("stim_dex2", AbilityType.Dexterity, 4);
-            CreateItem("stim_dex3", AbilityType.Dexterity, 6);
+            CreateItem("stim_dex1", AbilityType.Perception, 2);
+            CreateItem("stim_dex2", AbilityType.Perception, 4);
+            CreateItem("stim_dex3", AbilityType.Perception, 6);
 
             // Constitution
-            CreateItem("stim_con1", AbilityType.Constitution, 2);
-            CreateItem("stim_con2", AbilityType.Constitution, 4);
-            CreateItem("stim_con3", AbilityType.Constitution, 6);
+            CreateItem("stim_con1", AbilityType.Vitality, 2);
+            CreateItem("stim_con2", AbilityType.Vitality, 4);
+            CreateItem("stim_con3", AbilityType.Vitality, 6);
 
             // Wisdom
-            CreateItem("stim_wis1", AbilityType.Wisdom, 2);
-            CreateItem("stim_wis2", AbilityType.Wisdom, 4);
-            CreateItem("stim_wis3", AbilityType.Wisdom, 6);
+            CreateItem("stim_wis1", AbilityType.Spirit, 2);
+            CreateItem("stim_wis2", AbilityType.Spirit, 4);
+            CreateItem("stim_wis3", AbilityType.Spirit, 6);
 
             // Intelligence
-            CreateItem("stim_int1", AbilityType.Intelligence, 2);
-            CreateItem("stim_int2", AbilityType.Intelligence, 4);
-            CreateItem("stim_int3", AbilityType.Intelligence, 6);
+            CreateItem("stim_int1", AbilityType.Unused, 2);
+            CreateItem("stim_int2", AbilityType.Unused, 4);
+            CreateItem("stim_int3", AbilityType.Unused, 6);
 
         }
     }

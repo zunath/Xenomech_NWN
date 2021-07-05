@@ -4,11 +4,11 @@ namespace Xenomech.Core.NWScript.Enum
     {
         Invalid = -1,
         // should be the same as in nwseffectlist.cpp
-        Strength,
-        Dexterity,
-        Constitution,
-        Intelligence,
-        Wisdom,
-        Charisma
+        Might,
+        Perception,
+        Vitality,
+        Unused,
+        Spirit,
+        Diplomacy
     }
 }

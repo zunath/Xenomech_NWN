@@ -17,12 +17,12 @@ namespace Xenomech.Entity
             ImplantStats = new PlayerImplantStats();
             BaseStats = new Dictionary<AbilityType, int>
             {
-                {AbilityType.Constitution, 0},
-                {AbilityType.Strength, 0},
-                {AbilityType.Charisma, 0},
-                {AbilityType.Dexterity, 0},
-                {AbilityType.Intelligence, 0},
-                {AbilityType.Wisdom, 0}
+                {AbilityType.Vitality, 0},
+                {AbilityType.Might, 0},
+                {AbilityType.Diplomacy, 0},
+                {AbilityType.Perception, 0},
+                {AbilityType.Unused, 0},
+                {AbilityType.Spirit, 0}
             };
 
             ShowHelmet = true;
@@ -180,12 +180,12 @@ namespace Xenomech.Entity
         {
             Attributes = new Dictionary<AbilityType, int>
             {
-                {AbilityType.Constitution, 0},
-                {AbilityType.Strength, 0},
-                {AbilityType.Charisma, 0},
-                {AbilityType.Dexterity, 0},
-                {AbilityType.Intelligence, 0},
-                {AbilityType.Wisdom, 0}
+                {AbilityType.Vitality, 0},
+                {AbilityType.Might, 0},
+                {AbilityType.Diplomacy, 0},
+                {AbilityType.Perception, 0},
+                {AbilityType.Unused, 0},
+                {AbilityType.Spirit, 0}
             };
         }
     }
