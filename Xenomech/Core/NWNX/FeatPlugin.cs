@@ -3,7 +3,7 @@ using Xenomech.Core.NWScript.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class Feat
+    public static class FeatPlugin
     {
         private const string PluginName = "NWNX_Feat";
 

@@ -35,7 +35,7 @@ namespace Xenomech.Feature
                 }
 
                 Log.Write(LogGroup.Server, "Server shutting down for automated restart.", true);
-                Administration.ShutdownServer();
+                AdministrationPlugin.ShutdownServer();
             }
         }
 

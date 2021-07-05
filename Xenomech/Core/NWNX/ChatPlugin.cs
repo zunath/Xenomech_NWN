@@ -2,7 +2,7 @@ using Xenomech.Core.NWNX.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class Chat
+    public static class ChatPlugin
     {
         private const string PLUGIN_NAME = "NWNX_Chat";
 

@@ -682,7 +682,7 @@ namespace Xenomech.Feature.ChatCommandDefinition
                         BootPC(player, "The server is restarting.");
                         player = GetNextPC();
                     }
-                    Administration.ShutdownServer();
+                    AdministrationPlugin.ShutdownServer();
                 });
         }
     }

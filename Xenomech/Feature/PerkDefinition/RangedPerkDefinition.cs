@@ -97,11 +97,11 @@ namespace Xenomech.Feature.PerkDefinition
 
                 .TriggerPurchase((player, type, level) =>
                 {
-                    Creature.SetCriticalMultiplierModifier(player, level, 0, true);
+                    CreaturePlugin.SetCriticalMultiplierModifier(player, level, 0, true);
                 })
                 .TriggerRefund((player, type, level) =>
                 {
-                    Creature.SetCriticalMultiplierModifier(player, 0, 0, true);
+                    CreaturePlugin.SetCriticalMultiplierModifier(player, 0, 0, true);
                 });
         }
 
@@ -196,7 +196,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.PistolBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) + level;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
                 })
                 .TriggerUnequippedItem((player, item, slot, type, level) =>
@@ -207,7 +207,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.PistolBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
 
                 })
@@ -219,7 +219,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.PistolBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) + 1;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
                 })
                 .TriggerRefund((player, type, level) =>
@@ -230,7 +230,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.PistolBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
                 })
 
@@ -386,7 +386,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.ThrowingWeaponBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) + level;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
                 })
                 .TriggerUnequippedItem((player, item, slot, type, level) =>
@@ -397,7 +397,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.ThrowingWeaponBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
 
                 })
@@ -409,7 +409,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.ThrowingWeaponBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) + 1;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
                 })
                 .TriggerRefund((player, type, level) =>
@@ -420,7 +420,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.ThrowingWeaponBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
                 })
 
@@ -577,7 +577,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.RifleBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) + level;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
                 })
                 .TriggerUnequippedItem((player, item, slot, type, level) =>
@@ -588,7 +588,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.RifleBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
 
                 })
@@ -600,7 +600,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.RifleBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) + 1;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
                 })
                 .TriggerRefund((player, type, level) =>
@@ -611,7 +611,7 @@ namespace Xenomech.Feature.PerkDefinition
                     if (Item.RifleBaseItemTypes.Contains(itemType))
                     {
                         var bab = GetBaseAttackBonus(player) - level;
-                        Creature.SetBaseAttackBonus(player, bab);
+                        CreaturePlugin.SetBaseAttackBonus(player, bab);
                     }
                 })
 

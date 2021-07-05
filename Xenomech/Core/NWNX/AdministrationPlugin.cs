@@ -3,7 +3,7 @@ using Xenomech.Core.NWNX.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class Administration
+    public static class AdministrationPlugin
     {
         private const string PLUGIN_NAME = "NWNX_Administration";
 

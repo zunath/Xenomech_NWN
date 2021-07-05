@@ -2,7 +2,7 @@ using Xenomech.Core.NWNX.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class ELC
+    public static class ELCPlugin
     {
         private const string PLUGIN_NAME = "NWNX_ELC";
 

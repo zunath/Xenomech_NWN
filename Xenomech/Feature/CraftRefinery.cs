@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using Xenomech.Core;
 using Xenomech.Core.Bioware;
+using Xenomech.Core.NWNX;
 using Xenomech.Core.NWScript;
 using Xenomech.Core.NWScript.Enum;
 using Xenomech.Enumeration;
 using Xenomech.Service;
 using static Xenomech.Core.NWScript.NWScript;
-using Player = Xenomech.Core.NWNX.Player;
 using Skill = Xenomech.Service.Skill;
 
 namespace Xenomech.Feature
@@ -141,7 +141,7 @@ namespace Xenomech.Feature
                     AssignCommand(player, () => ActionPlayAnimation(Animation.LoopingGetMid, 1.0f, DelaySeconds));
 
                     // Display the timing bar and finish the process when the delay elapses.
-                    Player.StartGuiTimingBar(player, DelaySeconds);
+                    PlayerPlugin.StartGuiTimingBar(player, DelaySeconds);
                     DelayCommand(DelaySeconds, () =>
                     {
                         // Spawn the refined item onto the player.

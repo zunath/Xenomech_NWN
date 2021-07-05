@@ -3,7 +3,7 @@ using static Xenomech.Core.NWScript.NWScript;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class Damage
+    public static class DamagePlugin
     {
         private const string PLUGIN_NAME = "NWNX_Damage";
 

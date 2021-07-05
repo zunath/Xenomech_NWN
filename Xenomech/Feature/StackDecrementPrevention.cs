@@ -22,7 +22,7 @@ namespace Xenomech.Feature
                 itemType == BaseItem.Dart ||
                 itemType == BaseItem.ThrowingAxe)
             {
-                Events.SkipEvent();
+                EventsPlugin.SkipEvent();
             }
         }
     }

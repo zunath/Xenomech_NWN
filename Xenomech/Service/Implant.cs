@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using Xenomech.Core;
+using Xenomech.Core.NWNX;
 using Xenomech.Core.NWScript;
 using Xenomech.Core.NWScript.Enum;
 using Xenomech.Entity;
 using Xenomech.Enumeration;
 using Xenomech.Service.ImplantService;
 using static Xenomech.Core.NWScript.NWScript;
-using Object = Xenomech.Core.NWNX.Object;
 
 namespace Xenomech.Service
 {
@@ -121,8 +121,8 @@ namespace Xenomech.Service
 
             foreach (var (_, implant) in dbPlayer.Implants)
             {
-                var item = Object.Deserialize(implant.ItemSerializedData);
-                Object.AcquireItem(container, item);
+                var item = ObjectPlugin.Deserialize(implant.ItemSerializedData);
+                ObjectPlugin.AcquireItem(container, item);
             }
 
             // Grant the tier 1 buff if player doesn't have a higher level one already.
@@ -179,7 +179,7 @@ namespace Xenomech.Service
                 dbPlayer.Implants[implantDetail.Slot] = new PlayerImplant
                 {
                     ItemId = itemId,
-                    ItemSerializedData = Object.Serialize(item)
+                    ItemSerializedData = ObjectPlugin.Serialize(item)
                 };
 
                 // Adjust stats

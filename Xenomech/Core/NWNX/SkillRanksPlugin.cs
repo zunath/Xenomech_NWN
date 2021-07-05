@@ -3,7 +3,7 @@ using Xenomech.Core.NWScript.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class SkillRanks
+    public static class SkillRanksPlugin
     {
         private const string PLUGIN_NAME = "NWNX_SkillRanks";
 

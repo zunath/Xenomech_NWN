@@ -2,7 +2,7 @@ using Xenomech.Core.NWNX.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class Feedback
+    public static class FeedbackPlugin
     {
         private const string PLUGIN_NAME = "NWNX_Feedback";
 

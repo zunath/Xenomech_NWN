@@ -157,7 +157,7 @@ namespace Xenomech.Feature.DialogDefinition
                 var feats = perkDetail.PerkLevels.Values.SelectMany(s => s.GrantedFeats);
                 foreach (var feat in feats)
                 {
-                    Creature.RemoveFeat(player, feat);
+                    CreaturePlugin.RemoveFeat(player, feat);
                 }
 
                 // Run all of the triggers related to refunding this perk.

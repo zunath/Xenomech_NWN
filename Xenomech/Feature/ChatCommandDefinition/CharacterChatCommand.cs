@@ -206,7 +206,7 @@ namespace Xenomech.Feature.ChatCommandDefinition
                         DB.Set(playerID, entity);
 
                         BootPC(user, "Your character has been deleted.");
-                        Administration.DeletePlayerCharacter(user, true);
+                        AdministrationPlugin.DeletePlayerCharacter(user, true);
                     }
                 });
         }

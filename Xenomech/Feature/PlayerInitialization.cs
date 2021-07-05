@@ -51,12 +51,12 @@ namespace Xenomech.Feature
         private static void AutoLevelPlayer(uint player)
         {
             // Capture original stats before we level up the player.
-            var str = Creature.GetRawAbilityScore(player, AbilityType.Strength);
-            var con = Creature.GetRawAbilityScore(player, AbilityType.Constitution);
-            var dex = Creature.GetRawAbilityScore(player, AbilityType.Dexterity);
-            var @int = Creature.GetRawAbilityScore(player, AbilityType.Intelligence);
-            var wis = Creature.GetRawAbilityScore(player, AbilityType.Wisdom);
-            var cha = Creature.GetRawAbilityScore(player, AbilityType.Charisma);
+            var str = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Strength);
+            var con = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Constitution);
+            var dex = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Dexterity);
+            var @int = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Intelligence);
+            var wis = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Wisdom);
+            var cha = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Charisma);
 
             GiveXPToCreature(player, 10000);
 
@@ -67,12 +67,12 @@ namespace Xenomech.Feature
             }
 
             // Set stats back to how they were on entry.
-            Creature.SetRawAbilityScore(player, AbilityType.Strength, str);
-            Creature.SetRawAbilityScore(player, AbilityType.Constitution, con);
-            Creature.SetRawAbilityScore(player, AbilityType.Dexterity, dex);
-            Creature.SetRawAbilityScore(player, AbilityType.Intelligence, @int);
-            Creature.SetRawAbilityScore(player, AbilityType.Wisdom, wis);
-            Creature.SetRawAbilityScore(player, AbilityType.Charisma, cha);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Strength, str);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Constitution, con);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Dexterity, dex);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Intelligence, @int);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Wisdom, wis);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Charisma, cha);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Xenomech.Feature
             for (var iCurSkill = 1; iCurSkill <= 27; iCurSkill++)
             {
                 var skill = (Skill) (iCurSkill - 1);
-                Creature.SetSkillRank(player, skill, 0);
+                CreaturePlugin.SetSkillRank(player, skill, 0);
             }
         }
 
@@ -132,33 +132,33 @@ namespace Xenomech.Feature
             var @class = GetClassByPosition(1, player);
             for (var index = 0; index <= 255; index++)
             {
-                Creature.RemoveKnownSpell(player, @class, 0, index);
+                CreaturePlugin.RemoveKnownSpell(player, @class, 0, index);
             }
         }
 
         private static void ClearFeats(uint player)
         {
-            var numberOfFeats = Creature.GetFeatCount(player);
+            var numberOfFeats = CreaturePlugin.GetFeatCount(player);
             for (var currentFeat = numberOfFeats; currentFeat >= 0; currentFeat--)
             {
-                Creature.RemoveFeat(player, Creature.GetFeatByIndex(player, currentFeat - 1));
+                CreaturePlugin.RemoveFeat(player, CreaturePlugin.GetFeatByIndex(player, currentFeat - 1));
             }
         }
 
         private static void GrantBasicFeats(uint player)
         {
-            Creature.AddFeatByLevel(player, FeatType.ArmorProficiencyLight, 1);
-            Creature.AddFeatByLevel(player, FeatType.ArmorProficiencyMedium, 1);
-            Creature.AddFeatByLevel(player, FeatType.ArmorProficiencyHeavy, 1);
-            Creature.AddFeatByLevel(player, FeatType.ShieldProficiency, 1);
-            Creature.AddFeatByLevel(player, FeatType.WeaponProficiencyExotic, 1);
-            Creature.AddFeatByLevel(player, FeatType.WeaponProficiencyMartial, 1);
-            Creature.AddFeatByLevel(player, FeatType.WeaponProficiencySimple, 1);
-            Creature.AddFeatByLevel(player, FeatType.UncannyDodge1, 1);
-            Creature.AddFeatByLevel(player, FeatType.OpenRestMenu, 1);
-            Creature.AddFeatByLevel(player, FeatType.ChatCommandTargeter, 1);
-            Creature.AddFeatByLevel(player, FeatType.StructureTool, 1);
-            Creature.AddFeatByLevel(player, FeatType.Rest, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.ArmorProficiencyLight, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.ArmorProficiencyMedium, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.ArmorProficiencyHeavy, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.ShieldProficiency, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.WeaponProficiencyExotic, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.WeaponProficiencyMartial, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.WeaponProficiencySimple, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.UncannyDodge1, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.OpenRestMenu, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.ChatCommandTargeter, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.StructureTool, 1);
+            CreaturePlugin.AddFeatByLevel(player, FeatType.Rest, 1);
         }
 
 
@@ -169,10 +169,10 @@ namespace Xenomech.Feature
             var restAbility = PlayerQuickBarSlot.UseFeat(FeatType.Rest);
             var structureTool = PlayerQuickBarSlot.UseFeat(FeatType.StructureTool);
 
-            Core.NWNX.Player.SetQuickBarSlot(player, 0, openRestMenu);
-            Core.NWNX.Player.SetQuickBarSlot(player, 1, chatCommandTargeter);
-            Core.NWNX.Player.SetQuickBarSlot(player, 2, restAbility);
-            Core.NWNX.Player.SetQuickBarSlot(player, 3, structureTool);
+            Core.NWNX.PlayerPlugin.SetQuickBarSlot(player, 0, openRestMenu);
+            Core.NWNX.PlayerPlugin.SetQuickBarSlot(player, 1, chatCommandTargeter);
+            Core.NWNX.PlayerPlugin.SetQuickBarSlot(player, 2, restAbility);
+            Core.NWNX.PlayerPlugin.SetQuickBarSlot(player, 3, structureTool);
         }
 
         /// <summary>
@@ -187,17 +187,17 @@ namespace Xenomech.Feature
             dbPlayer.Name = GetName(player);
             Stat.AdjustPlayerMaxHP(dbPlayer, player, 40);
             Stat.AdjustPlayerMaxSTM(dbPlayer, 10);
-            Creature.SetBaseAttackBonus(player, 1);
+            CreaturePlugin.SetBaseAttackBonus(player, 1);
             dbPlayer.HP = GetCurrentHitPoints(player);
             dbPlayer.FP = Stat.GetMaxFP(player, dbPlayer);
             dbPlayer.Stamina = Stat.GetMaxStamina(player, dbPlayer);
 
-            dbPlayer.BaseStats[AbilityType.Strength] = Creature.GetRawAbilityScore(player, AbilityType.Strength);
-            dbPlayer.BaseStats[AbilityType.Dexterity] = Creature.GetRawAbilityScore(player, AbilityType.Dexterity);
-            dbPlayer.BaseStats[AbilityType.Constitution] = Creature.GetRawAbilityScore(player, AbilityType.Constitution);
-            dbPlayer.BaseStats[AbilityType.Wisdom] = Creature.GetRawAbilityScore(player, AbilityType.Wisdom);
-            dbPlayer.BaseStats[AbilityType.Intelligence] = Creature.GetRawAbilityScore(player, AbilityType.Intelligence);
-            dbPlayer.BaseStats[AbilityType.Charisma] = Creature.GetRawAbilityScore(player, AbilityType.Charisma);
+            dbPlayer.BaseStats[AbilityType.Strength] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Strength);
+            dbPlayer.BaseStats[AbilityType.Dexterity] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Dexterity);
+            dbPlayer.BaseStats[AbilityType.Constitution] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Constitution);
+            dbPlayer.BaseStats[AbilityType.Wisdom] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Wisdom);
+            dbPlayer.BaseStats[AbilityType.Intelligence] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Intelligence);
+            dbPlayer.BaseStats[AbilityType.Charisma] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Charisma);
         }
 
         /// <summary>
@@ -206,8 +206,8 @@ namespace Xenomech.Feature
         /// <param name="player">The player to object.</param>
         private static void AdjustAlignment(uint player)
         {
-            Creature.SetAlignmentLawChaos(player, 50);
-            Creature.SetAlignmentGoodEvil(player, 50);
+            CreaturePlugin.SetAlignmentLawChaos(player, 50);
+            CreaturePlugin.SetAlignmentGoodEvil(player, 50);
         }
         
         /// <summary>

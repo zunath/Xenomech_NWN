@@ -6,7 +6,6 @@ using Xenomech.Entity;
 using Xenomech.Service;
 using Xenomech.Service.DialogService;
 using static Xenomech.Core.NWScript.NWScript;
-using Object = Xenomech.Core.NWNX.Object;
 
 namespace Xenomech.Feature.DialogDefinition
 {
@@ -169,16 +168,16 @@ namespace Xenomech.Feature.DialogDefinition
         [NWNEventHandler("on_nwnx_chat")]
         public static void ListenForStoreName()
         {
-            var player = Chat.GetSender();
+            var player = ChatPlugin.GetSender();
             if (!GetLocalBool(player, "IS_SETTING_STORE_NAME")) return;
 
-            var message = Chat.GetMessage();
+            var message = ChatPlugin.GetMessage();
 
             if (message.Length > 30)
                 message = message.Substring(0, 30);
 
             SetLocalString(player, "NEW_STORE_NAME", message);
-            Chat.SkipMessage();
+            ChatPlugin.SkipMessage();
 
             FloatingTextStringOnCreature("Press 'Refresh' in the chat window to see the changes.", player, false);
         }
@@ -285,8 +284,8 @@ namespace Xenomech.Feature.DialogDefinition
             {
                 page.AddResponse(ColorToken.Red("CONFIRM REMOVE ITEM"), () =>
                 {
-                    var inWorldItem = Object.Deserialize(item.Data);
-                    Object.AcquireItem(player, inWorldItem);
+                    var inWorldItem = ObjectPlugin.Deserialize(item.Data);
+                    ObjectPlugin.AcquireItem(player, inWorldItem);
                     dbPlayerStore.ItemsForSale.Remove(model.SelectedItemId);
 
                     DB.Set(playerId, dbPlayerStore);

@@ -6,7 +6,7 @@ using Xenomech.Core.NWScript.Enum.VisualEffect;
 
 namespace Xenomech.Core.NWNX
 {
-    public class Player
+    public class PlayerPlugin
     {
         private const string PLUGIN_NAME = "NWNX_Player";
 

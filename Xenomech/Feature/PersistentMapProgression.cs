@@ -25,7 +25,7 @@ namespace Xenomech.Feature
 
             if (string.IsNullOrWhiteSpace(areaResref)) return;
 
-            var progression = Core.NWNX.Player.GetAreaExplorationState(player, area);
+            var progression = Core.NWNX.PlayerPlugin.GetAreaExplorationState(player, area);
 
             dbPlayer.MapProgressions[areaResref] = progression;
 
@@ -56,7 +56,7 @@ namespace Xenomech.Feature
                 return;
 
             var progression = dbPlayer.MapProgressions[areaResref];
-            Core.NWNX.Player.SetAreaExplorationState(player, area, progression);
+            Core.NWNX.PlayerPlugin.SetAreaExplorationState(player, area, progression);
         }
     }
 }

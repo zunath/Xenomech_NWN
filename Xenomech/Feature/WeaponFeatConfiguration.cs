@@ -31,18 +31,18 @@ namespace Xenomech.Feature
 
         private static void ConfigureMartialArts()
         {
-            Weapon.SetWeaponIsMonkWeapon(BaseItem.Club);
-            Weapon.SetWeaponIsMonkWeapon(BaseItem.QuarterStaff);
-            Weapon.SetWeaponIsMonkWeapon(BaseItem.LightMace);
+            WeaponPlugin.SetWeaponIsMonkWeapon(BaseItem.Club);
+            WeaponPlugin.SetWeaponIsMonkWeapon(BaseItem.QuarterStaff);
+            WeaponPlugin.SetWeaponIsMonkWeapon(BaseItem.LightMace);
         }
 
         private static void ConfigureVibroblades()
         {
             foreach (var itemType in Item.VibrobladeBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusLongswords);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationLongswords);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalLongswords);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusLongswords);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationLongswords);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalLongswords);
             }
         }
 
@@ -50,9 +50,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.FinesseVibrobladeBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusKnives);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationKnives);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalKnives);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusKnives);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationKnives);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalKnives);
             }
         }
         
@@ -60,9 +60,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.HeavyVibrobladeBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusGreatswords);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationGreatswords);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalGreatswords);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusGreatswords);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationGreatswords);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalGreatswords);
             }
         }
 
@@ -70,9 +70,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.PolearmBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusPolearms);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationPolearms);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalPolearms);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusPolearms);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationPolearms);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalPolearms);
             }
         }
 
@@ -80,9 +80,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.TwinBladeBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusTwinBlades);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationTwinBlades);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalTwinBlades);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusTwinBlades);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationTwinBlades);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalTwinBlades);
             }
         }
 
@@ -90,9 +90,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.KnucklesBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusKnuckles);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationKnuckles);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalKnuckles);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusKnuckles);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationKnuckles);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalKnuckles);
             }
         }
 
@@ -100,18 +100,18 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.StaffBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusStaves);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationStaves);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalStaff);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusStaves);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationStaves);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalStaff);
             }
         }
         private static void ConfigurePistols()
         {
             foreach (var itemType in Item.PistolBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusPistol);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationPistol);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalPistol);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusPistol);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationPistol);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalPistol);
             }
         }
 
@@ -119,9 +119,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.ThrowingWeaponBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusThrowingWeapons);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationThrowingWeapons);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalThrowingWeapons);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusThrowingWeapons);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationThrowingWeapons);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalThrowingWeapons);
             }
         }
         
@@ -129,9 +129,9 @@ namespace Xenomech.Feature
         {
             foreach (var itemType in Item.RifleBaseItemTypes)
             {
-                Weapon.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusRifles);
-                Weapon.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationRifles);
-                Weapon.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalRifles);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusRifles);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationRifles);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalRifles);
             }
         }
     }

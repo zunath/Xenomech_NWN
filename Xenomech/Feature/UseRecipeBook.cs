@@ -26,7 +26,7 @@ namespace Xenomech.Feature
                 return;
             }
 
-            var item = StringToObject(Events.GetEventData("ITEM_OBJECT_ID"));
+            var item = StringToObject(EventsPlugin.GetEventData("ITEM_OBJECT_ID"));
             var playerId = GetObjectUUID(user);
             var dbPlayer = DB.Get<Player>(playerId);
             var recipeList = GetLocalString(item, "RECIPES");

@@ -1,6 +1,6 @@
-﻿using Xenomech.Core.NWNX.Enum;
+﻿using Xenomech.Core.NWNX;
+using Xenomech.Core.NWNX.Enum;
 using static Xenomech.Core.NWScript.NWScript;
-using Object = Xenomech.Core.NWNX.Object;
 
 namespace Xenomech.Service
 {
@@ -13,10 +13,10 @@ namespace Xenomech.Service
         /// <param name="target">The target to apply variables to.</param>
         public static void CopyAll(uint source, uint target)
         {
-            var variableCount = Object.GetLocalVariableCount(source);
+            var variableCount = ObjectPlugin.GetLocalVariableCount(source);
             for (var variableIndex = 0; variableIndex < variableCount - 1; variableIndex++)
             {
-                var stCurVar = Object.GetLocalVariable(source, variableIndex);
+                var stCurVar = ObjectPlugin.GetLocalVariable(source, variableIndex);
 
                 switch (stCurVar.Type)
                 {

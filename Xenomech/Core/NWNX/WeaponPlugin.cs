@@ -5,7 +5,7 @@ using Xenomech.Core.NWScript.Enum.Item;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class Weapon
+    public static class WeaponPlugin
     {
         private const string PLUGIN_NAME = "NWNX_Weapon";
 

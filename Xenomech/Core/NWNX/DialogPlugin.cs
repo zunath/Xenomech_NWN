@@ -3,7 +3,7 @@ using Xenomech.Core.NWScript.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class Dialog
+    public static class DialogPlugin
     {
         private const string PLUGIN_NAME = "NWNX_Dialog";
 

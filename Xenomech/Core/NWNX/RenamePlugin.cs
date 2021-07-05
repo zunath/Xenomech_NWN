@@ -2,7 +2,7 @@ using Xenomech.Core.NWNX.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public class Rename
+    public class RenamePlugin
     {
         private const string PLUGIN_NAME = "NWNX_Rename";
 

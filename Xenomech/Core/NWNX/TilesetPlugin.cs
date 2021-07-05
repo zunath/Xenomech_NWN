@@ -3,7 +3,7 @@ using static Xenomech.Core.NWNX.NWNXCore;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class Tileset
+    public static class TilesetPlugin
     {
         private const string NWNX_Tileset = "NWNX_Tileset";
 

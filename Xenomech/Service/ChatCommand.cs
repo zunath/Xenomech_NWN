@@ -9,7 +9,6 @@ using Xenomech.Core.NWScript.Enum;
 using Xenomech.Enumeration;
 using Xenomech.Service.ChatCommandService;
 using static Xenomech.Core.NWScript.NWScript;
-using Player = Xenomech.Core.NWNX.Player;
 
 namespace Xenomech.Service
 {
@@ -37,7 +36,7 @@ namespace Xenomech.Service
         public static void HandleChatMessage()
         {
             var sender = OBJECT_SELF;
-            var originalMessage = Chat.GetMessage().Trim();
+            var originalMessage = ChatPlugin.GetMessage().Trim();
 
             if (!CanHandleChat(sender, originalMessage))
             {
@@ -54,7 +53,7 @@ namespace Xenomech.Service
             var command = split[0].Substring(1, split[0].Length - 1);
             split.RemoveAt(0);
 
-            Chat.SkipMessage();
+            ChatPlugin.SkipMessage();
 
             if (!_chatCommands.ContainsKey(command))
             {
@@ -85,14 +84,14 @@ namespace Xenomech.Service
 
                 if (!GetHasFeat(FeatType.ChatCommandTargeter, sender) || GetIsDM(sender) || GetIsDMPossessed(sender))
                 {
-                    Creature.AddFeatByLevel(sender, FeatType.ChatCommandTargeter, 1);
+                    CreaturePlugin.AddFeatByLevel(sender, FeatType.ChatCommandTargeter, 1);
 
                     if (GetIsDM(sender) || GetIsDMPossessed(sender))
                     {
-                        var qbs = Player.GetQuickBarSlot(sender, 11);
+                        var qbs = PlayerPlugin.GetQuickBarSlot(sender, 11);
                         if (qbs.ObjectType == QuickBarSlotType.Empty)
                         {
-                            Player.SetQuickBarSlot(sender, 11, PlayerQuickBarSlot.UseFeat(FeatType.ChatCommandTargeter));
+                            PlayerPlugin.SetQuickBarSlot(sender, 11, PlayerQuickBarSlot.UseFeat(FeatType.ChatCommandTargeter));
                         }
                     }
                 }
@@ -214,14 +213,14 @@ namespace Xenomech.Service
         public static void UseOpenRestMenuFeat()
         {
             var player = OBJECT_SELF;
-            var feat = (FeatType)Convert.ToInt32(Events.GetEventData("FEAT_ID"));
+            var feat = (FeatType)Convert.ToInt32(EventsPlugin.GetEventData("FEAT_ID"));
             if (feat != FeatType.ChatCommandTargeter) return;
 
-            var target = StringToObject(Events.GetEventData("TARGET_OBJECT_ID"));
-            var area = StringToObject(Events.GetEventData("AREA_OBJECT_ID"));
-            var targetX = (float)Convert.ToDouble(Events.GetEventData("TARGET_POSITION_X"));
-            var targetY = (float)Convert.ToDouble(Events.GetEventData("TARGET_POSITION_Y"));
-            var targetZ = (float)Convert.ToDouble(Events.GetEventData("TARGET_POSITION_Z"));
+            var target = StringToObject(EventsPlugin.GetEventData("TARGET_OBJECT_ID"));
+            var area = StringToObject(EventsPlugin.GetEventData("AREA_OBJECT_ID"));
+            var targetX = (float)Convert.ToDouble(EventsPlugin.GetEventData("TARGET_POSITION_X"));
+            var targetY = (float)Convert.ToDouble(EventsPlugin.GetEventData("TARGET_POSITION_Y"));
+            var targetZ = (float)Convert.ToDouble(EventsPlugin.GetEventData("TARGET_POSITION_Z"));
 
             var targetLocation = Location(area, new Vector3(targetX, targetY, targetZ), 0.0f);
             var command = GetLocalString(player, "CHAT_COMMAND");

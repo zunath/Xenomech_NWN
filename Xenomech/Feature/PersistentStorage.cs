@@ -7,7 +7,6 @@ using Xenomech.Core.NWScript.Enum.Item;
 using Xenomech.Entity;
 using Xenomech.Service;
 using Item = Xenomech.Service.Item;
-using Object = Xenomech.Core.NWNX.Object;
 using static Xenomech.Core.NWScript.NWScript;
 
 namespace Xenomech.Feature
@@ -77,7 +76,7 @@ namespace Xenomech.Feature
             var container = OBJECT_SELF;
             if (GetResRef(container) != "bank_chest" || GetLocalBool(container, "IS_DESERIALIZING")) return;
 
-            var item = StringToObject(Events.GetEventData("ITEM"));
+            var item = StringToObject(EventsPlugin.GetEventData("ITEM"));
             var player = GetItemPossessor(item);
             var playerId = GetObjectUUID(player);
             var storageId = GetStorageID();
@@ -186,7 +185,7 @@ namespace Xenomech.Feature
             if (IsLoading) return;
 
             var container = OBJECT_SELF;
-            var item = StringToObject(Events.GetEventData("ITEM"));
+            var item = StringToObject(EventsPlugin.GetEventData("ITEM"));
             var player = GetItemPossessor(item);
             var limit = GetItemLimit();
             var count = Item.GetInventoryItemCount(container);
@@ -217,7 +216,7 @@ namespace Xenomech.Feature
 
             var items = DB.GetList<InventoryItem>(key, keyPrefix) ?? new EntityList<InventoryItem>();
             var itemID = Guid.Parse(GetObjectUUID(item));
-            var data = Object.Serialize(item);
+            var data = ObjectPlugin.Serialize(item);
 
             items.Add(new InventoryItem
             {
@@ -242,7 +241,7 @@ namespace Xenomech.Feature
         /// <param name="message">The message sent</param>
         private static void CancelEvent(uint player, string message)
         {
-            Events.SkipEvent();
+            EventsPlugin.SkipEvent();
             SendMessageToPC(player, message);
         }
 
@@ -292,8 +291,8 @@ namespace Xenomech.Feature
             IsLoading = true;
             foreach (var entity in items)
             {
-                var deserializedItem = Object.Deserialize(entity.Data);
-                Object.AcquireItem(container, deserializedItem);
+                var deserializedItem = ObjectPlugin.Deserialize(entity.Data);
+                ObjectPlugin.AcquireItem(container, deserializedItem);
             }
 
             IsLoading = false;

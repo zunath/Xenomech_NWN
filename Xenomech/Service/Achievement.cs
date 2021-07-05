@@ -64,7 +64,7 @@ namespace Xenomech.Service
 
             var achievement = _activeAchievements[achievementType];
             DisplayAchievementNotificationWindow(player, achievement.Name);
-            Core.NWNX.Player.PlaySound(player, "gui_prompt", OBJECT_INVALID);
+            Core.NWNX.PlayerPlugin.PlaySound(player, "gui_prompt", OBJECT_INVALID);
         }
 
         /// <summary>

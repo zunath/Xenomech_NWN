@@ -10,7 +10,6 @@ using Xenomech.Entity;
 using Xenomech.Enumeration;
 using Xenomech.Service;
 using Xenomech.Service.DialogService;
-using Object = Xenomech.Core.NWNX.Object;
 using static Xenomech.Core.NWScript.NWScript;
 
 namespace Xenomech.Feature.DialogDefinition
@@ -195,7 +194,7 @@ namespace Xenomech.Feature.DialogDefinition
                 else if (position.Z < -10f)
                     position.Z = -10f;
 
-                Object.SetPosition(model.Placeable, position);
+                ObjectPlugin.SetPosition(model.Placeable, position);
 
                 var furnitureId = GetLocalString(model.Placeable, "HOUSING_FURNITURE_ID");
                 var dbHouse = DB.Get<PlayerHouse>(model.OwnerUUID);
@@ -284,8 +283,8 @@ namespace Xenomech.Feature.DialogDefinition
                     SetPlotFlag(tile, true);
                     ApplyEffectToObject(DurationType.Permanent, EffectVisualEffect(VisualEffect.Vfx_Placement_Grid), tile);
 
-                    Visibility.SetVisibilityOverride(OBJECT_INVALID, tile, VisibilityType.Hidden);
-                    Visibility.SetVisibilityOverride(player, tile, VisibilityType.Visible);
+                    VisibilityPlugin.SetVisibilityOverride(OBJECT_INVALID, tile, VisibilityType.Hidden);
+                    VisibilityPlugin.SetVisibilityOverride(player, tile, VisibilityType.Visible);
                     model.GridTiles.Add(tile);
                 }
 

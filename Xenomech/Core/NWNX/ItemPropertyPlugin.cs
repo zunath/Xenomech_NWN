@@ -3,7 +3,7 @@ using Xenomech.Core.NWNX.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public static class ItemProperty
+    public static class ItemPropertyPlugin
     {
         private const string PLUGIN_NAME = "NWNX_ItemProperty";
 

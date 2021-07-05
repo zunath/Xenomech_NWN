@@ -103,7 +103,7 @@ namespace Xenomech.Service
             // Send out an event signifying that a player has received a skill rank increase.
             if(receivedRankUp)
             {
-                Events.SignalEvent("XM_GAIN_SKILL_POINT", player);
+                EventsPlugin.SignalEvent("XM_GAIN_SKILL_POINT", player);
             }
         }
 

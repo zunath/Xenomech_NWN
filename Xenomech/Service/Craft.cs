@@ -427,7 +427,7 @@ namespace Xenomech.Service
             var craftingDelay = CalculateAutoCraftingDelay();
 
             state.IsAutoCrafting = true;
-            Core.NWNX.Player.StartGuiTimingBar(player, craftingDelay);
+            Core.NWNX.PlayerPlugin.StartGuiTimingBar(player, craftingDelay);
             AssignCommand(player, () => ActionPlayAnimation(Animation.LoopingGetMid, 1f, craftingDelay));
             DelayCommand(craftingDelay, () =>
             {

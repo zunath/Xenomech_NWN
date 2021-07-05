@@ -3,7 +3,7 @@ using Xenomech.Core.NWScript.Enum;
 
 namespace Xenomech.Core.NWNX
 {
-    public class Race
+    public class RacePlugin
     {
         private const string PLUGIN_NAME = "NWNX_Race";
 

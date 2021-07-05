@@ -40,8 +40,8 @@ namespace Xenomech.Feature
         public static void UseFeat()
         {
             var activator = OBJECT_SELF;
-            var target = StringToObject(Events.GetEventData("TARGET_OBJECT_ID"));
-            var feat = (FeatType)Convert.ToInt32(Events.GetEventData("FEAT_ID"));
+            var target = StringToObject(EventsPlugin.GetEventData("TARGET_OBJECT_ID"));
+            var feat = (FeatType)Convert.ToInt32(EventsPlugin.GetEventData("FEAT_ID"));
             if (!Ability.IsFeatRegistered(feat)) return;
             var ability = Ability.GetAbilityDetail(feat);
             
@@ -183,7 +183,7 @@ namespace Xenomech.Feature
                 {
                     RemoveEffectByTag(activator, "ACTIVATION_VFX");
 
-                    Player.StopGuiTimingBar(activator, string.Empty);
+                    PlayerPlugin.StopGuiTimingBar(activator, string.Empty);
                     SendMessageToPC(activator, "Your ability has been interrupted.");
                     return;
                 }
@@ -217,7 +217,7 @@ namespace Xenomech.Feature
             {
                 if (activationDelay > 0.0f)
                 {
-                    Player.StartGuiTimingBar(activator, activationDelay, string.Empty);
+                    PlayerPlugin.StartGuiTimingBar(activator, activationDelay, string.Empty);
                 }
             }
 
