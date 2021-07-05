@@ -1,6 +1,4 @@
-﻿//using Random = SWLOR.Game.Server.Service.Random;
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Xenomech.Core.NWScript.Enum;
 using Xenomech.Enumeration;
 using Xenomech.Service;

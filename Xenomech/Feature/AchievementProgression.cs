@@ -67,7 +67,7 @@ namespace Xenomech.Feature
         /// <summary>
         /// Handles the Buy Perk line of achievements.
         /// </summary>
-        [NWNEventHandler("swlor_buy_perk")]
+        [NWNEventHandler("xm_buy_perk")]
         public static void BuyPerk()
         {
             var player = OBJECT_SELF;
@@ -106,7 +106,7 @@ namespace Xenomech.Feature
         /// <summary>
         /// Handles the Gain Skill line of achievements.
         /// </summary>
-        [NWNEventHandler("swlor_gain_skill")]
+        [NWNEventHandler("xm_gain_skill")]
         public static void GainSkillPoint()
         {
             var player = OBJECT_SELF;
@@ -149,7 +149,7 @@ namespace Xenomech.Feature
         /// <summary>
         /// Handles the Complete Quests line of achievements.
         /// </summary>
-        [NWNEventHandler("swlor_comp_qst")]
+        [NWNEventHandler("xm_comp_qst")]
         public static void CompleteQuests()
         {
             var player = OBJECT_SELF;

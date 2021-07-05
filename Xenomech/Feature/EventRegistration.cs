@@ -512,12 +512,12 @@ namespace Xenomech.Feature
                 Events.SignalEvent("APPLICATION_SHUTDOWN", GetModule());
             };
 
-            Events.SubscribeEvent("SWLOR_ITEM_EQUIP_VALID_BEFORE", "item_eqp_bef");
-            Events.SubscribeEvent("SWLOR_BUY_PERK", "swlor_buy_perk");
-            Events.SubscribeEvent("SWLOR_GAIN_SKILL_POINT", "swlor_gain_skill");
-            Events.SubscribeEvent("SWLOR_COMPLETE_QUEST", "swlor_comp_qst");
-            Events.SubscribeEvent("SWLOR_CACHE_SKILLS_LOADED", "swlor_skl_cache");
-            Events.SubscribeEvent("SWLOR_EXAMINE_OBJECT_BEFORE", "examine_bef");
+            Events.SubscribeEvent("XM_ITEM_EQUIP_VALID_BEFORE", "item_eqp_bef");
+            Events.SubscribeEvent("XM_BUY_PERK", "xm_buy_perk");
+            Events.SubscribeEvent("XM_GAIN_SKILL_POINT", "xm_gain_skill");
+            Events.SubscribeEvent("XM_COMPLETE_QUEST", "xm_comp_qst");
+            Events.SubscribeEvent("XM_CACHE_SKILLS_LOADED", "xm_skl_cache");
+            Events.SubscribeEvent("XM_EXAMINE_OBJECT_BEFORE", "examine_bef");
         }
 
         /// <summary>
@@ -535,7 +535,7 @@ namespace Xenomech.Feature
             SetDescription(obj, description);
             
             Events.PushEventData("EXAMINEE_OBJECT_ID", objectId);
-            Events.SignalEvent("SWLOR_EXAMINE_OBJECT_BEFORE", OBJECT_SELF);
+            Events.SignalEvent("XM_EXAMINE_OBJECT_BEFORE", OBJECT_SELF);
         }
 
         /// <summary>

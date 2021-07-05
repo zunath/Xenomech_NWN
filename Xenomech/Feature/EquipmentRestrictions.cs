@@ -46,7 +46,7 @@ namespace Xenomech.Feature
             {
                 Events.PushEventData("ITEM", ObjectToString(item));
                 Events.PushEventData("SLOT", Convert.ToString((int)slot));
-                Events.SignalEvent("SWLOR_ITEM_EQUIP_VALID_BEFORE", creature);
+                Events.SignalEvent("XM_ITEM_EQUIP_VALID_BEFORE", creature);
                 return;
             }
 

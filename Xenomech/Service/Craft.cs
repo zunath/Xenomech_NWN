@@ -39,7 +39,7 @@ namespace Xenomech.Service
         /// <summary>
         /// When the skill cache has finished loading, recipe and category data is cached.
         /// </summary>
-        [NWNEventHandler("swlor_skl_cache")]
+        [NWNEventHandler("xm_skl_cache")]
         public static void CacheData()
         {
             CacheCategories();

@@ -67,6 +67,7 @@ namespace Xenomech.Feature.DialogDefinition
                 SwitchConversation(nameof(RecipeDialog));
             });
             page.AddResponse("View Key Items", () => SwitchConversation(nameof(ViewKeyItemsDialog)));
+            page.AddResponse("Open Dice Bag", () => SwitchConversation(nameof(DiceDialog)));
             page.AddResponse("Modify Item Appearance", () => SwitchConversation(nameof(ModifyItemAppearanceDialog)));
             page.AddResponse("Player Settings", () => SwitchConversation(nameof(PlayerSettingsDialog)));
             page.AddResponse("Open Trash Can (Destroy Items)", () =>

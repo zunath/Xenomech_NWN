@@ -191,7 +191,7 @@ namespace Xenomech.Feature.DialogDefinition
                 GrantFeats();
                 ApplyPurchasePerkTriggers(dbPlayer.Perks[model.SelectedPerk]);
 
-                Events.SignalEvent("SWLOR_BUY_PERK", player);
+                Events.SignalEvent("XM_BUY_PERK", player);
             }
 
             void GrantFeats()

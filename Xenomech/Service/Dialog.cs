@@ -36,6 +36,8 @@ namespace Xenomech.Service
                 }
                 _conversations.Add(type.Name, instance);
             }
+
+            Console.WriteLine($"Loaded {_conversations.Count} conversations.");
         }
 
         [NWNEventHandler("mod_load")]

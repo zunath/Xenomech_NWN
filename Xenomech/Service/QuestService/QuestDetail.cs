@@ -379,7 +379,7 @@ namespace Xenomech.Service.QuestService
             SendMessageToPC(player, "Quest '" + Name + "' complete!");
             RemoveJournalQuestEntry(QuestId, player, false);
 
-            Events.SignalEvent("SWLOR_COMPLETE_QUEST", player);
+            Events.SignalEvent("XM_COMPLETE_QUEST", player);
         }
     }
 }

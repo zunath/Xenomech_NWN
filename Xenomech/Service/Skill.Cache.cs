@@ -98,7 +98,7 @@ namespace Xenomech.Service
                 _allSkillsByCategory[skillDetail.Category].Add(skillType);
             }
 
-            Events.SignalEvent("SWLOR_CACHE_SKILLS_LOADED", GetModule());
+            Events.SignalEvent("XM_CACHE_SKILLS_LOADED", GetModule());
             Console.WriteLine("Skill data cached successfully.");
         }
 
