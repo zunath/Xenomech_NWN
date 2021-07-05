@@ -130,7 +130,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void WeaponFocusVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.WeaponFocusVibroblades)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.WeaponFocusLongswords)
                 .Name("Weapon Focus - Vibroblades")
 
                 .AddPerkLevel()
@@ -149,7 +149,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void ImprovedCriticalVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.ImprovedCriticalVibroblades)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.ImprovedCriticalLongswords)
                 .Name("Improved Critical - Vibroblades")
 
                 .AddPerkLevel()
@@ -162,7 +162,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void VibrobladeProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.VibrobladeProficiency)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.LongswordProficiency)
                 .Name("Vibroblade Proficiency")
 
                 .AddPerkLevel()
@@ -197,7 +197,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void VibrobladeMastery(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.VibrobladeMastery)
+            builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.LongswordMastery)
                 .Name("Vibroblade Mastery")
                 .TriggerEquippedItem((player, item, slot, type, level) =>
                 {
@@ -320,7 +320,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void WeaponFocusFinesseVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.WeaponFocusFinesseVibroblades)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.WeaponFocusKnives)
                 .Name("Weapon Focus - Finesse Vibroblades")
 
                 .AddPerkLevel()
@@ -339,7 +339,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void ImprovedCriticalFinesseVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.ImprovedCriticalFinesseVibroblades)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.ImprovedCriticalKnives)
                 .Name("Improved Critical - Finesse Vibroblades")
 
                 .AddPerkLevel()
@@ -352,7 +352,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void FinesseVibrobladeProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.FinesseVibrobladeProficiency)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.KnifeProficiency)
                 .Name("Finesse Vibroblade Proficiency")
 
                 .AddPerkLevel()
@@ -387,7 +387,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void FinesseVibrobladeMastery(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.FinesseVibrobladeMastery)
+            builder.Create(PerkCategoryType.OneHandedKnife, PerkType.KnifeMastery)
                 .Name("Finesse Vibroblade Mastery")
                 .TriggerEquippedItem((player, item, slot, type, level) =>
                 {

@@ -17,67 +17,73 @@ namespace Xenomech.Enumeration
         OneHandedKnife = 3,
 
         [PerkCategory("Two Handed - General", true)]
-        TwoHandedGeneral = 5,
+        TwoHandedGeneral = 4,
 
         [PerkCategory("Two Handed - Greatsword", true)]
-        TwoHandedGreatsword = 6,
+        TwoHandedGreatsword = 5,
 
         [PerkCategory("Two Handed - Polearm", true)]
-        TwoHandedPolearm = 7,
+        TwoHandedPolearm = 6,
 
         [PerkCategory("Two Handed - Twin Blade", true)]
-        TwoHandedTwinBlade = 8,
+        TwoHandedTwinBlade = 7,
         
         [PerkCategory("Martial Arts - General", true)]
-        MartialArtsGeneral = 10,
+        MartialArtsGeneral = 8,
 
         [PerkCategory("Martial Arts - Knuckles", true)]
-        MartialArtsKnuckles = 11,
+        MartialArtsKnuckles = 9,
 
         [PerkCategory("Martial Arts - Staff", true)]
-        MartialArtsStaff = 12,
+        MartialArtsStaff = 10,
 
         [PerkCategory("Ranged - General", true)]
-        RangedGeneral = 13,
+        RangedGeneral = 11,
 
         [PerkCategory("Ranged - Pistol", true)]
-        RangedPistol = 14,
+        RangedPistol = 12,
 
         [PerkCategory("Ranged - Throwing", true)]
-        RangedThrowing = 15,
+        RangedThrowing = 13,
 
         [PerkCategory("Ranged - Rifle", true)]
-        RangedRifle = 17,
+        RangedRifle = 14,
 
-        [PerkCategory("Ether", true)]
-        Ether = 18,
+        [PerkCategory("Ether - Elemental", true)]
+        EtherElemental = 15,
+
+        [PerkCategory("Ether - Arcane", true)]
+        EtherArcane = 16,
+
+        [PerkCategory("Ether - Summoning", true)]
+        EtherSummoning = 17,
 
         [PerkCategory("Armor - General", true)]
-        ArmorGeneral = 19,
+        ArmorGeneral = 18,
 
         [PerkCategory("Armor - Heavy", true)]
-        ArmorHeavy = 20,
+        ArmorHeavy = 19,
 
         [PerkCategory("Armor - Light", true)]
-        ArmorLight = 21,
+        ArmorLight = 20,
 
         [PerkCategory("Piloting", true)]
-        Piloting = 22,
+        Piloting = 21,
 
         [PerkCategory("First Aid", true)]
-        FirstAid = 23,
+        FirstAid = 22,
 
         [PerkCategory("Smithery", true)]
-        Smithery = 24,
+        Smithery = 23,
 
         [PerkCategory("Cybertech", true)]
-        Cybertech = 25,
+        Cybertech = 24,
 
         [PerkCategory("Fabrication", true)]
-        Fabrication = 26,
+        Fabrication = 25,
 
         [PerkCategory("Gathering", true)]
-        Gathering = 27
+        Gathering = 26
     }
 
     public class PerkCategoryAttribute : Attribute

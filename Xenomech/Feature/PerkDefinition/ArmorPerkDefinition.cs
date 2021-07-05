@@ -29,7 +29,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void CloakProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorGeneral, PerkType.Cloaks)
+            builder.Create(PerkCategoryType.ArmorGeneral, PerkType.CloakProficiency)
                 .Name("Cloak Proficiency")
 
                 .AddPerkLevel()
@@ -64,7 +64,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void BeltProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorGeneral, PerkType.Belts)
+            builder.Create(PerkCategoryType.ArmorGeneral, PerkType.BeltProficiency)
                 .Name("Belt Proficiency")
 
                 .AddPerkLevel()
@@ -99,7 +99,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void RingProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorGeneral, PerkType.Rings)
+            builder.Create(PerkCategoryType.ArmorGeneral, PerkType.RingProficiency)
                 .Name("Ring Proficiency")
 
                 .AddPerkLevel()
@@ -134,7 +134,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void NecklaceProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorGeneral, PerkType.Necklaces)
+            builder.Create(PerkCategoryType.ArmorGeneral, PerkType.NecklaceProficiency)
                 .Name("Necklace Proficiency")
 
                 .AddPerkLevel()
@@ -169,7 +169,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void BreastplateProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.Breastplates)
+            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.BreastplateProficiency)
                 .Name("Breastplate Proficiency")
 
                 .AddPerkLevel()
@@ -204,7 +204,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void HelmetProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.Helmets)
+            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.HelmetProficiency)
                 .Name("Helmet Proficiency")
 
                 .AddPerkLevel()
@@ -239,7 +239,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void BracerProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.Bracers)
+            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.BracerProficiency)
                 .Name("Bracer Proficiency")
 
                 .AddPerkLevel()
@@ -274,7 +274,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void LeggingProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.Leggings)
+            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.LeggingProficiency)
                 .Name("Legging Proficiency")
 
                 .AddPerkLevel()
@@ -309,7 +309,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void HeavyShieldProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.Shields)
+            builder.Create(PerkCategoryType.ArmorHeavy, PerkType.ShieldProficiency)
                 .Name("Shield Proficiency")
 
                 .AddPerkLevel()
@@ -344,7 +344,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void TunicProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorLight, PerkType.Tunics)
+            builder.Create(PerkCategoryType.ArmorLight, PerkType.TunicProficiency)
                 .Name("Tunic Proficiency")
 
                 .AddPerkLevel()
@@ -379,7 +379,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void CapProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorLight, PerkType.Caps)
+            builder.Create(PerkCategoryType.ArmorLight, PerkType.CapProficiency)
                 .Name("Cap Proficiency")
 
                 .AddPerkLevel()
@@ -414,7 +414,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void GloveProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorLight, PerkType.Gloves)
+            builder.Create(PerkCategoryType.ArmorLight, PerkType.GloveProficiency)
                 .Name("Glove Proficiency")
 
                 .AddPerkLevel()
@@ -449,7 +449,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void BootProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.ArmorLight, PerkType.Boots)
+            builder.Create(PerkCategoryType.ArmorLight, PerkType.BootProficiency)
                 .Name("Boot Proficiency")
 
                 .AddPerkLevel()

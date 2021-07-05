@@ -98,7 +98,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void WeaponFocusHeavyVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.WeaponFocusHeavyVibroblades)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.WeaponFocusGreatswords)
                 .Name("Weapon Focus - Heavy Vibroblades")
 
                 .AddPerkLevel()
@@ -117,7 +117,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void ImprovedCriticalHeavyVibroblades(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.ImprovedCriticalHeavyVibroblades)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.ImprovedCriticalGreatswords)
                 .Name("Improved Critical - Heavy Vibroblades")
 
                 .AddPerkLevel()
@@ -130,7 +130,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void HeavyVibrobladeProficiency(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.HeavyVibrobladeProficiency)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.GreatswordProficiency)
                 .Name("Heavy Vibroblade Proficiency")
 
                 .AddPerkLevel()
@@ -165,7 +165,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void HeavyVibrobladeMastery(PerkBuilder builder)
         {
-            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.HeavyVibrobladeMastery)
+            builder.Create(PerkCategoryType.TwoHandedGreatsword, PerkType.GreatswordMastery)
                 .Name("Heavy Vibroblade Mastery")
                 .TriggerEquippedItem((player, item, slot, type, level) =>
                 {
