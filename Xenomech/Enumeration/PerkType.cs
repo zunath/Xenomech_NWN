@@ -1,6 +1,7 @@
 ﻿namespace Xenomech.Enumeration
 {
     // Note: These IDs are tied to 2DAs. Don't reassign ID numbers unless you also update the 2DA files.
+    // 2da file: iprp_resperk.2da
     public enum PerkType
     {
         Invalid = 0,
@@ -19,14 +20,12 @@
         KnifeMastery = 13,
         PoisonStab = 14,
         Backstab = 15,
-        
         ThermoCube = 16,
         ElementalSpread = 17,
         AquaIce = 18,
         Clarity = 19,
         AnemoBolt = 20,
         ElementalSeal = 21,
-
         PowerAttack = 22,
         SuperiorWeaponFocus = 23,
         IncreasedMultiplier = 24,
@@ -49,14 +48,12 @@
         TwinBladeMastery = 41,
         LegSweep = 42,
         CrossCut = 43,
-        
         Sazanami = 44,
         ArcaneSpread = 45,
         Ryokusho = 46,
         Kaseii = 47,
         Senkei = 48,
         ClearMind = 49,
-
         Knockdown = 50,
         FlurryOfBlows = 51,
         InnerStrength = 52,
@@ -90,21 +87,18 @@
         ThrowingWeaponMastery = 80,
         ExplosiveToss = 81,
         PiercingToss = 82,
-        
         ArcaneSpikes = 83,
         Convert = 84,
         LightningSpirit = 85,
         EtherFlow = 86,
         EarthSpirit = 87,
         SpiritualBonding = 88,
-
         WeaponFocusRifles = 89,
         ImprovedCriticalRifles = 90,
         RifleProficiency = 91,
         RifleMastery = 92,
         TranquilizerShot = 93,
         CripplingShot = 94,
-        
         HolySpirit = 95,
         EtherConduit = 96,
         MechPiloting = 97,
@@ -112,7 +106,6 @@
         MechDefenses = 99,
         FuelConservation = 100,
         ImprovedFocus = 101,
-
         CloakProficiency = 102,
         BeltProficiency = 103,
         RingProficiency = 104,
@@ -126,39 +119,30 @@
         CapProficiency = 112,
         GloveProficiency = 113,
         BootProficiency = 114,
-        
-        RangedHealing = 122,
-        FrugalMedic = 123,
-        RecoveryItems = 124,
-        StimPacks = 125,
-        OneHandedBlueprints = 127,
-        TwoHandedBlueprints = 128,
-        MartialBlueprints = 129,
-        RangedBlueprints = 130,
-        ArmorBlueprints = 132,
-        AccessoryBlueprints = 133,
-        ImplantInstallation = 140,
-        
-        HeadImplantBlueprints = 142,
-        ArmImplantBlueprints = 143,
-        LegImplantBlueprints = 144,
-        FootImplantBlueprints = 145,
-        BodyImplantBlueprints = 146,
-        
-        
-        FurnitureBlueprints = 149,
-        
-        Harvesting = 157,
-        Refining = 158,
-        RefineryManagement = 159,
-        Scavenging = 160,
-        HardLook = 161,
-        
-        
-        
-        TreasureHunter = 1002,
-        CreditFinder = 1003,
-        GuildRelations = 1004,
-
+        RangedHealing = 115,
+        FrugalMedic = 116,
+        RecoveryItems = 117,
+        StimPacks = 118,
+        OneHandedBlueprints = 119,
+        TwoHandedBlueprints = 120,
+        MartialBlueprints = 121,
+        RangedBlueprints = 122,
+        ArmorBlueprints = 123,
+        AccessoryBlueprints = 124,
+        ImplantInstallation = 125,
+        HeadImplantBlueprints = 126,
+        ArmImplantBlueprints = 127,
+        LegImplantBlueprints = 128,
+        FootImplantBlueprints = 129,
+        BodyImplantBlueprints = 130,
+        FurnitureBlueprints = 131,
+        Harvesting = 132,
+        Refining = 133,
+        RefineryManagement = 134,
+        Scavenging = 135,
+        HardLook = 136,
+        TreasureHunter = 137,
+        CreditFinder = 138,
+        GuildRelations = 139,
     }
 }
