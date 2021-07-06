@@ -36,6 +36,9 @@ namespace Xenomech.Feature
             SetTlkOverride(461, "Vitality represents the health and stamina of your character. It improves your max HP and stamina.");
             SetTlkOverride(462, "Spirit represents the ether attunement of your character. It improves your ether attack and ether defense.");
             SetTlkOverride(478, "Diplomacy measures the ability to negotiate. It improves your ability to negotiate mission rewards.");
+
+            SetTlkOverride(321, "EV");
+            SetTlkOverride(7099, "Evasion");
         }
 
         private static string BuildRecommendedButtonText()
