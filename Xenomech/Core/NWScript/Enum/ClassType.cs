@@ -45,8 +45,8 @@ namespace Xenomech.Core.NWScript.Enum
         ShouDisciple = 40,
         PDK = 41,
 
-        Standard = 66,
-        ForceSensitive = 67,
+        Standard = 43,
+        Mage = 44,
 
         Invalid = 255
     }

@@ -242,7 +242,7 @@ namespace Xenomech.Feature
         }
 
         /// <summary>
-        /// Sets the character type (either Standard or Force Sensitive) based on their character class.
+        /// Sets the character type (either Standard or Mage) based on their character class.
         /// </summary>
         /// <param name="player">The player</param>
         /// <param name="dbPlayer">The player entity</param>
@@ -252,7 +252,7 @@ namespace Xenomech.Feature
 
             if (@class == ClassType.Standard)
                 dbPlayer.CharacterType = CharacterType.Standard;
-            else if (@class == ClassType.ForceSensitive)
+            else if (@class == ClassType.Mage)
                 dbPlayer.CharacterType = CharacterType.Mage;
         }
 

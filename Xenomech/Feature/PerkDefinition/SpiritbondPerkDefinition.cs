@@ -5,7 +5,7 @@ using Xenomech.Service.PerkService;
 
 namespace Xenomech.Feature.PerkDefinition
 {
-    public class SummoningPerkDefinition: IPerkListDefinition
+    public class SpiritbondPerkDefinition: IPerkListDefinition
     {
         private readonly PerkBuilder _builder = new PerkBuilder();
 
@@ -23,7 +23,7 @@ namespace Xenomech.Feature.PerkDefinition
 
         private void LightningSpirit()
         {
-            _builder.Create(PerkCategoryType.EtherSummoning, PerkType.LightningSpirit)
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.LightningSpirit)
                 .Name("Lightning Spirit")
 
                 .AddPerkLevel()
@@ -34,103 +34,103 @@ namespace Xenomech.Feature.PerkDefinition
                 .AddPerkLevel()
                 .Description("Summons a Lightning Spirit to do your bidding. The Spirit will use electric based ether abilities.")
                 .Price(3)
-                .RequirementSkill(SkillType.Summoning, 15)
+                .RequirementSkill(SkillType.Spiritbond, 15)
                 .GrantsFeat(FeatType.LightningSpirit2)
 
                 .AddPerkLevel()
                 .Description("Summons a Lightning Spirit to do your bidding. The Spirit will use electric based ether abilities.")
                 .Price(4)
-                .RequirementSkill(SkillType.Summoning, 30)
+                .RequirementSkill(SkillType.Spiritbond, 30)
                 .GrantsFeat(FeatType.LightningSpirit3);
         }
 
         private void EtherFlow()
         {
-            _builder.Create(PerkCategoryType.EtherSummoning, PerkType.EtherFlow)
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.EtherFlow)
                 .Name("Ether Flow")
 
                 .AddPerkLevel()
                 .Description("Releases your summoned spirit, initating the spirit's pact ability.")
                 .Price(5)
-                .RequirementSkill(SkillType.Summoning, 20)
+                .RequirementSkill(SkillType.Spiritbond, 20)
                 .GrantsFeat(FeatType.EtherFlow);
         }
 
         private void EarthSpirit()
         {
-            _builder.Create(PerkCategoryType.EtherSummoning, PerkType.EarthSpirit)
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.EarthSpirit)
                 .Name("Earth Spirit")
 
                 .AddPerkLevel()
                 .Description("Summons a Earth Spirit to do your bidding. The Spirit will use defensive ether abilities.")
                 .Price(3)
-                .RequirementSkill(SkillType.Summoning, 10)
+                .RequirementSkill(SkillType.Spiritbond, 10)
                 .GrantsFeat(FeatType.LightningSpirit1)
 
                 .AddPerkLevel()
                 .Description("Summons a Earth Spirit to do your bidding. The Spirit will use defensive ether abilities.")
                 .Price(4)
-                .RequirementSkill(SkillType.Summoning, 35)
+                .RequirementSkill(SkillType.Spiritbond, 35)
                 .GrantsFeat(FeatType.LightningSpirit2)
 
                 .AddPerkLevel()
                 .Description("Summons a Earth Spirit to do your bidding. The Spirit will use defensive ether abilities.")
                 .Price(5)
-                .RequirementSkill(SkillType.Summoning, 45)
+                .RequirementSkill(SkillType.Spiritbond, 45)
                 .GrantsFeat(FeatType.LightningSpirit3);
         }
 
         private void SpiritualBonding()
         {
-            _builder.Create(PerkCategoryType.EtherSummoning, PerkType.SpiritualBonding)
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.SpiritualBonding)
                 .Name("Spiritual Bonding")
 
                 .AddPerkLevel()
                 .Description("Reduces the EP concentration cost of summons by 1 EP/tick.")
                 .Price(3)
-                .RequirementSkill(SkillType.Summoning, 20)
+                .RequirementSkill(SkillType.Spiritbond, 20)
                 .GrantsFeat(FeatType.SpiritualBonding1)
 
                 .AddPerkLevel()
                 .Description("Reduces the EP concentration cost of summons by an additional 1 EP/tick.")
                 .Price(5)
-                .RequirementSkill(SkillType.Summoning, 40)
+                .RequirementSkill(SkillType.Spiritbond, 40)
                 .GrantsFeat(FeatType.SpiritualBonding2);
         }
 
         private void HolySpirit()
         {
-            _builder.Create(PerkCategoryType.EtherSummoning, PerkType.HolySpirit)
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.HolySpirit)
                 .Name("Holy Spirit")
 
                 .AddPerkLevel()
                 .Description("Summons a Holy Spirit to do your bidding. The Spirit will use restorative ether abilities.")
                 .Price(3)
-                .RequirementSkill(SkillType.Summoning, 5)
+                .RequirementSkill(SkillType.Spiritbond, 5)
                 .GrantsFeat(FeatType.HolySpirit1)
 
                 .AddPerkLevel()
                 .Description("Summons a Holy Spirit to do your bidding. The Spirit will use restorative ether abilities.")
                 .Price(4)
-                .RequirementSkill(SkillType.Summoning, 25)
+                .RequirementSkill(SkillType.Spiritbond, 25)
                 .GrantsFeat(FeatType.HolySpirit2)
 
                 .AddPerkLevel()
                 .Description("Summons a Holy Spirit to do your bidding. The Spirit will use restorative ether abilities.")
                 .Price(5)
-                .RequirementSkill(SkillType.Summoning, 40)
+                .RequirementSkill(SkillType.Spiritbond, 40)
                 .GrantsFeat(FeatType.HolySpirit3);
         }
 
         private void EtherConduit()
         {
-            _builder.Create(PerkCategoryType.EtherSummoning, PerkType.EtherConduit)
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.EtherConduit)
                 .Name("Ether Conduit")
 
                 .AddPerkLevel()
                 .Description("Doubles the effectiveness of your Spirit's next Spirit Pact.")
                 .Price(4)
-                .RequirementSkill(SkillType.Summoning, 30)
+                .RequirementSkill(SkillType.Spiritbond, 30)
                 .GrantsFeat(FeatType.EtherConduit);
         }
     }

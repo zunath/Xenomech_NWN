@@ -61,12 +61,12 @@ namespace Xenomech.Enumeration
         Arcane = 6,
 
         [Skill(SkillCategoryType.Ether,
-            "Summoning",
+            "Spiritbond",
             50,
             true,
-            "Ability to use Summoning Ether abilities. Only available to 'Mage' character types.",
+            "Ability to use Spirit Ether abilities. Only available to 'Mage' character types.",
             true)]
-        Summoning = 7,
+        Spiritbond = 7,
 
         [Skill(SkillCategoryType.Combat, 
             "Armor", 

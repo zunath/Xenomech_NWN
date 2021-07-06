@@ -11,16 +11,12 @@ namespace Xenomech.Feature
     public static class PlayerStatusWindow
     {
         private static Gui.IdReservation _characterIdReservation;
-        private static Gui.IdReservation _spaceIdReservation;
 
         [NWNEventHandler("mod_load")]
         public static void ReserveIds()
         {
             // Reserve 20 Ids for the player's status
             _characterIdReservation = Gui.ReserveIds(nameof(PlayerStatusWindow) + "_CHARACTER", 20);
-
-            // Reserve another 22 Ids for the target's status (if player is in space mode)
-            _spaceIdReservation = Gui.ReserveIds(nameof(PlayerStatusWindow) + "_SPACE", 22);
         }
 
         /// <summary>

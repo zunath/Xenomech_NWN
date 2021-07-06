@@ -55,8 +55,8 @@ namespace Xenomech.Enumeration
         [PerkCategory("Ether - Arcane", true)]
         EtherArcane = 16,
 
-        [PerkCategory("Ether - Summoning", true)]
-        EtherSummoning = 17,
+        [PerkCategory("Ether - Spiritbond", true)]
+        EtherSpiritbond = 17,
 
         [PerkCategory("Armor - General", true)]
         ArmorGeneral = 18,

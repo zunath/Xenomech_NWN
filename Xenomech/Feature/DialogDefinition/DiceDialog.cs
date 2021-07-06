@@ -241,7 +241,7 @@ namespace Xenomech.Feature.DialogDefinition
                         case DiceGroup.Ether:
                             totalSkill = dbPlayer.Skills[SkillType.Arcane].Rank +
                                              dbPlayer.Skills[SkillType.Elemental].Rank +
-                                             dbPlayer.Skills[SkillType.Summoning].Rank;
+                                             dbPlayer.Skills[SkillType.Spiritbond].Rank;
                             modifier = totalSkill / 3;
                             message = ColorToken.SkillCheck("Dice Roll [ETHER]: ") + dieRoll + "+" + modifier + ": " + (value + modifier);
 
