@@ -12,7 +12,7 @@ namespace Xenomech.Service
         /// This is the maximum number of skill points a single character can have at any time.
         /// </summary>
         public const int SkillCap = 300;
-        
+
         /// <summary>
         /// Gives XP towards a specific skill to a player.
         /// </summary>
@@ -96,6 +96,8 @@ namespace Xenomech.Service
                 }
 
                 dbPlayer.Skills[skill] = pcSkill;
+
+                ApplyAbilityPoint(player, pcSkill.Rank, dbPlayer);
             }
 
             DB.Set(playerId, dbPlayer);
@@ -105,6 +107,38 @@ namespace Xenomech.Service
             {
                 EventsPlugin.SignalEvent("XM_GAIN_SKILL_POINT", player);
             }
+        }
+
+        /// <summary>
+        /// Gives the player an ability point which can be distributed to the attribute of their choice
+        /// from the rest menu. Must be at the 10/20/30/40/50 rank threshold.
+        /// </summary>
+        /// <param name="player">The player to receive the AP.</param>
+        /// <param name="rank">The rank attained.</param>
+        /// <param name="dbPlayer">The database entity.</param>
+        private static void ApplyAbilityPoint(uint player, int rank, Player dbPlayer)
+        {
+            // Total AP have been earned (300SP = 30AP)
+            if (dbPlayer.TotalAPAcquired >= SkillCap / 10) return;
+
+            void Apply(int expectedRank, int apLevelMax)
+            {
+                if (rank == expectedRank &&
+                    dbPlayer.AbilityPointsByLevel[expectedRank] < apLevelMax)
+                {
+                    dbPlayer.TotalAPAcquired++;
+                    dbPlayer.UnallocatedAP++;
+                    dbPlayer.AbilityPointsByLevel[expectedRank]++;
+
+                    SendMessageToPC(player, ColorToken.Green("You acquired 1 ability point!"));
+                }
+            }
+
+            Apply(10, 6);
+            Apply(20, 6);
+            Apply(30, 6);
+            Apply(40, 6);
+            Apply(50, 6);
         }
 
         /// <summary>

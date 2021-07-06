@@ -22,6 +22,15 @@ namespace Xenomech.Entity
                 {AbilityType.Unused, 0},
                 {AbilityType.Spirit, 0}
             };
+            UpgradedStats = new Dictionary<AbilityType, int>
+            {
+                {AbilityType.Vitality, 0},
+                {AbilityType.Might, 0},
+                {AbilityType.Diplomacy, 0},
+                {AbilityType.Perception, 0},
+                {AbilityType.Unused, 0},
+                {AbilityType.Spirit, 0}
+            };
 
             ShowHelmet = true;
             IsUsingDualPistolMode = false;
@@ -43,6 +52,14 @@ namespace Xenomech.Entity
             SavedOutfits = new Dictionary<int, string>();
             Factions = new Dictionary<FactionType, PlayerFactionStanding>();
             TaxiDestinations = new Dictionary<int, List<TaxiDestinationType>>();
+            AbilityPointsByLevel = new Dictionary<int, int>
+            {
+                {10, 0},
+                {20, 0},
+                {30, 0},
+                {40, 0},
+                {50, 0},
+            };
         }
 
         public override string KeyPrefix => "Player";
@@ -68,7 +85,9 @@ namespace Xenomech.Entity
         public string RespawnAreaResref { get; set; }
         public int UnallocatedXP { get; set; }
         public int UnallocatedSP { get; set; }
+        public int UnallocatedAP { get; set; }
         public int TotalSPAcquired { get; set; }
+        public int TotalAPAcquired { get; set; }
         public int RegenerationTick { get; set; }
         public int XPDebt { get; set; }
         public bool IsDeleted { get; set; }
@@ -87,6 +106,7 @@ namespace Xenomech.Entity
 
         public PlayerSettings Settings { get; set; }
         public Dictionary<AbilityType, int> BaseStats { get; set; }
+        public Dictionary<AbilityType, int> UpgradedStats { get; set; }
         public RoleplayProgress RoleplayProgress { get; set; }
         public Dictionary<string, List<MapPin>> MapPins { get; set; }
         public Dictionary<string, string> MapProgressions { get; set; }
@@ -101,6 +121,7 @@ namespace Xenomech.Entity
         public Dictionary<int, string> SavedOutfits { get; set; }
         public Dictionary<FactionType, PlayerFactionStanding> Factions { get; set; }
         public Dictionary<int, List<TaxiDestinationType>> TaxiDestinations { get; set; }
+        public Dictionary<int, int> AbilityPointsByLevel { get; set; }
     }
 
     public class MapPin

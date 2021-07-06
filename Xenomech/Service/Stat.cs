@@ -423,7 +423,7 @@ namespace Xenomech.Service
         }
         
         /// <summary>
-        /// Calculates a player's stat based on their skill bonuses, etc. and applies the changes to one ability score.
+        /// Calculates a player's stat based on their skill bonuses, upgrades, etc. and applies the changes to one ability score.
         /// </summary>
         /// <param name="entity">The player entity</param>
         /// <param name="player">The player object</param>
@@ -433,7 +433,7 @@ namespace Xenomech.Service
             if (!GetIsPC(player) || GetIsDM(player)) return;
             if (ability == AbilityType.Invalid) return;
 
-            var totalStat = entity.BaseStats[ability];
+            var totalStat = entity.BaseStats[ability] + entity.UpgradedStats[ability];
             CreaturePlugin.SetRawAbilityScore(player, ability, totalStat);
         }
 
