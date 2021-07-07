@@ -49,15 +49,14 @@ namespace Xenomech.Native
         {
             var creatureStats = CNWSCreatureStats.FromPointer(thisPtr);
             var creature = CNWSCreature.FromPointer(creatureStats.m_pBaseCreature);
-            var target = CNWSCreature.FromPointer(pTarget);
+            var targetObject = CNWSObject.FromPointer(pTarget);
             var damageFlags = creatureStats.m_pBaseCreature.GetDamageFlags();
-            var damagePower = creatureStats.m_pBaseCreature.CalculateDamagePower(target, bOffHand);
-
+            
             var defense = 0f;
             var dmg = 0f;
             var attackAttribute = 0f;
             var damage = 0;
-
+            
             // Calculate attacker's DMG
             if (creature != null)
             {
@@ -69,6 +68,14 @@ namespace Xenomech.Native
                 if (weapon == null)
                 {
                     weapon = creature.m_pInventory.GetItemInSlot((int) EquipmentSlot.Arms);
+                }
+
+                // Gloves not equipped. Check claws
+                if (weapon == null)
+                {
+                    weapon = bOffHand == 1
+                        ? creature.m_pInventory.GetItemInSlot((int) EquipmentSlot.CreatureWeaponLeft)
+                        : creature.m_pInventory.GetItemInSlot((int) EquipmentSlot.CreatureWeaponRight);
                 }
 
                 if (weapon != null)
@@ -110,8 +117,10 @@ namespace Xenomech.Native
             }
 
             // Calculate total defense on the target.
-            if (target != null)
+            if (targetObject != null && targetObject.m_nObjectType == (int)ObjectType.Creature)
             {
+                var target = CNWSCreature.FromPointer(pTarget);
+                var damagePower = creatureStats.m_pBaseCreature.CalculateDamagePower(target, bOffHand);
                 float vitality = target.m_pStats.m_nConstitutionModifier;
 
                 foreach (var slotItemId in target.m_pInventory.m_pEquipSlot)
@@ -129,7 +138,20 @@ namespace Xenomech.Native
                         }
                     }
                 }
-                
+
+                // todo: DEBUG
+
+                Console.WriteLine("====================================");
+                Console.WriteLine($"DMG = {dmg}");
+                Console.WriteLine($"AttackAttribute = {attackAttribute}");
+                Console.WriteLine($"Defense = {defense}");
+                Console.WriteLine($"Vitality = {vitality}");
+                Console.WriteLine($"Critical = {bCritical}");
+                Console.WriteLine("====================================");
+
+                // todo: END DEBUG
+
+
                 // Formula: ((DMG+MightOrPerception/3)*6)-((DEF+Vitality/3)/3)
                 var maxDamage = (dmg + attackAttribute / 3f) * 6f - ((defense + vitality / 3f) / 3f);
                 var minDamage = maxDamage * 0.75f;
@@ -142,6 +164,13 @@ namespace Xenomech.Native
                 }
 
                 damage = (int)Random.NextFloat(minDamage, maxDamage);
+
+                // Plot target - zero damage
+                if (target.m_bPlotObject == 1)
+                {
+                    damage = 0;
+                }
+
 
                 // Apply NWN mechanics to damage reduction
                 damage = target.DoDamageImmunity(creature, damage, damageFlags, 0, 1);
