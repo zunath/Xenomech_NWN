@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using Xenomech.Core;
+﻿using Xenomech.Core;
 using Xenomech.Core.NWNX;
 using Xenomech.Core.NWScript.Enum;
-using Xenomech.Entity;
-using Xenomech.Enumeration;
 using Xenomech.Service;
 using Player = Xenomech.Entity.Player;
 using Skill = Xenomech.Core.NWScript.Enum.Skill;
 using static Xenomech.Core.NWScript.NWScript;
+using CharacterType = Xenomech.Enumeration.CharacterType;
+using ClassType = Xenomech.Core.NWScript.Enum.ClassType;
+using InventorySlot = Xenomech.Core.NWScript.Enum.InventorySlot;
 using Race = Xenomech.Service.Race;
 
 namespace Xenomech.Feature
@@ -57,12 +57,12 @@ namespace Xenomech.Feature
             var @int = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Unused);
             var wis = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Spirit);
             var cha = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Diplomacy);
-
-            GiveXPToCreature(player, 10000);
-
-            for(var level = 1; level <= 5; level++)
+            
+            GiveXPToCreature(player, 800000);
+            var @class = GetClassByPosition(1, player);
+            
+            for (var level = 1; level <= 40; level++)
             {
-                var @class = GetClassByPosition(1, player);
                 LevelUpHenchman(player, @class);
             }
 
@@ -250,7 +250,7 @@ namespace Xenomech.Feature
         {
             var @class = GetClassByPosition(1, player);
 
-            if (@class == ClassType.Standard)
+            if (@class == ClassType.Natural)
                 dbPlayer.CharacterType = CharacterType.Natural;
             else if (@class == ClassType.Mage)
                 dbPlayer.CharacterType = CharacterType.Mage;

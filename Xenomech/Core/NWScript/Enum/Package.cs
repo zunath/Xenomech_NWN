@@ -133,17 +133,9 @@ namespace Xenomech.Core.NWScript.Enum
         Npc_Aribeth_Paladin = 129,
         Npc_Aribeth_Blackguard = 130,
         PurpleDragonKnight = 131,
-        Plant = 132,
-        Warrior = 133,
-        Monk = 134,
-        Thief = 135,
-        Ranger = 136,
-        WhiteMage = 137,
-        BlackMage = 138,
-        Miner = 155,
-        Botanist = 156,
-        Carpenter = 157,
-        Blacksmith = 158,
+        Natural = 132,
+        Mage = 133,
+        Cyber = 134,
         Invalid = 255
     }
 }
