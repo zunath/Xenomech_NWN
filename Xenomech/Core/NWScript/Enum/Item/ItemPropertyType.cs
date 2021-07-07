@@ -91,6 +91,8 @@ namespace Xenomech.Core.NWScript.Enum.Item
         HPBonus = 90,
         EPBonus = 91, 
         STMBonus = 92,
+        DMG = 93,
+        Defense = 94,
 
         UseLimitationPerk = 100,
         AbilityRecastReduction = 118
