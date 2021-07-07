@@ -30,7 +30,7 @@ namespace Xenomech.Feature
 
             var playerId = GetObjectUUID(player);
             var dbPlayer = DB.Get<Player>(playerId);
-            var isStandard = dbPlayer.CharacterType == CharacterType.Standard;
+            var isStandard = dbPlayer.CharacterType == CharacterType.Natural;
 
             // Standard Characters
             if (isStandard)

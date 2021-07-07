@@ -112,7 +112,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants Ambidexterity feat which reduces the attack penalty of your off-hand weapon by 4.")
                 .Price(6)
                 .RequirementSkill(SkillType.OneHanded, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.Ambidexterity);
         }
 
@@ -143,7 +143,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with vibroblades.")
                 .Price(4)
                 .RequirementSkill(SkillType.OneHanded, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationLongswords);
         }
 
@@ -156,7 +156,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using a vibroblade.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalLongswords);
         }
 
@@ -249,21 +249,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.LongswordMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.LongswordMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.LongswordMastery3);
         }
 
@@ -282,14 +282,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 2d4 damage and has a 75% chance to inflict Bleed for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.HackingBlade2)
 
                 .AddPerkLevel()
                 .Description("Your next attack deals an additional 3d4 damage and has a 100% chance to inflict Bleed for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.HackingBlade3);
         }
 
@@ -314,7 +314,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Instantly deals 3d6 damage to your target.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.RiotBlade3);
         }
 
@@ -333,7 +333,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with finesse vibroblades.")
                 .Price(4)
                 .RequirementSkill(SkillType.OneHanded, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationKnives);
         }
 
@@ -346,7 +346,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using a finesse vibroblade.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalKnives);
         }
 
@@ -439,21 +439,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Finesse Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.KnifeMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Finesse Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.KnifeMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Finesse Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.KnifeMastery3);
         }
 
@@ -472,14 +472,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 2d6 damage and has a 75% chance to inflict Poison for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PoisonStab2)
 
                 .AddPerkLevel()
                 .Description("Your next attack deals an additional 3d6 damage and has a 100% chance to inflict Poison for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PoisonStab3);
         }
 
@@ -498,14 +498,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Deals 3d8 damage to your target when dealt from behind. Damage is halved if not behind target.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 20)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.Backstab2)
 
                 .AddPerkLevel()
                 .Description("Deals 4d8 damage to your target when dealt from behind. Damage is halved if not behind target.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.Backstab3);
         }
     }

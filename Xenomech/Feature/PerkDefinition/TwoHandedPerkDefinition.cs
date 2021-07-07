@@ -54,7 +54,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants the Improved Power Attack feat which grants a +10 bonus to damage roll at the cost of -10 to attack roll.")
                 .Price(4)
                 .RequirementSkill(SkillType.TwoHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedPowerAttack);
         }
 
@@ -67,7 +67,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Two-Handed weapons gain +1 bonus to all attack rolls.")
                 .Price(5)
                 .RequirementSkill(SkillType.TwoHanded, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.SuperiorWeaponFocus);
         }
 
@@ -80,7 +80,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Two-Handed weapons gain x1 to all critical hits.")
                 .Price(6)
                 .RequirementSkill(SkillType.TwoHanded, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.IncreaseMultiplier);
         }
 
@@ -111,7 +111,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with heavy vibroblades.")
                 .Price(4)
                 .RequirementSkill(SkillType.TwoHanded, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationGreatswords);
         }
 
@@ -124,7 +124,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using a heavy vibroblade.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalGreatswords);
         }
 
@@ -217,21 +217,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Heavy Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.GreatswordMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Heavy Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.GreatswordMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Heavy Vibroblade.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.GreatswordMastery3);
         }
 
@@ -250,14 +250,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 3d4 damage and inflicts stun for 3 seconds.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.CrescentMoon2)
 
                 .AddPerkLevel()
                 .Description("Your next attack deals an additional 4d4 damage and inflicts stun for 3 seconds.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.CrescentMoon3);
         }
 
@@ -282,7 +282,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Instantly deals 3d8 damage to your target.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.HardSlash3);
         }
 
@@ -301,7 +301,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with polearms.")
                 .Price(4)
                 .RequirementSkill(SkillType.TwoHanded, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationPolearms);
         }
 
@@ -314,7 +314,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using a polearm.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalPolearms);
         }
 
@@ -407,21 +407,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Polearm.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PolearmMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Polearm.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PolearmMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Polearm.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PolearmMastery3);
         }
 
@@ -440,14 +440,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 2d6 damage and has a 75% chance to interrupt the concentration of your target.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.Skewer2)
 
                 .AddPerkLevel()
                 .Description("Your next attack deals an additional 3d6 damage and has a 100% chance to interrupt the concentration of your target.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.Skewer3);
         }
 
@@ -466,14 +466,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Instantly attacks twice, each for 2d6 damage.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 20)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.DoubleThrust2)
 
                 .AddPerkLevel()
                 .Description("Instantly attacks twice, each for 3d6 damage.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.DoubleThrust3);
         }
 
@@ -492,7 +492,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with twin blades.")
                 .Price(4)
                 .RequirementSkill(SkillType.TwoHanded, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationTwinBlades);
         }
 
@@ -505,7 +505,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using a twin blades.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalTwinBlades);
         }
 
@@ -598,21 +598,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Twin Blade.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.TwinBladeMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Twin Blade.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.TwinBladeMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Twin Blade.")
                 .Price(8)
                 .RequirementSkill(SkillType.TwoHanded, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.TwinBladeMastery3);
         }
 
@@ -631,14 +631,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 2d8 damage and has a 40% chance to inflict knockdown on your target for 6 seconds.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.LegSweep2)
 
                 .AddPerkLevel()
                 .Description("Your next attack deals an additional 3d8 damage and has a 50% chance to inflict knockdown on your target for 6 seconds.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.LegSweep3);
         }
 
@@ -657,14 +657,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Instantly attacks twice, each for 2d4. Successful hits reduce your target's AC by 4 for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 20)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.CrossCut2)
 
                 .AddPerkLevel()
                 .Description("Instantly attacks twice, each for 3d4. Successful hits reduce your target's AC by 6 for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.TwoHanded, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.CrossCut3);
         }
     }

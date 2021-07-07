@@ -55,7 +55,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants the Flurry of Blows feat. You receive an extra attack per round when fighting with unarmed attacks or a staff. However, all attacks in that round suffer a -2 attack penalty.")
                 .Price(4)
                 .RequirementSkill(SkillType.MartialArts, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.FlurryOfBlows);
         }
 
@@ -68,14 +68,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves critical range by 1.")
                 .Price(5)
                 .RequirementSkill(SkillType.MartialArts, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.InnerStrength1)
 
                 .AddPerkLevel()
                 .Description("Improves critical range by 2.")
                 .Price(6)
                 .RequirementSkill(SkillType.MartialArts, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.InnerStrength2)
                 
                 .TriggerPurchase((player, type, level) =>
@@ -97,7 +97,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You make melee attack rolls with your DEX score if it is higher than your STR score.")
                 .Price(5)
                 .RequirementSkill(SkillType.MartialArts, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.MartialFinesse);
         }
 
@@ -116,7 +116,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with knuckles.")
                 .Price(4)
                 .RequirementSkill(SkillType.MartialArts, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationKnuckles);
         }
 
@@ -129,7 +129,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using knuckles.")
                 .Price(3)
                 .RequirementSkill(SkillType.MartialArts, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalKnuckles);
         }
 
@@ -222,21 +222,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Knuckles.")
                 .Price(8)
                 .RequirementSkill(SkillType.MartialArts, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.KnucklesMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Knuckles.")
                 .Price(8)
                 .RequirementSkill(SkillType.MartialArts, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.KnucklesMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Knuckles.")
                 .Price(8)
                 .RequirementSkill(SkillType.MartialArts, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.KnucklesMastery3);
         }
 
@@ -255,14 +255,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 2d4 damage and has a 75% chance to inflict Shock for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.MartialArts, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ElectricFist2)
 
                 .AddPerkLevel()
                 .Description("Your next attack deals an additional 3d4 damage and has a 100% chance to inflict Shock for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.MartialArts, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ElectricFist3);
         }
 
@@ -287,7 +287,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 3d6 damage and has a 100% chance to inflict Poison for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.MartialArts, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.StrikingCobra3);
         }
 
@@ -306,7 +306,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with staves.")
                 .Price(4)
                 .RequirementSkill(SkillType.MartialArts, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationStaves);
         }
 
@@ -319,7 +319,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using a staff.")
                 .Price(3)
                 .RequirementSkill(SkillType.MartialArts, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalStaff);
         }
 
@@ -412,21 +412,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Staff.")
                 .Price(8)
                 .RequirementSkill(SkillType.MartialArts, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.StaffMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Staff.")
                 .Price(8)
                 .RequirementSkill(SkillType.MartialArts, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.StaffMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Staff.")
                 .Price(8)
                 .RequirementSkill(SkillType.MartialArts, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.StaffMastery3);
         }
 
@@ -445,14 +445,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 2d4 damage and has a 75% chance to inflict Blindness for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.MartialArts, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.Slam2)
 
                 .AddPerkLevel()
                 .Description("Your next attack deals an additional 3d4 damage and has a 100% chance to inflict Blindness for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.MartialArts, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.Slam3);
         }
 
@@ -471,14 +471,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Attacks up to 3 nearby enemies for 2d6 of damage each.")
                 .Price(3)
                 .RequirementSkill(SkillType.MartialArts, 20)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.SpinningWhirl2)
 
                 .AddPerkLevel()
                 .Description("Attacks up to 3 nearby enemies for 3d6 of damage each.")
                 .Price(3)
                 .RequirementSkill(SkillType.MartialArts, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.SpinningWhirl3);
         }
     }

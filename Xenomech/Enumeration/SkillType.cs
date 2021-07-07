@@ -44,6 +44,7 @@ namespace Xenomech.Enumeration
             true)]
         Ranged = 4,
 
+        // Ether
         [Skill(SkillCategoryType.Ether,
             "Elemental",
             50,
@@ -68,13 +69,38 @@ namespace Xenomech.Enumeration
             true)]
         Spiritbond = 7,
 
+        // Cybertech
+        [Skill(SkillCategoryType.Cybertech,
+            "Nano Combat",
+            50,
+            true,
+            "Ability to use combat nanos. Only available to 'Cybertech' character types.",
+            true)]
+        NanoCombat = 8,
+
+        [Skill(SkillCategoryType.Cybertech,
+            "Nano Reinforcement",
+            50,
+            true,
+            "Ability to use reinforcement nanos. Only available to 'Cybertech' character types.",
+            true)]
+        NanoReinforcement = 9,
+
+        [Skill(SkillCategoryType.Cybertech,
+            "Nano Construction",
+            50,
+            true,
+            "Ability to use construction nanos. Only available to 'Cybertech' character types.",
+            true)]
+        NanoConstruction = 10,
+
         [Skill(SkillCategoryType.Combat, 
             "Armor", 
             50, 
             true,
             "Ability to effectively wear and defend against attacks with armor.", 
             true)]
-        Armor = 8,
+        Armor = 11,
 
         // Utility
         [Skill(SkillCategoryType.Utility,
@@ -83,7 +109,7 @@ namespace Xenomech.Enumeration
             true,
             "Ability to pilot and outfit mechs.",
             true)]
-        Piloting = 9,
+        Piloting = 12,
 
         [Skill(SkillCategoryType.Utility,
             "First Aid",
@@ -91,7 +117,7 @@ namespace Xenomech.Enumeration
             true,
             "Ability to treat bodily injuries in the field with healing kits and stim packs.",
             true)]
-        FirstAid = 10,
+        FirstAid = 13,
 
         // Crafting
         [Skill(SkillCategoryType.Crafting, 
@@ -100,23 +126,15 @@ namespace Xenomech.Enumeration
             true, 
             "Ability to create weapons and armor like vibroblades, blasters, and helmets.", 
             true)]
-        Smithery = 11,
+        Smithery = 14,
         
-        [Skill(SkillCategoryType.Crafting,
-            "Cybertech", 
-            50,
-            true,
-            "",
-            true)]
-        Cybertech = 12,
-
         [Skill(SkillCategoryType.Crafting, 
             "Fabrication", 
             50, 
             true, 
             "Ability to create base structures, furniture, and starships.", 
             true)]
-        Fabrication = 13,
+        Fabrication = 15,
 
         [Skill(SkillCategoryType.Crafting, 
             "Gathering", 
@@ -124,7 +142,7 @@ namespace Xenomech.Enumeration
             true, 
             "Ability to harvest raw materials and scavenge for supplies.", 
             true)]
-        Gathering = 14,
+        Gathering = 16,
 
         [Skill(SkillCategoryType.Languages, 
             "Basic", 

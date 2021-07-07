@@ -251,7 +251,7 @@ namespace Xenomech.Feature
             var @class = GetClassByPosition(1, player);
 
             if (@class == ClassType.Standard)
-                dbPlayer.CharacterType = CharacterType.Standard;
+                dbPlayer.CharacterType = CharacterType.Natural;
             else if (@class == ClassType.Mage)
                 dbPlayer.CharacterType = CharacterType.Mage;
         }

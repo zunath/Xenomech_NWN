@@ -8,14 +8,16 @@ namespace Xenomech.Enumeration
         Invalid = 0,
         [SkillCategory("Combat", true, 1)]
         Combat = 1,
-        [SkillCategory("Ether", true, 1)]
+        [SkillCategory("Ether", true, 2)]
         Ether = 2,
+        [SkillCategory("Cybertech", true, 3)]
+        Cybertech = 3,
         [SkillCategory("Crafting", true, 4)]
-        Crafting = 3,
-        [SkillCategory("Utility", true, 6)]
-        Utility = 4,
-        [SkillCategory("Languages", true, 8)]
-        Languages = 5,
+        Crafting = 4,
+        [SkillCategory("Utility", true, 5)]
+        Utility = 5,
+        [SkillCategory("Languages", true, 6)]
+        Languages = 6,
     }
 
     public class SkillCategoryAttribute : Attribute

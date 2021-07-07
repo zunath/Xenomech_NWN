@@ -40,14 +40,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Increases the range you can use recovery items and stim packs by 3 meter.")
                 .Price(5)
                 .RequirementSkill(SkillType.FirstAid, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.RangedHealing3)
 
                 .AddPerkLevel()
                 .Description("Increases the range you can use recovery items and stim packs by 4 meter.")
                 .Price(6)
                 .RequirementSkill(SkillType.FirstAid, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.RangedHealing4);
         }
 
@@ -66,14 +66,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("20% chance to use a recovery item or stim pack without consuming a charge.")
                 .Price(4)
                 .RequirementSkill(SkillType.FirstAid, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.FrugalMedic2)
 
                 .AddPerkLevel()
                 .Description("30% chance to use a recovery item or stim pack without consuming a charge.")
                 .Price(5)
                 .RequirementSkill(SkillType.FirstAid, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.FrugalMedic3);
         }
 

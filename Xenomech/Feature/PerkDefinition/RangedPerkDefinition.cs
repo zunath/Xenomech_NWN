@@ -85,14 +85,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves critical multiplier by 1.")
                 .Price(5)
                 .RequirementSkill(SkillType.Ranged, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PrecisionAim1)
 
                 .AddPerkLevel()
                 .Description("Improves critical multiplier by 2.")
                 .Price(6)
                 .RequirementSkill(SkillType.Ranged, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PrecisionAim2)
 
                 .TriggerPurchase((player, type, level) =>
@@ -132,7 +132,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with pistols.")
                 .Price(4)
                 .RequirementSkill(SkillType.Ranged, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationPistol);
         }
 
@@ -145,7 +145,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using a pistol.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalPistol);
         }
 
@@ -238,21 +238,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Pistol.")
                 .Price(8)
                 .RequirementSkill(SkillType.Ranged, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PistolMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Pistol.")
                 .Price(8)
                 .RequirementSkill(SkillType.Ranged, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PistolMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Pistol.")
                 .Price(8)
                 .RequirementSkill(SkillType.Ranged, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PistolMastery3);
         }
 
@@ -271,14 +271,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Instantly deals 2d6 damage to your target.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.QuickDraw2)
 
                 .AddPerkLevel()
                 .Description("Instantly deals 3d6 damage to your target.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.QuickDraw3);
         }
 
@@ -303,7 +303,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Instantly attacks twice, each for 3d6 damage.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.DoubleShot3);
         }
 
@@ -322,7 +322,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with throwing weapons.")
                 .Price(4)
                 .RequirementSkill(SkillType.Ranged, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationThrowingWeapons);
         }
 
@@ -335,7 +335,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using a throwing weapon.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalThrowingWeapons);
         }
 
@@ -428,21 +428,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Throwing Weapon.")
                 .Price(8)
                 .RequirementSkill(SkillType.Ranged, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ThrowingWeaponMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Throwing Weapon.")
                 .Price(8)
                 .RequirementSkill(SkillType.Ranged, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ThrowingWeaponMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Throwing Weapon.")
                 .Price(8)
                 .RequirementSkill(SkillType.Ranged, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ThrowingWeaponMastery3);
         }
 
@@ -461,14 +461,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack damages up to 3 enemies within 3 meters of your target for 1d6 damage.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ExplosiveToss2)
 
                 .AddPerkLevel()
                 .Description("Your next attack damages up to 3 enemies within 3 meters of your target for 1d8 damage.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ExplosiveToss3);
         }
 
@@ -487,14 +487,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 2d4 damage and has a 75% chance to inflict Bleed for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 20)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PiercingToss2)
 
                 .AddPerkLevel()
                 .Description("Your next attack deals an additional 3d4 damage and has a 100% chance to inflict Bleed for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.PiercingToss3);
         }
         
@@ -513,7 +513,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with rifles.")
                 .Price(4)
                 .RequirementSkill(SkillType.Ranged, 15)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationRifles);
         }
 
@@ -526,7 +526,7 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Improves the critical hit chance when using a rifles.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalRifles);
         }
 
@@ -619,21 +619,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants +1 BAB when equipped with a Rifle.")
                 .Price(8)
                 .RequirementSkill(SkillType.Ranged, 25)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.RifleMastery1)
 
                 .AddPerkLevel()
                 .Description("Grants +2 BAB when equipped with a Rifle.")
                 .Price(8)
                 .RequirementSkill(SkillType.Ranged, 40)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.RifleMastery2)
 
                 .AddPerkLevel()
                 .Description("Grants +3 BAB when equipped with a Rifle.")
                 .Price(8)
                 .RequirementSkill(SkillType.Ranged, 50)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.RifleMastery3);
         }
 
@@ -652,14 +652,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack will tranquilize your target for up to 24 seconds. Damage will break the effect prematurely.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 30)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.TranquilizerShot2)
 
                 .AddPerkLevel()
                 .Description("Your next attack will tranquilize all creatures within 5 meters of your target for up to 12 seconds. Damage will break the effect prematurely.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 45)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.TranquilizerShot3);
         }
 
@@ -678,14 +678,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next attack deals an additional 2d6 damage and has a 75% chance to inflict Bind for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 20)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.CripplingShot2)
 
                 .AddPerkLevel()
                 .Description("Your next attack deals an additional 3d6 damage and has a 100% chance to inflict Bind for 1 minute.")
                 .Price(3)
                 .RequirementSkill(SkillType.Ranged, 35)
-                .RequirementCharacterType(CharacterType.Standard)
+                .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.CripplingShot3);
         }
     }

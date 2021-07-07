@@ -3,7 +3,8 @@
     public enum CharacterType
     {
         Invalid = 0,
-        Standard = 1,
-        Mage = 2
+        Natural = 1,
+        Mage = 2,
+        Cyber = 3
     }
 }

@@ -32,18 +32,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Restores HP to a single target.")
                 .Price(2)
                 .GrantsFeat(FeatType.Sazanami1)
+                .RequirementCharacterType(CharacterType.Mage)
 
                 .AddPerkLevel()
                 .Description("Restores HP to a single target.")
                 .Price(3)
                 .RequirementSkill(SkillType.Arcane, 15)
                 .GrantsFeat(FeatType.Sazanami2)
+                .RequirementCharacterType(CharacterType.Mage)
 
                 .AddPerkLevel()
                 .Description("Restores HP to a single target.")
                 .Price(4)
                 .RequirementSkill(SkillType.Arcane, 30)
-                .GrantsFeat(FeatType.Sazanami3);
+                .GrantsFeat(FeatType.Sazanami3)
+                .RequirementCharacterType(CharacterType.Mage);
         }
 
         private void ArcaneSpread()
@@ -55,7 +58,8 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Your next beneficial Arcane ability will target all party members within range.")
                 .Price(5)
                 .RequirementSkill(SkillType.Arcane, 20)
-                .GrantsFeat(FeatType.ArcaneSpread);
+                .GrantsFeat(FeatType.ArcaneSpread)
+                .RequirementCharacterType(CharacterType.Mage);
         }
 
         private void Ryokusho()
@@ -67,7 +71,8 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Removes physical ailments from a single target.")
                 .Price(3)
                 .RequirementSkill(SkillType.Arcane, 10)
-                .GrantsFeat(FeatType.Ryokusho);
+                .GrantsFeat(FeatType.Ryokusho)
+                .RequirementCharacterType(CharacterType.Mage);
         }
 
         private void Kaseii()
@@ -79,7 +84,8 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants regeneration to a single target for 5 minutes.")
                 .Price(4)
                 .RequirementSkill(SkillType.Arcane, 35)
-                .GrantsFeat(FeatType.Kaseii);
+                .GrantsFeat(FeatType.Kaseii)
+                .RequirementCharacterType(CharacterType.Mage);
         }
 
         private void Senkei()
@@ -91,7 +97,8 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Grants haste to a single target for 30 seconds.")
                 .Price(5)
                 .RequirementSkill(SkillType.Arcane, 45)
-                .GrantsFeat(FeatType.Senkei);
+                .GrantsFeat(FeatType.Senkei)
+                .RequirementCharacterType(CharacterType.Mage);
         }
 
         private void ClearMind()
@@ -104,12 +111,14 @@ namespace Xenomech.Feature.PerkDefinition
                 .Price(3)
                 .RequirementSkill(SkillType.Arcane, 20)
                 .GrantsFeat(FeatType.ClearMind1)
+                .RequirementCharacterType(CharacterType.Mage)
 
                 .AddPerkLevel()
                 .Description("Increases automatic regeneration of EP by an additional 1 per tick.")
                 .Price(5)
                 .RequirementSkill(SkillType.Arcane, 40)
-                .GrantsFeat(FeatType.ClearMind2);
+                .GrantsFeat(FeatType.ClearMind2)
+                .RequirementCharacterType(CharacterType.Mage);
         }
 
         private void ArcaneSpikes()
@@ -122,18 +131,21 @@ namespace Xenomech.Feature.PerkDefinition
                 .Price(3)
                 .RequirementSkill(SkillType.Arcane, 5)
                 .GrantsFeat(FeatType.ArcaneSpikes1)
+                .RequirementCharacterType(CharacterType.Mage)
 
                 .AddPerkLevel()
                 .Description("Grants a damage shield to a single target for 5 minutes.")
                 .Price(4)
                 .RequirementSkill(SkillType.Arcane, 25)
                 .GrantsFeat(FeatType.ArcaneSpikes1)
+                .RequirementCharacterType(CharacterType.Mage)
 
                 .AddPerkLevel()
                 .Description("Grants a damage shield to a single target for 5 minutes.")
                 .Price(5)
                 .RequirementSkill(SkillType.Arcane, 40)
-                .GrantsFeat(FeatType.ArcaneSpikes1);
+                .GrantsFeat(FeatType.ArcaneSpikes1)
+                .RequirementCharacterType(CharacterType.Mage);
         }
 
         private void Convert()
@@ -145,7 +157,8 @@ namespace Xenomech.Feature.PerkDefinition
                 .Description("Swaps current HP with EP.")
                 .Price(4)
                 .RequirementSkill(SkillType.Arcane, 30)
-                .GrantsFeat(FeatType.Convert);
+                .GrantsFeat(FeatType.Convert)
+                .RequirementCharacterType(CharacterType.Mage);
         }
     }
 }
