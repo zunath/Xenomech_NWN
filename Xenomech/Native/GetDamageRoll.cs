@@ -54,28 +54,28 @@ namespace Xenomech.Native
             
             var defense = 0f;
             var dmg = 0f;
-            var attackAttribute = 0f;
+            var attackAttribute = creatureStats.m_nStrengthBase < 10 ? 0 : creatureStats.m_nStrengthModifier;
             var damage = 0;
             
             // Calculate attacker's DMG
             if (creature != null)
             {
                 var weapon = bOffHand == 1
-                    ? creature.m_pInventory.GetItemInSlot((int) EquipmentSlot.LeftHand)
-                    : creature.m_pInventory.GetItemInSlot((int) EquipmentSlot.RightHand);
+                    ? creature.m_pInventory.GetItemInSlot((uint) EquipmentSlot.LeftHand)
+                    : creature.m_pInventory.GetItemInSlot((uint) EquipmentSlot.RightHand);
 
                 // Nothing equipped - check gloves.
                 if (weapon == null)
                 {
-                    weapon = creature.m_pInventory.GetItemInSlot((int) EquipmentSlot.Arms);
+                    weapon = creature.m_pInventory.GetItemInSlot((uint) EquipmentSlot.Arms);
                 }
 
                 // Gloves not equipped. Check claws
                 if (weapon == null)
                 {
                     weapon = bOffHand == 1
-                        ? creature.m_pInventory.GetItemInSlot((int) EquipmentSlot.CreatureWeaponLeft)
-                        : creature.m_pInventory.GetItemInSlot((int) EquipmentSlot.CreatureWeaponRight);
+                        ? creature.m_pInventory.GetItemInSlot((uint) EquipmentSlot.CreatureWeaponLeft)
+                        : creature.m_pInventory.GetItemInSlot((uint) EquipmentSlot.CreatureWeaponRight);
                 }
 
                 if (weapon != null)
@@ -84,7 +84,7 @@ namespace Xenomech.Native
                     for (var index = 0; index < weapon.m_lstPassiveProperties.array_size; index++)
                     {
                         var ip = weapon.GetPassiveProperty(index);
-                        if (ip != null && ip.m_nPropertyName == (int)ItemPropertyType.DMG)
+                        if (ip != null && ip.m_nPropertyName == (ushort)ItemPropertyType.DMG)
                         {
                             if (ip.m_nCostTableValue > dmg)
                             {
@@ -94,18 +94,14 @@ namespace Xenomech.Native
                     }
 
                     // Ranged weapons use Perception (NWN's DEX)
+                    // All others use Might (NWN's STR)
                     if (weapon.m_nBaseItem == (uint) BaseItem.HeavyCrossbow ||
                         weapon.m_nBaseItem == (uint) BaseItem.LightCrossbow ||
                         weapon.m_nBaseItem == (uint) BaseItem.Shortbow ||
                         weapon.m_nBaseItem == (uint) BaseItem.Longbow ||
                         weapon.m_nBaseItem == (uint) BaseItem.Sling)
                     {
-                        attackAttribute = creatureStats.GetDEXMod(0);
-                    }
-                    // All others use Might (NWN's STR)
-                    else
-                    {
-                        attackAttribute = creatureStats.m_nStrengthModifier;
+                        attackAttribute = creatureStats.m_nDexterityBase < 10 ? 0 : creatureStats.m_nDexterityModifier;
                     }
                 }
             }
@@ -131,7 +127,7 @@ namespace Xenomech.Native
                         for (var index = 0; index < item.m_lstPassiveProperties.array_size; index++)
                         {
                             var ip = item.GetPassiveProperty(index);
-                            if (ip != null && ip.m_nPropertyName == (int)ItemPropertyType.Defense)
+                            if (ip != null && ip.m_nPropertyName == (ushort)ItemPropertyType.Defense)
                             {
                                 defense += ip.m_nCostTableValue;
                             }

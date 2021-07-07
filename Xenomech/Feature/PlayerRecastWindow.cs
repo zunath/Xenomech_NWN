@@ -12,9 +12,7 @@ namespace Xenomech.Feature
     public static class PlayerRecastWindow
     {
         private const int MaxNumberOfRecastTimers = 10;
-        private const int MaxNumberOfShipModules = 15;
         private static Gui.IdReservation _recastIdReservation;
-        private static Gui.IdReservation _shipModuleIdReservation;
 
         /// <summary>
         /// When the module loads, reserve Gui Ids for both window types.
@@ -23,7 +21,6 @@ namespace Xenomech.Feature
         public static void ReserveGuiIds()
         {
             _recastIdReservation = Gui.ReserveIds(nameof(PlayerRecastWindow) + "_ABILITIES", MaxNumberOfRecastTimers * 2);
-            _shipModuleIdReservation = Gui.ReserveIds(nameof(PlayerRecastWindow) + "_SHIPMODULES", MaxNumberOfShipModules * 2);
         }
 
         /// <summary>
@@ -33,6 +30,7 @@ namespace Xenomech.Feature
         public static void DrawGuiElements()
         {
             var player = OBJECT_SELF;
+            if (GetIsDM(player)) return;
 
             DrawCharacterRecastComponent(player);
         }
@@ -86,6 +84,8 @@ namespace Xenomech.Feature
         public static void CleanUpExpiredRecastTimers()
         {
             var player = OBJECT_SELF;
+            if (GetIsDM(player)) return;
+
             var playerId = GetObjectUUID(player);
             var dbPlayer = DB.Get<Player>(playerId);
             var now = DateTime.UtcNow;

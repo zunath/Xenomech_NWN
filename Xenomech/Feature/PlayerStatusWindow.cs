@@ -26,6 +26,8 @@ namespace Xenomech.Feature
         public static void DrawGuiElements()
         {
             var player = OBJECT_SELF;
+            if (GetIsDM(player)) return;
+
             var playerId = GetObjectUUID(player);
             var dbPlayer = DB.Get<Player>(playerId);
             var isStandard = dbPlayer.CharacterType == CharacterType.Standard;

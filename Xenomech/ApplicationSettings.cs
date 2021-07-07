@@ -18,7 +18,7 @@ namespace Xenomech
 
         private ApplicationSettings()
         {
-            LogDirectory = Environment.GetEnvironmentVariable("APP_LOG_DIRECTORY");
+            LogDirectory = Environment.GetEnvironmentVariable("XM_APP_LOG_DIRECTORY");
             RedisIPAddress = Environment.GetEnvironmentVariable("NWNX_REDIS_HOST");
         }
 
