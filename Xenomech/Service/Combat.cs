@@ -77,8 +77,8 @@ namespace Xenomech.Service
         /// <summary>
         /// Retrieves a creature's total defense value.
         /// </summary>
-        /// <param name="creature"></param>
-        /// <returns></returns>
+        /// <param name="creature">The creature to retrieve from.</param>
+        /// <returns>Total defense value of selected creature.</returns>
         public static int CalculateDefense(uint creature)
         {
             var defense = 0;
@@ -100,6 +100,34 @@ namespace Xenomech.Service
             // todo: Pull defense values off effects
 
             return defense;
+        }
+
+        /// <summary>
+        /// Retrieves a creature's total ether defense value.
+        /// </summary>
+        /// <param name="creature">The creature to retrieve from.</param>
+        /// <returns>Total ether defense value of selected creature.</returns>
+        public static int CalculateEtherDefense(uint creature)
+        {
+            var etherDefense = 0;
+
+            // Pull defense values off equipment.
+            for (var slot = 0; slot < NumberOfInventorySlots; slot++)
+            {
+                var item = GetItemInSlot((InventorySlot)slot, creature);
+
+                for (var ip = GetFirstItemProperty(item); GetIsItemPropertyValid(ip); ip = GetNextItemProperty(item))
+                {
+                    if (GetItemPropertyType(ip) == ItemPropertyType.EtherDefense)
+                    {
+                        etherDefense += GetItemPropertyCostTableValue(ip);
+                    }
+                }
+            }
+
+            // todo: Pull defense values off effects
+
+            return etherDefense;
         }
     }
 }

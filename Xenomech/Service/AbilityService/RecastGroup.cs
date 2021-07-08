@@ -7,6 +7,32 @@ namespace Xenomech.Service.AbilityService
     {
         [RecastGroup("Invalid", "Invalid")]
         Invalid = 0,
+        [RecastGroup("Anemo Bolt", "An. Bolt")]
+        AnemoBolt = 1,
+        [RecastGroup("Aqua Ice", "Aqua Bolt")]
+        AquaIce = 2,
+        [RecastGroup("Elemental Seal", "Elem. Seal")]
+        ElementalSeal = 3,
+        [RecastGroup("Elemental Spread", "Elem. Spread")]
+        ElementalSpread = 4,
+        [RecastGroup("Thermo Cube", "Therm. Cube")]
+        ThermoCube = 5,
+        [RecastGroup("Arcane Spikes", "Arc. Spikes")]
+        ArcaneSpikes = 6,
+        [RecastGroup("Arcane Spread", "Arc. Spread")]
+        ArcaneSpread = 7,
+        [RecastGroup("Convert", "Convert")]
+        Convert = 8,
+        [RecastGroup("Kaseii", "Kaseii")]
+        Kaseii = 9,
+        [RecastGroup("Ryokusho", "Ryokusho")]
+        Ryokusho = 10,
+        [RecastGroup("Sazanami", "Sazanami")]
+        Sazanami = 11,
+        [RecastGroup("Senkei", "Senkei")]
+        Senkei = 12,
+        [RecastGroup("Summon Spirit", "Summon Spirit")]
+        SummonSpirit = 13,
         [RecastGroup("Hacking Blade", "Hacking Blade")]
         HackingBlade = 14,
         [RecastGroup("Riot Blade", "Riot Blade")]
@@ -14,7 +40,9 @@ namespace Xenomech.Service.AbilityService
         [RecastGroup("Poison Stab", "Poison Stab")]
         PoisonStab = 16,
         [RecastGroup("Backstab", "Backstab")]
-        Backstab = 17,        
+        Backstab = 17,
+        [RecastGroup("Ether Conduit", "E. Conduit")]
+        EtherConduit = 18,
         [RecastGroup("Saber Strike", "Saber Strike")]
         SaberStrike = 19,
         [RecastGroup("Crescent Moon", "Cresc. Moon")]
@@ -62,7 +90,9 @@ namespace Xenomech.Service.AbilityService
         [RecastGroup("Rest", "Rest")]
         Rest = 41,
         [RecastGroup("Knockdown", "Knockdown")]
-        Knockdown = 42
+        Knockdown = 42,
+        [RecastGroup("Ether Flow", "Ether Flow")]
+        EtherFlow = 43
     }
 
     public class RecastGroupAttribute: Attribute

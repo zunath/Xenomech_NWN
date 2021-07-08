@@ -40,6 +40,8 @@ namespace Xenomech.Service
                     _abilities[feat] = ability;
                 }
             }
+
+            Console.WriteLine($"Loaded {_abilities.Count} abilities.");
         }
 
         /// <summary>

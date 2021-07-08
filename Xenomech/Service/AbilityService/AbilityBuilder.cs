@@ -207,7 +207,7 @@ namespace Xenomech.Service.AbilityService
         /// </summary>
         /// <param name="requiredFP">The amount of FP needed to use this ability at this level.</param>
         /// <returns>An ability builder with the configured options</returns>
-        public AbilityBuilder RequirementFP(int requiredFP)
+        public AbilityBuilder RequirementEP(int requiredFP)
         {
             var requirement = new PerkFPRequirement(requiredFP);
             _activeAbility.Requirements.Add(requirement);

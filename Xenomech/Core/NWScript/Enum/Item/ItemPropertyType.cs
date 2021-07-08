@@ -93,6 +93,7 @@ namespace Xenomech.Core.NWScript.Enum.Item
         STMBonus = 92,
         DMG = 93,
         Defense = 94,
+        EtherDefense = 95,
 
         UseLimitationPerk = 100,
         AbilityRecastReduction = 118
