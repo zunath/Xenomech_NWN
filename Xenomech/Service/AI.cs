@@ -289,7 +289,7 @@ namespace Xenomech.Service
         {
             var self = OBJECT_SELF;
             
-            SetLocalInt(self, "FP", Stat.GetMaxFP(self));
+            SetLocalInt(self, "FP", Stat.GetMaxEP(self));
             SetLocalInt(self, "STAMINA", Stat.GetMaxStamina(self));
         }
 
@@ -309,7 +309,7 @@ namespace Xenomech.Service
         private static void RestoreCreatureStats()
         {
             var self = OBJECT_SELF;
-            var maxFP = Stat.GetMaxFP(self);
+            var maxFP = Stat.GetMaxEP(self);
             var maxSTM = Stat.GetMaxStamina(self);
             var fp = GetLocalInt(self, "FP") + 1;
             var stm = GetLocalInt(self, "STAMINA") + 1;

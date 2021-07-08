@@ -35,17 +35,16 @@ namespace Xenomech.Service
         }
 
         /// <summary>
-        /// Retrieves the maximum FP on a creature.
+        /// Retrieves the maximum EP on a creature.
         /// For players:
-        /// INT and WIS modifiers will be checked. The higher one is used for calculations.
-        /// Each modifier grants +2 to max FP.
+        /// Each Spirit modifier grants +2 to max EP.
         /// For NPCs:
-        /// INT and WIS modifiers are added together. Each modifier grants +3 to max FP.
+        /// Each WIS grants +3 to max EP.
         /// </summary>
         /// <param name="creature">The creature object</param>
         /// <param name="dbPlayer">The player entity. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
-        /// <returns>The max amount of FP</returns>
-        public static int GetMaxFP(uint creature, Player dbPlayer = null)
+        /// <returns>The max amount of EP</returns>
+        public static int GetMaxEP(uint creature, Player dbPlayer = null)
         {
             // Players
             if (GetIsPC(creature) && !GetIsDM(creature))
@@ -55,29 +54,29 @@ namespace Xenomech.Service
                     var playerId = GetObjectUUID(creature);
                     dbPlayer = DB.Get<Player>(playerId);
                 }
-                var baseFP = dbPlayer.MaxFP;
+                var baseEP = dbPlayer.MaxEP;
                 var modifier = GetAbilityModifier(AbilityType.Vitality, creature);
                 
-                return baseFP + (modifier * 2);
+                return baseEP + (modifier * 2);
             }
             // NPCs
             else
             {
                 var statModifier = GetAbilityModifier(AbilityType.Vitality, creature);
-                var fp = statModifier * 3;
-                if (fp < 0) fp = 0;
+                var ep = statModifier * 3;
+                if (ep < 0) ep = 0;
 
-                return fp;
+                return ep;
             }
         }
 
         /// <summary>
-        /// Retrieves the current FP on a creature.
+        /// Retrieves the current EP on a creature.
         /// </summary>
-        /// <param name="creature">The creature to retrieve FP from.</param>
+        /// <param name="creature">The creature to retrieve EP from.</param>
         /// <param name="dbPlayer">The player entity. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
-        /// <returns>The current amount of FP.</returns>
-        public static int GetCurrentFP(uint creature, Player dbPlayer = null)
+        /// <returns>The current amount of EP.</returns>
+        public static int GetCurrentEP(uint creature, Player dbPlayer = null)
         {
             // Players
             if (GetIsPC(creature) && !GetIsDM(creature))
@@ -88,12 +87,12 @@ namespace Xenomech.Service
                     dbPlayer = DB.Get<Player>(playerId);
                 }
 
-                return dbPlayer.FP;
+                return dbPlayer.EP;
             }
             // NPCs
             else
             {
-                return GetLocalInt(creature, "FP");
+                return GetLocalInt(creature, "EP");
             }
         }
 
@@ -156,16 +155,16 @@ namespace Xenomech.Service
             }
         }
         /// <summary>
-        /// Restores a creature's FP by a specified amount.
+        /// Restores a creature's EP by a specified amount.
         /// </summary>
         /// <param name="creature">The creature to modify.</param>
-        /// <param name="amount">The amount of FP to restore.</param>
+        /// <param name="amount">The amount of EP to restore.</param>
         /// <param name="dbPlayer">The player entity to modify. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
-        public static void RestoreFP(uint creature, int amount, Player dbPlayer = null)
+        public static void RestoreEP(uint creature, int amount, Player dbPlayer = null)
         {
             if (amount <= 0) return;
 
-            var maxFP = GetMaxFP(creature);
+            var maxEP = GetMaxEP(creature);
             
             // Players
             if (GetIsPC(creature) && !GetIsDM(creature))
@@ -176,35 +175,35 @@ namespace Xenomech.Service
                     dbPlayer = DB.Get<Player>(playerId);
                 }
                 
-                dbPlayer.FP += amount;
+                dbPlayer.EP += amount;
 
-                if (dbPlayer.FP > maxFP)
-                    dbPlayer.FP = maxFP;
+                if (dbPlayer.EP > maxEP)
+                    dbPlayer.EP = maxEP;
                 
                 DB.Set(playerId, dbPlayer);
             }
             // NPCs
             else
             {
-                var fp = GetLocalInt(creature, "FP");
-                fp += amount;
+                var ep = GetLocalInt(creature, "EP");
+                ep += amount;
 
-                if (fp > maxFP)
-                    fp = maxFP;
+                if (ep > maxEP)
+                    ep = maxEP;
 
-                SetLocalInt(creature, "FP", fp);
+                SetLocalInt(creature, "EP", ep);
             }
             
         }
 
         /// <summary>
-        /// Reduces a creature's FP by a specified amount.
-        /// If creature would fall below 0 FP, they will be reduced to 0 instead.
+        /// Reduces a creature's EP by a specified amount.
+        /// If creature would fall below 0 EP, they will be reduced to 0 instead.
         /// </summary>
-        /// <param name="creature">The creature whose FP will be reduced.</param>
-        /// <param name="reduceBy">The amount of FP to reduce by.</param>
+        /// <param name="creature">The creature whose EP will be reduced.</param>
+        /// <param name="reduceBy">The amount of EP to reduce by.</param>
         /// <param name="dbPlayer">The player entity to modify. If this is not set, a DB call will be made. Leave null for NPCs.</param>
-        public static void ReduceFP(uint creature, int reduceBy, Player dbPlayer = null)
+        public static void ReduceEP(uint creature, int reduceBy, Player dbPlayer = null)
         {
             if (reduceBy <= 0) return;
 
@@ -216,21 +215,21 @@ namespace Xenomech.Service
                     dbPlayer = DB.Get<Player>(playerId);
                 }
 
-                dbPlayer.FP -= reduceBy;
+                dbPlayer.EP -= reduceBy;
 
-                if (dbPlayer.FP < 0)
-                    dbPlayer.FP = 0;
+                if (dbPlayer.EP < 0)
+                    dbPlayer.EP = 0;
                 
                 DB.Set(playerId, dbPlayer);
             }
             else
             {
-                var fp = GetLocalInt(creature, "FP");
-                fp -= reduceBy;
-                if (fp < 0)
-                    fp = 0;
+                var ep = GetLocalInt(creature, "EP");
+                ep -= reduceBy;
+                if (ep < 0)
+                    ep = 0;
                 
-                SetLocalInt(creature, "FP", fp);
+                SetLocalInt(creature, "EP", ep);
             }
         }
 
@@ -265,13 +264,13 @@ namespace Xenomech.Service
             // NPCs
             else
             {
-                var fp = GetLocalInt(creature, "STAMINA");
-                fp += amount;
+                var stm = GetLocalInt(creature, "STAMINA");
+                stm += amount;
 
-                if (fp > maxSTM)
-                    fp = maxSTM;
+                if (stm > maxSTM)
+                    stm = maxSTM;
 
-                SetLocalInt(creature, "STAMINA", fp);
+                SetLocalInt(creature, "STAMINA", stm);
             }
         }
 
@@ -370,23 +369,23 @@ namespace Xenomech.Service
         }
 
         /// <summary>
-        /// Modifies a player's maximum FP by a certain amount.
+        /// Modifies a player's maximum EP by a certain amount.
         /// This method will not persist the changes so be sure you call DB.Set after calling this.
         /// </summary>
         /// <param name="entity">The entity to modify</param>
         /// <param name="adjustBy">The amount to adjust by</param>
-        public static void AdjustPlayerMaxFP(Player entity, int adjustBy)
+        public static void AdjustPlayerMaxEP(Player entity, int adjustBy)
         {
-            // Note: It's possible for Max FP to drop to a negative number. This is expected to ensure calculations stay in sync.
+            // Note: It's possible for Max EP to drop to a negative number. This is expected to ensure calculations stay in sync.
             // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
-            entity.MaxFP += adjustBy;
+            entity.MaxEP += adjustBy;
 
-            if (entity.FP > entity.MaxFP)
-                entity.FP = entity.MaxFP;
+            if (entity.EP > entity.MaxEP)
+                entity.EP = entity.MaxEP;
 
-            // Current FP, however, should never drop below zero.
-            if (entity.FP < 0)
-                entity.FP = 0;
+            // Current EP, however, should never drop below zero.
+            if (entity.EP < 0)
+                entity.EP = 0;
         }
 
         /// <summary>
@@ -447,5 +446,45 @@ namespace Xenomech.Service
         {
             entity.AbilityRecastReduction += adjustBy;
         }
+
+        /// <summary>
+        /// Modifies a player's HP Regen by a certain amount.
+        /// This method will not persist the changes so be sure you call DB.Set after calling this.
+        /// </summary>
+        /// <param name="entity">The entity to modify</param>
+        /// <param name="adjustBy">The amount to adjust by</param>
+        public static void AdjustHPRegen(Player entity, int adjustBy)
+        {
+            // Note: It's possible for HP Regen to drop to a negative number. This is expected to ensure calculations stay in sync.
+            // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
+            entity.HPRegen += adjustBy;
+        }
+
+        /// <summary>
+        /// Modifies a player's EP Regen by a certain amount.
+        /// This method will not persist the changes so be sure you call DB.Set after calling this.
+        /// </summary>
+        /// <param name="entity">The entity to modify</param>
+        /// <param name="adjustBy">The amount to adjust by</param>
+        public static void AdjustEPRegen(Player entity, int adjustBy)
+        {
+            // Note: It's possible for EP Regen to drop to a negative number. This is expected to ensure calculations stay in sync.
+            // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
+            entity.EPRegen += adjustBy;
+        }
+
+        /// <summary>
+        /// Modifies a player's STM Regen by a certain amount.
+        /// This method will not persist the changes so be sure you call DB.Set after calling this.
+        /// </summary>
+        /// <param name="entity">The entity to modify</param>
+        /// <param name="adjustBy">The amount to adjust by</param>
+        public static void AdjustSTMRegen(Player entity, int adjustBy)
+        {
+            // Note: It's possible for STM Regen to drop to a negative number. This is expected to ensure calculations stay in sync.
+            // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
+            entity.STMRegen += adjustBy;
+        }
+
     }
 }

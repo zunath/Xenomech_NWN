@@ -85,8 +85,8 @@ namespace Xenomech.Feature.ItemDefinition
                     .ValidationAction((user, item, target, location) =>
                     {
 
-                        var currentFP = Stat.GetCurrentFP(target);
-                        var maxFP = Stat.GetMaxFP(target);
+                        var currentFP = Stat.GetCurrentEP(target);
+                        var maxFP = Stat.GetMaxEP(target);
 
                         if (currentFP >= maxFP)
                             return "Your target's FP is already full.";

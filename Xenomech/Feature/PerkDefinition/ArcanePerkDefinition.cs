@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
 using Xenomech.Core.NWScript.Enum;
+using Xenomech.Entity;
 using Xenomech.Enumeration;
+using Xenomech.Service;
 using Xenomech.Service.PerkService;
+using static Xenomech.Core.NWScript.NWScript;
 
 namespace Xenomech.Feature.PerkDefinition
 {
@@ -105,6 +108,22 @@ namespace Xenomech.Feature.PerkDefinition
         {
             _builder.Create(PerkCategoryType.EtherArcane, PerkType.ClearMind)
                 .Name("Clear Mind")
+                .TriggerPurchase((player, type, level) =>
+                {
+                    var playerId = GetObjectUUID(player);
+                    var dbPlayer = DB.Get<Player>(playerId);
+
+                    Stat.AdjustEPRegen(dbPlayer, 1);
+                    DB.Set(playerId, dbPlayer);
+                })
+                .TriggerRefund((player, type, level) =>
+                {
+                    var playerId = GetObjectUUID(player);
+                    var dbPlayer = DB.Get<Player>(playerId);
+
+                    Stat.AdjustEPRegen(dbPlayer, -1);
+                    DB.Set(playerId, dbPlayer);
+                })
 
                 .AddPerkLevel()
                 .Description("Increases automatic regeneration of EP by 1 per tick.")

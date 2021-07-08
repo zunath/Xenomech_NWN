@@ -67,10 +67,10 @@ namespace Xenomech.Entity
         public int Version { get; set; }
         public string Name { get; set; }
         public int MaxHP { get; set; }
-        public int MaxFP { get; set; }
+        public int MaxEP { get; set; }
         public int MaxStamina { get; set; }
         public int HP { get; set; }
-        public int FP { get; set; }
+        public int EP { get; set; }
         public int Stamina { get; set; }
         public int BAB { get; set; }
         public string LocationAreaResref { get; set; }
@@ -89,6 +89,9 @@ namespace Xenomech.Entity
         public int TotalSPAcquired { get; set; }
         public int TotalAPAcquired { get; set; }
         public int RegenerationTick { get; set; }
+        public int HPRegen { get; set; }
+        public int EPRegen { get; set; }
+        public int STMRegen { get; set; }
         public int XPDebt { get; set; }
         public bool IsDeleted { get; set; }
         public bool ShowHelmet { get; set; }

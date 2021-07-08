@@ -24,7 +24,7 @@ namespace Xenomech.Feature.StatusEffectDefinition
                     .EffectIcon(2) // 2 = Regenerate
                     .TickAction((source, target) =>
                     {
-                        Stat.RestoreFP(target, amount);
+                        Stat.RestoreEP(target, amount);
                     });
             }
 

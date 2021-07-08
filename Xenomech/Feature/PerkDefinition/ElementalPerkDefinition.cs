@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
 using Xenomech.Core.NWScript.Enum;
+using Xenomech.Entity;
 using Xenomech.Enumeration;
+using Xenomech.Service;
 using Xenomech.Service.PerkService;
+using static Xenomech.Core.NWScript.NWScript;
 
 namespace Xenomech.Feature.PerkDefinition
 {
@@ -91,6 +94,22 @@ namespace Xenomech.Feature.PerkDefinition
         {
             _builder.Create(PerkCategoryType.EtherElemental, PerkType.Clarity)
                 .Name("Clarity")
+                .TriggerPurchase((player, type, level) =>
+                {
+                    var playerId = GetObjectUUID(player);
+                    var dbPlayer = DB.Get<Player>(playerId);
+
+                    Stat.AdjustPlayerMaxEP(dbPlayer, 10);
+                    DB.Set(playerId, dbPlayer);
+                })
+                .TriggerRefund((player, type, level) =>
+                {
+                    var playerId = GetObjectUUID(player);
+                    var dbPlayer = DB.Get<Player>(playerId);
+
+                    Stat.AdjustPlayerMaxEP(dbPlayer, -10);
+                    DB.Set(playerId, dbPlayer);
+                })
 
                 .AddPerkLevel()
                 .Description("Increases EP pool by 10 points.")

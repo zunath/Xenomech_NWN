@@ -58,6 +58,12 @@ namespace Xenomech.Feature
             var currentSTM = dbPlayer.Stamina;
             var maxSTM = Stat.GetMaxStamina(player, dbPlayer);
 
+            // Safety checks to ensure we don't display negative values.
+            if (currentSTM < 0)
+                currentSTM = 0;
+            if (maxSTM < 0)
+                maxSTM = 0;
+
             var backgroundBar = BuildBar(1, 1, 22);
             var hpBar = BuildBar(currentHP, maxHP, 22);
             var stmBar = BuildBar(currentSTM, maxSTM, 22);
@@ -92,7 +98,7 @@ namespace Xenomech.Feature
         }
 
         /// <summary>
-        /// Draws the HP, FP, and STM status information on a force player's screen.
+        /// Draws the HP, EP, and STM status information on a force player's screen.
         /// </summary>
         /// <param name="player">The player to draw the component for.</param>
         private static void DrawForceCharacterStatusComponent(uint player)
@@ -102,14 +108,24 @@ namespace Xenomech.Feature
 
             var currentHP = GetCurrentHitPoints(player);
             var maxHP = GetMaxHitPoints(player);
-            var currentFP = dbPlayer.FP;
-            var maxFP = Stat.GetMaxFP(player, dbPlayer);
+            var currentEP = dbPlayer.EP;
+            var maxEP = Stat.GetMaxEP(player, dbPlayer);
             var currentSTM = dbPlayer.Stamina;
             var maxSTM = Stat.GetMaxStamina(player, dbPlayer);
 
+            // Safety checks to ensure we don't show negative values.
+            if (currentEP < 0)
+                currentEP = 0;
+            if (maxEP < 0)
+                maxEP = 0;
+            if (currentSTM < 0)
+                currentSTM = 0;
+            if (maxSTM < 0)
+                maxSTM = 0;
+
             var backgroundBar = BuildBar(1, 1, 22);
             var hpBar = BuildBar(currentHP, maxHP, 22);
-            var fpBar = BuildBar(currentFP, maxFP, 22);
+            var fpBar = BuildBar(currentEP, maxEP, 22);
             var stmBar = BuildBar(currentSTM, maxSTM, 22);
 
             const int WindowX = 1;
@@ -122,7 +138,7 @@ namespace Xenomech.Feature
 
             // Draw the text
             var hpText = "HP:".PadRight(5, ' ') + $"{currentHP.ToString().PadLeft(4, ' ')} / {maxHP.ToString().PadLeft(4, ' ')}";
-            var fpText = "FP:".PadRight(5, ' ') + $"{currentFP.ToString().PadLeft(4, ' ')} / {maxFP.ToString().PadLeft(4, ' ')}";
+            var fpText = "FP:".PadRight(5, ' ') + $"{currentEP.ToString().PadLeft(4, ' ')} / {maxEP.ToString().PadLeft(4, ' ')}";
             var stmText = "STM:".PadRight(5, ' ') + $"{currentSTM.ToString().PadLeft(4, ' ')} / {maxSTM.ToString().PadLeft(4, ' ')}";
 
             PostString(player, hpText, centerWindowX + 8, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 2, Gui.TextName);

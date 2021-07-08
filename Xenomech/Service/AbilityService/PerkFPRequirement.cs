@@ -20,7 +20,7 @@ namespace Xenomech.Service.AbilityService
             // DMs are assumed to be able to activate.
             if (GetIsDM(player)) return string.Empty;
 
-            var fp = Stat.GetCurrentFP(player);
+            var fp = Stat.GetCurrentEP(player);
 
             if (fp >= _requiredFP) return string.Empty;
             return $"Not enough FP. (Required: {_requiredFP})";
@@ -30,7 +30,7 @@ namespace Xenomech.Service.AbilityService
         {
             if (GetIsDM(player)) return;
 
-            Stat.ReduceFP(player, _requiredFP);
+            Stat.ReduceEP(player, _requiredFP);
         }
     }
 }

@@ -104,7 +104,7 @@ namespace Xenomech.Feature.ChatCommandDefinition
                     }
 
                     ApplyEffectToObject(DurationType.Instant, EffectHeal(999), user);
-                    Stat.RestoreFP(user, Stat.GetMaxFP(user));
+                    Stat.RestoreEP(user, Stat.GetMaxEP(user));
                     Stat.RestoreStamina(user, Stat.GetMaxStamina(user));
                 });
 

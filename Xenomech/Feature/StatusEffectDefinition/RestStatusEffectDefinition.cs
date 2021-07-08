@@ -56,7 +56,7 @@ namespace Xenomech.Feature.StatusEffectDefinition
 
                     ApplyEffectToObject(DurationType.Instant, EffectHeal(hpAmount), target);
                     Stat.RestoreStamina(target, stmAmount);
-                    Stat.RestoreFP(target, fpAmount);
+                    Stat.RestoreEP(target, fpAmount);
                 })
                 .RemoveAction(target =>
                 {

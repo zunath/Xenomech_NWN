@@ -120,11 +120,11 @@ namespace Xenomech.Feature
 
             if (isAdding)
             {
-                Stat.AdjustPlayerMaxFP(dbPlayer, amount);
+                Stat.AdjustPlayerMaxEP(dbPlayer, amount);
             }
             else
             {
-                Stat.AdjustPlayerMaxFP(dbPlayer, -amount);
+                Stat.AdjustPlayerMaxEP(dbPlayer, -amount);
             }
 
             DB.Set(playerId, dbPlayer);
