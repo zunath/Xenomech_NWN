@@ -1,40 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using NWN.Native.API;
 using Xenomech.Core;
-using Xenomech.Core.NWNX;
 using Xenomech.Core.NWScript.Enum.Item;
-using static Xenomech.Core.NWScript.NWScript;
+using Xenomech.Service;
 using BaseItem = NWN.Native.API.BaseItem;
 using EquipmentSlot = NWN.Native.API.EquipmentSlot;
-using Random = Xenomech.Service.Random;
 
 namespace Xenomech.Native
 {
     public static unsafe class GetDamageRoll
     {
-        private static Dictionary<int, float> _dmgValues = new Dictionary<int, float>();
-
         internal delegate int GetDamageRollHook(void* thisPtr, void* pTarget, int bOffHand, int bCritical, int bSneakAttack, int bDeathAttack, int bForceMax);
         // ReSharper disable once NotAccessedField.Local
         private static GetDamageRollHook _callOriginal;
 
-        [NWNEventHandler("mod_load")]
-        public static void CacheDMGValues()
-        {
-            var rowCount = UtilPlugin.Get2DARowCount("iprp_dmg");
-
-            for (var row = 0; row < rowCount; row++)
-            {
-                var label = Get2DAString("iprp_dmg", "Label", row);
-
-                if (float.TryParse(label, out var dmgValue))
-                {
-                    _dmgValues[row] = dmgValue;
-                }
-            }
-        }
 
         [NWNEventHandler("mod_load")]
         public static void RegisterHook()
@@ -88,7 +68,7 @@ namespace Xenomech.Native
                         {
                             if (ip.m_nCostTableValue > dmg)
                             {
-                                dmg = _dmgValues[ip.m_nCostTableValue];
+                                dmg = Combat.GetDMGValueFromItemPropertyCostTableValue(ip.m_nCostTableValue);
                             }
                         }
                     }
@@ -135,38 +115,13 @@ namespace Xenomech.Native
                     }
                 }
 
-                // todo: DEBUG
-
-                Console.WriteLine("====================================");
-                Console.WriteLine($"DMG = {dmg}");
-                Console.WriteLine($"AttackAttribute = {attackAttribute}");
-                Console.WriteLine($"Defense = {defense}");
-                Console.WriteLine($"Vitality = {vitality}");
-                Console.WriteLine($"Critical = {bCritical}");
-                Console.WriteLine("====================================");
-
-                // todo: END DEBUG
-
-
-                // Formula: ((DMG+MightOrPerception/3)*6)-((DEF+Vitality/3)/3)
-                var maxDamage = (dmg + attackAttribute / 3f) * 6f - ((defense + vitality / 3f) / 3f);
-                var minDamage = maxDamage * 0.75f;
-
-                // Criticals - 25% bonus to damage range
-                if (bCritical == 1)
-                {
-                    minDamage = maxDamage;
-                    maxDamage *= 1.25f;
-                }
-
-                damage = (int)Random.NextFloat(minDamage, maxDamage);
+                damage = Combat.CalculateDamage(dmg, attackAttribute, defense, vitality, bCritical == 1);
 
                 // Plot target - zero damage
                 if (target.m_bPlotObject == 1)
                 {
                     damage = 0;
                 }
-
 
                 // Apply NWN mechanics to damage reduction
                 damage = target.DoDamageImmunity(creature, damage, damageFlags, 0, 1);
