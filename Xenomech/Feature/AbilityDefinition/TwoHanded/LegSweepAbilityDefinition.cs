@@ -33,8 +33,7 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
 
         private static void ImpactAction(uint activator, uint target, int level)
         {
-            var weapon = GetItemInSlot(InventorySlot.RightHand, activator);
-            var damage = 0;
+            var dmg = 0.0f;
             var inflict = false;
             // If activator is in stealth mode, force them out of stealth mode.
             if (GetActionMode(activator, ActionMode.Stealth) == true)
@@ -43,21 +42,25 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
             switch (level)
             {
                 case 1:
-                    damage = d4(2);
+                    dmg = 4.0f;
                     if (d4()==1) inflict = true;
                     break;
                 case 2:
-                    damage = d4(3);
+                    dmg = 9.0f;
                     if (Random(100) < 40) inflict = true;
                     break;
                 case 3:
-                    damage = d2(4);
+                    dmg = 14.0f;
                     if (d4() > 2) inflict = true;
                     break;
                 default:
                     break;
             }
 
+            var might = GetAbilityModifier(AbilityType.Might, activator);
+            var defense = Combat.CalculateDefense(target);
+            var vitality = GetAbilityModifier(AbilityType.Vitality, target);
+            var damage = Combat.CalculateDamage(dmg, might, defense, vitality, false);
             ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Slashing), target);
             if (inflict) ApplyEffectToObject(DurationType.Temporary, EffectKnockdown(), target, 6f);
 
@@ -73,14 +76,8 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(3)
                 .IsWeaponAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void LegSweep2(AbilityBuilder builder)
         {
@@ -90,14 +87,8 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(4)
                 .IsWeaponAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void LegSweep3(AbilityBuilder builder)
         {
@@ -107,14 +98,8 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(5)
                 .IsWeaponAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
     }
 }

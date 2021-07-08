@@ -33,8 +33,7 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
 
         private static void ImpactAction(uint activator, uint target, int level)
         {
-            var weapon = GetItemInSlot(InventorySlot.RightHand, activator);
-            var damage = 0;
+            var dmg = 0.0f;
             var duration = 0f;
             var inflict = false;
             // If activator is in stealth mode, force them out of stealth mode.
@@ -44,17 +43,17 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
             switch (level)
             {
                 case 1:
-                    damage = d6();
+                    dmg = 6.5f;
                     duration = 30f;
                     if (d2() == 1) inflict = true;
                     break;
                 case 2:
-                    damage = d6(2);
+                    dmg = 11.5f;
                     duration = 60f;
                     if (d4() > 1 ) inflict = true;
                     break;
                 case 3:
-                    damage = d6(3);
+                    dmg = 16.5f;
                     duration = 60f;
                     inflict = true;
                     break;
@@ -62,11 +61,14 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
                     break;
             }
 
+            var perception = GetAbilityModifier(AbilityType.Perception, activator);
+            var defense = Combat.CalculateDefense(target);
+            var vitality = GetAbilityModifier(AbilityType.Vitality, target);
+            var damage = Combat.CalculateDamage(dmg, perception, defense, vitality, false);
             ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Piercing), target);
             if (inflict) ApplyEffectToObject(DurationType.Temporary, EffectSlow(), target, duration);
 
-            Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
+            CombatPoint.AddCombatPoint(activator, target, SkillType.Ranged, 3);
         }
 
         private static void CripplingShot1(AbilityBuilder builder)

@@ -33,8 +33,7 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
 
         private static void ImpactAction(uint activator, uint target, int level)
         {
-            var weapon = GetItemInSlot(InventorySlot.RightHand, activator);
-            var damage = 0;
+            var dmg = 0.0f;
             // If activator is in stealth mode, force them out of stealth mode.
             if (GetActionMode(activator, ActionMode.Stealth) == true)
                 SetActionMode(activator, ActionMode.Stealth, false);
@@ -42,13 +41,13 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
             switch (level)
             {
                 case 1:
-                    damage = d4();
+                    dmg = 6.0f;
                     break;
                 case 2:
-                    damage = d6();
+                    dmg = 11.0f;
                     break;
                 case 3:
-                    damage = d8();
+                    dmg = 16.0f;
                     break;
                 default:
                     break;
@@ -60,14 +59,18 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
             {
                 if (GetDistanceBetween(target, creature) <= 3f)
                 {
-                    ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Slashing), target);
+                    var might = GetAbilityModifier(AbilityType.Might, activator);
+                    var defense = Combat.CalculateDefense(creature);
+                    var vitality = GetAbilityModifier(AbilityType.Vitality, target);
+                    var damage = Combat.CalculateDamage(dmg, might, defense, vitality, false);
+                    ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Slashing), creature);
+
+                    CombatPoint.AddCombatPoint(activator, creature, SkillType.Ranged, 3);
+
                     count++;
                 }
                 creature = GetNextObjectInShape(Shape.Sphere, RadiusSize.Medium, GetLocation(target), true, ObjectType.Creature);                
-            }            
-
-            Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
+            }
         }
 
         private static void ExplosiveToss1(AbilityBuilder builder)
@@ -78,14 +81,8 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(3)
                 .IsCastedAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void ExplosiveToss2(AbilityBuilder builder)
         {
@@ -95,14 +92,8 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(4)
                 .IsCastedAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void ExplosiveToss3(AbilityBuilder builder)
         {
@@ -112,14 +103,8 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(5)
                 .IsCastedAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
     }
 }

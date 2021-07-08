@@ -33,8 +33,7 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
 
         private static void ImpactAction(uint activator, uint target, int level)
         {
-            var weapon = GetItemInSlot(InventorySlot.RightHand, activator);
-            var damage = 0;
+            var dmg = 0.0f;
             var duration = 0f;
             var inflict = false;
             // If activator is in stealth mode, force them out of stealth mode.
@@ -44,28 +43,33 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
             switch (level)
             {
                 case 1:
-                    damage = d4();
+                    dmg = 6.0f;
                     inflict = true;
                     duration = 30f;
                     break;
                 case 2:
-                    damage = d4(2);
+                    dmg = 11.0f;
                     inflict = true;
                     duration = 60f;
                     break;
                 case 3:
-                    damage = d2(3);
+                    dmg = 16.0f;
                     duration = 60f;
                     break;
                 default:
                     break;
             }
 
+
+            var might = GetAbilityModifier(AbilityType.Might, activator);
+            var defense = Combat.CalculateDefense(target);
+            var vitality = GetAbilityModifier(AbilityType.Vitality, target);
+            var damage = Combat.CalculateDamage(dmg, might, defense, vitality, false);
             ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Bludgeoning), target);
             if (inflict) ApplyEffectToObject(DurationType.Temporary, EffectBlindness(), target, duration);
 
             Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.MartialArts, 3);
+            CombatPoint.AddCombatPoint(activator, target, SkillType.MartialArts, 3);
         }
 
         private static void Slam1(AbilityBuilder builder)
@@ -76,14 +80,8 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(3)
                 .IsWeaponAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void Slam2(AbilityBuilder builder)
         {
@@ -93,14 +91,8 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(4)
                 .IsWeaponAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void Slam3(AbilityBuilder builder)
         {
@@ -110,14 +102,8 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(5)
                 .IsWeaponAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
     }
 }

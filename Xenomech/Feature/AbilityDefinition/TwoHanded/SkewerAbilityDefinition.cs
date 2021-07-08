@@ -33,8 +33,7 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
 
         private static void ImpactAction(uint activator, uint target, int level)
         {
-            var weapon = GetItemInSlot(InventorySlot.RightHand, activator);
-            var damage = 0;
+            var dmg = 0.0f;
             var inflict = false;
             // If activator is in stealth mode, force them out of stealth mode.
             if (GetActionMode(activator, ActionMode.Stealth) == true)
@@ -43,21 +42,25 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
             switch (level)
             {
                 case 1:
-                    damage = d6();
+                    dmg = 6.5f;
                     if (Random(100)<45) inflict = true;
                     break;
                 case 2:
-                    damage = d6(2);
+                    dmg = 11.5f;
                     if (d4()>1) inflict = true;
                     break;
                 case 3:
-                    damage = d6(3);
+                    dmg = 16.5f;
                     inflict = true;
                     break;
                 default:
                     break;
             }
 
+            var perception = GetAbilityModifier(AbilityType.Might, activator);
+            var defense = Combat.CalculateDefense(target);
+            var vitality = GetAbilityModifier(AbilityType.Vitality, target);
+            var damage = Combat.CalculateDamage(dmg, perception, defense, vitality, false);
             ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Piercing), target);
             if (inflict)
             {
@@ -66,8 +69,7 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
                 SendMessageToPC(target, ColorToken.Gray(GetName(activator)) + " broke your concentration.");
             }
 
-            Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.TwoHanded, 3);
+            CombatPoint.AddCombatPoint(activator, target, SkillType.TwoHanded, 3);
         }
 
         private static void Skewer1(AbilityBuilder builder)

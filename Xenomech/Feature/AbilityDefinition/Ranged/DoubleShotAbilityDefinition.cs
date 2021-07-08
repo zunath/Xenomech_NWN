@@ -33,7 +33,7 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
 
         private static void ImpactAction(uint activator, uint target, int level)
         {
-            var damage = 0;
+            var dmg = 0.0f;
 
             // If activator is in stealth mode, force them out of stealth mode.
             if (GetActionMode(activator, ActionMode.Stealth) == true)
@@ -42,22 +42,30 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
             switch (level)
             {
                 case 1:
-                    damage = d4();
+                    dmg = 4.5f;
                     break;
                 case 2:
-                    damage = d6(2);
+                    dmg = 8.5f;
                     break;
                 case 3:
-                    damage = d6(3);
+                    dmg = 11.5f;
                     break;
                 default:
                     break;
             }
 
+            // First attack
+            var perception = GetAbilityModifier(AbilityType.Perception, activator);
+            var defense = Combat.CalculateDefense(target);
+            var vitality = GetAbilityModifier(AbilityType.Vitality, target);
+            var damage = Combat.CalculateDamage(dmg, perception, defense, vitality, false);
             ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Piercing), target);
 
-            Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
+            // Second attack
+            damage = Combat.CalculateDamage(dmg, perception, defense, vitality, false);
+            ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Piercing), target);
+
+            CombatPoint.AddCombatPoint(activator, target, SkillType.Ranged, 3);
         }
 
         private static void DoubleShot1(AbilityBuilder builder)

@@ -33,7 +33,7 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
 
         private static void ImpactAction(uint activator, uint target, int level)
         {
-            var damage = 0;
+            var dmg = 0.0f;
 
             // If activator is in stealth mode, force them out of stealth mode.
             if (GetActionMode(activator, ActionMode.Stealth) == true)
@@ -42,18 +42,22 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
             switch (level)
             {
                 case 1:
-                    damage = d4();
+                    dmg = 4.0f;
                     break;
                 case 2:
-                    damage = d6(2);
+                    dmg = 9.0f;
                     break;
                 case 3:
-                    damage = d6(3);
+                    dmg = 14.0f;
                     break;
                 default:
                     break;
             }
 
+            var might = GetAbilityModifier(AbilityType.Might, activator);
+            var defense = Combat.CalculateDefense(target);
+            var vitality = GetAbilityModifier(AbilityType.Vitality, target);
+            var damage = Combat.CalculateDamage(dmg, might, defense, vitality, false);
             ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Piercing), target);
 
             Enmity.ModifyEnmityOnAll(activator, 1);
@@ -68,10 +72,7 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(3)
                 .IsCastedAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
+                .HasCustomValidation(Validation)
                 .HasImpactAction((activator, target, level) =>
                 {
                     ImpactAction(activator, target, level);
@@ -86,10 +87,7 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(5)
                 .IsCastedAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
+                .HasCustomValidation(Validation)
                 .HasImpactAction((activator, target, level) =>
                 {
                     ImpactAction(activator, target, level);
@@ -104,10 +102,7 @@ namespace Xenomech.Feature.AbilityDefinition.TwoHanded
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(8)
                 .IsCastedAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
+                .HasCustomValidation(Validation)
                 .HasImpactAction((activator, target, level) =>
                 {
                     ImpactAction(activator, target, level);

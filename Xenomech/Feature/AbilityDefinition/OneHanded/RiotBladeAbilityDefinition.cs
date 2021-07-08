@@ -38,7 +38,7 @@ namespace Xenomech.Feature.AbilityDefinition.OneHanded
 
         private static void ImpactAction(uint activator, uint target, int level)
         {
-            var damage = 0;
+            var dmg = 0.0f;
 
             // If activator is in stealth mode, force them out of stealth mode.
             if (GetActionMode(activator, ActionMode.Stealth) == true)
@@ -47,22 +47,25 @@ namespace Xenomech.Feature.AbilityDefinition.OneHanded
             switch (level)
             {
                 case 1:
-                    damage = d8();
+                    dmg = 7.0f;
                     break;
                 case 2:
-                    damage = d6(2);
+                    dmg = 12.0f;
                     break;
                 case 3:
-                    damage = d6(3);
+                    dmg = 17.0f;
                     break;
                 default:
                     break;
             }
 
+            var might = GetAbilityModifier(AbilityType.Might, activator);
+            var defense = Combat.CalculateDefense(target);
+            var vitality = GetAbilityModifier(AbilityType.Vitality, target);
+            var damage = Combat.CalculateDamage(dmg, might, defense, vitality, false);
             ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Slashing), target);
 
-            Enmity.ModifyEnmityOnAll(activator, 1);
-            CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 3);
+            CombatPoint.AddCombatPoint(activator, target, SkillType.OneHanded, 3);
         }
 
         private static void RiotBlade1(AbilityBuilder builder)
@@ -73,14 +76,8 @@ namespace Xenomech.Feature.AbilityDefinition.OneHanded
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(3)
                 .IsCastedAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void RiotBlade2(AbilityBuilder builder)
         {
@@ -90,14 +87,8 @@ namespace Xenomech.Feature.AbilityDefinition.OneHanded
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(5)
                 .IsCastedAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void RiotBlade3(AbilityBuilder builder)
         {
@@ -107,14 +98,8 @@ namespace Xenomech.Feature.AbilityDefinition.OneHanded
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(8)
                 .IsCastedAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
     }
 }

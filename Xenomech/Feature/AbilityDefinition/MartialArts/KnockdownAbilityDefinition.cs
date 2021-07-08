@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xenomech.Core.NWScript.Enum;
 using Xenomech.Enumeration;
+using Xenomech.Service;
 using Xenomech.Service.AbilityService;
 using static Xenomech.Core.NWScript.NWScript;
 using Random = Xenomech.Service.Random;
@@ -31,6 +32,8 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
                     if (!isHit) return;
 
                     ApplyEffectToObject(DurationType.Temporary, EffectKnockdown(), target, 12f);
+                    CombatPoint.AddCombatPoint(activator, target, SkillType.MartialArts, 3);
+                    Enmity.ModifyEnmity(activator, target, 18);
                 });
         }
     }
