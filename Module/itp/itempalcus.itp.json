@@ -148,6 +148,22 @@
                 "type": "byte",
                 "value": 13
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Test Claw"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "test_claw"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 6744
@@ -180,6 +196,22 @@
               "ID": {
                 "type": "byte",
                 "value": 14
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Test Skin"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "test_skin"
+                    }
+                  }
+                ]
               },
               "STRREF": {
                 "type": "dword",

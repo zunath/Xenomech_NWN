@@ -13,6 +13,13 @@
           "type": "resref",
           "value": "area001"
         }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "area002"
+        }
       }
     ]
   },
@@ -44,7 +51,7 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "area001"
+    "value": "area002"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
@@ -56,11 +63,11 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 40.0
+    "value": 33.0
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 45.0
+    "value": 37.0
   },
   "Mod_Entry_Z": {
     "type": "float",
@@ -130,6 +137,13 @@
         "__struct_id": 8,
         "Mod_Hak": {
           "type": "cexostring",
+          "value": "xm_icons"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
           "value": "xm_items"
         }
       },
@@ -193,7 +207,7 @@
   },
   "Mod_ID": {
     "type": "void",
-    "value": "÷‰O!”B­é¹Uî7‚c’G"
+    "value": "ÿÿÿÿ\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
   },
   "Mod_IsSaveGame": {
     "type": "byte",
@@ -215,15 +229,15 @@
   },
   "Mod_OnAcquirItem": {
     "type": "resref",
-    "value": "x2_mod_def_aqu"
+    "value": ""
   },
   "Mod_OnActvtItem": {
     "type": "resref",
-    "value": "x2_mod_def_act"
+    "value": ""
   },
   "Mod_OnClientEntr": {
     "type": "resref",
-    "value": "x3_mod_def_enter"
+    "value": ""
   },
   "Mod_OnClientLeav": {
     "type": "resref",
@@ -239,7 +253,7 @@
   },
   "Mod_OnModLoad": {
     "type": "resref",
-    "value": "x2_mod_def_load"
+    "value": ""
   },
   "Mod_OnModStart": {
     "type": "resref",
@@ -251,15 +265,15 @@
   },
   "Mod_OnPlrDeath": {
     "type": "resref",
-    "value": "nw_o0_death"
+    "value": ""
   },
   "Mod_OnPlrDying": {
     "type": "resref",
-    "value": "nw_o0_dying"
+    "value": ""
   },
   "Mod_OnPlrEqItm": {
     "type": "resref",
-    "value": "x2_mod_def_equ"
+    "value": ""
   },
   "Mod_OnPlrLvlUp": {
     "type": "resref",
@@ -267,19 +281,19 @@
   },
   "Mod_OnPlrRest": {
     "type": "resref",
-    "value": "x2_mod_def_rest"
+    "value": ""
   },
   "Mod_OnPlrUnEqItm": {
     "type": "resref",
-    "value": "x2_mod_def_unequ"
+    "value": ""
   },
   "Mod_OnSpawnBtnDn": {
     "type": "resref",
-    "value": "nw_o0_respawn"
+    "value": ""
   },
   "Mod_OnUnAqreItem": {
     "type": "resref",
-    "value": "x2_mod_def_unaqu"
+    "value": ""
   },
   "Mod_OnUsrDefined": {
     "type": "resref",
@@ -315,6 +329,6 @@
   },
   "Mod_XPScale": {
     "type": "byte",
-    "value": 10
+    "value": 0
   }
 }
