@@ -76,9 +76,6 @@ namespace Xenomech.Enumeration
         [PerkCategory("Smithery", true)]
         Smithery = 23,
 
-        [PerkCategory("Cybertech", true)]
-        Cybertech = 24,
-
         [PerkCategory("Fabrication", true)]
         Fabrication = 25,
 

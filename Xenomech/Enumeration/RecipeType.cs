@@ -239,10 +239,8 @@
         MightCloakIV = 223,
         ThiefCloakIV = 224,
         WarriorCloakIV = 225,
-
-        // Cybertech:  1001-2000
-
-        // Fabrication:     2001-3000
+        
+        // Fabrication:     1001-2000
 
     }
 }

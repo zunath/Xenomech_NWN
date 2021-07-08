@@ -27,6 +27,9 @@
 
   <ItemGroup>
     <Folder Include="Feature\AbilityDefinition\Crafting\" />
+    <Folder Include="Feature\AbilityDefinition\NanoCombat\" />
+    <Folder Include="Feature\AbilityDefinition\NanoConstruction\" />
+    <Folder Include="Feature\AbilityDefinition\NanoReinforcement\" />
     <Folder Include="Feature\QuestDefinition\" />
     <Folder Include="Feature\SpawnDefinition\" />
   </ItemGroup>
