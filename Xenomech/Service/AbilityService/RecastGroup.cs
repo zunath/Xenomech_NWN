@@ -91,8 +91,8 @@ namespace Xenomech.Service.AbilityService
         Rest = 41,
         [RecastGroup("Knockdown", "Knockdown")]
         Knockdown = 42,
-        [RecastGroup("Ether Flow", "Ether Flow")]
-        EtherFlow = 43
+        [RecastGroup("Parting Gift", "Parting Gift")]
+        PartingGift = 43
     }
 
     public class RecastGroupAttribute: Attribute

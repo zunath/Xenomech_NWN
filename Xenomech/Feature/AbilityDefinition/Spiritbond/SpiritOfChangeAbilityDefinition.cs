@@ -4,7 +4,7 @@ using Xenomech.Service.AbilityService;
 
 namespace Xenomech.Feature.AbilityDefinition.Spiritbond
 {
-    public class HolySpiritAbilityDefinition : IAbilityListDefinition
+    public class SpiritOfChangeAbilityDefinition : IAbilityListDefinition
     {
         private readonly AbilityBuilder _builder = new AbilityBuilder();
 

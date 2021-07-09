@@ -57,13 +57,13 @@ namespace Xenomech.Service
                 var baseEP = dbPlayer.MaxEP;
                 var modifier = GetAbilityModifier(AbilityType.Vitality, creature);
                 
-                return baseEP + (modifier * 2);
+                return baseEP + (modifier * 10);
             }
             // NPCs
             else
             {
                 var statModifier = GetAbilityModifier(AbilityType.Vitality, creature);
-                var ep = statModifier * 3;
+                var ep = statModifier * 10;
                 if (ep < 0) ep = 0;
 
                 return ep;

@@ -11,80 +11,80 @@ namespace Xenomech.Feature.PerkDefinition
 
         public Dictionary<PerkType, PerkDetail> BuildPerks()
         {
-            LightningSpirit();
-            EtherFlow();
-            EarthSpirit();
+            SpiritOfRage();
+            PartingGift();
+            SpiritOfChange();
             SpiritualBonding();
-            HolySpirit();
+            SpiritOfFaith();
             EtherConduit();
 
             return _builder.Build();
         }
 
-        private void LightningSpirit()
+        private void SpiritOfRage()
         {
-            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.LightningSpirit)
-                .Name("Lightning Spirit")
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.SpiritOfRage)
+                .Name("Spirit of Rage")
 
                 .AddPerkLevel()
-                .Description("Summons a Lightning Spirit to do your bidding. The Spirit will use electric based ether abilities.")
+                .Description("Summons a Rage Spirit to do your bidding. The Spirit will use electric based ether abilities.")
                 .Price(2)
-                .GrantsFeat(FeatType.LightningSpirit1)
+                .GrantsFeat(FeatType.SpiritOfRage1)
                 .RequirementCharacterType(CharacterType.Mage)
 
                 .AddPerkLevel()
-                .Description("Summons a Lightning Spirit to do your bidding. The Spirit will use electric based ether abilities.")
+                .Description("Summons a Rage Spirit to do your bidding. The Spirit will use electric based ether abilities.")
                 .Price(3)
                 .RequirementSkill(SkillType.Spiritbond, 15)
                 .RequirementCharacterType(CharacterType.Mage)
-                .GrantsFeat(FeatType.LightningSpirit2)
+                .GrantsFeat(FeatType.SpiritOfRage2)
 
                 .AddPerkLevel()
-                .Description("Summons a Lightning Spirit to do your bidding. The Spirit will use electric based ether abilities.")
+                .Description("Summons a Rage Spirit to do your bidding. The Spirit will use electric based ether abilities.")
                 .Price(4)
                 .RequirementSkill(SkillType.Spiritbond, 30)
                 .RequirementCharacterType(CharacterType.Mage)
-                .GrantsFeat(FeatType.LightningSpirit3);
+                .GrantsFeat(FeatType.SpiritOfRage3);
         }
 
-        private void EtherFlow()
+        private void PartingGift()
         {
-            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.EtherFlow)
-                .Name("Ether Flow")
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.PartingGift)
+                .Name("Parting Gift")
 
                 .AddPerkLevel()
                 .Description("Releases your summoned spirit, initating the spirit's pact ability.")
                 .Price(5)
                 .RequirementSkill(SkillType.Spiritbond, 20)
                 .RequirementCharacterType(CharacterType.Mage)
-                .GrantsFeat(FeatType.EtherFlow);
+                .GrantsFeat(FeatType.PartingGift);
         }
 
-        private void EarthSpirit()
+        private void SpiritOfChange()
         {
-            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.EarthSpirit)
-                .Name("Earth Spirit")
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.SpiritOfChange)
+                .Name("Spirit of Change")
 
                 .AddPerkLevel()
-                .Description("Summons a Earth Spirit to do your bidding. The Spirit will use defensive ether abilities.")
+                .Description("Summons a Change Spirit to do your bidding. The Spirit will use defensive ether abilities.")
                 .Price(3)
                 .RequirementSkill(SkillType.Spiritbond, 10)
                 .RequirementCharacterType(CharacterType.Mage)
-                .GrantsFeat(FeatType.LightningSpirit1)
+                .GrantsFeat(FeatType.SpiritOfChange1)
 
                 .AddPerkLevel()
-                .Description("Summons a Earth Spirit to do your bidding. The Spirit will use defensive ether abilities.")
+                .Description("Summons a Change Spirit to do your bidding. The Spirit will use defensive ether abilities.")
                 .Price(4)
                 .RequirementSkill(SkillType.Spiritbond, 35)
                 .RequirementCharacterType(CharacterType.Mage)
-                .GrantsFeat(FeatType.LightningSpirit2)
+                .GrantsFeat(FeatType.SpiritOfChange2)
 
                 .AddPerkLevel()
-                .Description("Summons a Earth Spirit to do your bidding. The Spirit will use defensive ether abilities.")
+                .Description("Summons a Change Spirit to do your bidding. The Spirit will use defensive ether abilities.")
                 .Price(5)
                 .RequirementSkill(SkillType.Spiritbond, 45)
                 .RequirementCharacterType(CharacterType.Mage)
-                .GrantsFeat(FeatType.LightningSpirit3);
+                .GrantsFeat(FeatType.SpiritOfChange3);
         }
 
         private void SpiritualBonding()
@@ -107,31 +107,31 @@ namespace Xenomech.Feature.PerkDefinition
                 .GrantsFeat(FeatType.SpiritualBonding2);
         }
 
-        private void HolySpirit()
+        private void SpiritOfFaith()
         {
-            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.HolySpirit)
-                .Name("Holy Spirit")
+            _builder.Create(PerkCategoryType.EtherSpiritbond, PerkType.SpiritOfFaith)
+                .Name("Spirit of Faith")
 
                 .AddPerkLevel()
-                .Description("Summons a Holy Spirit to do your bidding. The Spirit will use restorative ether abilities.")
+                .Description("Summons a Faith Spirit to do your bidding. The Spirit will use restorative ether abilities.")
                 .Price(3)
                 .RequirementSkill(SkillType.Spiritbond, 5)
                 .RequirementCharacterType(CharacterType.Mage)
-                .GrantsFeat(FeatType.HolySpirit1)
+                .GrantsFeat(FeatType.SpiritOfFaith1)
 
                 .AddPerkLevel()
-                .Description("Summons a Holy Spirit to do your bidding. The Spirit will use restorative ether abilities.")
+                .Description("Summons a Faith Spirit to do your bidding. The Spirit will use restorative ether abilities.")
                 .Price(4)
                 .RequirementSkill(SkillType.Spiritbond, 25)
                 .RequirementCharacterType(CharacterType.Mage)
-                .GrantsFeat(FeatType.HolySpirit2)
+                .GrantsFeat(FeatType.SpiritOfFaith2)
 
                 .AddPerkLevel()
-                .Description("Summons a Holy Spirit to do your bidding. The Spirit will use restorative ether abilities.")
+                .Description("Summons a Faith Spirit to do your bidding. The Spirit will use restorative ether abilities.")
                 .Price(5)
                 .RequirementSkill(SkillType.Spiritbond, 40)
                 .RequirementCharacterType(CharacterType.Mage)
-                .GrantsFeat(FeatType.HolySpirit3);
+                .GrantsFeat(FeatType.SpiritOfFaith3);
         }
 
         private void EtherConduit()

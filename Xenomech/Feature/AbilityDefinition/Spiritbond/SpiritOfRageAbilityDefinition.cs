@@ -4,7 +4,7 @@ using Xenomech.Service.AbilityService;
 
 namespace Xenomech.Feature.AbilityDefinition.Spiritbond
 {
-    public class EtherFlowAbilityDefinition : IAbilityListDefinition
+    public class SpiritOfRageAbilityDefinition : IAbilityListDefinition
     {
         private readonly AbilityBuilder _builder = new AbilityBuilder();
 
