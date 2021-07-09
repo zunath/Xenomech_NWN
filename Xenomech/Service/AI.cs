@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Xenomech.Core;
+using Xenomech.Core.NWNX;
 using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
 using Xenomech.Feature.AIDefinition;
 using Xenomech.Service.AIService;
 using static Xenomech.Core.NWScript.NWScript;
@@ -284,11 +286,31 @@ namespace Xenomech.Service
 
         /// <summary>
         /// When a creature spawns, store their STM and FP as local variables.
+        /// Also load their HP per their skin, if specified.
         /// </summary>
         private static void LoadCreatureStats()
         {
             var self = OBJECT_SELF;
-            
+            var skin = GetItemInSlot(InventorySlot.CreatureArmor, self);
+
+            var maxHP = 0;
+            for (var ip = GetFirstItemProperty(skin); GetIsItemPropertyValid(ip); ip = GetNextItemProperty(skin))
+            {
+                if (GetItemPropertyType(ip) == ItemPropertyType.NPCHP)
+                {
+                    maxHP += GetItemPropertyCostTableValue(ip);
+                }
+            }
+
+            if (maxHP > 30000)
+                maxHP = 30000;
+
+            if (maxHP > 0)
+            {
+                ObjectPlugin.SetMaxHitPoints(self, maxHP);
+                ObjectPlugin.SetCurrentHitPoints(self, maxHP);
+            }
+
             SetLocalInt(self, "FP", Stat.GetMaxEP(self));
             SetLocalInt(self, "STAMINA", Stat.GetMaxStamina(self));
         }

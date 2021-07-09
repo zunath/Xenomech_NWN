@@ -1,6 +1,7 @@
 ﻿using Xenomech.Core;
 using Xenomech.Core.NWNX;
 using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Item;
 using Player = Xenomech.Entity.Player;
 using static Xenomech.Core.NWScript.NWScript;
 
@@ -62,9 +63,16 @@ namespace Xenomech.Service
             // NPCs
             else
             {
-                var statModifier = GetAbilityModifier(AbilityType.Vitality, creature);
-                var ep = statModifier * 10;
-                if (ep < 0) ep = 0;
+                var skin = GetItemInSlot(InventorySlot.CreatureArmor, creature);
+
+                var ep = 0;
+                for (var ip = GetFirstItemProperty(skin); GetIsItemPropertyValid(ip); ip = GetNextItemProperty(skin))
+                {
+                    if (GetItemPropertyType(ip) == ItemPropertyType.NPCEP)
+                    {
+                        ep += GetItemPropertyCostTableValue(ip);
+                    }
+                }
 
                 return ep;
             }
@@ -122,8 +130,16 @@ namespace Xenomech.Service
             // NPCs
             else
             {
-                var statModifier = GetAbilityModifier(AbilityType.Vitality, creature);
-                var stm = 30 + statModifier * 4;
+                var skin = GetItemInSlot(InventorySlot.CreatureArmor, creature);
+
+                var stm = 0;
+                for (var ip = GetFirstItemProperty(skin); GetIsItemPropertyValid(ip); ip = GetNextItemProperty(skin))
+                {
+                    if (GetItemPropertyType(ip) == ItemPropertyType.NPCSTM)
+                    {
+                        stm += GetItemPropertyCostTableValue(ip);
+                    }
+                }
 
                 return stm;
             }
@@ -154,6 +170,7 @@ namespace Xenomech.Service
                 return GetLocalInt(creature, "STAMINA");
             }
         }
+
         /// <summary>
         /// Restores a creature's EP by a specified amount.
         /// </summary>

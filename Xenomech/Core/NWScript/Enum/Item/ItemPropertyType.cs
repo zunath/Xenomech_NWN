@@ -94,6 +94,9 @@ namespace Xenomech.Core.NWScript.Enum.Item
         DMG = 93,
         Defense = 94,
         EtherDefense = 95,
+        NPCHP = 96,
+        NPCEP = 97,
+        NPCSTM = 98,
 
         UseLimitationPerk = 100,
         AbilityRecastReduction = 118
