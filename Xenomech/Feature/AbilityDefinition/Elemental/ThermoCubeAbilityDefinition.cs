@@ -14,9 +14,9 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
 
         public Dictionary<FeatType, AbilityDetail> BuildAbilities()
         {
-            AnemoBolt1();
-            AnemoBolt2();
-            AnemoBolt3();
+            ThermoCube1();
+            ThermoCube2();
+            ThermoCube3();
 
             return _builder.Build();
         }
@@ -24,15 +24,23 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
         private static void ImpactAction(uint activator, uint target, int level, float dmg)
         {
             var attackerSpirit = GetAbilityModifier(AbilityType.Spirit, activator);
-            var defenderSpirit = GetAbilityModifier(AbilityType.Spirit, activator);
+            var defenderSpirit = GetAbilityModifier(AbilityType.Spirit, target);
             var defenderEDEF = Combat.CalculateEtherDefense(target);
 
             var damage = Combat.CalculateDamage(dmg, attackerSpirit, defenderEDEF, defenderSpirit, false);
-            ApplyEffectToObject(DurationType.Instant, EffectDamage(damage), target);
+
+            if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ElementalSeal))
+            {
+                damage *= 2;
+
+                StatusEffect.Remove(activator, StatusEffectType.ElementalSeal);
+            }
+
+            ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Fire), target);
             ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Com_Hit_Fire), target);
         }
 
-        private static void AnemoBolt1()
+        private static void ThermoCube1()
         {
             _builder.Create(FeatType.ThermoCube1, PerkType.ThermoCube)
                 .Name("Thermo Cube I")
@@ -47,7 +55,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 });
         }
 
-        private static void AnemoBolt2()
+        private static void ThermoCube2()
         {
             _builder.Create(FeatType.ThermoCube2, PerkType.ThermoCube)
                 .Name("Thermo Cube II")
@@ -62,7 +70,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 });
         }
 
-        private static void AnemoBolt3()
+        private static void ThermoCube3()
         {
             _builder.Create(FeatType.ThermoCube3, PerkType.ThermoCube)
                 .Name("Thermo Cube III")

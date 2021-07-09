@@ -186,6 +186,7 @@ namespace Xenomech.Feature
             dbPlayer.Version = 1;
             dbPlayer.Name = GetName(player);
             Stat.AdjustPlayerMaxHP(dbPlayer, player, 40);
+            Stat.AdjustPlayerMaxEP(dbPlayer, 10);
             Stat.AdjustPlayerMaxSTM(dbPlayer, 10);
             CreaturePlugin.SetBaseAttackBonus(player, 1);
             dbPlayer.HP = GetCurrentHitPoints(player);

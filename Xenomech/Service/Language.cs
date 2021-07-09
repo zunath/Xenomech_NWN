@@ -71,21 +71,6 @@ namespace Xenomech.Service
 
             // Check for the Comprehend Speech concentration ability.
             var grantSenseXP = false;
-            var statusEffectBonus = 0;
-            if (StatusEffect.HasStatusEffect(listener, StatusEffectType.ComprehendSpeech1))
-                statusEffectBonus = 5;
-            else if (StatusEffect.HasStatusEffect(listener, StatusEffectType.ComprehendSpeech2))
-                statusEffectBonus = 10;
-            else if (StatusEffect.HasStatusEffect(listener, StatusEffectType.ComprehendSpeech3))
-                statusEffectBonus = 15;
-            else if (StatusEffect.HasStatusEffect(listener, StatusEffectType.ComprehendSpeech4))
-                statusEffectBonus = 20;
-
-            if (statusEffectBonus > 0)
-            {
-                rank += statusEffectBonus;
-                grantSenseXP = true;
-            }
 
             // Ensure we don't go over the maximum.
             if (rank > maxRank)

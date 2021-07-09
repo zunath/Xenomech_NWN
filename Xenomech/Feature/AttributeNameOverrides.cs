@@ -33,7 +33,7 @@ namespace Xenomech.Feature
 
             SetTlkOverride(459, "Might measures the physical power of your character. It improves your melee power and carrying capacity.");
             SetTlkOverride(460, "Perception measures the intuition of your character. It improves your ranged power and evasion.");
-            SetTlkOverride(461, "Vitality represents the health and stamina of your character. It improves your max HP and stamina.");
+            SetTlkOverride(461, "Vitality represents the health, spiritual capacity, and stamina of your character. It improves your max HP, EP, and stamina.");
             SetTlkOverride(462, "Spirit represents the ether attunement of your character. It improves your ether attack and ether defense.");
             SetTlkOverride(478, "Diplomacy measures the ability to negotiate. It improves your ability to negotiate mission rewards.");
 
