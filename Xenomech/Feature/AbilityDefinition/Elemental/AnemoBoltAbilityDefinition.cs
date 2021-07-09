@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Creature;
 using Xenomech.Core.NWScript.Enum.Item.Property;
 using Xenomech.Core.NWScript.Enum.VisualEffect;
 using Xenomech.Enumeration;
@@ -26,23 +27,45 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
         private static void ImpactAction(uint activator, uint target, float dmg, int evasionLoss)
         {
             var attackerSpirit = GetAbilityModifier(AbilityType.Spirit, activator);
-            var defenderSpirit = GetAbilityModifier(AbilityType.Spirit, target);
-            var defenderEDEF = Combat.CalculateEtherDefense(target);
-            var duration = 20f;
+            var targets = new List<uint>();
+            targets.Add(target);
 
-            var damage = Combat.CalculateDamage(dmg, attackerSpirit, defenderEDEF, defenderSpirit, false);
-
-            if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ElementalSeal))
+            if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ElementalSpread))
             {
-                duration *= 2;
-                damage *= 2;
+                var count = 1;
+                var nearby = GetNearestCreature(CreatureType.IsAlive, 1, target, count);
+                while (GetIsObjectValid(nearby) &&
+                       count <= 10 &&
+                       GetDistanceBetween(target, nearby) <= 5f)
+                {
+                    if (nearby == target) continue;
 
-                StatusEffect.Remove(activator, StatusEffectType.ElementalSeal);
+                    targets.Add(nearby);
+
+                    count++;
+                    nearby = GetNearestCreature(CreatureType.IsAlive, 1, target, count);
+                }
             }
 
-            ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Electrical), target);
-            ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Lightning_S), target);
-            ApplyEffectToObject(DurationType.Temporary, EffectACDecrease(evasionLoss, ArmorClassModiferType.Natural), target, duration);
+            foreach (var creature in targets)
+            {
+                var defenderSpirit = GetAbilityModifier(AbilityType.Spirit, creature);
+                var defenderEDEF = Combat.CalculateEtherDefense(creature);
+                var damage = Combat.CalculateDamage(dmg, attackerSpirit, defenderEDEF, defenderSpirit, false);
+                var duration = 20f;
+
+                if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ElementalSeal))
+                {
+                    damage *= 2;
+                    duration *= 2;
+
+                    StatusEffect.Remove(activator, StatusEffectType.ElementalSeal);
+                }
+
+                ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Electrical), creature);
+                ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Lightning_S), creature);
+                ApplyEffectToObject(DurationType.Temporary, EffectACDecrease(evasionLoss, ArmorClassModiferType.Natural), creature, duration);
+            }
         }
 
         private static void AnemoBolt1()

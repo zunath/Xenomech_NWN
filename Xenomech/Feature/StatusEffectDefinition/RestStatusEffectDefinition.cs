@@ -50,13 +50,20 @@ namespace Xenomech.Feature.StatusEffectDefinition
                         return;
                     }
 
-                    var hpAmount = 1 + GetAbilityModifier(AbilityType.Vitality, target) / 2;
-                    var stmAmount = 1 + GetAbilityModifier(AbilityType.Perception, target) / 2;
-                    var fpAmount = 1 + GetAbilityModifier(AbilityType.Diplomacy, target) / 2;
+                    var hpAmount = (int)(GetMaxHitPoints(target) * 0.1f);
+                    var epAmount = (int) (Stat.GetMaxEP(target) * 0.1f);
+                    var stmAmount = (int) (Stat.GetMaxStamina(target) * 0.1f);
+
+                    if (hpAmount < 1)
+                        hpAmount = 1;
+                    if (epAmount < 1)
+                        epAmount = 1;
+                    if (stmAmount < 1)
+                        stmAmount = 1;
 
                     ApplyEffectToObject(DurationType.Instant, EffectHeal(hpAmount), target);
                     Stat.RestoreStamina(target, stmAmount);
-                    Stat.RestoreEP(target, fpAmount);
+                    Stat.RestoreEP(target, epAmount);
                 })
                 .RemoveAction(target =>
                 {

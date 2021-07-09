@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Xenomech.Core.NWScript.Enum;
+using Xenomech.Core.NWScript.Enum.Creature;
 using Xenomech.Core.NWScript.Enum.VisualEffect;
 using Xenomech.Enumeration;
 using Xenomech.Service;
@@ -24,20 +25,42 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
         private static void ImpactAction(uint activator, uint target, int level, float dmg)
         {
             var attackerSpirit = GetAbilityModifier(AbilityType.Spirit, activator);
-            var defenderSpirit = GetAbilityModifier(AbilityType.Spirit, target);
-            var defenderEDEF = Combat.CalculateEtherDefense(target);
+            var targets = new List<uint>();
+            targets.Add(target);
 
-            var damage = Combat.CalculateDamage(dmg, attackerSpirit, defenderEDEF, defenderSpirit, false);
-
-            if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ElementalSeal))
+            if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ElementalSpread))
             {
-                damage *= 2;
+                var count = 1;
+                var nearby = GetNearestCreature(CreatureType.IsAlive, 1, target, count);
+                while (GetIsObjectValid(nearby) &&
+                       count <= 10 &&
+                       GetDistanceBetween(target, nearby) <= 5f)
+                {
+                    if (nearby == target) continue;
 
-                StatusEffect.Remove(activator, StatusEffectType.ElementalSeal);
+                    targets.Add(nearby);
+
+                    count++;
+                    nearby = GetNearestCreature(CreatureType.IsAlive, 1, target, count);
+                }
             }
 
-            ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Fire), target);
-            ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Com_Hit_Fire), target);
+            foreach(var creature in targets)
+            {
+                var defenderSpirit = GetAbilityModifier(AbilityType.Spirit, creature);
+                var defenderEDEF = Combat.CalculateEtherDefense(creature);
+                var damage = Combat.CalculateDamage(dmg, attackerSpirit, defenderEDEF, defenderSpirit, false);
+
+                if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ElementalSeal))
+                {
+                    damage *= 2;
+
+                    StatusEffect.Remove(activator, StatusEffectType.ElementalSeal);
+                }
+
+                ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Fire), creature);
+                ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Com_Hit_Fire), creature);
+            }
         }
 
         private static void ThermoCube1()

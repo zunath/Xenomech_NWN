@@ -6,6 +6,7 @@
         ElementalSeal = 1,
         Shock = 2,
         Burn = 3,
+        ElementalSpread = 4,
 
         EtherPack1 = 6,
         EtherPack2 = 7,
