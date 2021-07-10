@@ -26,7 +26,7 @@ namespace Xenomech.Service.AbilityService
             var requiredEP = _requiredEPDelegate(player);
 
             if (ep >= requiredEP) return string.Empty;
-            return $"Not enough EP. (Required: {_requiredEPDelegate})";
+            return $"Not enough EP. (Required: {requiredEP})";
         }
 
         public void AfterActivationAction(uint player)

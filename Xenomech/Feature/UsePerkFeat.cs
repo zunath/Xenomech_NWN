@@ -69,7 +69,7 @@ namespace Xenomech.Feature
                 Messaging.SendMessageNearbyToPlayers(activator, $"{GetName(activator)} readies {ability.Name}.");
                 QueueWeaponAbility(activator, ability, feat, effectivePerkLevel);
             }
-            // Concentration abilities are triggered once per second.
+            // Concentration abilities are triggered once per tick.
             else if(ability.ActivationType == AbilityActivationType.Concentration)
             {
                 // Using the same concentration feat ends the effect.
@@ -80,8 +80,7 @@ namespace Xenomech.Feature
                 }
                 else
                 {
-                    Messaging.SendMessageNearbyToPlayers(activator, $"{GetName(activator)} begins concentrating...");
-                    Ability.StartConcentrationAbility(activator, feat, ability.ConcentrationStatusEffectType);
+                    ActivateAbility(activator, target, feat, ability, effectivePerkLevel, targetLocation);
                 }
                 
             }
@@ -89,7 +88,7 @@ namespace Xenomech.Feature
             else
             {
                 Messaging.SendMessageNearbyToPlayers(activator, $"{GetName(activator)} readies {ability.Name} on {GetName(target)}.");
-                ActivateAbility(activator, target, ability, effectivePerkLevel, targetLocation);
+                ActivateAbility(activator, target, feat, ability, effectivePerkLevel, targetLocation);
             }
         }
 
@@ -114,9 +113,17 @@ namespace Xenomech.Feature
         /// </summary>
         /// <param name="activator">The creature activating the ability.</param>
         /// <param name="target">The target of the ability</param>
+        /// <param name="feat">The type of feat associated with this ability.</param>
         /// <param name="ability">The ability details</param>
         /// <param name="effectivePerkLevel">The activator's effective perk level</param>
-        private static void ActivateAbility(uint activator, uint target, AbilityDetail ability, int effectivePerkLevel, Location targetLocation)
+        /// <param name="targetLocation">The targeted location</param>
+        private static void ActivateAbility(
+            uint activator, 
+            uint target, 
+            FeatType feat,
+            AbilityDetail ability, 
+            int effectivePerkLevel, 
+            Location targetLocation)
         {
             // Activation delay is increased if player is equipped with heavy or light armor.
             float CalculateActivationDelay()
@@ -210,6 +217,11 @@ namespace Xenomech.Feature
                 ApplyRequirementEffects(activator, ability);
                 ability.ImpactAction?.Invoke(activator, target, effectivePerkLevel, targetLocation);
                 ApplyRecastDelay(activator, ability.RecastGroup, abilityRecastDelay);
+
+                if (ability.ConcentrationStatusEffectType != StatusEffectType.Invalid)
+                {
+                    Ability.StartConcentrationAbility(activator, feat, ability.ConcentrationStatusEffectType);
+                }
             }
 
             // Begin the main process

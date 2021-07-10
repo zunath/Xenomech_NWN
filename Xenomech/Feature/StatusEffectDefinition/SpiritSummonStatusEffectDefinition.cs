@@ -59,7 +59,8 @@ namespace Xenomech.Feature.StatusEffectDefinition
             
             if (GetIsObjectValid(associate))
             {
-                ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Unsummon), associate);
+                var location = GetLocation(associate);
+                ApplyEffectAtLocation(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Unsummon), location);
                 DestroyObject(associate);
             }
         }
