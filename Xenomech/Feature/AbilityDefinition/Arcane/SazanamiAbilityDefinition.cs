@@ -55,6 +55,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 .Name("Sazanami I")
                 .HasRecastDelay(RecastGroup.Sazanami, 2f)
                 .IsCastedAbility()
+                .HasActivationDelay(1f)
                 .UsesAnimation(Animation.LoopingConjure1)
                 .HasImpactAction((activator, target, _) =>
                 {
@@ -68,6 +69,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 .Name("Sazanami II")
                 .HasRecastDelay(RecastGroup.Sazanami, 2f)
                 .IsCastedAbility()
+                .HasActivationDelay(1f)
                 .UsesAnimation(Animation.LoopingConjure1)
                 .HasImpactAction((activator, target, _) =>
                 {
@@ -81,6 +83,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 .Name("Sazanami III")
                 .HasRecastDelay(RecastGroup.Sazanami, 2f)
                 .IsCastedAbility()
+                .HasActivationDelay(1f)
                 .UsesAnimation(Animation.LoopingConjure1)
                 .HasImpactAction((activator, target, _) =>
                 {
