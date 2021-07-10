@@ -67,6 +67,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 ApplyEffectToObject(DurationType.Temporary, EffectSlow(), target, duration);
 
                 Enmity.ModifyEnmityOnAll(activator, damage + 15);
+                CombatPoint.AddCombatPoint(activator, creature, SkillType.Elemental, 3);
             }
         }
 

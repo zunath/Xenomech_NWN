@@ -32,6 +32,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Evil_Help), activator);
 
                     Enmity.ModifyEnmityOnAll(activator, 30);
+                    CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 6);
                 });
         }
     }

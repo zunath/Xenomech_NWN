@@ -67,6 +67,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 ApplyEffectToObject(DurationType.Temporary, EffectACDecrease(evasionLoss, ArmorClassModiferType.Natural), creature, duration);
 
                 Enmity.ModifyEnmityOnAll(activator, damage + 10);
+                CombatPoint.AddCombatPoint(activator, creature, SkillType.Elemental, 3);
             }
         }
 

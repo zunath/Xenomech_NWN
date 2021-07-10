@@ -32,6 +32,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Evil_Help), activator);
 
                     Enmity.ModifyEnmityOnAll(activator, 40);
+                    CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Arcane, 3);
                 });
         }
 

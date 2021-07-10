@@ -39,6 +39,7 @@ namespace Xenomech.Feature.StatusEffectDefinition
                 ApplyEffectAtLocation(DurationType.Permanent, effect, location);
 
                 Enmity.ModifyEnmityOnAll(activator, 40);
+                CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 6);
             });
         }
 

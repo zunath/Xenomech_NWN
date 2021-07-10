@@ -71,6 +71,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Knock), target);
 
                     Enmity.ModifyEnmityOnAll(activator, 50);
+                    CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Arcane, 6);
                 });
         }
     }

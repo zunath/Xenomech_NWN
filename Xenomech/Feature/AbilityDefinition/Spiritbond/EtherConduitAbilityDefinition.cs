@@ -32,6 +32,7 @@ namespace Xenomech.Feature.AbilityDefinition.Spiritbond
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Death_Ward), activator);
 
                     Enmity.ModifyEnmityOnAll(activator, 30);
+                    CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Elemental, 6);
                 });
         }
 

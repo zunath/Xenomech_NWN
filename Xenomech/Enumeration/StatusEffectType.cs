@@ -30,6 +30,9 @@
         SpiritOfFaith1 = 25,
         SpiritOfFaith2 = 26,
         SpiritOfFaith3 = 27,
+        SpiritProtection1 = 28,
+        SpiritProtection2 = 29,
+        SpiritProtection3 = 30,
         Tranquilize = 41,
         Rest = 43,
     }

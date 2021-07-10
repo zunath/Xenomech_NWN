@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using NWN.Native.API;
 using Xenomech.Core;
 using Xenomech.Core.NWScript.Enum.Item;
+using Xenomech.Enumeration;
 using Xenomech.Service;
 using BaseItem = NWN.Native.API.BaseItem;
 using EquipmentSlot = NWN.Native.API.EquipmentSlot;
@@ -115,6 +116,7 @@ namespace Xenomech.Native
                     }
                 }
 
+                defense += CalculateEffectDefense(target.m_idSelf);
                 damage = Combat.CalculateDamage(dmg, attackAttribute, defense, vitality, bCritical == 1);
 
                 // Plot target - zero damage
@@ -133,5 +135,26 @@ namespace Xenomech.Native
 
             return damage;
         }
+
+        private static int CalculateEffectDefense(uint creature)
+        {
+            var defense = 0;
+
+            if (StatusEffect.HasStatusEffect(creature, StatusEffectType.SpiritProtection1))
+            {
+                defense += 20;
+            }
+            if (StatusEffect.HasStatusEffect(creature, StatusEffectType.SpiritProtection2))
+            {
+                defense += 40;
+            }
+            if (StatusEffect.HasStatusEffect(creature, StatusEffectType.SpiritProtection3))
+            {
+                defense += 60;
+            }
+
+            return defense;
+        }
+
     }
 }

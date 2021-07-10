@@ -62,6 +62,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Com_Hit_Fire), creature);
 
                 Enmity.ModifyEnmityOnAll(activator, damage + 10);
+                CombatPoint.AddCombatPoint(activator, creature, SkillType.Elemental, 3);
             }
         }
 

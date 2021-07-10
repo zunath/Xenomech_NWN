@@ -49,6 +49,8 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
 
                         StatusEffect.Remove(activator, StatusEffectType.ArcaneSpread);
                     }
+
+                    CombatPoint.AddCombatPointToAllTagged(activator, SkillType.Arcane, 3);
                 });
         }
 
