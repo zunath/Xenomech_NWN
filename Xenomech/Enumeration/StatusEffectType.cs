@@ -7,6 +7,7 @@
         Shock = 2,
         Burn = 3,
         ElementalSpread = 4,
+        ArcaneSpread = 5,
 
         EtherPack1 = 6,
         EtherPack2 = 7,
