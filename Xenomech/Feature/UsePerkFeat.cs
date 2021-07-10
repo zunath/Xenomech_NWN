@@ -41,6 +41,14 @@ namespace Xenomech.Feature
         {
             var activator = OBJECT_SELF;
             var target = StringToObject(EventsPlugin.GetEventData("TARGET_OBJECT_ID"));
+            var targetArea = StringToObject(EventsPlugin.GetEventData("AREA_OBJECT_ID"));
+            var targetPosition = Vector3(
+                (float)Convert.ToDouble(EventsPlugin.GetEventData("TARGET_POSITION_X")),
+                (float)Convert.ToDouble(EventsPlugin.GetEventData("TARGET_POSITION_Y")),
+                (float)Convert.ToDouble(EventsPlugin.GetEventData("TARGET_POSITION_Z"))
+            );
+            var targetLocation = Location(targetArea, targetPosition, 0.0f);
+
             var feat = (FeatType)Convert.ToInt32(EventsPlugin.GetEventData("FEAT_ID"));
             if (!Ability.IsFeatRegistered(feat)) return;
             var ability = Ability.GetAbilityDetail(feat);
@@ -50,7 +58,7 @@ namespace Xenomech.Feature
                 ability.EffectiveLevelPerkType == PerkType.Invalid 
                     ? 1 // If there's not an associated perk, default level to 1.
                     : Perk.GetEffectivePerkLevel(activator, ability.EffectiveLevelPerkType);
-            if (!Ability.CanUseAbility(activator, target, feat, effectivePerkLevel))
+            if (!Ability.CanUseAbility(activator, target, feat, effectivePerkLevel, targetLocation))
             {
                 return;
             }
@@ -81,7 +89,7 @@ namespace Xenomech.Feature
             else
             {
                 Messaging.SendMessageNearbyToPlayers(activator, $"{GetName(activator)} readies {ability.Name} on {GetName(target)}.");
-                ActivateAbility(activator, target, ability, effectivePerkLevel);
+                ActivateAbility(activator, target, ability, effectivePerkLevel, targetLocation);
             }
         }
 
@@ -108,7 +116,7 @@ namespace Xenomech.Feature
         /// <param name="target">The target of the ability</param>
         /// <param name="ability">The ability details</param>
         /// <param name="effectivePerkLevel">The activator's effective perk level</param>
-        private static void ActivateAbility(uint activator, uint target, AbilityDetail ability, int effectivePerkLevel)
+        private static void ActivateAbility(uint activator, uint target, AbilityDetail ability, int effectivePerkLevel, Location targetLocation)
         {
             // Activation delay is increased if player is equipped with heavy or light armor.
             float CalculateActivationDelay()
@@ -198,9 +206,9 @@ namespace Xenomech.Feature
 
                 // Moved during casting or activator died. Cancel the activation.
                 if (GetLocalInt(activator, id) == (int) ActivationStatus.Interrupted || GetCurrentHitPoints(activator) <= 0) return;
-
+                
                 ApplyRequirementEffects(activator, ability);
-                ability.ImpactAction?.Invoke(activator, target, effectivePerkLevel);
+                ability.ImpactAction?.Invoke(activator, target, effectivePerkLevel, targetLocation);
                 ApplyRecastDelay(activator, ability.RecastGroup, abilityRecastDelay);
             }
 
@@ -275,6 +283,7 @@ namespace Xenomech.Feature
             if (!GetIsObjectValid(activator)) return;
 
             var target = GetSpellTargetObject();
+            var targetLocation = GetLocation(target);
             var item = GetSpellCastItem();
 
             // If this method was triggered by our own armor (from getting hit), return. 
@@ -286,7 +295,7 @@ namespace Xenomech.Feature
             if (!Ability.IsFeatRegistered(activeWeaponAbility)) return;
 
             var abilityDetail = Ability.GetAbilityDetail(activeWeaponAbility);
-            abilityDetail.ImpactAction?.Invoke(activator, target, activeAbilityEffectivePerkLevel);
+            abilityDetail.ImpactAction?.Invoke(activator, target, activeAbilityEffectivePerkLevel, targetLocation);
 
             DeleteLocalInt(activator, ActiveAbilityName);
             DeleteLocalString(activator, ActiveAbilityIdName);

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Xenomech.Core;
 using Xenomech.Core.NWScript.Enum;
 using Xenomech.Enumeration;
 using Xenomech.Service;
@@ -19,7 +20,7 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
             return builder.Build();
         }
 
-        private static string Validation(uint activator, uint target, int level)
+        private static string Validation(uint activator, uint target, int level, Location targetLocation)
         {
             var weapon = GetItemInSlot(InventorySlot.RightHand, activator);
 
@@ -31,7 +32,7 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
                 return string.Empty;
         }
 
-        private static void ImpactAction(uint activator, uint target, int level)
+        private static void ImpactAction(uint activator, uint target, int level, Location targetLocation)
         {
             var dmg = 0.0f;
             var duration = 0f;

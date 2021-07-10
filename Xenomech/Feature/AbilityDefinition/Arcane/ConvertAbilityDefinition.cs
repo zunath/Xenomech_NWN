@@ -27,7 +27,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 .IsCastedAbility()
                 .HasActivationDelay(1f)
                 .UsesAnimation(Animation.LoopingConjure2)
-                .HasCustomValidation((activator, target, level) =>
+                .HasCustomValidation((activator, target, level, targetLocation) =>
                 {
                     var hp = GetCurrentHitPoints(activator);
                     var ep = Stat.GetCurrentEP(activator);
@@ -44,7 +44,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
 
                     return string.Empty;
                 })
-                .HasImpactAction((activator, target, _) =>
+                .HasImpactAction((activator, target, _, targetLocation) =>
                 {
                     var hp = GetCurrentHitPoints(activator);
                     var ep = Stat.GetCurrentEP(activator);

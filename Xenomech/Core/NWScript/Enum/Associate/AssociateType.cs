@@ -1,6 +1,6 @@
 namespace Xenomech.Core.NWScript.Enum.Associate
 {
-    public enum Type
+    public enum AssociateType
     {
         // These match the values in nwscreature.h
         None,

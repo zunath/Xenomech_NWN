@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
+using Xenomech.Core;
 using Xenomech.Core.NWScript.Enum;
 using Xenomech.Core.NWScript.Enum.VisualEffect;
 using Xenomech.Enumeration;
 
 namespace Xenomech.Service.AbilityService
 {
-    public delegate void AbilityImpactAction(uint activator, uint target, int effectivePerkLevel);
+    public delegate void AbilityImpactAction(uint activator, uint target, int effectivePerkLevel, Location targetLocation);
     public delegate float AbilityActivationDelayAction(uint activator, uint target, int effectivePerkLevel);
     public delegate float AbilityRecastDelayAction(uint activator);
-    public delegate string AbilityCustomValidationAction(uint activator, uint target, int effectivePerkLevel);
+    public delegate string AbilityCustomValidationAction(uint activator, uint target, int effectivePerkLevel, Location targetLocation);
 
     public class AbilityDetail
     {

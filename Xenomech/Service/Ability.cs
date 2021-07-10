@@ -77,8 +77,9 @@ namespace Xenomech.Service
         /// <param name="target">The target of the perk feat.</param>
         /// <param name="abilityType">The type of ability to use.</param>
         /// <param name="effectivePerkLevel">The activator's effective perk level.</param>
+        /// <param name="targetLocation">The target location of the perk feat.</param>
         /// <returns>true if successful, false otherwise</returns>
-        public static bool CanUseAbility(uint activator, uint target, FeatType abilityType, int effectivePerkLevel)
+        public static bool CanUseAbility(uint activator, uint target, FeatType abilityType, int effectivePerkLevel, Location targetLocation)
         {
             var ability = GetAbilityDetail(abilityType);
 
@@ -122,7 +123,7 @@ namespace Xenomech.Service
             }
 
             // Perk-specific custom validation logic.
-            var customValidationResult = ability.CustomValidation == null ? string.Empty : ability.CustomValidation(activator, target, effectivePerkLevel);
+            var customValidationResult = ability.CustomValidation == null ? string.Empty : ability.CustomValidation(activator, target, effectivePerkLevel, targetLocation);
             if (!string.IsNullOrWhiteSpace(customValidationResult))
             {
                 SendMessageToPC(activator, customValidationResult);
@@ -162,9 +163,10 @@ namespace Xenomech.Service
 
                 var ability = GetAbilityDetail(concentrationAbility.Feat);
                 var effectiveLevel = Perk.GetEffectivePerkLevel(creature, ability.EffectiveLevelPerkType);
-                
+                var targetLocation = GetLocation(creature);
+
                 // Move to next creature if requirements aren't met.
-                if (!CanUseAbility(creature, creature, concentrationAbility.Feat, effectiveLevel))
+                if (!CanUseAbility(creature, creature, concentrationAbility.Feat, effectiveLevel, targetLocation))
                 {
                     EndConcentrationAbility(creature);
                     continue;
@@ -223,29 +225,6 @@ namespace Xenomech.Service
 
                 SendMessageToPC(creature, "You stop concentrating.");
             }
-        }
-
-        /// <summary>
-        /// Returns true if the target resists the ability.
-        /// </summary>
-        /// <param name="activator"></param>
-        /// /// <param name="target"></param>
-        /// /// <param name="primaryAbilityType"></param>
-        /// /// <param name="secondaryAbilityType"></param>
-        public static bool GetAbilityResisted(uint activator, uint target, AbilityType primaryAbilityType, AbilityType secondaryAbilityType)
-        {
-            if (GetAbilityModifier(primaryAbilityType, activator) + GetAbilityModifier(secondaryAbilityType, activator) * 0.5 + d20(1)
-                >
-                GetAbilityModifier(primaryAbilityType, target) + GetAbilityModifier(secondaryAbilityType, target) * 0.5 + d20(1)
-                )
-            {
-                
-                return false;
-            }
-
-            SendMessageToPC(activator, ColorToken.Gray(GetName(target)) + " resisted your ability");
-            SendMessageToPC(target, ColorToken.Gray("You resisted " + GetName(activator)) + "'s ability");
-            return true;
         }
     }
 }

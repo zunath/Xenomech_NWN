@@ -27,7 +27,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 .IsCastedAbility()
                 .HasActivationDelay(2f)
                 .UsesAnimation(Animation.LoopingConjure1)
-                .HasImpactAction((activator, target, _) =>
+                .HasImpactAction((activator, target, _, targetLocation) =>
                 {
                     var activatorSpirit = GetAbilityModifier(AbilityType.Spirit, activator);
                     var amount = 1 + activatorSpirit / 3;

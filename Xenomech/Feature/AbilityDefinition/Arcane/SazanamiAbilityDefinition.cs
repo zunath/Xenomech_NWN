@@ -57,7 +57,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 .IsCastedAbility()
                 .HasActivationDelay(1f)
                 .UsesAnimation(Animation.LoopingConjure1)
-                .HasImpactAction((activator, target, _) =>
+                .HasImpactAction((activator, target, _, targetLocation) =>
                 {
                     ImpactAction(activator, target, 40);
                 });
@@ -71,7 +71,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 .IsCastedAbility()
                 .HasActivationDelay(1f)
                 .UsesAnimation(Animation.LoopingConjure1)
-                .HasImpactAction((activator, target, _) =>
+                .HasImpactAction((activator, target, _, targetLocation) =>
                 {
                     ImpactAction(activator, target, 100);
                 });
@@ -85,7 +85,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 .IsCastedAbility()
                 .HasActivationDelay(1f)
                 .UsesAnimation(Animation.LoopingConjure1)
-                .HasImpactAction((activator, target, _) =>
+                .HasImpactAction((activator, target, _, targetLocation) =>
                 {
                     ImpactAction(activator, target, 160);
                 });

@@ -27,7 +27,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 .IsCastedAbility()
                 .HasActivationDelay(1f)
                 .UsesAnimation(Animation.LoopingConjure1)
-                .HasImpactAction((activator, target, _) =>
+                .HasImpactAction((activator, target, _, targetLocation) =>
                 {
                     // Target first always
                     RemoveEffects(target);

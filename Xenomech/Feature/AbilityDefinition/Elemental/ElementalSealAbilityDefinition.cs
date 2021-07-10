@@ -26,7 +26,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 .HasRecastDelay(RecastGroup.ElementalSeal, 300f)
                 .IsCastedAbility()
                 .UsesAnimation(Animation.LoopingConjure2)
-                .HasImpactAction((activator, _, _) =>
+                .HasImpactAction((activator, _, _, targetLocation) =>
                 {
                     StatusEffect.Apply(activator, activator, StatusEffectType.ElementalSeal, 30f);
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Good_Help), activator);

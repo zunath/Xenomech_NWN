@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Xenomech.Core;
 using Xenomech.Core.NWScript.Enum;
 using Xenomech.Core.NWScript.Enum.Item;
 using Xenomech.Enumeration;
@@ -20,7 +21,7 @@ namespace Xenomech.Feature.AbilityDefinition.OneHanded
             return builder.Build();
         }
 
-        private static string Validation(uint activator, uint target, int level)
+        private static string Validation(uint activator, uint target, int level, Location targetLocation)
         {
             var weapon = GetItemInSlot(InventorySlot.RightHand, activator);
 
@@ -36,7 +37,7 @@ namespace Xenomech.Feature.AbilityDefinition.OneHanded
                 return string.Empty;
         }
 
-        private static void ImpactAction(uint activator, uint target, int level)
+        private static void ImpactAction(uint activator, uint target, int level, Location targetLocation)
         {
             var dmg = 0.0f;
             var inflictBleed = false;

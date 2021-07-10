@@ -72,7 +72,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 .RequirementEP(2)
                 .IsCastedAbility()
                 .UsesAnimation(Animation.LoopingConjure1)
-                .HasImpactAction((activator, target, level) =>
+                .HasImpactAction((activator, target, level, targetLocation) =>
                 {
                     ImpactAction(activator, target, level, 10f);
                 });
@@ -87,7 +87,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 .RequirementEP(4)
                 .IsCastedAbility()
                 .UsesAnimation(Animation.LoopingConjure1)
-                .HasImpactAction((activator, target, level) =>
+                .HasImpactAction((activator, target, level, targetLocation) =>
                 {
                     ImpactAction(activator, target, level, 16f);
                 });
@@ -102,7 +102,7 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 .RequirementEP(6)
                 .IsCastedAbility()
                 .UsesAnimation(Animation.LoopingConjure1)
-                .HasImpactAction((activator, target, level) =>
+                .HasImpactAction((activator, target, level, targetLocation) =>
                 {
                     ImpactAction(activator, target, level, 21f);
                 });

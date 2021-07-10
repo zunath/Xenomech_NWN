@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Xenomech.Core;
 using Xenomech.Core.NWScript.Enum;
 using Xenomech.Enumeration;
 using Xenomech.Service;
@@ -19,7 +20,7 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
             return builder.Build();
         }
 
-        private static string Validation(uint activator, uint target, int level)
+        private static string Validation(uint activator, uint target, int level, Location targetLocation)
         {
             var weapon = GetItemInSlot(InventorySlot.RightHand, activator);
 
@@ -31,7 +32,7 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
                 return string.Empty;
         }
 
-        private static void ImpactAction(uint activator, uint target, int level)
+        private static void ImpactAction(uint activator, uint target, int level, Location targetLocation)
         {
             var dmg = 0.0f;
             var duration = 0f;
@@ -79,14 +80,8 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(3)
                 .IsWeaponAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void CripplingShot2(AbilityBuilder builder)
         {
@@ -96,14 +91,8 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(5)
                 .IsWeaponAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
         private static void CripplingShot3(AbilityBuilder builder)
         {
@@ -113,14 +102,8 @@ namespace Xenomech.Feature.AbilityDefinition.Ranged
                 .HasActivationDelay(2.0f)
                 .RequirementStamina(8)
                 .IsWeaponAbility()
-                .HasCustomValidation((activator, target, level) =>
-                {
-                    return Validation(activator, target, level);
-                })
-                .HasImpactAction((activator, target, level) =>
-                {
-                    ImpactAction(activator, target, level);
-                });
+                .HasCustomValidation(Validation)
+                .HasImpactAction(ImpactAction);
         }
     }
 }

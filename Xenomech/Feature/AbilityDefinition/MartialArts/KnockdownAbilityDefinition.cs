@@ -26,7 +26,7 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
                 .HasRecastDelay(RecastGroup.Knockdown, 60f)
                 .IsWeaponAbility()
                 .RequirementStamina(6)
-                .HasImpactAction((activator, target, level) =>
+                .HasImpactAction((activator, target, level, targetLocation) =>
                 {
                     var isHit = Random.D100(1) <= 60;
                     if (!isHit) return;

@@ -203,13 +203,26 @@ namespace Xenomech.Service.AbilityService
         }
 
         /// <summary>
-        /// Adds an FP requirement to use the ability at this level.
+        /// Adds an EP requirement to use the ability at this level.
         /// </summary>
-        /// <param name="requiredFP">The amount of FP needed to use this ability at this level.</param>
+        /// <param name="requiredEP">The amount of EP needed to use this ability at this level.</param>
         /// <returns>An ability builder with the configured options</returns>
-        public AbilityBuilder RequirementEP(int requiredFP)
+        public AbilityBuilder RequirementEP(int requiredEP)
         {
-            var requirement = new PerkFPRequirement(requiredFP);
+            var requirement = new PerkEPRequirement(_ => requiredEP);
+            _activeAbility.Requirements.Add(requirement);
+
+            return this;
+        }
+
+        /// <summary>
+        /// Adds an EP requirement to use the ability at this level.
+        /// </summary>
+        /// <param name="requiredEP">The amount of EP needed to use this ability at this level.</param>
+        /// <returns>An ability builder with the configured options</returns>
+        public AbilityBuilder RequirementEP(PerkEPRequirementDelegate requiredEP)
+        {
+            var requirement = new PerkEPRequirement(requiredEP);
             _activeAbility.Requirements.Add(requirement);
 
             return this;
