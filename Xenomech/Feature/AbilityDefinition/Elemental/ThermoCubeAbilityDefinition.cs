@@ -60,6 +60,8 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
 
                 ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Fire), creature);
                 ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Com_Hit_Fire), creature);
+
+                Enmity.ModifyEnmityOnAll(activator, damage + 10);
             }
         }
 

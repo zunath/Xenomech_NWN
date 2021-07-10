@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Xenomech.Core;
+﻿using System.Collections.Generic;
 using Xenomech.Core.NWScript.Enum;
 using Xenomech.Core.NWScript.Enum.Associate;
 using Xenomech.Core.NWScript.Enum.VisualEffect;
@@ -39,6 +37,8 @@ namespace Xenomech.Feature.StatusEffectDefinition
                 var effect = EffectSummonCreature(summonResref, VisualEffect.Vfx_Imp_Unsummon);
                 var location = GetLocation(activator);
                 ApplyEffectAtLocation(DurationType.Permanent, effect, location);
+
+                Enmity.ModifyEnmityOnAll(activator, 40);
             });
         }
 

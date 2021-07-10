@@ -30,6 +30,8 @@ namespace Xenomech.Feature.AbilityDefinition.Spiritbond
                 {
                     StatusEffect.Apply(activator, activator, StatusEffectType.EtherConduit, 15f);
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Death_Ward), activator);
+
+                    Enmity.ModifyEnmityOnAll(activator, 30);
                 });
         }
 

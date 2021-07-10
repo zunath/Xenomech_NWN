@@ -30,6 +30,8 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                 {
                     StatusEffect.Apply(activator, activator, StatusEffectType.ArcaneSpread, 15f);
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Evil_Help), activator);
+
+                    Enmity.ModifyEnmityOnAll(activator, 40);
                 });
         }
 

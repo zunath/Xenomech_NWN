@@ -31,6 +31,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
             // Target first always
             ApplyEffectToObject(DurationType.Temporary, EffectDamageShield(baseAmount, DamageBonus.DAMAGEBONUS_1d8, DamageType.Piercing), target, length);
             ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Bigbys_Forceful_Hand), target);
+            Enmity.ModifyEnmityOnAll(activator, 20);
 
             // If Arcane Spread is active, target nearby party members.
             if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ArcaneSpread))
@@ -41,6 +42,8 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
 
                     ApplyEffectToObject(DurationType.Temporary, EffectDamageShield(baseAmount, DamageBonus.DAMAGEBONUS_1d8, DamageType.Piercing), member, length);
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Bigbys_Forceful_Hand), member);
+
+                    Enmity.ModifyEnmityOnAll(activator, 20);
                 }
 
                 StatusEffect.Remove(activator, StatusEffectType.ArcaneSpread);

@@ -35,6 +35,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                     // Target first always
                     ApplyEffectToObject(DurationType.Temporary, EffectHaste(), target, length);
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Haste), target);
+                    Enmity.ModifyEnmityOnAll(activator, 50);
 
                     // If Arcane Spread is active, target nearby party members.
                     if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ArcaneSpread))
@@ -45,6 +46,8 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
 
                             ApplyEffectToObject(DurationType.Temporary, EffectHaste(), member, length);
                             ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Haste), member);
+
+                            Enmity.ModifyEnmityOnAll(activator, 50);
                         }
 
                         StatusEffect.Remove(activator, StatusEffectType.ArcaneSpread);

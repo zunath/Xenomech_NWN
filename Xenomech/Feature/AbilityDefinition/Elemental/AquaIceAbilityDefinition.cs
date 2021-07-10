@@ -65,6 +65,8 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Cold), target);
                 ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Frost_L), target);
                 ApplyEffectToObject(DurationType.Temporary, EffectSlow(), target, duration);
+
+                Enmity.ModifyEnmityOnAll(activator, damage + 15);
             }
         }
 

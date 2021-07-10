@@ -65,6 +65,8 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 ApplyEffectToObject(DurationType.Instant, EffectDamage(damage, DamageType.Electrical), creature);
                 ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Lightning_S), creature);
                 ApplyEffectToObject(DurationType.Temporary, EffectACDecrease(evasionLoss, ArmorClassModiferType.Natural), creature, duration);
+
+                Enmity.ModifyEnmityOnAll(activator, damage + 10);
             }
         }
 

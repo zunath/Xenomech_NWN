@@ -32,6 +32,7 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
             var amount = baseAmount + Random.Next(minBonus, maxBonus);
             ApplyEffectToObject(DurationType.Instant, EffectHeal(amount), target);
             ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Healing_L), target);
+            Enmity.ModifyEnmityOnAll(activator, amount + 10);
 
             // If Arcane Spread is active, heal nearby party members.
             if (StatusEffect.HasStatusEffect(activator, StatusEffectType.ArcaneSpread))
@@ -43,6 +44,8 @@ namespace Xenomech.Feature.AbilityDefinition.Arcane
                     amount = baseAmount + Random.Next(minBonus, maxBonus);
                     ApplyEffectToObject(DurationType.Instant, EffectHeal(amount), member);
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Healing_L), member);
+
+                    Enmity.ModifyEnmityOnAll(activator, amount + 10);
                 }
 
                 StatusEffect.Remove(activator, StatusEffectType.ArcaneSpread);

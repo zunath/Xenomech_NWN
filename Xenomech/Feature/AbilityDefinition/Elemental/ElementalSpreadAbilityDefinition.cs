@@ -30,6 +30,8 @@ namespace Xenomech.Feature.AbilityDefinition.Elemental
                 {
                     StatusEffect.Apply(activator, activator, StatusEffectType.ElementalSpread, 15f);
                     ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Evil_Help), activator);
+
+                    Enmity.ModifyEnmityOnAll(activator, 30);
                 });
         }
     }
