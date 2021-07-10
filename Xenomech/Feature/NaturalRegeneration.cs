@@ -9,7 +9,7 @@ namespace Xenomech.Feature
     public static class NaturalRegeneration
     {
         /// <summary>
-        /// On module heartbeat, process a player's HP/FP/STM regeneration.
+        /// On module heartbeat, process a player's HP/EP/STM regeneration.
         /// </summary>
         [NWNEventHandler("interval_pc_6s")]
         public static void ProcessRegeneration()

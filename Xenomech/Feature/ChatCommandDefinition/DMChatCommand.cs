@@ -94,7 +94,7 @@ namespace Xenomech.Feature.ChatCommandDefinition
                 .RequiresTarget();
 
             _builder.Create("rez")
-                .Description("Revives you, heals you to full, and restores all FP/STM.")
+                .Description("Revives you, heals you to full, and restores all EP/STM.")
                 .Permissions(AuthorizationLevel.DM, AuthorizationLevel.Admin)
                 .Action((user, target, location, args) =>
                 {

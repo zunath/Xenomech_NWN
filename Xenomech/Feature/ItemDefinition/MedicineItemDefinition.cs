@@ -16,7 +16,7 @@ namespace Xenomech.Feature.ItemDefinition
         {
             var builder = new ItemBuilder();
             HealthPack(builder);
-            ForcePack(builder);
+            EnergyPack(builder);
             StaminaPack(builder);
             ResuscitationKit(builder);
             Bandages(builder);
@@ -77,7 +77,7 @@ namespace Xenomech.Feature.ItemDefinition
             CreateItem("healing_kit_p4", 6, 30f); // Healing Kit V
         }
 
-        private void ForcePack(ItemBuilder builder)
+        private void EnergyPack(ItemBuilder builder)
         {
             void CreateItem(string tag, StatusEffectType statusEffect, float duration)
             {
@@ -85,18 +85,18 @@ namespace Xenomech.Feature.ItemDefinition
                     .ValidationAction((user, item, target, location) =>
                     {
 
-                        var currentFP = Stat.GetCurrentEP(target);
-                        var maxFP = Stat.GetMaxEP(target);
+                        var currentEP = Stat.GetCurrentEP(target);
+                        var maxEP = Stat.GetMaxEP(target);
 
-                        if (currentFP >= maxFP)
-                            return "Your target's FP is already full.";
+                        if (currentEP >= maxEP)
+                            return "Your target's EP is already full.";
 
                         return string.Empty;
                     })
                     .InitializationMessage((user, item, target, location) =>
                     {
                         var name = GetName(target);
-                        return $"You begin applying a force pack to {name}...";
+                        return $"You begin applying an energy pack to {name}...";
                     })
                     .Delay(4.0f)
                     .UserFacesTarget()

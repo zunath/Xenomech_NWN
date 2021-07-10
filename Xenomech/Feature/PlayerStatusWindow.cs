@@ -45,7 +45,7 @@ namespace Xenomech.Feature
         }
 
         /// <summary>
-        /// Draws the HP, FP, and STM status information on the player's screen.
+        /// Draws the HP, EP, and STM status information on the player's screen.
         /// </summary>
         /// <param name="player">The player to draw the component for.</param>
         private static void DrawStandardCharacterStatusComponent(uint player)
@@ -125,7 +125,7 @@ namespace Xenomech.Feature
 
             var backgroundBar = BuildBar(1, 1, 22);
             var hpBar = BuildBar(currentHP, maxHP, 22);
-            var fpBar = BuildBar(currentEP, maxEP, 22);
+            var epBar = BuildBar(currentEP, maxEP, 22);
             var stmBar = BuildBar(currentSTM, maxSTM, 22);
 
             const int WindowX = 1;
@@ -138,16 +138,16 @@ namespace Xenomech.Feature
 
             // Draw the text
             var hpText = "HP:".PadRight(5, ' ') + $"{currentHP.ToString().PadLeft(4, ' ')} / {maxHP.ToString().PadLeft(4, ' ')}";
-            var fpText = "FP:".PadRight(5, ' ') + $"{currentEP.ToString().PadLeft(4, ' ')} / {maxEP.ToString().PadLeft(4, ' ')}";
+            var epText = "EP:".PadRight(5, ' ') + $"{currentEP.ToString().PadLeft(4, ' ')} / {maxEP.ToString().PadLeft(4, ' ')}";
             var stmText = "STM:".PadRight(5, ' ') + $"{currentSTM.ToString().PadLeft(4, ' ')} / {maxSTM.ToString().PadLeft(4, ' ')}";
 
             PostString(player, hpText, centerWindowX + 8, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 2, Gui.TextName);
-            PostString(player, fpText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 1, Gui.TextName);
+            PostString(player, epText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 1, Gui.TextName);
             PostString(player, stmText, centerWindowX + 8, WindowY + 1, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId, Gui.TextName);
 
             // Draw the bars
             PostString(player, hpBar, centerWindowX + 2, WindowY + 3, Anchor, 0.0f, Gui.ColorHealthBar, Gui.ColorHealthBar, _characterIdReservation.StartId + 3, Gui.FontName);
-            PostString(player, fpBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorManaBar, Gui.ColorManaBar, _characterIdReservation.StartId + 4, Gui.FontName);
+            PostString(player, epBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorEPBar, Gui.ColorEPBar, _characterIdReservation.StartId + 4, Gui.FontName);
             PostString(player, stmBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorStaminaBar, Gui.ColorStaminaBar, _characterIdReservation.StartId + 5, Gui.FontName);
 
             // Draw the backgrounds

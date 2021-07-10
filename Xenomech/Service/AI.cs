@@ -285,7 +285,7 @@ namespace Xenomech.Service
         }
 
         /// <summary>
-        /// When a creature spawns, store their STM and FP as local variables.
+        /// When a creature spawns, store their STM and EP as local variables.
         /// Also load their HP per their skin, if specified.
         /// </summary>
         private static void LoadCreatureStats()
@@ -311,7 +311,7 @@ namespace Xenomech.Service
                 ObjectPlugin.SetCurrentHitPoints(self, maxHP);
             }
 
-            SetLocalInt(self, "FP", Stat.GetMaxEP(self));
+            SetLocalInt(self, "EP", Stat.GetMaxEP(self));
             SetLocalInt(self, "STAMINA", Stat.GetMaxStamina(self));
         }
 
@@ -326,22 +326,22 @@ namespace Xenomech.Service
         }
 
         /// <summary>
-        /// When a creature's heartbeat fires, restore their STM and FP.
+        /// When a creature's heartbeat fires, restore their STM and EP.
         /// </summary>
         private static void RestoreCreatureStats()
         {
             var self = OBJECT_SELF;
-            var maxFP = Stat.GetMaxEP(self);
+            var maxEP = Stat.GetMaxEP(self);
             var maxSTM = Stat.GetMaxStamina(self);
-            var fp = GetLocalInt(self, "FP") + 1;
+            var ep = GetLocalInt(self, "EP") + 1;
             var stm = GetLocalInt(self, "STAMINA") + 1;
 
-            if (fp > maxFP)
-                fp = maxFP;
+            if (ep > maxEP)
+                ep = maxEP;
             if (stm > maxSTM)
                 stm = maxSTM;
 
-            SetLocalInt(self, "FP", fp);
+            SetLocalInt(self, "EP", ep);
             SetLocalInt(self, "STAMINA", stm);
         }
 

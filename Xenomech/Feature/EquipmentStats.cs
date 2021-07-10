@@ -22,7 +22,7 @@ namespace Xenomech.Feature
         public static void RegisterStatActions()
         {
             _statChangeActions[ItemPropertyType.HPBonus] = ApplyHPBonus;
-            _statChangeActions[ItemPropertyType.EPBonus] = ApplyFPBonus;
+            _statChangeActions[ItemPropertyType.EPBonus] = ApplyEPBonus;
             _statChangeActions[ItemPropertyType.STMBonus] = ApplySTMBonus;
             _statChangeActions[ItemPropertyType.AbilityRecastReduction] = ApplyAbilityRecastReduction;
         }
@@ -106,13 +106,13 @@ namespace Xenomech.Feature
         }
 
         /// <summary>
-        /// Applies or removes an FP bonus on a player.
+        /// Applies or removes an EP bonus on a player.
         /// </summary>
         /// <param name="player">The player to adjust</param>
         /// <param name="item">The item being equipped or unequipped</param>
         /// <param name="ip">The item property associated with this change</param>
-        /// <param name="isAdding">If true, we're adding the FP, if false we're removing it</param>
-        private static void ApplyFPBonus(uint player, uint item, ItemProperty ip, bool isAdding)
+        /// <param name="isAdding">If true, we're adding the EP, if false we're removing it</param>
+        private static void ApplyEPBonus(uint player, uint item, ItemProperty ip, bool isAdding)
         {
             var amount = GetItemPropertyCostTableValue(ip);
             var playerId = GetObjectUUID(player);
@@ -136,7 +136,7 @@ namespace Xenomech.Feature
         /// <param name="player">The player to adjust</param>
         /// <param name="item">The item being equipped or unequipped</param>
         /// <param name="ip">The item property associated with this change</param>
-        /// <param name="isAdding">If true, we're adding the FP, if false we're removing it</param>
+        /// <param name="isAdding">If true, we're adding the STM, if false we're removing it</param>
         private static void ApplySTMBonus(uint player, uint item, ItemProperty ip, bool isAdding)
         {
             var amount = GetItemPropertyCostTableValue(ip);

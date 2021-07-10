@@ -60,7 +60,7 @@ namespace Xenomech.Service
         public static int ColorPurple = Convert.ToInt32("0x800080FF", 16);
 
         public static int ColorHealthBar = Convert.ToInt32("0x8B0000FF", 16);
-        public static int ColorManaBar = Convert.ToInt32("0x00008BFF", 16);
+        public static int ColorEPBar = Convert.ToInt32("0x00008BFF", 16);
         public static int ColorStaminaBar = Convert.ToInt32("0x008B00FF", 16);
 
         public static int ColorShieldsBar = Convert.ToInt32("0x00AAE4FF", 16);

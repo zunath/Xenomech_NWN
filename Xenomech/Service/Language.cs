@@ -69,9 +69,6 @@ namespace Xenomech.Service
             var rank = dbListener.Skills[language].Rank;
             var maxRank = languageSkill.MaxRank;
 
-            // Check for the Comprehend Speech concentration ability.
-            var grantSenseXP = false;
-
             // Ensure we don't go over the maximum.
             if (rank > maxRank)
                 rank = maxRank;
@@ -124,11 +121,7 @@ namespace Xenomech.Service
                 var amount = Math.Max(10, Math.Min(150, snippet.Length) / 3);
                 // Reward exp towards the language - we scale this with character count, maxing at 50 exp for 150 characters.
                 Skill.GiveSkillXP(listener, language, amount);
-
-                // Grant Force XP if player is concentrating Comprehend Speech.
-                if (grantSenseXP)
-                    Skill.GiveSkillXP(listener, SkillType.Elemental, amount * 10);
-
+                
                 SetLocalInt(listener, "LAST_LANGUAGE_SKILL_INCREASE_LOW", (int)(now & 0xFFFFFFFF));
                 SetLocalInt(listener, "LAST_LANGUAGE_SKILL_INCREASE_HIGH", (int)((now >> 32) & 0xFFFFFFFF));
             }

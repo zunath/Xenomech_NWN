@@ -189,7 +189,7 @@ namespace Xenomech.Service
 
         /// <summary>
         /// Each tick, creatures with a concentration effect will be processed.
-        /// This will drain FP and reapply whatever effect is associated with an ability.
+        /// This will drain EP and reapply whatever effect is associated with an ability.
         /// </summary>
         [NWNEventHandler("mod_heartbeat")]
         public static void ProcessConcentrationEffects()
