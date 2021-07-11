@@ -605,6 +605,182 @@
                 "type": "byte",
                 "value": 0
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 0.5
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Change Spirit I"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "change_spirit1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 0.5
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Change Spirit II"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "change_spirit2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 0.5
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Change Spirit III"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "change_spirit3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 0.5
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Faith Spirit I"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "faith_spirit1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 0.5
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Faith Spirit II"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "faith_spirit2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 0.5
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Faith Spirit III"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "faith_spirit3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 0.5
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Rage Spirit I"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "rage_spirit1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 0.5
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Rage Spirit II"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "rage_spirit2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 0.5
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Rage Spirit III"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "rage_spirit3"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 6688

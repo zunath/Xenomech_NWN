@@ -25,6 +25,176 @@
                 "type": "byte",
                 "value": 8
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Argos Armor"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "ar_armor"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Battlemaster Armor"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "bm_armor"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Combat Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "com_tunic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Eclipse Armor"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "ec_armor"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Forza Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "for_tunic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Grenada Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "gr_tunic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Quark Armor"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "qk_armor"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Reginal Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "reg_tunic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Spiritmaster Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sm_tunic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Supreme Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sup_tunic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Survival Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sur_tunic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Titan Armor"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "tit_armor"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Transcendent Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "tran_tunic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Valor Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "val_tunic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Vivid Tunic"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "viv_tunic"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 4818
@@ -35,6 +205,176 @@
               "ID": {
                 "type": "byte",
                 "value": 9
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Argos Helmet"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "ar_helmet"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Battlemaster Helmet"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "bm_helmet"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Combat Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "com_cap"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Eclipse Helmet"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "ec_helmet"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Forza Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "for_cap"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Grenada Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "gr_cap"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Quark Helmet"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "qk_helmet"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Reginal Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "reg_cap"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Spiritmaster Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sm_cap"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Supreme Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sup_cap"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Survival Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sur_cap"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Titan Helmet"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "tit_helmet"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Transcendent Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "tran_cap"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Valor Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "val_cap"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Vivid Cap"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "viv_cap"
+                    }
+                  }
+                ]
               },
               "STRREF": {
                 "type": "dword",
@@ -84,6 +424,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 11
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Argos Shield"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ar_shield"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Battlemaster Shield"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "bm_shield"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eclipse Shield"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ec_shield"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Quark Shield"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "qk_shield"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Shield"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_shield"
+                          }
+                        }
+                      ]
                     },
                     "STRREF": {
                       "type": "dword",
@@ -274,6 +674,176 @@
                       "type": "byte",
                       "value": 16
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Argos Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ar_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Battlemaster Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "bm_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Combat Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "com_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eclipse Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ec_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Forza Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "for_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Grenada Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "gre_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Quark Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "qk_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Reginal Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "reg_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Spiritmaster Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sm_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Supreme Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sup_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Survival Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sur_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Transcendent Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tran_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Valor Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "val_belt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Vivid Belt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "viv_belt"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 6745
@@ -284,6 +854,176 @@
                     "ID": {
                       "type": "byte",
                       "value": 15
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Argos Leggings"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ar_leggings"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Battlemaster Leggings"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "bm_leggings"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Combat Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "com_boots"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eclipse Leggings"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ec_leggings"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Forza Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "for_boots"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Grenada Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "gr_boots"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Quark Leggings"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "qk_leggings"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Reginal Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "reg_boots"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Spiritmaster Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sm_boots"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Supreme Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sup_boots"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Survival Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sur_boots"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Leggings"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_leggings"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Transcendent Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tran_boots"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Valor Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "val_boots"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Vivid Boots"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "viv_boots"
+                          }
+                        }
+                      ]
                     },
                     "STRREF": {
                       "type": "dword",
@@ -296,6 +1036,66 @@
                       "type": "byte",
                       "value": 17
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Argos Bracer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ar_bracer"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Battlemaster Bracer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "bm_bracer"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eclipse Bracer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ec_bracer"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Quark Bracer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "qk_bracer"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Bracer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_bracer"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 6746
@@ -307,6 +1107,176 @@
                       "type": "byte",
                       "value": 18
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Argos Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ar_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Battlemaster Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "bm_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Combat Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "com_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eclipse Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ec_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Forza Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "for_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Grenada Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "gre_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Quark Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "qk_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Reginal Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "reg_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Spiritmaster Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sm_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Supreme Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sup_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Survival Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sur_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Transcendent Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tran_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Valor Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "val_cloak"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Vivid Cloak"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "viv_cloak"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 6747
@@ -317,6 +1287,121 @@
                     "ID": {
                       "type": "byte",
                       "value": 19
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Combat Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "com_gloves"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Forza Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "for_gloves"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Grenada Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "gr_gloves"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Reginal Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "reg_gloves"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Spiritmaster Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sm_gloves"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Supreme Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sup_gloves"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Survival Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sur_gloves"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Transcendent Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tran_gloves"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Valor Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "val_gloves"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Vivid Gloves"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "viv_gloves"
+                          }
+                        }
+                      ]
                     },
                     "STRREF": {
                       "type": "dword",
@@ -363,6 +1448,176 @@
                       "type": "byte",
                       "value": 21
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Argos Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ar_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Battlemaster Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "bm_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Combat Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "com_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eclipse Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ec_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Forza Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "for_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Grenada Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "gr_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Quark Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "qk_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Reginal Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "reg_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Spiritmaster Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sm_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Supreme Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sup_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Survival Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sur_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Transcendent Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tran_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Valor Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "val_necklace"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Vivid Necklace"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "viv_necklace"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 6750
@@ -373,6 +1628,176 @@
                     "ID": {
                       "type": "byte",
                       "value": 22
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Argos Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ar_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Battlemaster Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "bm_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Combat Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "com_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eclipse Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ec_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Forza Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "for_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Grenada Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "gr_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Quark Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "qk_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Reginal Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "reg_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Spiritmaster Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sm_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Supreme Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sup_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Survival Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sur_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Transcendent Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tran_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Valor Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "val_ring"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Vivid Ring"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "viv_ring"
+                          }
+                        }
+                      ]
                     },
                     "STRREF": {
                       "type": "dword",
@@ -643,6 +2068,121 @@
                       "type": "byte",
                       "value": 34
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Archetype Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "arc_knife"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Basic Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "b_knife"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Carbide Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "car_knife"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ceramic Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "crm_knife"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Cermet Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "cer_knife"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Delta Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "del_knife"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ophidian Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "oph_knife"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Proto Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "proto_knife"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Striker Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "str_knife"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Knife"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_knife"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 6765
@@ -654,6 +2194,121 @@
                       "type": "byte",
                       "value": 35
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Archetype Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "arc_greatsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Basic Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "b_greatsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Carbide Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "car_greatsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ceramic Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "crm_greatsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Cermet Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "cer_greatsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Delta Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "del_greatsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ophidian Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "oph_greatsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Proto Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "proto_greatsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Striker Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "str_greatsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Great Sword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_greatsword"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 6766
@@ -664,6 +2319,121 @@
                     "ID": {
                       "type": "byte",
                       "value": 36
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Archetype Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "arc_longsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Basic Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "b_longsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Carbide Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "car_longsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ceramic Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "crm_longsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Cermet Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "cer_longsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Delta Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "del_longsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ophidian Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "oph_longsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Proto Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pro_longsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Striker Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "str_longsword"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Longsword"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_longsword"
+                          }
+                        }
+                      ]
                     },
                     "STRREF": {
                       "type": "dword",
@@ -772,6 +2542,231 @@
                 "type": "byte",
                 "value": 46
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Archetype Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "arc_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Archetype Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "arc_twinblade"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Basic Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "b_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Basic Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "b_twinblade"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Carbide Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "car_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Carbide Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "car_twinblade"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Ceramic Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "crm_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Ceramic Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "crm_twinblade"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Cermet Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "cer_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Cermet Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "cer_twinblade"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Delta Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "del_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Delta Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "del_twinblade"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Ophidian Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "oph_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Ophidian Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "oph_twinblade"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Proto Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "proto_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Proto Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "proto_twinblade"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Striker Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "str_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Striker Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "str_twinblade"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Titan Staff"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "tit_staff"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Titan Twin Blade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "tit_twinblade"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 6775
@@ -839,6 +2834,121 @@
                 "type": "byte",
                 "value": 51
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Archetype Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "arc_spear"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Basic Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "b_spear"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Carbide Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "car_spear"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Ceramic Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "crm_spear"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Cermet Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "cer_spear"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Delta Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "del_spear"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Ophidian Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "oph_spear"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Proto Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "proto_spear"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Striker Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "str_spear"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Titan Spear"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "tit_spear"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 489
@@ -889,11 +2999,110 @@
                           "__struct_id": 0,
                           "NAME": {
                             "type": "cexostring",
-                            "value": "Handgun"
+                            "value": "Archetype Pistol"
                           },
                           "RESREF": {
                             "type": "resref",
-                            "value": "handgun"
+                            "value": "arc_pistol"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Basic Pistol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "b_pistol"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Carbide Pistol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "car_pistol"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ceramic Pistol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "crm_pistol"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Cermet Pistol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "cer_pistol"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Delta Pistol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "del_pistol"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ophidian Pistol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "oph_pistol"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Proto Pistol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "proto_pistol"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Striker Pistol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "str_pistol"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Pistol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_pistol"
                           }
                         }
                       ]
@@ -908,6 +3117,121 @@
                     "ID": {
                       "type": "byte",
                       "value": 43
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Archetype Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "arc_rifle"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Basic Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "b_rifle"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Carbide Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "car_rifle"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ceramic Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "crm_rifle"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Cermet Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "cer_rifle"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Delta Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "del_rifle"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ophidian Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "oph_rifle"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Proto Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "proto_rifle"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Striker Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "str_rifle"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Rifle"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_rifle"
+                          }
+                        }
+                      ]
                     },
                     "STRREF": {
                       "type": "dword",
@@ -937,6 +3261,121 @@
               "ID": {
                 "type": "byte",
                 "value": 52
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Archetype Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "arc_shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Basic Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "b_shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Carbide Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "car_shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Ceramic Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "crm_shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Cermet Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "cer_shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Delta Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "del_shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Ophidian Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "oph_shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Proto Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "proto_shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Striker Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "str_shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Titan Shuriken"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "tit_shuriken"
+                    }
+                  }
+                ]
               },
               "STRREF": {
                 "type": "dword",
