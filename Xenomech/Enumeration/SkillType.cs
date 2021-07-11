@@ -124,7 +124,7 @@ namespace Xenomech.Enumeration
             "Smithery", 
             50, 
             true, 
-            "Ability to create weapons and armor like vibroblades, blasters, and helmets.", 
+            "Ability to create weapons and armor like longswords, rifles, and armor.", 
             true)]
         Smithery = 14,
         

@@ -17,9 +17,9 @@ namespace Xenomech.Feature
             ConfigureMartialArts();
 
             // Weapon Focus, Specialization, Improved Critical
-            ConfigureVibroblades();
-            ConfigureFinesseVibroblades();
-            ConfigureHeavyVibroblades();
+            ConfigureLongswords();
+            ConfigureKnives();
+            ConfigureGreatswords();
             ConfigurePolearms();
             ConfigureTwinBlades();
             ConfigureKnuckles();
@@ -36,7 +36,7 @@ namespace Xenomech.Feature
             WeaponPlugin.SetWeaponIsMonkWeapon(BaseItem.LightMace);
         }
 
-        private static void ConfigureVibroblades()
+        private static void ConfigureLongswords()
         {
             foreach (var itemType in Item.VibrobladeBaseItemTypes)
             {
@@ -46,7 +46,7 @@ namespace Xenomech.Feature
             }
         }
 
-        private static void ConfigureFinesseVibroblades()
+        private static void ConfigureKnives()
         {
             foreach (var itemType in Item.FinesseVibrobladeBaseItemTypes)
             {
@@ -56,7 +56,7 @@ namespace Xenomech.Feature
             }
         }
         
-        private static void ConfigureHeavyVibroblades()
+        private static void ConfigureGreatswords()
         {
             foreach (var itemType in Item.HeavyVibrobladeBaseItemTypes)
             {

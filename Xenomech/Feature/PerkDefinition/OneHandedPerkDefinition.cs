@@ -16,16 +16,16 @@ namespace Xenomech.Feature.PerkDefinition
             Doublehand(builder);
             DualWield(builder);
             WeaponFinesse(builder);
-            WeaponFocusVibroblades(builder);
-            ImprovedCriticalVibroblades(builder);
-            VibrobladeProficiency(builder);
-            VibrobladeMastery(builder);
+            WeaponFocusLongswords(builder);
+            ImprovedCriticalLongswords(builder);
+            LongswordProficiency(builder);
+            LongswordMastery(builder);
             HackingBlade(builder);
             RiotBlade(builder);
-            WeaponFocusFinesseVibroblades(builder);
-            ImprovedCriticalFinesseVibroblades(builder);
-            FinesseVibrobladeProficiency(builder);
-            FinesseVibrobladeMastery(builder);
+            WeaponFocusKnives(builder);
+            ImprovedCriticalKnives(builder);
+            KnifeProficiency(builder);
+            KnifeMastery(builder);
             PoisonStab(builder);
             Backstab(builder);
 
@@ -128,77 +128,77 @@ namespace Xenomech.Feature.PerkDefinition
                 .GrantsFeat(FeatType.WeaponFinesse);
         }
 
-        private void WeaponFocusVibroblades(PerkBuilder builder)
+        private void WeaponFocusLongswords(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.WeaponFocusLongswords)
-                .Name("Weapon Focus - Vibroblades")
+                .Name("Weapon Focus - Longswords")
 
                 .AddPerkLevel()
-                .Description("You gain the Weapon Focus feat which grants a +1 attack bonus when equipped with vibroblades.")
+                .Description("You gain the Weapon Focus feat which grants a +1 attack bonus when equipped with longswords.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 5)
                 .GrantsFeat(FeatType.WeaponFocusLongswords)
 
                 .AddPerkLevel()
-                .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with vibroblades.")
+                .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with longswords.")
                 .Price(4)
                 .RequirementSkill(SkillType.OneHanded, 15)
                 .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationLongswords);
         }
 
-        private void ImprovedCriticalVibroblades(PerkBuilder builder)
+        private void ImprovedCriticalLongswords(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.ImprovedCriticalLongswords)
-                .Name("Improved Critical - Vibroblades")
+                .Name("Improved Critical - Longswords")
 
                 .AddPerkLevel()
-                .Description("Improves the critical hit chance when using a vibroblade.")
+                .Description("Improves the critical hit chance when using a longsword.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 25)
                 .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalLongswords);
         }
 
-        private void VibrobladeProficiency(PerkBuilder builder)
+        private void LongswordProficiency(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.LongswordProficiency)
-                .Name("Vibroblade Proficiency")
+                .Name("Longsword Proficiency")
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 1 Vibroblades.")
+                .Description("Grants the ability to equip tier 1 Longswords.")
                 .Price(2)
                 .GrantsFeat(FeatType.LongswordProficiency1)
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 2 Vibroblades.")
+                .Description("Grants the ability to equip tier 2 Longswords.")
                 .Price(2)
                 .RequirementSkill(SkillType.OneHanded, 10)
                 .GrantsFeat(FeatType.LongswordProficiency2)
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 3 Vibroblades.")
+                .Description("Grants the ability to equip tier 3 Longswords.")
                 .Price(2)
                 .RequirementSkill(SkillType.OneHanded, 20)
                 .GrantsFeat(FeatType.LongswordProficiency3)
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 4 Vibroblades.")
+                .Description("Grants the ability to equip tier 4 Longswords.")
                 .Price(2)
                 .RequirementSkill(SkillType.OneHanded, 30)
                 .GrantsFeat(FeatType.LongswordProficiency4)
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 5 Vibroblades.")
+                .Description("Grants the ability to equip tier 5 Longswords.")
                 .Price(2)
                 .RequirementSkill(SkillType.OneHanded, 40)
                 .GrantsFeat(FeatType.LongswordProficiency5);
         }
 
-        private void VibrobladeMastery(PerkBuilder builder)
+        private void LongswordMastery(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.OneHandedLongsword, PerkType.LongswordMastery)
-                .Name("Vibroblade Mastery")
+                .Name("Longsword Mastery")
                 .TriggerEquippedItem((player, item, slot, type, level) =>
                 {
                     if (slot != InventorySlot.RightHand) return;
@@ -246,21 +246,21 @@ namespace Xenomech.Feature.PerkDefinition
                 })
 
                 .AddPerkLevel()
-                .Description("Grants +1 BAB when equipped with a Vibroblade.")
+                .Description("Grants +1 BAB when equipped with a Longsword.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 25)
                 .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.LongswordMastery1)
 
                 .AddPerkLevel()
-                .Description("Grants +2 BAB when equipped with a Vibroblade.")
+                .Description("Grants +2 BAB when equipped with a Longsword.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 40)
                 .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.LongswordMastery2)
 
                 .AddPerkLevel()
-                .Description("Grants +3 BAB when equipped with a Vibroblade.")
+                .Description("Grants +3 BAB when equipped with a Longsword.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 50)
                 .RequirementCharacterType(CharacterType.Natural)
@@ -318,77 +318,77 @@ namespace Xenomech.Feature.PerkDefinition
                 .GrantsFeat(FeatType.RiotBlade3);
         }
 
-        private void WeaponFocusFinesseVibroblades(PerkBuilder builder)
+        private void WeaponFocusKnives(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.OneHandedKnife, PerkType.WeaponFocusKnives)
-                .Name("Weapon Focus - Finesse Vibroblades")
+                .Name("Weapon Focus - Knives")
 
                 .AddPerkLevel()
-                .Description("You gain the Weapon Focus feat which grants a +1 attack bonus when equipped with finesse vibroblades.")
+                .Description("You gain the Weapon Focus feat which grants a +1 attack bonus when equipped with knives.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 5)
                 .GrantsFeat(FeatType.WeaponFocusKnives)
 
                 .AddPerkLevel()
-                .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with finesse vibroblades.")
+                .Description("You gain the Weapon Specialization feat which grants a +2 damage when equipped with knives.")
                 .Price(4)
                 .RequirementSkill(SkillType.OneHanded, 15)
                 .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.WeaponSpecializationKnives);
         }
 
-        private void ImprovedCriticalFinesseVibroblades(PerkBuilder builder)
+        private void ImprovedCriticalKnives(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.OneHandedKnife, PerkType.ImprovedCriticalKnives)
-                .Name("Improved Critical - Finesse Vibroblades")
+                .Name("Improved Critical - Knives")
 
                 .AddPerkLevel()
-                .Description("Improves the critical hit chance when using a finesse vibroblade.")
+                .Description("Improves the critical hit chance when using a knife.")
                 .Price(3)
                 .RequirementSkill(SkillType.OneHanded, 25)
                 .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.ImprovedCriticalKnives);
         }
 
-        private void FinesseVibrobladeProficiency(PerkBuilder builder)
+        private void KnifeProficiency(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.OneHandedKnife, PerkType.KnifeProficiency)
-                .Name("Finesse Vibroblade Proficiency")
+                .Name("Finesse Longsword Proficiency")
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 1 Finesse Vibroblades.")
+                .Description("Grants the ability to equip tier 1 Knives.")
                 .Price(2)
                 .GrantsFeat(FeatType.KnifeProficiency1)
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 2 Finesse Vibroblades.")
+                .Description("Grants the ability to equip tier 2 Knives.")
                 .Price(2)
                 .RequirementSkill(SkillType.OneHanded, 10)
                 .GrantsFeat(FeatType.KnifeProficiency2)
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 3 Finesse Vibroblades.")
+                .Description("Grants the ability to equip tier 3 Knives.")
                 .Price(2)
                 .RequirementSkill(SkillType.OneHanded, 20)
                 .GrantsFeat(FeatType.KnifeProficiency3)
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 4 Finesse Vibroblades.")
+                .Description("Grants the ability to equip tier 4 Knives.")
                 .Price(2)
                 .RequirementSkill(SkillType.OneHanded, 30)
                 .GrantsFeat(FeatType.KnifeProficiency4)
 
                 .AddPerkLevel()
-                .Description("Grants the ability to equip tier 5 Finesse Vibroblades.")
+                .Description("Grants the ability to equip tier 5 Knives.")
                 .Price(2)
                 .RequirementSkill(SkillType.OneHanded, 40)
                 .GrantsFeat(FeatType.KnifeProficiency5);
         }
 
-        private void FinesseVibrobladeMastery(PerkBuilder builder)
+        private void KnifeMastery(PerkBuilder builder)
         {
             builder.Create(PerkCategoryType.OneHandedKnife, PerkType.KnifeMastery)
-                .Name("Finesse Vibroblade Mastery")
+                .Name("Finesse Longsword Mastery")
                 .TriggerEquippedItem((player, item, slot, type, level) =>
                 {
                     if (slot != InventorySlot.RightHand) return;
@@ -436,21 +436,21 @@ namespace Xenomech.Feature.PerkDefinition
                 })
 
                 .AddPerkLevel()
-                .Description("Grants +1 BAB when equipped with a Finesse Vibroblade.")
+                .Description("Grants +1 BAB when equipped with a Finesse Longsword.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 25)
                 .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.KnifeMastery1)
 
                 .AddPerkLevel()
-                .Description("Grants +2 BAB when equipped with a Finesse Vibroblade.")
+                .Description("Grants +2 BAB when equipped with a Finesse Longsword.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 40)
                 .RequirementCharacterType(CharacterType.Natural)
                 .GrantsFeat(FeatType.KnifeMastery2)
 
                 .AddPerkLevel()
-                .Description("Grants +3 BAB when equipped with a Finesse Vibroblade.")
+                .Description("Grants +3 BAB when equipped with a Finesse Longsword.")
                 .Price(8)
                 .RequirementSkill(SkillType.OneHanded, 50)
                 .RequirementCharacterType(CharacterType.Natural)
