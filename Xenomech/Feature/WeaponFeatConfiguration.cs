@@ -22,7 +22,7 @@ namespace Xenomech.Feature
             ConfigureGreatswords();
             ConfigurePolearms();
             ConfigureTwinBlades();
-            ConfigureKnuckles();
+            ConfigureKatars();
             ConfigureStaves();
             ConfigurePistols();
             ConfigureThrowingWeapons();
@@ -86,13 +86,13 @@ namespace Xenomech.Feature
             }
         }
 
-        private static void ConfigureKnuckles()
+        private static void ConfigureKatars()
         {
-            foreach (var itemType in Item.KnucklesBaseItemTypes)
+            foreach (var itemType in Item.KatarBaseItemTypes)
             {
-                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusKnuckles);
-                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationKnuckles);
-                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalKnuckles);
+                WeaponPlugin.SetWeaponFocusFeat(itemType, FeatType.WeaponFocusKatars);
+                WeaponPlugin.SetWeaponSpecializationFeat(itemType, FeatType.WeaponSpecializationKatars);
+                WeaponPlugin.SetWeaponImprovedCriticalFeat(itemType, FeatType.ImprovedCriticalKatars);
             }
         }
 

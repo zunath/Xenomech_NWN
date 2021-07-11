@@ -31,8 +31,8 @@ namespace Xenomech.Enumeration
         [PerkCategory("Martial Arts - General", true)]
         MartialArtsGeneral = 8,
 
-        [PerkCategory("Martial Arts - Knuckles", true)]
-        MartialArtsKnuckles = 9,
+        [PerkCategory("Martial Arts - Katars", true)]
+        MartialArtsKatars = 9,
 
         [PerkCategory("Martial Arts - Staff", true)]
         MartialArtsStaff = 10,

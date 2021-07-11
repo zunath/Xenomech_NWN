@@ -412,11 +412,11 @@ namespace Xenomech.Service
         };
         
         /// <summary>
-        /// Retrieves the list of Knuckles base item types.
+        /// Retrieves the list of Katar base item types.
         /// </summary>
-        public static List<BaseItem> KnucklesBaseItemTypes { get; } = new List<BaseItem>
+        public static List<BaseItem> KatarBaseItemTypes { get; } = new List<BaseItem>
         {
-            BaseItem.Gloves
+            BaseItem.Katar
         };
 
         /// <summary>

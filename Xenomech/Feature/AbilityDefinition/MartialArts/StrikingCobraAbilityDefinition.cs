@@ -24,9 +24,9 @@ namespace Xenomech.Feature.AbilityDefinition.MartialArts
         {
             var weapon = GetItemInSlot(InventorySlot.RightHand, activator);
 
-            if (!Item.KnucklesBaseItemTypes.Contains(GetBaseItemType(weapon)))
+            if (!Item.KatarBaseItemTypes.Contains(GetBaseItemType(weapon)))
             {
-                return "This is a knuckles ability.";
+                return "This is a katar ability.";
             }
             else
                 return string.Empty;
