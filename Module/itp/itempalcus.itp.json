@@ -2446,6 +2446,121 @@
                       "type": "byte",
                       "value": 37
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Archetype Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "arc_katar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Basic Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "b_katar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Carbide Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "car_katar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ceramic Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "crm_katar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Cermet Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "cer_katar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Delta Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "del_katar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ophidian Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "oph_katar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Proto Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "proto_katar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Striker Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "str_katar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Titan Katar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "tit_katar"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 6699
