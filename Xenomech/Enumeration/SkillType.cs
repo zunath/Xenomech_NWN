@@ -143,14 +143,6 @@ namespace Xenomech.Enumeration
             "Ability to harvest raw materials and scavenge for supplies.", 
             true)]
         Gathering = 16,
-
-        [Skill(SkillCategoryType.Languages, 
-            "Basic", 
-            20, 
-            true, 
-            "Ability to speak the Basic language.", 
-            false)]
-        Basic = 30
     }
 
     public class SkillAttribute : Attribute

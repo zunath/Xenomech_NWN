@@ -285,38 +285,10 @@ namespace Xenomech.Service
                 }
 
                 var originalSender = sender;
-                // temp set sender to hologram owner for holocoms
-                if (GetIsObjectValid(HoloCom.GetHoloGramOwner(sender)))
-                {
-                    sender = HoloCom.GetHoloGramOwner(sender);
-                }
-
-                var language = Language.GetActiveLanguage(sender);
-
-                var color = Language.GetColor(language);
-                var r = (byte)(color >> 24 & 0xFF);
-                var g = (byte)(color >> 16 & 0xFF);
-                var b = (byte)(color >> 8 & 0xFF);
-
-                if (language != SkillType.Basic)
-                {
-                    var languageName = Language.GetName(language);
-                    finalMessage.Append(ColorToken.Custom($"[{languageName}] ", r, g, b));
-                }
 
                 foreach (var component in chatComponents)
                 {
                     var text = component.Text;
-
-                    if (component.IsTranslatable && language != SkillType.Basic)
-                    {
-                        text = Language.TranslateSnippetForListener(sender, obj, language, component.Text);
-
-                        if (color != 0)
-                        {
-                            text = ColorToken.Custom(text, r, g, b);
-                        }
-                    }
 
                     if (component.IsCustomColor)
                     {

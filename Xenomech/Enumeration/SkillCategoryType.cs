@@ -15,9 +15,7 @@ namespace Xenomech.Enumeration
         [SkillCategory("Crafting", true, 4)]
         Crafting = 4,
         [SkillCategory("Utility", true, 5)]
-        Utility = 5,
-        [SkillCategory("Languages", true, 6)]
-        Languages = 6,
+        Utility = 5
     }
 
     public class SkillCategoryAttribute : Attribute

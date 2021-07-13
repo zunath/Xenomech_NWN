@@ -82,7 +82,6 @@ namespace Xenomech.Feature.ChatCommandDefinition
                 });
 
             DeleteCommand(builder);
-            LanguageCommand(builder);
             CustomizeCommand(builder);
             ToggleHelmet(builder);
             ToggleDualPistolMode(builder);
@@ -95,65 +94,7 @@ namespace Xenomech.Feature.ChatCommandDefinition
             
             return builder.Build();
         }
-
-        private static void LanguageCommand(ChatCommandBuilder builder)
-        {
-            builder.Create("language")
-                .Description("Switches the active language. Use /language help for more information.")
-                .Permissions(AuthorizationLevel.Player)
-                .Validate((user, args) =>
-                {
-                    if (args.Length < 1)
-                    {
-                        return ColorToken.Red("Please enter /language help for more information on how to use this command.");
-                    }
-
-                    return string.Empty;
-                })
-                .Action((user, target, location, args) =>
-                {
-                    var command = args[0].ToLower();
-                    var race = GetRacialType(user);
-                    var languages = Language.Languages;
-
-                    if (command == "help")
-                    {
-                        var commands = new List<string>
-                        {
-                            "help: Displays this help text."
-                        };
-
-                        foreach (var language in languages)
-                        {
-                            var chatText = language.ChatNames.ElementAt(0);
-                            var count = language.ChatNames.Count();
-
-                            for (var x = 1; x < count; x++)
-                            {
-                                chatText += ", " + language.ChatNames.ElementAt(x);
-                            }
-
-                            commands.Add($"{chatText}: Sets the active language to {language.ProperName}.");
-                        }
-
-                        SendMessageToPC(user, commands.Aggregate((a, b) => a + '\n' + b));
-                        return;
-                    }
-
-                    foreach (var language in Language.Languages)
-                    {
-                        if (language.ChatNames.Contains(command))
-                        {
-                            Language.SetActiveLanguage(user, language.Skill);
-                            SendMessageToPC(user, $"Set active language to {language.ProperName}.");
-                            return;
-                        }
-                    }
-
-                    SendMessageToPC(user, ColorToken.Red($"Unknown language {command}."));
-                });
-        }
-
+        
         private static void DeleteCommand(ChatCommandBuilder builder)
         {
             builder.Create("delete")
