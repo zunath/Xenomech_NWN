@@ -17,7 +17,7 @@ namespace Xenomech.Service
         /// <summary>
         /// Name of the texture used for the GUI elements.
         /// </summary>
-        public const string FontName = "fnt_es_gui";
+        public const string GuiFontName = "fnt_es_gui";
 
         /// <summary>
         /// Name of the texture used for the GUI text.
@@ -149,7 +149,7 @@ namespace Xenomech.Service
 
         private static void Draw(uint player, string message, int x, int y, ScreenAnchor anchor, int id, float lifeTime = 10.0f)
         {
-            PostString(player, message, x, y, anchor, lifeTime, ColorWhite, ColorWhite, id, FontName);
+            PostString(player, message, x, y, anchor, lifeTime, ColorWhite, ColorWhite, id, GuiFontName);
         }
 
         /// <summary>

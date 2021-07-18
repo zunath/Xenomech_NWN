@@ -24,8 +24,6 @@ namespace Xenomech.Service
         /// </summary>
         private static void LoadItemToSkillMapping()
         {
-            Console.WriteLine("Loading item to skill mappings.");
-
             // One-Handed Skills
             _itemToSkillMapping[BaseItem.BastardSword] = SkillType.OneHanded;
             _itemToSkillMapping[BaseItem.BattleAxe] = SkillType.OneHanded;
@@ -84,7 +82,7 @@ namespace Xenomech.Service
             _itemToSkillMapping[BaseItem.LargeShield] = SkillType.Armor;
             _itemToSkillMapping[BaseItem.TowerShield] = SkillType.Armor;
 
-            Console.WriteLine("Completed item to skill mappings successfully.");
+            Console.WriteLine($"Loaded {_itemToSkillMapping.Count} item to skill mappings.");
         }
 
         /// <summary>

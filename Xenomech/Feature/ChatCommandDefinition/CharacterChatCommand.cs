@@ -86,7 +86,6 @@ namespace Xenomech.Feature.ChatCommandDefinition
             ToggleHelmet(builder);
             ToggleDualPistolMode(builder);
             ToggleEmoteStyle(builder);
-            ToggleHolonet(builder);
             ChangeItemName(builder);
             ChangeItemDescription(builder);
             ChangePlayerDescription(builder);
@@ -225,32 +224,6 @@ namespace Xenomech.Feature.ChatCommandDefinition
                     var newStyle = curStyle == EmoteStyle.Novel ? EmoteStyle.Regular : EmoteStyle.Novel;
                     Communication.SetEmoteStyle(user, newStyle);
                     SendMessageToPC(user, $"Toggled emote style to {newStyle}.");
-                });
-        }
-
-        private static void ToggleHolonet(ChatCommandBuilder builder)
-        {
-            builder.Create("toggleholonet")
-                .Description("Enables or disables holonet chat channel.")
-                .Permissions(AuthorizationLevel.Player)
-                .Action((user, target, location, args) =>
-                {
-                    var playerId = GetObjectUUID(user);
-                    var dbPlayer = DB.Get<Player>(playerId);
-                    dbPlayer.IsHolonetEnabled = !dbPlayer.IsHolonetEnabled;
-                    DB.Set(playerId, dbPlayer);
-                    
-                    SetLocalBool(user, "DISPLAY_HOLONET", dbPlayer.IsHolonetEnabled);
-
-                    if (dbPlayer.IsHolonetEnabled)
-                    {
-                        SendMessageToPC(user, $"Holonet chat: {ColorToken.Green("ENABLED")}");
-                    }
-                    else
-                    {
-                        SendMessageToPC(user, $"Holonet chat: {ColorToken.Red("DISABLED")}");
-                    }
-                    
                 });
         }
 

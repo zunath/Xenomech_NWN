@@ -4,6 +4,7 @@ using Xenomech.Core.NWScript.Enum;
 using Xenomech.Enumeration;
 using Xenomech.Service.AbilityService;
 using Xenomech.Service.FactionService;
+using Xenomech.Service.MechService;
 using Xenomech.Service.TaxiService;
 
 namespace Xenomech.Entity
@@ -34,7 +35,6 @@ namespace Xenomech.Entity
 
             ShowHelmet = true;
             IsUsingDualPistolMode = false;
-            IsHolonetEnabled = true;
             EmoteStyle = EmoteStyle.Regular;
             MovementRate = 1.0f;
             MapPins = new Dictionary<string, List<MapPin>>();
@@ -60,6 +60,9 @@ namespace Xenomech.Entity
                 {40, 0},
                 {50, 0},
             };
+
+            Mechs = new Dictionary<Guid, PlayerMech>();
+            ActiveMechId = Guid.Empty;
         }
 
         public override string KeyPrefix => "Player";
@@ -98,7 +101,6 @@ namespace Xenomech.Entity
         public bool IsUsingDualPistolMode { get; set; }
         public DateTime? DatePerkRefundAvailable { get; set; }
         public CharacterType CharacterType { get; set; }
-        public bool IsHolonetEnabled { get; set; }
         public EmoteStyle EmoteStyle { get; set; }
         public string SerializedHotBar { get; set; }
         public Guid ActiveShipId { get; set; }
@@ -106,6 +108,7 @@ namespace Xenomech.Entity
         public AppearanceType OriginalAppearanceType { get; set; }
         public float MovementRate { get; set; }
         public int AbilityRecastReduction { get; set; }
+        public Guid ActiveMechId { get; set; }
 
         public PlayerSettings Settings { get; set; }
         public Dictionary<AbilityType, int> BaseStats { get; set; }
@@ -125,6 +128,7 @@ namespace Xenomech.Entity
         public Dictionary<FactionType, PlayerFactionStanding> Factions { get; set; }
         public Dictionary<int, List<TaxiDestinationType>> TaxiDestinations { get; set; }
         public Dictionary<int, int> AbilityPointsByLevel { get; set; }
+        public Dictionary<Guid, PlayerMech> Mechs { get; set; }
     }
 
     public class MapPin
@@ -180,5 +184,18 @@ namespace Xenomech.Entity
     {
         public int Standing { get; set; }
         public int Points { get; set; }
+    }
+
+    public class PlayerMech
+    {
+        public string Name { get; set; }
+        public MechFrameType FrameType { get; set; }
+        public MechLeftArmType LeftArmType { get; set; }
+        public MechRightArmType RightArmType { get; set; }
+        public MechLegType LegType { get; set; }
+        public int FrameHP { get; set; }
+        public int LeftArmHP { get; set; }
+        public int RightArmHP { get; set; }
+        public int LegHP { get; set; }
     }
 }

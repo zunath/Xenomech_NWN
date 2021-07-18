@@ -11,12 +11,20 @@ namespace Xenomech.Feature
     public static class PlayerStatusWindow
     {
         private static Gui.IdReservation _characterIdReservation;
+        private static Gui.IdReservation _mechIdReservation;
+        private static Gui.IdReservation _targetMechIdReservation;
 
         [NWNEventHandler("mod_load")]
         public static void ReserveIds()
         {
             // Reserve 20 Ids for the player's status
             _characterIdReservation = Gui.ReserveIds(nameof(PlayerStatusWindow) + "_CHARACTER", 20);
+
+            // Reserve 40 Ids for the mech's status
+            _mechIdReservation = Gui.ReserveIds(nameof(PlayerStatusWindow) + "_MECH", 40);
+
+            // Reserve another 40 Ids for target mech's status.
+            _targetMechIdReservation = Gui.ReserveIds(nameof(PlayerStatusWindow) + "_TARGETMECH", 40);
         }
 
         /// <summary>
@@ -32,15 +40,32 @@ namespace Xenomech.Feature
             var dbPlayer = DB.Get<Player>(playerId);
             var isStandard = dbPlayer.CharacterType == CharacterType.Natural;
 
-            // Standard Characters
-            if (isStandard)
+            // Character Mode
+            if (dbPlayer.ActiveMechId == Guid.Empty)
             {
-                DrawStandardCharacterStatusComponent(player);
+                // Natural Characters
+                if (isStandard)
+                {
+                    DrawNaturalCharacterStatusComponent(player);
+                }
+                // Force Characters
+                else
+                {
+                    DrawNonNaturalCharacterStatusComponent(player);
+                }
             }
-            // Force Characters
+            // Mech Mode
             else
             {
-                DrawForceCharacterStatusComponent(player);
+                // Draw player's status
+                DrawMechStatus(player, player, true, _mechIdReservation.StartId);
+
+                // Draw player's target status
+                var target = GetAttackTarget(player);
+                if (GetIsObjectValid(target))
+                {
+                    DrawMechStatus(player, target, false, _targetMechIdReservation.StartId);
+                }
             }
         }
 
@@ -48,7 +73,7 @@ namespace Xenomech.Feature
         /// Draws the HP, EP, and STM status information on the player's screen.
         /// </summary>
         /// <param name="player">The player to draw the component for.</param>
-        private static void DrawStandardCharacterStatusComponent(uint player)
+        private static void DrawNaturalCharacterStatusComponent(uint player)
         {
             var playerId = GetObjectUUID(player);
             var dbPlayer = DB.Get<Player>(playerId) ?? new Player();
@@ -84,24 +109,21 @@ namespace Xenomech.Feature
             PostString(player, stmText, centerWindowX + 8, WindowY + 1, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId, Gui.TextName);
 
             // Draw the bars
-            PostString(player, hpBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorHealthBar, Gui.ColorHealthBar, _characterIdReservation.StartId + 3, Gui.FontName);
-            PostString(player, stmBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorStaminaBar, Gui.ColorStaminaBar, _characterIdReservation.StartId + 5, Gui.FontName);
+            PostString(player, hpBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorHealthBar, Gui.ColorHealthBar, _characterIdReservation.StartId + 3, Gui.GuiFontName);
+            PostString(player, stmBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorStaminaBar, Gui.ColorStaminaBar, _characterIdReservation.StartId + 5, Gui.GuiFontName);
 
             // Draw the backgrounds
-            if (!GetLocalBool(player, "PLAYERSTATUSWINDOW_BACKGROUND_DRAWN"))
-            {
-                PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 6, Gui.FontName);
-                PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 8, Gui.FontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 6, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 8, Gui.GuiFontName);
 
-                Gui.DrawWindow(player, _characterIdReservation.StartId + 9, Anchor, WindowX, WindowY, WindowWidth - 2, 2);
-            }
+            Gui.DrawWindow(player, _characterIdReservation.StartId + 9, Anchor, WindowX, WindowY, WindowWidth - 2, 2);
         }
 
         /// <summary>
         /// Draws the HP, EP, and STM status information on a force player's screen.
         /// </summary>
         /// <param name="player">The player to draw the component for.</param>
-        private static void DrawForceCharacterStatusComponent(uint player)
+        private static void DrawNonNaturalCharacterStatusComponent(uint player)
         {
             var playerId = GetObjectUUID(player);
             var dbPlayer = DB.Get<Player>(playerId) ?? new Player();
@@ -146,26 +168,98 @@ namespace Xenomech.Feature
             PostString(player, stmText, centerWindowX + 8, WindowY + 1, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId, Gui.TextName);
 
             // Draw the bars
-            PostString(player, hpBar, centerWindowX + 2, WindowY + 3, Anchor, 0.0f, Gui.ColorHealthBar, Gui.ColorHealthBar, _characterIdReservation.StartId + 3, Gui.FontName);
-            PostString(player, epBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorEPBar, Gui.ColorEPBar, _characterIdReservation.StartId + 4, Gui.FontName);
-            PostString(player, stmBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorStaminaBar, Gui.ColorStaminaBar, _characterIdReservation.StartId + 5, Gui.FontName);
+            PostString(player, hpBar, centerWindowX + 2, WindowY + 3, Anchor, 0.0f, Gui.ColorHealthBar, Gui.ColorHealthBar, _characterIdReservation.StartId + 3, Gui.GuiFontName);
+            PostString(player, epBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorEPBar, Gui.ColorEPBar, _characterIdReservation.StartId + 4, Gui.GuiFontName);
+            PostString(player, stmBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorStaminaBar, Gui.ColorStaminaBar, _characterIdReservation.StartId + 5, Gui.GuiFontName);
 
             // Draw the backgrounds
-            if (!GetLocalBool(player, "PLAYERSTATUSWINDOW_BACKGROUND_DRAWN"))
-            {
-                PostString(player, backgroundBar, centerWindowX + 2, WindowY + 3, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 6, Gui.FontName);
-                PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 7, Gui.FontName);
-                PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 8, Gui.FontName);
-                
-                Gui.DrawWindow(player, _characterIdReservation.StartId + 9, Anchor, WindowX, WindowY, WindowWidth - 2, 3);
-            }
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 3, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 6, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 7, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 8, Gui.GuiFontName);
+
+            Gui.DrawWindow(player, _characterIdReservation.StartId + 9, Anchor, WindowX, WindowY, WindowWidth - 2, 3);
         }
-        
-        [NWNEventHandler("mod_exit")]
-        public static void RemoveTempVariables()
+
+        private static void DrawMechStatus(uint player, uint source, bool showFuel, int reservationIdStart)
         {
-            var exiting = GetExitingObject();
-            DeleteLocalBool(exiting, "PLAYERSTATUSWINDOW_BACKGROUND_DRAWN");
+            var playerId = GetObjectUUID(player);
+            var dbPlayer = DB.Get<Player>(playerId) ?? new Player();
+
+            var sourceMech = Mech.GetMechDetail(source);
+            var frameHP = sourceMech.CurrentFrameHP;
+            var leftArmHP = sourceMech.CurrentLeftArmHP;
+            var rightArmHP = sourceMech.CurrentRightArmHP;
+            var legsHP = sourceMech.CurrentLegsHP;
+            var fuel = sourceMech.CurrentFuel;
+
+            // Safety checks to ensure we don't show negative values.
+            if (frameHP < 0)
+                frameHP = 0;
+            if (leftArmHP < 0)
+                leftArmHP = 0;
+            if (rightArmHP < 0)
+                rightArmHP = 0;
+            if (legsHP < 0)
+                legsHP = 0;
+            if (fuel < 0)
+                fuel = 0;
+
+            var backgroundBar = BuildBar(1, 1, 22);
+            var frameHPBar = BuildBar(frameHP, sourceMech.MaxFrameHP, 22);
+            var leftArmHPBar = BuildBar(leftArmHP, sourceMech.MaxLeftArmHP, 11);
+            var rightArmHPBar = BuildBar(rightArmHP, sourceMech.MaxRightArmHP, 11);
+            var legsHPBar = BuildBar(legsHP, sourceMech.MaxLegsHP, 22);
+            var fuelBar = BuildBar(fuel, sourceMech.MaxFuel, 22);
+
+            const int WindowX = 1;
+            const int WindowY = 6;
+            const int WindowWidth = 25;
+            const ScreenAnchor Anchor = ScreenAnchor.BottomRight;
+
+            // Draw order is backwards. The top-most layer needs to be drawn first.
+            var centerWindowX = Gui.CenterStringInWindow(backgroundBar, WindowX, WindowWidth);
+
+            // Draw the text
+            var frameHPText = "FR:".PadRight(5, ' ') + $"{frameHP.ToString().PadLeft(4, ' ')} / {sourceMech.MaxFrameHP.ToString().PadLeft(4, ' ')}";
+            var leftArmHPText = "LA:".PadRight(5, ' ') + $"{leftArmHP.ToString().PadLeft(4, ' ')} / {sourceMech.MaxLeftArmHP.ToString().PadLeft(4, ' ')}";
+            var rightArmHPText = "RA:".PadRight(5, ' ') + $"{rightArmHP.ToString().PadLeft(4, ' ')} / {sourceMech.MaxRightArmHP.ToString().PadLeft(4, ' ')}";
+            var legsHPText = "LG:".PadRight(5, ' ') + $"{legsHP.ToString().PadLeft(4, ' ')} / {sourceMech.MaxLegsHP.ToString().PadLeft(4, ' ')}";
+            var fuelText = "FL:".PadRight(5, ' ') + $"{fuel.ToString().PadLeft(4, ' ')} / {sourceMech.MaxFuel.ToString().PadLeft(4, ' ')}";
+
+            // First line: Frame HP (Text)
+            PostString(player, frameHPText, centerWindowX + 8, WindowY + 4, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart, Gui.TextName);
+            PostString(player, frameHPBar, centerWindowX + 8, WindowY + 4, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 1, Gui.GuiFontName);
+
+            // Second line: Left Arm / Right Arm HP (Text)
+            PostString(player, leftArmHPText, centerWindowX + 8, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 2, Gui.TextName);
+            PostString(player, leftArmHPBar, centerWindowX + 8, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 3, Gui.GuiFontName);
+            PostString(player, rightArmHPText, centerWindowX + 16, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 4, Gui.TextName);
+            PostString(player, rightArmHPBar, centerWindowX + 16, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 5, Gui.GuiFontName);
+
+            // Third line: Leg HP (Text)
+            PostString(player, legsHPText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 6, Gui.TextName);
+            PostString(player, legsHPBar, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 7, Gui.GuiFontName);
+
+            // Fourth line: Fuel (Text)
+            if (showFuel)
+            {
+                PostString(player, fuelText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 8, Gui.TextName);
+                PostString(player, fuelText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 9, Gui.GuiFontName);
+            }
+            
+            // Draw the backgrounds
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 3, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, reservationIdStart + 10, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, reservationIdStart + 11, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, reservationIdStart + 12, Gui.GuiFontName);
+
+            if (showFuel)
+            {
+                Gui.DrawWindow(player, _characterIdReservation.StartId + 13, Anchor, WindowX, WindowY, WindowWidth - 2, 4);
+            }
+            else
+            {
+                Gui.DrawWindow(player, _characterIdReservation.StartId + 14, Anchor, WindowX, WindowY, WindowWidth - 2, 3);
+            }
         }
 
         /// <summary>

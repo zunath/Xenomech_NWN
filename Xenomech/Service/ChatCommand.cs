@@ -156,7 +156,6 @@ namespace Xenomech.Service
         /// </summary>
         private static void LoadChatCommands()
         {
-            Console.WriteLine("Loading chat commands");
             var types = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(s => s.GetTypes())
                 .Where(w => typeof(IChatCommandListDefinition).IsAssignableFrom(w) && !w.IsInterface && !w.IsAbstract);
@@ -172,7 +171,7 @@ namespace Xenomech.Service
                 }
             }
 
-            Console.WriteLine($"{_chatCommands.Count} chat commands loaded successfully.");
+            Console.WriteLine($"Loaded {_chatCommands.Count} chat commands.");
         }
 
         /// <summary>

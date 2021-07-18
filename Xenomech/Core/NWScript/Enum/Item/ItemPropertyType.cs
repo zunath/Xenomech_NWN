@@ -79,7 +79,7 @@ namespace Xenomech.Core.NWScript.Enum.Item
         HealersKit = 80,
         WeightIncrease = 81,
         OnHitCastSpell = 82,
-        Visualeffect = 83,
+        VisualEffect = 83,
         ArcaneSpellFailure = 84,
         Material = 85,
         Quality = 86,
@@ -99,6 +99,11 @@ namespace Xenomech.Core.NWScript.Enum.Item
         NPCSTM = 98,
 
         UseLimitationPerk = 100,
+        NPCMechFrame = 101,
+        NPCMechLeftArm = 102,
+        NPCMechRightArm = 103,
+        NPCMechLegs = 104,
+
         AbilityRecastReduction = 118
     }
 }

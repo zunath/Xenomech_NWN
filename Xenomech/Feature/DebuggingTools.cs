@@ -1,8 +1,8 @@
 ﻿using System;
 using Xenomech.Core;
-using Xenomech.Core.NWScript.Enum;
-using Xenomech.Native;
+using Xenomech.Entity;
 using Xenomech.Service;
+using Xenomech.Service.MechService;
 using static Xenomech.Core.NWScript.NWScript;
 
 namespace Xenomech.Feature
@@ -13,8 +13,33 @@ namespace Xenomech.Feature
         public static void Test()
         {
             var player = GetLastUsedBy();
+            var playerId = GetObjectUUID(player);
+            var dbPlayer = DB.Get<Player>(playerId);
 
-            SetPhenoType(PhenoType.TigerFang, player);
+            var mechId = Guid.NewGuid();
+            var frame = Mech.GetFrameDetail(MechFrameType.TestFrame);
+            var leftArm = Mech.GetLeftArmDetail(MechLeftArmType.TestLeftArm);
+            var rightArm = Mech.GetRightArmDetail(MechRightArmType.TestRightArm);
+            var legs = Mech.GetLegDetail(MechLegType.TestLegs);
+
+            dbPlayer.Mechs.Add(mechId, new PlayerMech
+            {
+                Name = "Test Mech",
+
+                FrameType = MechFrameType.TestFrame,
+                LeftArmType = MechLeftArmType.TestLeftArm,
+                RightArmType = MechRightArmType.TestRightArm,
+                LegType = MechLegType.TestLegs,
+
+                FrameHP = frame.HP,
+                LeftArmHP = leftArm.HP,
+                RightArmHP = rightArm.HP,
+                LegHP = legs.HP
+            });
+
+            dbPlayer.ActiveMechId = mechId;
+
+            DB.Set(playerId, dbPlayer);
         }
     }
 }

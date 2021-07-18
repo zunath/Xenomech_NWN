@@ -34,23 +34,6 @@ namespace Xenomech.Service
             ColonBackward
         };
 
-        /// <summary>
-        /// When a player enters the server, set a local bool on their PC representing
-        /// the current state of their holonet visibility.
-        /// </summary>
-        [NWNEventHandler("mod_enter")]
-        public static void LoadHolonetSetting()
-        {
-            var player = GetEnteringObject();
-            if (!GetIsPC(player) || GetIsDM(player)) return;
-
-            var playerId = GetObjectUUID(player);
-            var dbPlayer = DB.Get<Player>(playerId) ?? new Player();
-            
-            SetLocalBool(player, "DISPLAY_HOLONET", dbPlayer.IsHolonetEnabled);
-        }
-        
-
         [NWNEventHandler("on_nwnx_chat")]
         public static void ProcessChatMessage()
         {
@@ -91,20 +74,6 @@ namespace Xenomech.Service
             }
 
             ChatPlugin.SkipMessage();
-
-            if (channel == ChatChannel.PlayerShout &&
-                GetIsPC(sender) &&
-                !GetIsDM(sender))
-            {
-                var playerId = GetObjectUUID(sender);
-                var dbPlayer = DB.Get<Player>(playerId);
-
-                if (!dbPlayer.IsHolonetEnabled)
-                {
-                    SendMessageToPC(sender, "You have disabled the holonet and cannot send this message.");
-                    return;
-                }
-            }
 
             var chatComponents = new List<CommunicationComponent>();
 

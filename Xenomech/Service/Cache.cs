@@ -24,11 +24,11 @@ namespace Xenomech.Service
         [NWNEventHandler("mod_load")]
         public static void OnModuleLoad()
         {
-            Console.WriteLine("Caching areas by resref.");
             CacheAreasByResref();
-
-            Console.WriteLine("Caching item names by resref.");
             CacheItemNamesByResref();
+
+            Console.WriteLine($"Loaded {AreasByResref.Count} areas by resref.");
+            Console.WriteLine($"Loaded {ItemNamesByResref.Count} item names by resref.");
         }
 
         /// <summary>
