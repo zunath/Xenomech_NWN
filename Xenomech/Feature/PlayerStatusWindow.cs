@@ -10,8 +10,9 @@ namespace Xenomech.Feature
 {
     public static class PlayerStatusWindow
     {
+        private const float GuiElementLife = 1.5f;
+
         private static Gui.IdReservation _characterIdReservation;
-        private static Gui.IdReservation _mechIdReservation;
         private static Gui.IdReservation _targetMechIdReservation;
 
         [NWNEventHandler("mod_load")]
@@ -19,9 +20,6 @@ namespace Xenomech.Feature
         {
             // Reserve 20 Ids for the player's status
             _characterIdReservation = Gui.ReserveIds(nameof(PlayerStatusWindow) + "_CHARACTER", 20);
-
-            // Reserve 40 Ids for the mech's status
-            _mechIdReservation = Gui.ReserveIds(nameof(PlayerStatusWindow) + "_MECH", 40);
 
             // Reserve another 40 Ids for target mech's status.
             _targetMechIdReservation = Gui.ReserveIds(nameof(PlayerStatusWindow) + "_TARGETMECH", 40);
@@ -58,13 +56,13 @@ namespace Xenomech.Feature
             else
             {
                 // Draw player's status
-                DrawMechStatus(player, player, true, _mechIdReservation.StartId);
+                DrawMechStatus(player, player, true, _characterIdReservation.StartId);
 
                 // Draw player's target status
                 var target = GetAttackTarget(player);
                 if (GetIsObjectValid(target))
                 {
-                    DrawMechStatus(player, target, false, _targetMechIdReservation.StartId);
+                    //DrawMechStatus(player, target, false, _targetMechIdReservation.StartId);
                 }
             }
         }
@@ -105,18 +103,18 @@ namespace Xenomech.Feature
             var hpText = "HP:".PadRight(5, ' ') + $"{currentHP.ToString().PadLeft(4, ' ')} / {maxHP.ToString().PadLeft(4, ' ')}";
             var stmText = "STM:".PadRight(5, ' ') + $"{currentSTM.ToString().PadLeft(4, ' ')} / {maxSTM.ToString().PadLeft(4, ' ')}";
 
-            PostString(player, hpText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 2, Gui.TextName);
-            PostString(player, stmText, centerWindowX + 8, WindowY + 1, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId, Gui.TextName);
+            PostString(player, hpText, centerWindowX + 8, WindowY + 2, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 2, Gui.TextName);
+            PostString(player, stmText, centerWindowX + 8, WindowY + 1, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId, Gui.TextName);
 
             // Draw the bars
-            PostString(player, hpBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorHealthBar, Gui.ColorHealthBar, _characterIdReservation.StartId + 3, Gui.GuiFontName);
-            PostString(player, stmBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorStaminaBar, Gui.ColorStaminaBar, _characterIdReservation.StartId + 5, Gui.GuiFontName);
+            PostString(player, hpBar, centerWindowX + 2, WindowY + 2, Anchor, GuiElementLife, Gui.ColorHealthBar, Gui.ColorHealthBar, _characterIdReservation.StartId + 3, Gui.GuiFontName);
+            PostString(player, stmBar, centerWindowX + 2, WindowY + 1, Anchor, GuiElementLife, Gui.ColorStaminaBar, Gui.ColorStaminaBar, _characterIdReservation.StartId + 5, Gui.GuiFontName);
 
             // Draw the backgrounds
-            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 6, Gui.GuiFontName);
-            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 8, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, GuiElementLife, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 6, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, GuiElementLife, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 8, Gui.GuiFontName);
 
-            Gui.DrawWindow(player, _characterIdReservation.StartId + 9, Anchor, WindowX, WindowY, WindowWidth - 2, 2);
+            Gui.DrawWindow(player, _characterIdReservation.StartId + 9, Anchor, WindowX, WindowY, WindowWidth - 2, 2, GuiElementLife);
         }
 
         /// <summary>
@@ -163,28 +161,25 @@ namespace Xenomech.Feature
             var epText = "EP:".PadRight(5, ' ') + $"{currentEP.ToString().PadLeft(4, ' ')} / {maxEP.ToString().PadLeft(4, ' ')}";
             var stmText = "STM:".PadRight(5, ' ') + $"{currentSTM.ToString().PadLeft(4, ' ')} / {maxSTM.ToString().PadLeft(4, ' ')}";
 
-            PostString(player, hpText, centerWindowX + 8, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 2, Gui.TextName);
-            PostString(player, epText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 1, Gui.TextName);
-            PostString(player, stmText, centerWindowX + 8, WindowY + 1, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId, Gui.TextName);
+            PostString(player, hpText, centerWindowX + 8, WindowY + 3, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 2, Gui.TextName);
+            PostString(player, epText, centerWindowX + 8, WindowY + 2, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId + 1, Gui.TextName);
+            PostString(player, stmText, centerWindowX + 8, WindowY + 1, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, _characterIdReservation.StartId, Gui.TextName);
 
             // Draw the bars
-            PostString(player, hpBar, centerWindowX + 2, WindowY + 3, Anchor, 0.0f, Gui.ColorHealthBar, Gui.ColorHealthBar, _characterIdReservation.StartId + 3, Gui.GuiFontName);
-            PostString(player, epBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorEPBar, Gui.ColorEPBar, _characterIdReservation.StartId + 4, Gui.GuiFontName);
-            PostString(player, stmBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorStaminaBar, Gui.ColorStaminaBar, _characterIdReservation.StartId + 5, Gui.GuiFontName);
+            PostString(player, hpBar, centerWindowX + 2, WindowY + 3, Anchor, GuiElementLife, Gui.ColorHealthBar, Gui.ColorHealthBar, _characterIdReservation.StartId + 3, Gui.GuiFontName);
+            PostString(player, epBar, centerWindowX + 2, WindowY + 2, Anchor, GuiElementLife, Gui.ColorEPBar, Gui.ColorEPBar, _characterIdReservation.StartId + 4, Gui.GuiFontName);
+            PostString(player, stmBar, centerWindowX + 2, WindowY + 1, Anchor, GuiElementLife, Gui.ColorStaminaBar, Gui.ColorStaminaBar, _characterIdReservation.StartId + 5, Gui.GuiFontName);
 
             // Draw the backgrounds
-            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 3, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 6, Gui.GuiFontName);
-            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 7, Gui.GuiFontName);
-            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 8, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 3, Anchor, GuiElementLife, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 6, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, GuiElementLife, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 7, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, GuiElementLife, Gui.ColorBlack, Gui.ColorBlack, _characterIdReservation.StartId + 8, Gui.GuiFontName);
 
-            Gui.DrawWindow(player, _characterIdReservation.StartId + 9, Anchor, WindowX, WindowY, WindowWidth - 2, 3);
+            Gui.DrawWindow(player, _characterIdReservation.StartId + 9, Anchor, WindowX, WindowY, WindowWidth - 2, 3, GuiElementLife);
         }
 
         private static void DrawMechStatus(uint player, uint source, bool showFuel, int reservationIdStart)
         {
-            var playerId = GetObjectUUID(player);
-            var dbPlayer = DB.Get<Player>(playerId) ?? new Player();
-
             var sourceMech = Mech.GetMechDetail(source);
             var frameHP = sourceMech.CurrentFrameHP;
             var leftArmHP = sourceMech.CurrentLeftArmHP;
@@ -206,14 +201,14 @@ namespace Xenomech.Feature
 
             var backgroundBar = BuildBar(1, 1, 22);
             var frameHPBar = BuildBar(frameHP, sourceMech.MaxFrameHP, 22);
-            var leftArmHPBar = BuildBar(leftArmHP, sourceMech.MaxLeftArmHP, 11);
-            var rightArmHPBar = BuildBar(rightArmHP, sourceMech.MaxRightArmHP, 11);
+            var leftArmHPBar = BuildBar(leftArmHP, sourceMech.MaxLeftArmHP, 10);
+            var rightArmHPBar = BuildBar(rightArmHP, sourceMech.MaxRightArmHP, 10);
             var legsHPBar = BuildBar(legsHP, sourceMech.MaxLegsHP, 22);
             var fuelBar = BuildBar(fuel, sourceMech.MaxFuel, 22);
 
             const int WindowX = 1;
             const int WindowY = 6;
-            const int WindowWidth = 25;
+            const int WindowWidth = 26;
             const ScreenAnchor Anchor = ScreenAnchor.BottomRight;
 
             // Draw order is backwards. The top-most layer needs to be drawn first.
@@ -221,44 +216,44 @@ namespace Xenomech.Feature
 
             // Draw the text
             var frameHPText = "FR:".PadRight(5, ' ') + $"{frameHP.ToString().PadLeft(4, ' ')} / {sourceMech.MaxFrameHP.ToString().PadLeft(4, ' ')}";
-            var leftArmHPText = "LA:".PadRight(5, ' ') + $"{leftArmHP.ToString().PadLeft(4, ' ')} / {sourceMech.MaxLeftArmHP.ToString().PadLeft(4, ' ')}";
-            var rightArmHPText = "RA:".PadRight(5, ' ') + $"{rightArmHP.ToString().PadLeft(4, ' ')} / {sourceMech.MaxRightArmHP.ToString().PadLeft(4, ' ')}";
+            var leftArmHPText = "LA:".PadRight(3, ' ') + $"{leftArmHP.ToString().PadLeft(3, ' ')}/{sourceMech.MaxLeftArmHP.ToString().PadLeft(3, ' ')}";
+            var rightArmHPText = "RA:".PadRight(3, ' ') + $"{rightArmHP.ToString().PadLeft(3, ' ')}/{sourceMech.MaxRightArmHP.ToString().PadLeft(3, ' ')}";
             var legsHPText = "LG:".PadRight(5, ' ') + $"{legsHP.ToString().PadLeft(4, ' ')} / {sourceMech.MaxLegsHP.ToString().PadLeft(4, ' ')}";
             var fuelText = "FL:".PadRight(5, ' ') + $"{fuel.ToString().PadLeft(4, ' ')} / {sourceMech.MaxFuel.ToString().PadLeft(4, ' ')}";
 
             // First line: Frame HP (Text)
-            PostString(player, frameHPText, centerWindowX + 8, WindowY + 4, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart, Gui.TextName);
-            PostString(player, frameHPBar, centerWindowX + 8, WindowY + 4, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 1, Gui.GuiFontName);
+            PostString(player, frameHPText, centerWindowX + 8, WindowY + 4, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart, Gui.TextName);
+            PostString(player, frameHPBar, centerWindowX + 2, WindowY + 4, Anchor, GuiElementLife, Gui.ColorHealthBar, Gui.ColorHealthBar, reservationIdStart + 1, Gui.GuiFontName);
 
             // Second line: Left Arm / Right Arm HP (Text)
-            PostString(player, leftArmHPText, centerWindowX + 8, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 2, Gui.TextName);
-            PostString(player, leftArmHPBar, centerWindowX + 8, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 3, Gui.GuiFontName);
-            PostString(player, rightArmHPText, centerWindowX + 16, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 4, Gui.TextName);
-            PostString(player, rightArmHPBar, centerWindowX + 16, WindowY + 3, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 5, Gui.GuiFontName);
+            PostString(player, leftArmHPText, centerWindowX + 14, WindowY + 3, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 2, Gui.TextName);
+            PostString(player, leftArmHPBar, centerWindowX + 14, WindowY + 3, Anchor, GuiElementLife, Gui.ColorStaminaBar, Gui.ColorStaminaBar, reservationIdStart + 3, Gui.GuiFontName);
+            PostString(player, rightArmHPText, centerWindowX + 4, WindowY + 3, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 4, Gui.TextName);
+            PostString(player, rightArmHPBar, centerWindowX + 4, WindowY + 3, Anchor, GuiElementLife, Gui.ColorStaminaBar, Gui.ColorStaminaBar, reservationIdStart + 5, Gui.GuiFontName);
 
             // Third line: Leg HP (Text)
-            PostString(player, legsHPText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 6, Gui.TextName);
-            PostString(player, legsHPBar, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 7, Gui.GuiFontName);
+            PostString(player, legsHPText, centerWindowX + 8, WindowY + 2, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 6, Gui.TextName);
+            PostString(player, legsHPBar, centerWindowX + 2, WindowY + 2, Anchor, GuiElementLife, Gui.ColorEPBar, Gui.ColorEPBar, reservationIdStart + 7, Gui.GuiFontName);
 
             // Fourth line: Fuel (Text)
             if (showFuel)
             {
-                PostString(player, fuelText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 8, Gui.TextName);
-                PostString(player, fuelText, centerWindowX + 8, WindowY + 2, Anchor, 0.0f, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 9, Gui.GuiFontName);
+                PostString(player, fuelText, centerWindowX + 8, WindowY + 1, Anchor, GuiElementLife, Gui.ColorWhite, Gui.ColorWhite, reservationIdStart + 8, Gui.TextName);
+                PostString(player, fuelBar, centerWindowX + 2, WindowY + 1, Anchor, GuiElementLife, Gui.ColorCapacitorBar, Gui.ColorCapacitorBar, reservationIdStart + 9, Gui.GuiFontName);
             }
             
             // Draw the backgrounds
-            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 3, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, reservationIdStart + 10, Gui.GuiFontName);
-            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, reservationIdStart + 11, Gui.GuiFontName);
-            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, 0.0f, Gui.ColorBlack, Gui.ColorBlack, reservationIdStart + 12, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 3, Anchor, GuiElementLife, Gui.ColorBlack, Gui.ColorBlack, reservationIdStart + 10, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 2, Anchor, GuiElementLife, Gui.ColorBlack, Gui.ColorBlack, reservationIdStart + 11, Gui.GuiFontName);
+            PostString(player, backgroundBar, centerWindowX + 2, WindowY + 1, Anchor, GuiElementLife, Gui.ColorBlack, Gui.ColorBlack, reservationIdStart + 12, Gui.GuiFontName);
 
             if (showFuel)
             {
-                Gui.DrawWindow(player, _characterIdReservation.StartId + 13, Anchor, WindowX, WindowY, WindowWidth - 2, 4);
+                Gui.DrawWindow(player, reservationIdStart + 13, Anchor, WindowX, WindowY, WindowWidth - 2, 4, GuiElementLife);
             }
             else
             {
-                Gui.DrawWindow(player, _characterIdReservation.StartId + 14, Anchor, WindowX, WindowY, WindowWidth - 2, 3);
+                Gui.DrawWindow(player, reservationIdStart + 14, Anchor, WindowX, WindowY, WindowWidth - 2, 3, GuiElementLife);
             }
         }
 

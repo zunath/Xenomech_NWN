@@ -34,10 +34,24 @@ namespace Xenomech.Feature
                 FrameHP = frame.HP,
                 LeftArmHP = leftArm.HP,
                 RightArmHP = rightArm.HP,
-                LegHP = legs.HP
+                LegHP = legs.HP,
+
+                Fuel = frame.Fuel
             });
 
             dbPlayer.ActiveMechId = mechId;
+
+            DB.Set(playerId, dbPlayer);
+        }
+
+        [NWNEventHandler("test2")]
+        public static void ClearMech()
+        {
+            var player = GetLastUsedBy();
+            var playerId = GetObjectUUID(player);
+            var dbPlayer = DB.Get<Player>(playerId);
+
+            dbPlayer.ActiveMechId = Guid.Empty;
 
             DB.Set(playerId, dbPlayer);
         }

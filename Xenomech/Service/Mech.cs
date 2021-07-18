@@ -86,11 +86,13 @@ namespace Xenomech.Service
                 mechDetail.MaxLeftArmHP = leftArm.HP;
                 mechDetail.MaxRightArmHP = rightArm.HP;
                 mechDetail.MaxLegsHP = legs.HP;
+                mechDetail.MaxFuel = frame.Fuel;
 
                 mechDetail.CurrentFrameHP = dbMech.FrameHP;
                 mechDetail.CurrentLeftArmHP = dbMech.LeftArmHP;
                 mechDetail.CurrentRightArmHP = dbMech.RightArmHP;
                 mechDetail.CurrentLegsHP = dbMech.LegHP;
+                mechDetail.CurrentFuel = dbMech.Fuel;
             }
             else
             {

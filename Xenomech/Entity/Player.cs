@@ -197,5 +197,6 @@ namespace Xenomech.Entity
         public int LeftArmHP { get; set; }
         public int RightArmHP { get; set; }
         public int LegHP { get; set; }
+        public int Fuel { get; set; }
     }
 }
