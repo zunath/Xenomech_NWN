@@ -38,7 +38,7 @@ namespace Xenomech.Service
         /// <summary>
         /// Retrieves the maximum EP on a creature.
         /// For players:
-        /// Each Spirit modifier grants +2 to max EP.
+        /// Each Vitality modifier grants +2 to max EP.
         /// For NPCs:
         /// Each WIS grants +3 to max EP.
         /// </summary>
