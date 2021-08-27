@@ -9,6 +9,13 @@ namespace Xenomech.Core.NWScript.Enum
         PlayerList = 5,
         Journal = 6,
         SpellBook = 7,
-        CharacterSheet = 8
+        CharacterSheet = 8,
+
+        GoldInventory = 10,
+        Barter = 11,
+        ExamineCreature = 12,
+        ExamineItem = 13,
+        ExaminePlaceable = 14,
+        ExamineDoor = 15
     }
 }
