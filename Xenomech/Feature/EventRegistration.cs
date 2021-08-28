@@ -81,6 +81,10 @@ namespace Xenomech.Feature
             SetEventScript(module, EventScript.Module_OnUnequipItem, "mod_unequip");
             SetEventScript(module, EventScript.Module_OnLoseItem, "mod_unacquire");
             SetEventScript(module, EventScript.Module_OnUserDefined, "mod_user_def");
+            SetEventScript(module, EventScript.Module_OnPlayerTarget, "mod_p_target");
+            SetEventScript(module, EventScript.Module_OnPlayerGuiEvent, "mod_gui_event");
+            SetEventScript(module, EventScript.Module_OnPlayerTileEvent, "mod_tile_event");
+            SetEventScript(module, EventScript.Module_OnNuiEvent, "mod_nui_event");
         }
 
         /// <summary>

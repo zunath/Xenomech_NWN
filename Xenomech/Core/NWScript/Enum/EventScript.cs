@@ -23,7 +23,8 @@ namespace Xenomech.Core.NWScript.Enum
         Module_OnPlayerChat = 3017,
         Module_OnPlayerTarget = 3018,
         Module_OnPlayerGuiEvent = 3019,
-        Module_OnPlayerTileAction = 3020,
+        Module_OnPlayerTileEvent = 3020,
+        Module_OnNuiEvent = 3021,
 
         Area_OnHeartbeat = 4000,
         Area_OnUserDefined = 4001,
